@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+<!-- dark mode support using dark reader, then rank langauges by your knowledge, as in PHP language 75 % of the progress bar then show w3 schools if necessary-->
 
 <head>
     <title>Ugorji Simon Okorie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
     <meta name="author" content="Simon Ugorji">
-    <meta property="og:title" content="Simon Ugorji - Software Developer">
+    <meta property="og:title" content="Simon Ugorji - Backend Developer">
     <meta property="og:description" content="Technical Writer | Backend Developer | PHP | JAVASCRIPT">
     <meta property="og:image" content="assets/img/my-me.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,9 +95,8 @@
                     learn each day while <b>&lt; coding /&gt.</b></p>
                 <p>I am a self-taught developer but would be glad to accept an <b>internship
                         offer</b> to sharpen my skills.</p>
-                <p>As part of my learning process, I write <b>Technical Articles (including sponsored
-                        articles)</b> and build packages or libraries on <b>PHP and JavaScript</b>
-                    which is helping a lot of developers.</p>
+                <p>As part of my learning process, I write <b>Technical Articles </b>, build libraries, and
+                    build web apps.</p>
                 <p>I have experience in Frontend Technologies like <b>HTML, CSS and CSS frameworks
                         such as Bootstrap, Bulma, and material design for bootstrap.</b></p>
                 <p>I am a Tech enthusiast and I dream of building <b>big libraries & apps</b> that
@@ -258,6 +258,15 @@
                                                 blogging.</p>
                                         </div>
                                     </li>
+                                    <li>
+                                        <time class="cbp_tmtime" datetime="2022-05-01"><span>2022/05</span></time>
+                                        <div class="cbp_tmicon bg-green"> <i class="zmdi zmdi-badge-check"></i></div>
+                                        <div class="cbp_tmlabel">
+                                            <p class="m-0">I got a certificate from the JavaScript Programming
+                                                Foundations course with the help of <b>Udacity & Alx-T.</b> I used the
+                                                knowledge of what I learnt on my project octaValidate.</p>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -386,19 +395,32 @@
                 <div class="col-sm-12 align-self-center">
                     <h3 class="title is-3 mt-3 font-dm">CONTACT ME</h3>
                     <h5 class="subtitle">Send me a message</h5>
-                    <form method="post" action="https://formbold.com/s/35Ey3" id="form_contact" class="mt-4 mw-700">
-                        <div class="form-group">
-                            <label class="form-label">Subject <span class="text-danger">*</span></label>
+                    <form method="post" action="https://formbold.com/s/35Ey3" id="form_contact" class="mt-4 mw-700"
+                        novalidate>
+                        <div class="form-group mb-3">
+                            <label class="form-label mb-1">Email Address <span class="text-danger">*</span></label>
+                            <input octavalidate="R,EMAIL" id="inp_email"
+                                ov-required:msg="Your email address is required"
+                                ov-email:msg="Please provide a valid email address" name="email" type="email"
+                                class="form-control" placeholder="me@you.com">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label mb-1">Name <span class="text-danger">*</span></label>
+                            <input octavalidate="R,ALPHA_ONLY" id="inp_name" ov-required:msg="Your Name is required"
+                                name="name" type="text" class="form-control" placeholder="John Doe">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label mb-1">Subject <span class="text-danger">*</span></label>
                             <input octavalidate="R,TEXT" id="inp_sub" name="subject" type="text" class="form-control"
                                 placeholder="Partnership">
                         </div>
-                        <div class="form-group mt-3">
-                            <label class="form-label">Message <span class="text-danger">*</span></label>
+                        <div class="form-group">
+                            <label class="form-label mb-1">Message <span class="text-danger">*</span></label>
                             <textarea octavalidate="R,TEXT" id="inp_mess" name="message" class="form-control"
-                                placeholder="Hello I'm John from..." rows="3"></textarea>
+                                placeholder="Hello, I'm John from..." rows="3"></textarea>
                         </div>
                         <div class="form-group mt-3">
-                            <button id="btn_contact" class="btn btn-cta shadow-0 text-white">SEND</buttoni>
+                            <button id="btn_contact" class="btn btn-cta shadow-0 text-white">SEND</button>
                         </div>
                     </form>
             </section>
@@ -408,7 +430,7 @@
 <footer class="footer p-3 z-depth-2 mt-5">
     <div class="row text-center">
         <div class="col-12">
-            <h4 class="title is-4 mb-3 font-roboto text-white">Follow me</h4>
+            <h4 class="title is-4 mb-3 font-roboto text-white">Let's connect</h4>
             <ul class="list-unstyled list-inline">
                 <li class="list-inline-item"><a title="Follow me on Twitter" class="btn btn-floating btn-info "
                         href="https://twitter.com/ugorji_simon" role="button"><i class="fab fa-twitter"></i></a></li>
@@ -429,9 +451,10 @@
                             class="fab fa-linkedin-in"></i></a>
                 </li>
             </ul>
-            <p class="gray-text">All rights reserved. Simon Ugorji. 19th/June/2022</p>
+            <p class="gray-text">Last updated: 3rd July 2022</p>
         </div>
     </div>
+    <!--19th/June/2022-->
 </footer>
 
 </html>
