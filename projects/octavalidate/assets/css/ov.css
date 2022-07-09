@@ -205,15 +205,6 @@ small{
 .list-inline-item:not(:last-child) {
  margin-right:.5rem;
 }
-@media screen and (max-width:520px) {
-    .list-inline-item{
-        display:block !important;
-        margin-bottom:10px;
-    }
-    .list-inline-item:not(:last-child) {
-        margin-right:0;
-    }
-}
 .footer{
     padding: 20px;
     background-color: #02151d;
