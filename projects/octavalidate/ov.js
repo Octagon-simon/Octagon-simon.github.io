@@ -21,6 +21,34 @@ window.addEventListener('load', function(){
   });
 })
 
+/*
+let buildNavbar = () => {
+  const reader = new FileReader();
+  reader.readAsDataURL('./includes/navbar.txt',"UTF-8");
+  reader.onload = (evt) => {
+    const html = new DOMParser().parseFromString(evt.target.result, 'text/html');
+    console.log(html);
+  }
+  reader.onerror = (evt) => {
+    console.log("ERROR OCCURED BUILDING NAVBAR")
+  }
+}
+*/
+let buildNavbar = () => {
+  fetch('includes/navbar.txt')
+  .then(response => {
+    response.text();
+    console.log(response);
+  })
+  .then(data => {
+   // const html = new DOMParser().parseFromString(data, 'text/html');
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
+
 function w3CodeColor(elmnt, mode) {
   var lang = (mode || "html");
   var elmntObj = (document.getElementById(elmnt) || elmnt);

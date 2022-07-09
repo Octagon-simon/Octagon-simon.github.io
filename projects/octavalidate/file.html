@@ -44,7 +44,7 @@
                         Get started
                     </a>
 
-                    <a class="navbar-item" href="https://octagon-simon.github.io/octaValidate/demo.html">
+                    <a class="navbar-item" href="demo.html">
                         Demo
                     </a>
 
@@ -55,7 +55,7 @@
 
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="./api.html">
-                                Api methods
+                                API methods
                             </a>
                             <a class="navbar-item" href="./rules.html">
                                 Validation rules
@@ -102,7 +102,8 @@
                 </h3>
                 <article>
                     <p>Validate a file upload form and add a custom validation message with the attributes below.</p>
-                    <table class="table is-bordered w-50 mt-3">
+                    <div class="table-responsive">
+                        <table class="table is-bordered w-50 mt-3">
                         <thead>
                             <th>
                                 Attribute
@@ -206,6 +207,8 @@
                             </tr>
                         </tbody>
                     </table>
+                    </div>
+                    
                 </article>
                 <p class="mt-3 mb-3">You can use the <code>R</code> validation rule to make the file upload field
                     required and you can add a custom message using the attribute <code>ov-required:msg</code>.</p>
@@ -227,7 +230,7 @@
                     <p class="notification is-info p-4 mt-4">NOW, TRY TO BREAK THROUGH! 😎</p>
                 </div>
 
-                <section class="p-5 mt-3" style="background-color: #eeeeee;">
+                <section class="p-5 mt-3" style="background-color: #f7f7f7;">
                     <form class="mt-2 mw-500" id="form_demo" novalidate>
                         <div class="field">
                             <label class="label">Single file upload <span style="color:#ff0000">*</span></label>
