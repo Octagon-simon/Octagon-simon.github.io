@@ -186,7 +186,7 @@
                     <p class="notification is-primary is-light">Strict mode is enabled, so will see a green border if
                         validation is
                         successful, and the words <b>"admin, null or undefined"</b> are not allowed.</p>
-                    <form class="mw-500 p-3 demo-form-bg" id="my_form_3" novalidate>
+                    <form class="mw-500 p-3 demo-form-bg" id="my_form" novalidate>
                         <div class="field">
                             <label class="label">Username <span style="color:#ff0000">*</span></label>
                             <input octavalidate="R,PASS" id="inp_uname_3" type="text" class="input">
@@ -222,9 +222,10 @@
     </footer>
     <script src="./ov.js"></script>
     <script>
-        const myForm = new octaValidate('my_form');
+        const myFormOptions = { successBorder: true, strictMode: true, strictWords: ["admin", "null", "undefined"] };
+        const myForm = new octaValidate('my_form', myFormOptions);
         let formEl = document.querySelector('#my_form');
-        //listen on first form
+        //listen on third form
         formEl.addEventListener('submit', function (e) {
             e.preventDefault();
             //invoke the validate method
@@ -235,67 +236,6 @@
                     icon: 'question',
                 })
             }
-        });
-
-        const myForm2 = new octaValidate('my_form_2');
-        //build first rule
-        const rule_title = "PASS";
-        const reg_exp = /12345/;
-        const err_txt = "Please Enter 12345";
-        myForm.customRule(rule_title, reg_exp, err_txt);
-        //build second rule
-        var RULES = {
-            "PASS": [/12345/, "Please Enter 12345"],
-            "URI": [/^((?:http:\/\/)|(?:https:\/\/))(www.)?((?:[a-zA-Z0-9]+\.[a-z]{3})|(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1(?::\d+)?))([\/a-zA-Z0-9\.]*)$/i, "Please provide a valid URL"]
-        };
-        myForm2.moreCustomRules(RULES);
-        let formEl2 = document.querySelector('#my_form_2');
-        //listen on second form
-        formEl2.addEventListener('submit', function (e) {
-            e.preventDefault();
-            //invoke the validate method
-            if (myForm2.validate() === true) {
-                XSAlert({
-                    title: 'Couldn\'t break through?',
-                    message: 'Demo Form passed the validation test! 😎',
-                    icon: 'question',
-                })
-            }
-        });
-
-        const myFormOptions = { successBorder: true, strictMode: true, strictWords: ["admin", "null", "undefined"] };
-        const myForm3 = new octaValidate('my_form_3', myFormOptions);
-        let formEl3 = document.querySelector('#my_form_3');
-        //listen on third form
-        formEl3.addEventListener('submit', function (e) {
-            e.preventDefault();
-            //invoke the validate method
-            if (myForm3.validate() === true) {
-                XSAlert({
-                    title: 'Couldn\'t break through?',
-                    message: 'Demo Form passed the validation test! 😎',
-                    icon: 'question',
-                })
-            }
-        });
-
-        const myForm4 = new octaValidate('my_form_4');
-        //success callback
-        let successCB = function () {
-            alert("No validation error");
-        }
-        //error callback
-        let errorCB = function () {
-            alert(myForm4.status() + " validation error(s)")
-        };
-        //assign the callback
-        myForm4.validateCallBack(successCB, errorCB);
-        let formEl4 = document.querySelector('#my_form_4');
-        //listen on third form
-        formEl4.addEventListener('submit', function (e) {
-            e.preventDefault();
-            //begin validation
-            myForm4.validate();
         });
     </script>
 </body>
