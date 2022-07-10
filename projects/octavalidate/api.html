@@ -218,7 +218,7 @@
 
                     <h5 class="title is-6 mt-5 mb-2">DEMO FORM</h5>
 
-                    <form class="mt-2 mw-500 p-5 demo-form-bg" id="my_form_4" novalidate>
+                    <form class="mt-2 mw-500 p-5 demo-form-bg" id="my_form_3" novalidate>
 
                         <div class="field">
                             <label class="label">Enter something <span style="color:#ff0000">*</span></label>
@@ -267,6 +267,11 @@
     <script src="./ov.js"></script>
     <script>
         const myForm = new octaValidate('my_form');
+        //build first rule
+        const rule_title = "PASS";
+        const reg_exp = /12345/;
+        const err_txt = "Please Enter 12345";
+        myForm.customRule(rule_title, reg_exp, err_txt);
         let formEl = document.querySelector('#my_form');
         //listen on first form
         formEl.addEventListener('submit', function (e) {
@@ -282,11 +287,6 @@
         });
 
         const myForm2 = new octaValidate('my_form_2');
-        //build first rule
-        const rule_title = "PASS";
-        const reg_exp = /12345/;
-        const err_txt = "Please Enter 12345";
-        myForm.customRule(rule_title, reg_exp, err_txt);
         //build second rule
         var RULES = {
             "PASS": [/12345/, "Please Enter 12345"],
@@ -307,13 +307,22 @@
             }
         });
 
-        const myFormOptions = { successBorder: true, strictMode: true, strictWords: ["admin", "null", "undefined"] };
-        const myForm3 = new octaValidate('my_form_3', myFormOptions);
+        const myForm3 = new octaValidate('my_form_3');
+        //success callback
+        let successCB = function () {
+            alert("No validation error");
+        }
+        //error callback
+        let errorCB = function () {
+            alert(myForm3.status() + " validation error(s)")
+        };
+        //assign the callback
+        myForm3.validateCallBack(successCB, errorCB);
         let formEl3 = document.querySelector('#my_form_3');
         //listen on third form
         formEl3.addEventListener('submit', function (e) {
             e.preventDefault();
-            //invoke the validate method
+            //begin validation
             if (myForm3.validate() === true) {
                 XSAlert({
                     title: 'Couldn\'t break through?',
@@ -321,25 +330,6 @@
                     icon: 'question',
                 })
             }
-        });
-
-        const myForm4 = new octaValidate('my_form_4');
-        //success callback
-        let successCB = function () {
-            alert("No validation error");
-        }
-        //error callback
-        let errorCB = function () {
-            alert(myForm4.status() + " validation error(s)")
-        };
-        //assign the callback
-        myForm4.validateCallBack(successCB, errorCB);
-        let formEl4 = document.querySelector('#my_form_4');
-        //listen on third form
-        formEl4.addEventListener('submit', function (e) {
-            e.preventDefault();
-            //begin validation
-            myForm4.validate();
         });
     </script>
 </body>
