@@ -55,7 +55,7 @@
                     <a class="navbar-item" href="./">
                         Get started
                     </a>
-<a class="navbar-item" href="octavalidate-with-npm.html">
+                    <a class="navbar-item" href="octavalidate-with-npm.html">
                         Get started with NPM
                     </a>
 
@@ -120,6 +120,16 @@
                 </h3>
                 <article>
                     <p>Validate a file upload form and add a custom validation message with the attributes below.</p>
+                    <ul class="list-disc">
+                        <li>accept - Use this attribute to list out the file types allowed for upload</li>
+                        <li> size (2mb) <code>single</code> - This means that the file provided must be 2mb in size
+                        <li>minsize (5mb) <code>single</code> - This means that the file provided must be up to 5mb or more.</li>
+                        <li>maxsize (5mb) <code>single</code> - This means that the file provided must be 5mb or less.</li>
+                        <li>totalsize (2mb) <code>multiple</code> - This means that all files provided must have a size equal to 2mb.</li>
+                        <li>totalminsize (5mb) <code>multiple</code> - This means that all files provided must have a size that is up to 5mb or more.</li>
+                        <li>totalmaxsize (5mb) <code>multiple</code> - This means that all files provided must have a size that is 5mb or less.</li>
+                    </ul>
+                    <p class="notification is-warning is-light mt-3"><code>multiple</code> means that the file upload type must have a multiple attribute to support more than one file.</p>
                     <div class="table-responsive">
                         <table class="table is-bordered w-50 mt-3">
                             <thead>
@@ -226,7 +236,6 @@
                             </tbody>
                         </table>
                     </div>
-
                 </article>
                 <p class="mt-3 mb-3">You can use the <code>R</code> validation rule to make the file upload field
                     required and you can add a custom message using the attribute <code>ov-required:msg</code>.</p>
