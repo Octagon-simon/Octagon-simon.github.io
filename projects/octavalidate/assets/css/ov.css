@@ -6,6 +6,16 @@
     margin:0px;
     padding:0px;
 }
+::-webkit-scrollbar{
+  width: 5px; 
+  height:8px;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb{
+background: #00d1b2;
+border-radius:5px ;
+}
 html, body{
     font-family: 'Roboto', sans-serif !important;
 }
@@ -204,6 +214,9 @@ small{
 }
 .list-inline-item:not(:last-child) {
  margin-right:.5rem;
+}
+.demo-form-bg{
+background-color: #f7f7f7;
 }
 .footer{
     padding: 20px;

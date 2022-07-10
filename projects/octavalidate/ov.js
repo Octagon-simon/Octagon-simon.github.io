@@ -33,7 +33,7 @@ let buildNavbar = () => {
     console.log("ERROR OCCURED BUILDING NAVBAR")
   }
 }
-*/
+
 let buildNavbar = () => {
   fetch('includes/navbar.txt')
   .then(response => {
@@ -48,7 +48,7 @@ let buildNavbar = () => {
     console.error(error);
   })
 }
-
+*/
 function w3CodeColor(elmnt, mode) {
   var lang = (mode || "html");
   var elmntObj = (document.getElementById(elmnt) || elmnt);

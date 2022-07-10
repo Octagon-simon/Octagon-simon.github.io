@@ -1,27 +1,19 @@
 <!doctype html>
 <html class="has-navbar-fixed-top">
-<title>octavalidate | Checkbox or Radio validation</title>
+<title>octavalidate | Installing with NPM</title>
 
 <head>
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="octaValidate: Learn more about the Checkbox or Radio Element Validation contained in this GREAT library">
-    <meta name="title" content="Octavalidate: Checkbox or Radio Element Validation">
+        content="octaValidate: This JavaScript Library helps to validate your HTML forms using validation rules, sophisticated regular expressions and form input attributes">
+    <meta name="title" content="Octavalidate: Installing with NPM">
     <meta property="og:description"
-        content="octaValidate: Learn more about the Checkbox or Radio Element Validation contained in this GREAT library">
-    <meta property="og:title" content="Octavalidate: Checkbox or Radio Element Validation">
+        content="octaValidate: This JavaScript Library helps to validate your HTML forms using validation rules, sophisticated regular expressions and form input attributes">
+    <meta property="og:title" content="Octavalidate: Installing with NPM">
     <link rel="icon" href="assets/img/ov-image.png">
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
-    <script src="src/validate.js"></script>
-    <!-- jQuery -->
-    <script src="assets/js/jquery.min.js"></script>
-    <!-- XSAlert CSS -->
-    <link rel="stylesheet" href="assets/css/xs-alert-light-theme.css">
-    <!-- XAlert core JS -->
-    <script src="assets/js/xs-alert.js"></script>
     <link rel="stylesheet" href="./assets/css/ov.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
@@ -29,6 +21,7 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-QS025GYRY5');
     </script>
 </head>
@@ -113,66 +106,60 @@
             </div>
         </nav>
     </header>
-    <section class="container is-fluid p-2 mb-3">
+    <section class="container is-fluid p-2 has-navbar-fixed-top">
         <div class="container p-3">
-            <h3 class="title is-4 mt-3 mb-3 has-text-primary">CHECKBOX OR RADIO ELEMENT
-            </h3>
+            <h3 class="title is-3 mt-3 mb-3 font-weight-bold has-text-primary">INSTALLING WITH NPM</h3>
             <article>
-                <p>You can validate a checkbox or radio element using the <code>R</code> validation rule.</p>
-                <p class="mt-2">You may also provide a custom message using <code>ov-required:msg</code> attribute.</p>
-                <h5 class="title is-5 mt-4 mb-2">Custom message attribute</h5>
-                <div class="table-responsive">
-                    <table class="table is-bordered w-50 mt-3">
-                        <thead>
-                            <th>
-                                Attribute
-                            </th>
-                            <th>
-                                Custom message
-                            </th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    R
-                                </td>
-                                <td>
-                                    ov-required:msg
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <p><b>octaValidate</b> is a front-end library, and before you can use it in your application, you have
+                    to install it through <b>NPM</b> an build the library with <b>browserify</b>.</p>
+                <p class="mt-3 mb-5">Below are the steps to achieve this.</p>
+                <h5 class="title is-5 mb-2">INSTALL BROWSERIFY</h5>
+                <p class="mt-2 mb-3">There are 2 ways to install <b>browserify.</b></p>
+                <p class="tag is-warning title is-6">Install on your App</p>
+                <pre id="code-section">npm install browserify</pre>
+                <p class="tag is-warning title is-6 mt-5">Or Install globally</p>
+                <pre id="code-section">npm install -g browserify</pre>
+                <hr>
+                <h5 class="title is-5 mb-2">INSTALL OCTAVALIDATE</h5>
+                <pre id="code-section">npm install octavalidate</pre>
+                <hr>
+                <p class="mb-3">Now create a file <span class="tag is-info is-light">ov.js</span> that will store all
+                    form validations for your app.</p>
+                <p>Within this file, require the library, then initialize the function after the <b>DOM</b> is ready,
+                    and pass in the form ID and any configuration options as the second argument.</p>
+                <p class="mt-2 mb-2 notification is-info is-light">Learn more about configuration options <a
+                        href="config.html">here</a></p>
+                <p class="tag is-info mb-2 title is-6">ov.js</p>
+                <pre
+                    id="code-section">//require the module<br>const octaValidate = require ('octavalidate');<br>//initialise the function after DOM is ready!!!<br>document.addEventListener('DOMContentLoaded', function () {<br>  const myForm = new octaValidate('my_form');<br>  //listen for submit event<br>  document.querySelector('#my_form').addEventListener('submit', function(e){<br>    e.preventDefault();<br>    //invoke the method<br>    if(myForm.validate() === true){ <br>      //validation successful, process form data here<br>    } else {<br>      //validation failed<br>    }<br>  })<br>})</pre>
+                <p class="mt-4 notification is-danger is-light">Make sure to initialise the function after the DOM is
+                    ready!</p>
+                <hr>
+                <h5 class="title is-5 mb-2">BUILD WITH BROWSERIFY</h5>
+                <p class="mt-2 mb-3">There are 2 ways to build your validations with <b>browserify.</b></p>
+                <p class="tag title is-6 is-warning mb-2 ">Command-line</p>
+                <p class="notification is-warning is-light mb-2">Use this method if you installed browserify
+                    <b>globally</b>.</p>
+                <p class="mb-3">Type the code below in a command-line to build your validations.</p>
+                <pre id="code-section">browserify ov.js -o validations.js</pre>
+                <hr>
+                <p class="tag title is-6 is-warning mb-2 ">package.json</p>
+                <p class="mb-3">Open your app's <span class="tag is-info is-light">package.json</span> file and add /
+                    modify the lines below to build the <span class="tag is-info is-light">ov.js</span>.</p>
+                <pre id="code-section">"scripts": {<br>  "build" : "browserify ov.js -o validations.js"<br>}</pre>
+                <p class="mt-2 mb-2">Then run</p>
+                <pre id="code-section">npm run build</pre>
+                <hr>
+                <p class="mb-3">If you can see the file <span class="tag is-info is-light">validations.js</span>, it
+                    means that we have successfully built validations for the form. All you have to do now is to link
+                    <span class="tag is-info is-light">validations.js</span> to your HTML page and reload your server.
+                </p>
+                <pre
+                    id="code-section">&lt;!-- form validation script --&gt;<br>&lt;script src="public/js/validations.js"&gt;&lt;/script&gt;<br><br>&lt;form id="my_form"&gt;<br>  &lt;input octavalidate="R,EMAIL" id="inp_email" name="email" type="email"&gt;<br>  &lt;input octavalidate="R,DIGITS" id="inp_age" name="age" type="number"&gt;<br>  &lt;button type="submit"&gt;submit&lt;/button&gt;<br>&lt;/form&gt;</pre>
+                <p class="notification is-warning is-light mt-3">
+                    If you're using <b>node js</b>, make sure your app is set up to serve <b>static files.</b>
+                </p>
             </article>
-            <div class="mt-5">
-                <h5 class="title is-5 mb-3">DEMO FORM</h5>
-                <p>Here's a demo form utilising some of the validation rules above and a custom validation message.</p>
-                <pre id="code-section"
-                    class="mt-4">&lt;!-- checkbox --&gt;<br>&lt;input id="inp_check" type="checkbox" octavalidate="R" ov-required:msg="You have to accept the terms and conditions"&gt;<br>&lt;!-- radio --&gt;<br>&lt;input id="inp_radio" type="radio" octavalidate="R" ov-required:msg="You have to accept the terms and conditions"&gt;</pre>
-            </div>
-
-            <p class="notification is-info p-4 mt-5">NOW, TRY TO BREAK THROUGH! 😎</p>
-            <section class="p-5 mt-3" style="background-color: #f7f7f7;">
-                <form class="mt-2 mw-300" id="form_demo" novalidate>
-                    <div class="field">
-                        <input type="checkbox" id="inp_check" octavalidate="R"
-                            ov-required:msg="You have to accept the terms and conditions">I accept the terms and
-                        conditions
-                    </div>
-                    <div class="field">
-                        <input type="radio" id="inp_terms" octavalidate="R"
-                            ov-required:msg="You have to accept the terms and conditions">I accept the terms and
-                        conditions
-                    </div>
-                    <div class="field">
-                        <button class="button is-primary" type="submit">Run test</button>
-                    </div>
-                </form>
-            </section>
-        </div>
-        <div class="mt-5 container has-text-centered">
-            <a href="length.html" class="has-fa-icon button is-primary is-light">LENGTH VALIDATION&nbsp;<i
-                    class="fas fa-arrow-right"></i></a>
         </div>
     </section>
     <footer class="footer">
@@ -195,23 +182,6 @@
         </div>
     </footer>
     <script src="./ov.js"></script>
-    <script>
-        //create instance of class
-        let formVal = new octaValidate('form_demo');
-
-        let formEl = document.querySelector('#form_demo');
-        formEl.addEventListener('submit', function (e) {
-            e.preventDefault();
-            //invoke the validate method
-            if (formVal.validate() === true) {
-                XSAlert({
-                    title: 'Couldn\'t break through?',
-                    message: 'Demo Form passed the validation test! 😎',
-                    icon: 'question',
-                })
-            }
-        })
-    </script>
 </body>
 
 </html>
