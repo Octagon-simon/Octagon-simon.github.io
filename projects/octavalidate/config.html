@@ -13,10 +13,10 @@
     <meta property="og:title" content="octaValidate: Configuration options">
     <meta property="og:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
-    <meta name="twitter:card" content="octaValidate">
-    <meta property="twitter:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta property="twitter:title" content="octaValidate: Configuration options">
-    <meta property="twitter:description"
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta name="twitter:title" content="octaValidate: Configuration options">
+    <meta name="twitter:description"
         content="octaValidate: Learn more about the Configuration options contained in this GREAT library">
     <link rel="icon" href="assets/img/ov-image.png">
     <meta charset="UTF-8">
@@ -103,7 +103,7 @@
                             </a>
                         </div>
                     </div>
-                    <a class="navbar-item" href="https://buymeacoffee.com/simon.ugorji">
+                    <a class="navbar-item" href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4">
                         Donate
                     </a>
                 </div>
@@ -127,7 +127,7 @@
             <article>
                 <p class="mb-3 mt-3">The code below shows the syntax to initialise octavalidate for your form.</p>
                 <pre
-                    id="code-section">&lt;script&gt;<br>//create new instance<br>const myForm = new octaValidate(FORM_ID, CONFIGURATION);<br>&lt;/script&gt;</pre>
+                    id="code-section">&lt;script&gt;<br>//syntax to create new instance<br>const myForm = new octaValidate(FORM_ID, CONFIGURATION);<br>&lt;/script&gt;</pre>
                 <h3 class="title is-5 mt-4 mb-3">CONFIGURATION OPTIONS</h3>
                 <p>To use any of the options below, provide it as an object and pass it as the second argument when
                     creating an instance of octaValidate.</p>
@@ -188,11 +188,12 @@
                         function like this:
                     </p>
                     <pre
-                        id="code-section">&lt;script&gt;<br>//configuration options<br>const myFormOptions = {successBorder: true, strictMode : true, strictWords : ["admin", "null", "undefined"]};<br>//create new instance of the function<br>const myForm = new octaValidate('my_form', myFormOptions);<br>&lt;/script&gt;</pre>
+                        id="code-section">&lt;script&gt;<br>//configuration options<br>const myFormOptions = {<br> successBorder: true,<br> strictMode : true,<br> strictWords : ["admin", "null", "undefined"]<br>};<br>//create new instance of the function<br>const myForm = new octaValidate('my_form', myFormOptions);<br>&lt;/script&gt;</pre>
+                        <p class="notification is-danger is-light mt-5"> From version <span class="tag is-danger">1.1.4</span> upwards, any value provided by the user that matches any of the strict words, will be flagged as <b>not allowed</b>.</p>
                     <h5 class="title is-6 mt-5 mb-3">DEMO FORM</h5>
-                    <p class="notification is-primary is-light">Strict mode is enabled, so will see a green border if
+                    <p class="notification is-primary is-light">Strict mode is enabled on this form, so you will see a green border if
                         validation is
-                        successful, and the words <b>"admin, null or undefined"</b> are not allowed.</p>
+                        successful, also, the words <b>"admin, null or undefined"</b> are not allowed. So try to provide them.</p>
                     <form class="mw-500 p-3 demo-form-bg" id="my_form" novalidate>
                         <div class="field">
                             <label class="label">Username <span style="color:#ff0000">*</span></label>
@@ -221,7 +222,7 @@
                 </li>
             </ul>
             <div class="mt-20 mb-20">
-                <a href="https://buymeacoffee.com/simon.ugorji" class="button is-primary has-fa-icon"><i
+                <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4" class="button is-primary has-fa-icon"><i
                         class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
             <p class="text-gray mt-20">octaValidate @ 1.1.4 🚀 Since January 2022 </p>

@@ -11,12 +11,14 @@
     <meta property="og:description"
         content="octaValidate: This JavaScript Library helps to validate your HTML forms using validation rules, sophisticated regular expressions and form input attributes">
     <meta property="og:title" content="octaValidate: Installing with NPM">
-    <meta property="og:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta property="og:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
-    <meta name="twitter:card" content="octaValidate">
-    <meta property="twitter:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta property="twitter:title" content="octaValidate: Installing with NPM">
-    <meta property="twitter:description"
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta name="twitter:title" content="octaValidate: Installing with NPM">
+    <meta name="twitter:description"
         content="octaValidate: This JavaScript Library helps to validate your HTML forms using validation rules, sophisticated regular expressions and form input attributes">
     <link rel="icon" href="assets/img/ov-image.png">
     <link rel="stylesheet" href="./assets/css/bulma.min.css" />
@@ -95,7 +97,7 @@
                             </a>
                         </div>
                     </div>
-                    <a class="navbar-item" href="https://buymeacoffee.com/simon.ugorji">
+                    <a class="navbar-item" href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4">
                         Donate
                     </a>
                 </div>
@@ -137,8 +139,8 @@
                 <p class="mt-2 mb-2 notification is-info is-light">Learn more about configuration options <a
                         href="config.html">here</a></p>
                 <p class="tag is-info mb-2 title is-6">ov.js</p>
-                <pre
-                    id="code-section">//require the module<br>const octaValidate = require ('octavalidate');<br>//initialise the function after DOM is ready!!!<br>document.addEventListener('DOMContentLoaded', function () {<br>  const myForm = new octaValidate('my_form');<br>  //listen for submit event<br>  document.querySelector('#my_form').addEventListener('submit', function(e){<br>    e.preventDefault();<br>    //invoke the method<br>    if(myForm.validate() === true){ <br>      //validation successful, process form data here<br>    } else {<br>      //validation failed<br>    }<br>  })<br>})</pre>
+                <pre id="code-section"
+                    class="code-section-npm">&lt;script&gt;<br>//require the module<br>const octaValidate = require ('octavalidate');<br>//initialise the function after DOM is ready!!!<br>document.addEventListener('DOMContentLoaded', function () {<br>  const myForm = new octaValidate('my_form');<br>  //listen for submit event<br>  document.querySelector('#my_form').addEventListener('submit', function(e){<br>    e.preventDefault();<br>    //invoke the method<br>    if(myForm.validate() === true){ <br>      //validation successful, process form data here<br>    } else {<br>      //validation failed<br>    }<br>  })<br>})&lt;/script&gt;</pre>
                 <p class="mt-4 notification is-danger is-light">Make sure to initialise the function after the DOM is
                     ready!</p>
                 <hr>
@@ -146,7 +148,8 @@
                 <p class="mt-2 mb-3">There are 2 ways to build your validations with <b>browserify.</b></p>
                 <p class="tag title is-6 is-warning mb-2 ">Command-line</p>
                 <p class="notification is-warning is-light mb-2">Use this method if you installed browserify
-                    <b>globally</b>.</p>
+                    <b>globally</b>.
+                </p>
                 <p class="mb-3">Type the code below in a command-line to build your validations.</p>
                 <pre id="code-section">browserify ov.js -o validations.js</pre>
                 <hr>
@@ -162,7 +165,7 @@
                     <span class="tag is-info is-light">validations.js</span> to your HTML page and reload your server.
                 </p>
                 <pre
-                    id="code-section">&lt;!-- form validation script --&gt;<br>&lt;script src="public/js/validations.js"&gt;&lt;/script&gt;<br><br>&lt;form id="my_form"&gt;<br>  &lt;input octavalidate="R,EMAIL" id="inp_email" name="email" type="email"&gt;<br>  &lt;input octavalidate="R,DIGITS" id="inp_age" name="age" type="number"&gt;<br>  &lt;button type="submit"&gt;submit&lt;/button&gt;<br>&lt;/form&gt;</pre>
+                    id="code-section">&lt;!-- form validation --&gt;<br>&lt;script src="public/js/validations.js"&gt;&lt;/script&gt;<br><br>&lt;form id="my_form"&gt;<br>  &lt;input octavalidate="R,EMAIL" id="inp_email" name="email" type="email"&gt;<br>  &lt;input octavalidate="R,DIGITS" id="inp_age" name="age" type="number"&gt;<br>  &lt;button type="submit"&gt;submit&lt;/button&gt;<br>&lt;/form&gt;</pre>
                 <p class="notification is-warning is-light mt-3">
                     If you're using <b>node js</b>, make sure your app is set up to serve <b>static files.</b>
                 </p>
@@ -182,13 +185,24 @@
                 </li>
             </ul>
             <div class="mt-20 mb-20">
-                <a href="https://buymeacoffee.com/simon.ugorji" class="button is-primary has-fa-icon"><i
-                        class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
+                    class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
             <p class="text-gray mt-20">octaValidate @ 1.1.4 🚀 Since January 2022 </p>
         </div>
     </footer>
     <script src="./ov.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.querySelectorAll('.code-section-npm span').forEach(s => {
+                    if (s.innerText.match(new RegExp('script')) || s.innerText.match(new RegExp('/script'))) {
+                        s.remove();
+                    }
+                })
+            }, 1000)
+        })
+    </script>
 </body>
 
 </html>

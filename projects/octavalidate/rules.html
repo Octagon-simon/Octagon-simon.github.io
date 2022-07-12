@@ -11,12 +11,14 @@
     <meta property="og:description"
         content="octaValidate: Learn more about the validation rules contained in this GREAT library">
     <meta property="og:title" content="octaValidate: Validation rules">
-    <meta property="og:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta property="og:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
-    <meta name="twitter:card" content="octaValidate">
-    <meta property="twitter:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta property="twitter:title" content="octaValidate: Validation rules">
-    <meta property="twitter:description"
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta name="twitter:title" content="octaValidate: Validation rules">
+    <meta name="twitter:description"
         content="octaValidate: Learn more about the validation rules contained in this GREAT library">
     <link rel="icon" href="assets/img/ov-image.png">
     <meta charset="UTF-8">
@@ -102,7 +104,7 @@
                             </a>
                         </div>
                     </div>
-                    <a class="navbar-item" href="https://buymeacoffee.com/simon.ugorji">
+                    <a class="navbar-item" href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4">
                         Donate
                     </a>
                 </div>
@@ -125,15 +127,19 @@
             <h3 class="title is-4 mt-3 mb-3 has-text-primary">VALIDATION RULES
             </h3>
             <article>
-                <p>You can validate form inputs, and also provide a custom message to show when a validation fails.</p>
+                <p>You can validate form inputs, and also provide a custom message to show when a validation test fails.
+                </p>
+                <p class="notification is-warning is-light">In as much as you can validate all form inputs, there are
+                    validation rules that are not supported depending on the input type.</p>
                 <p class="mt-2">Here, you can find all validation rules that must be entered within the
                     <code>octavalidate</code>
-                    attribute, as well as the attribute for a custom message.</p>
+                    attribute, as well as the attribute for a custom message.
+                </p>
                 <div class="table-responsive">
                     <table class="table is-bordered w-50 mt-3">
                         <thead>
                             <th>
-                                Rule
+                                Rule Title
                             </th>
                             <th>
                                 Description
@@ -295,10 +301,13 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="mt-4 mb-2">You can use the <code>R</code> validation rule to validate all input types, but not
+                <p class="notification is-info is-light mt-4 mb-2">You can use the <code>R</code> validation rule to
+                    validate all input types, but not
                     including <b>reset, hidden and submit</b>.</p>
-                <p>The <code>TEXT</code> validation rule supports these special characters
-                    <code>(. , / () [] & ! '' "" : ; ?)</code>
+                <p class="notification is-info is-light">The <code>TEXT</code> validation rule supports these special
+                    characters
+                    <code>(. , / () [] & ! '' "" : ; ?)</code> and this means that any character outside the supported
+                    set will be counted as <b>invalid!</b>
                 </p>
                 <div class="mt-3 notification is-warning is-light">Can't see a validation rule that you need for your
                     form? Use the <b>custom rule</b> api to build your own validation rule.<br>
@@ -339,7 +348,7 @@
             </section>
         </div>
         <div class="mt-5 container has-text-centered">
-            <a href="check.html" class="has-fa-icon button is-primary is-light">CHECKBOX OR RADIO ELEMENT&nbsp;<i
+            <a href="length.html" class="has-fa-icon button is-primary is-light">LENGTH VALIDATION&nbsp;<i
                     class="fas fa-arrow-right"></i></a>
         </div>
     </section>
@@ -356,8 +365,8 @@
                 </li>
             </ul>
             <div class="mt-20 mb-20">
-                <a href="https://buymeacoffee.com/simon.ugorji" class="button is-primary has-fa-icon"><i
-                        class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
+                    class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
             <p class="text-gray mt-20">octaValidate @ 1.1.4 🚀 Since January 2022 </p>
         </div>
