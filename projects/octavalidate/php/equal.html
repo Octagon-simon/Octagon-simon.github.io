@@ -1,0 +1,162 @@
+<!doctype html>
+<html class="has-navbar-fixed-top">
+<title>octavalidate-PHP | Equalto validation</title>
+
+<head>
+    <meta name="author" content="Simon Ugorji">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="octaValidate-PHP: Learn more about the EqualTo Attribute Validation contained in this GREAT library">
+    <meta name="title" content="octaValidate-PHP: EqualTo Attribute Validation">
+    <meta property="og:description"
+        content="octaValidate-PHP: Learn more about the EqualTo Attribute Validation contained in this GREAT library">
+    <meta property="og:title" content="octaValidate-PHP: EqualTo Attribute Validation">
+    <meta property="og:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta name="twitter:title" content="octaValidate-PHP: EqualTo Attribute Validation">
+    <meta name="twitter:description"
+        content="octaValidate-PHP: Learn more about the EqualTo Attribute Validation contained in this GREAT library">
+    <meta charset="UTF-8">
+    <link rel="icon" href="../assets/img/ov-image.png">
+    <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <!-- jQuery -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <!-- XSAlert CSS -->
+    <link rel="stylesheet" href="../assets/css/xs-alert-light-theme.css">
+    <!-- XAlert core JS -->
+    <script src="../assets/js/xs-alert.js"></script>
+    <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
+    <link rel="stylesheet" href="../assets/prettify/skins/sons-of-obsidian.css" />
+    <link rel="stylesheet" href="../assets/css/ov.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-QS025GYRY5');
+    </script>
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+    <section class="container is-fluid p-2 mb-3">
+        <div class="container p-3">
+            <h3 class="title is-4 mt-3 mb-3 has-text-primary">EQUALTO VALIDATION</h3>
+            <article>
+                <p class="mb-2 mt-3">This validation falls under the group <b>Attributes Validation</b> and they follow this common syntax.</p>
+                <pre
+                    class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FORM_INPUT_NAME" => array(<br>      ["ATTRIBUTE_TITLE", "VALUE", "CUSTOM_ERROR_MESSAGE"]<br> )<br>);</pre>
+                <p class="mt-3">This validation checks if two input names have the same value. To use this validation, you need to
+                    define the <b>EQUALTO</b> rule on the <b>first Input Name </b>and then provide the <b>second Input
+                        Name</b> as a value to this validation rule.
+                </p>
+                <div class="table-responsive">
+                    <table class="table is-bordered w-50 mt-3">
+                        <thead>
+                            <th>
+                                Rule Title
+                            </th>
+                            <th>
+                                Possible value <span class="tag is-warning">Input Name</span>
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    EQUALTO
+                                </td>
+                                <td>
+                                    confirm_password
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="notification is-info is-light mt-3 mb-3">This is useful if you need to validate a
+                    <b>password</b> and <b>confirm password</b> fields.
+                </p>
+                <div class="mt-3">
+                    <p class="mb-4">Follow the syntax below to use the <b>EQUALTO</b> validation rule.</p>
+
+                    <pre
+                        class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FIRST_INPUT_NAME" => array(<br>    ["EQUALTO", "SECOND_INPUT_NAME", "CUSTOM_ERROR_MESSAGE"]<br>  )<br>);<br>//sample validation<br>$valRules = array(<br>  "password" => array(<br>    ["R", "Your password is required"],<br>    ["EQUALTO", "confirm_password", "Both passwords do not match"]<br>  )<br>);</pre>
+                </div>
+                <div class="mt-3 notification is-danger is-light">
+                    <p>You have validated a form and there are validation errors, how do you handle these errors?</p>
+                    <a href="handle-errors.html" class="is-block mt-3 button has-fa-icon is-danger">Learn more <i
+                            class="fas fa-angle-right"></i></a>
+                </div>
+            </article>
+            <div class="mt-5">
+                <h5 class="title is-5 mb-3">DEMO FORM</h5>
+                <form method="post" id="form_demo" class="demo-form-bg mw-500 p-3" novalidate>
+                    <div class="field">
+                        <label class="label">Password <span class="has-text-danger">*</span></label>
+                        <input id="inp_pass" name="password" class="input" type="password" placeholder="Your Password">
+                    </div>
+                    <div class="field">
+                        <label class="label">Confirm password <span class="has-text-danger">*</span></label>
+                        <input id="inp_con_pass" name="confirm_password" type="password" class="input"
+                            placeholder="Re-enter password">
+                    </div>
+                    <div class="field">
+                        <button id="btn_form_demo" class="has-fa-icon button is-primary" type="submit">Run test</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="mt-3 container has-text-centered">
+            <a href="file.html" class="has-fa-icon button is-primary is-light">FILE VALIDATION&nbsp;<i
+                    class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <h3 class="title is-4 has-text-white mb-2">Let's Connect</h3>
+            <ul class="list-inline list-unstyled ml-0">
+                <li class="list-inline-item"><a href="https://twitter.com/ugorji_simon" target="_blank"
+                        class="button is-info">
+                        <i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3" target="_blank"
+                        class="button is-info"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+            <div class="mt-20 mb-20">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
+                    class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
+            </div>
+            <p class="text-gray mt-20">octaValidate PHP @ 1.0 🚀 Since July 2022 </p>
+        </div>
+    </footer>
+    <script src="../ov.js"></script>
+    <script>
+        const url = "https://simon-ugorji.000webhostapp.com/projects/octavalidate/demo_forms/demo_val_equalto.php";
+        const success = (form_id, data) => {
+            removeErrors(form_id);
+            if (data.success === true) {
+                XSAlert({
+                    title: 'Couldn\'t break through?',
+                    message: 'Demo Form passed the validation test! 😎',
+                    icon: 'question',
+                })
+            }
+        }
+        $('#form_demo').on('submit', function (e) {
+            e.preventDefault();
+            $('#btn_form_demo').attr("disabled", "disabled");
+
+            postData(url, 'form_demo', success, showErrors);
+        })
+    </script>
+</body>
+
+</html>

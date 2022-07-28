@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="has-navbar-fixed-top">
+<title>octavalidate-PHP | Getting Started</title>
+
+<head>
+    <meta name="author" content="Simon Ugorji">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="octavalidate-PHP: This PHP Library helps to validate your forms server-side using validation rules and sophisticated regular expressions">
+    <meta name="title" content="octavalidate-PHP: Getting started">
+    <meta property="og:description"
+        content="octavalidate-PHP: This PHP Library helps to validate your forms server-side using validation rules and sophisticated regular expressions">
+    <meta property="og:title" content="octavalidate-PHP: Getting started">
+    <meta property="og:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta name="twitter:title" content="octavalidate-PHP: Getting started">
+    <meta name="twitter:description"
+        content="octavalidate-PHP: This PHP Library helps to validate your forms server-side using validation rules and sophisticated regular expressions">
+        <meta charset="UTF-8">
+        <link rel="icon" href="../assets/img/ov-image.png">
+        <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+        <link rel="stylesheet" href="../assets/css/all.min.css" />
+        <!-- jQuery -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
+        <link rel="stylesheet" href="../assets/prettify/skins/sons-of-obsidian.css" />
+        <link rel="stylesheet" href="../assets/css/ov.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QS025GYRY5');
+    </script>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <section class="container is-fluid p-2 has-navbar-fixed-top">
+        <div class="container p-3">
+            <h3 class="title is-3 mt-3 mb-3 font-weight-bold has-text-primary">GETTING STARTED</h3>
+            <article>
+                <p>Welcome to this <b class="has-text-primary">GREAT library</b> that helps to validate your forms server-side using validation rules & sophisticated regular expressions.</p>
+                <h5 class="mb-3 mt-3 title is-5">Before you proceed ...</h5>
+                <p class="notification is-warning is-light">
+                    Make sure your form inputs have a <b>unique id</b> attached to it and <b>unique names</b> too. At the moment, it is your responsibility to return the <b>POST value</b> for the user to see the value submitted.
+                </p>
+                <p class="notification is-danger is-light">
+                    We don't store data submitted through the forms, we only validate & discard them Immediately.
+                </p>
+                <h3 class="title is-4 mt-4">INSTALLATION</h3>
+                <h5 class="tag is-primary is-light title is-5 mt-3 mb-2">COMPOSER</h5>
+                <pre class="prettyprint">$ composer require simon-ugorji/octavalidate-php</pre>
+                <hr>
+                <h5 class="tag is-danger is-light title is-5 mb-2">LOCAL</h5>
+                <ul class="ml-4 mb-3" style="list-style-type:disc">
+                    <li>Download and import the latest release to your project.</li>
+                    <li>In your project, use the <code>require</code> keyword & include the file <code>Validate.php</code></li>
+                    <li>Now with the <code>use</code> keyword, link the class to your project and create a new instance of the class by passing in the form id as the first argument and any configuration as the second argument.</li>
+                </ul>
+                <pre class="prettyprint lang-php"
+                    class="mb-4">require 'src/Validate.php';<br>use Validate\octaValidate;<br>$myForm = new octaValidate('FORM_ID');</pre>
+                <div class="mt-5">
+                    <h3 class="title is-4 mt-5 mb-3">HOW TO USE</h3>
+                    <p class="mb-3">Create a new instance of the class <b>octavalidate</b>, and pass in the form ID as the first argument, then any configuration as the second argument.</p>
+                    <p class="mb-3">Define validation rules for the form inputs and pass in the rules to the <code>validate</code> method.</p>
+                    <div class="notification is-warning is-light">
+                        Learn more about the configurations available.<br>
+                        <a href="config.html" class="button is-warning mt-2">Learn more&nbsp;<i class="fas fa-angle-right"></i></a>
+                    </div>
+                    <pre class="prettyprint lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br>  "stripTags" => true,<br>  "strictMode" => true<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);<br>//define rules for each form input name<br>$valRules = array(<br>  "uname" => array(<br>    ["R", "Your username is required"]<br> ),<br>  "email" => array(<br>    ["R", "Your Email Address is required"],<br>    ["EMAIL", "Your Email Address is invalid!"]<br>) );<br>//begin validation<br>if ($myForm->validate($valRules) === true){<br>//process form data here<br>}else{<br>  //return errors<br>  $myForm->getErrors();<br>}</pre>
+                </div>
+                <div class="mt-5">
+                    <p>The <b>validate method</b> returns a <b>boolean.</b></p>
+                    <ul class="ml-3 p-3 list-disc mt-2">
+                        <li><b>true</b> means there are no validation errors</li>
+                        <li><b>false</b> means there are validation errors</li>
+                    </ul>
+                    <div class="mt-5 container has-text-centered">
+                        <a href="api.html" class="has-fa-icon button is-primary is-light">API methods&nbsp;<i class="fas fa-arrow-right"></i></a>
+                    </div>
+            </article>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <h3 class="title is-4 has-text-white mb-2">Let's Connect</h3>
+            <ul class="list-inline list-unstyled ml-0">
+                <li class="list-inline-item"><a href="https://twitter.com/ugorji_simon" target="_blank"
+                        class="button is-info">
+                        <i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3" target="_blank"
+                        class="button is-info"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+            <div class="mt-20 mb-20">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
+                    class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
+            </div>
+            <p class="text-gray mt-20">octaValidate PHP @ 1.0 🚀 Since July 2022 </p>
+        </div>
+    </footer>
+    <script src="../ov.js"></script>
+   
+</body>
+
+</html>

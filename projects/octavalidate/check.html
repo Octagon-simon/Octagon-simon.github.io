@@ -1,28 +1,28 @@
 <!doctype html>
 <html class="has-navbar-fixed-top">
-<title>octavalidate | Checkbox or Radio validation</title>
+<title>octavalidate | Checkbox validation</title>
 
 <head>
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="octaValidate: Learn more about the Checkbox or Radio Element Validation contained in this GREAT library">
-    <meta name="title" content="octaValidate: Checkbox or Radio Element Validation">
+        content="octaValidate: Learn more about the Checkbox Element Validation contained in this GREAT library">
+    <meta name="title" content="octaValidate: Checkbox Element Validation">
     <meta property="og:description"
-        content="octaValidate: Learn more about the Checkbox or Radio Element Validation contained in this GREAT library">
-    <meta property="og:title" content="octaValidate: Checkbox or Radio Element Validation">
+        content="octaValidate: Learn more about the Checkbox Element Validation contained in this GREAT library">
+    <meta property="og:title" content="octaValidate: Checkbox Element Validation">
     <meta property="og:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="octaValidate: Checkbox or Radio Element Validation">
+    <meta name="twitter:title" content="octaValidate: Checkbox Element Validation">
     <meta name="twitter:description"
-        content="octaValidate: Learn more about the Checkbox or Radio Element Validation contained in this GREAT library">
+        content="octaValidate: Learn more about the Checkbox Element Validation contained in this GREAT library">
     <link rel="icon" href="assets/img/ov-image.png">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
-    <script src="https://unpkg.com/octavalidate@1.1.4/native/validate.js"></script>
+    <script src="https://unpkg.com/octavalidate@1.2.0/native/validate.js"></script>
     <!-- jQuery -->
     <script src="assets/js/jquery.min.js"></script>
     <!-- XSAlert CSS -->
@@ -41,91 +41,14 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="https://bulma.io">
-                    <img src="assets/img/web.png">
-                </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="./">
-                        Get started
-                    </a>
-                    <a class="navbar-item" href="octavalidate-with-npm.html">
-                        Get started with NPM
-                    </a>
-
-                    <a class="navbar-item" href="https://octagon-simon.github.io/octaValidate/demo.html">
-                        Demo
-                    </a>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            Documentation
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item" href="./config.html">
-                                Configuration options
-                            </a>
-                            <a class="navbar-item" href="./api.html">
-                                API methods
-                            </a>
-                            <a class="navbar-item" href="./rules.html">
-                                Validation rules
-                            </a>
-                            <a class="navbar-item" href="./length.html">
-                                Length validation
-                            </a>
-                            <a class="navbar-item" href="./equal.html">
-                                Equalto validation
-                            </a>
-                            <a class="navbar-item" href="./check.html">
-                                Checkbox validation
-                            </a>
-                            <a class="navbar-item" href="./file.html">
-                                File validation
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item" href="https://github.com/Octagon-simon/octaValidate/issues/new">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div>
-                    <a class="navbar-item" href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4">
-                        Donate
-                    </a>
-                </div>
-
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-primary"
-                                href="https://github.com/Octagon-simon/octaValidate/archive/refs/tags/v1.1.4.zip">
-                                <strong>Download&nbsp;<i class="fas fa-download"></i></strong>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+    <header id="header">
     </header>
     <section class="container is-fluid p-2 mb-3">
         <div class="container p-3">
-            <h3 class="title is-4 mt-3 mb-3 has-text-primary">CHECKBOX OR RADIO ELEMENT
+            <h3 class="title is-4 mt-3 mb-3 has-text-primary">CHECKBOX ELEMENT
             </h3>
             <article>
-                <p>To mark a checkbox or radio element as <b>required,</b> use the <code>R</code> validation rule.</p>
+                <p>To make a checkbox element <b>required,</b> use the <code>R</code> validation rule.</p>
                 <p class="mt-2">You may also provide a custom message using <code>ov-required:msg</code> attribute.</p>
                 <h5 class="title is-5 mt-4 mb-2">Custom message attribute</h5>
                 <div class="table-responsive">
@@ -154,19 +77,13 @@
             <div class="mt-5">
                 <h5 class="title is-5 mb-3">DEMO FORM</h5>
                 <pre id="code-section"
-                    class="mt-4">&lt;!-- checkbox --&gt;<br>&lt;input id="inp_check" type="checkbox" octavalidate="R" ov-required:msg="You have to accept the terms and conditions"&gt;<br>&lt;!-- radio --&gt;<br>&lt;input id="inp_radio" type="radio" octavalidate="R" ov-required:msg="You have to accept the terms and conditions"&gt;</pre>
+                    class="mt-4">&lt;!-- checkbox --&gt;<br>&lt;input id="inp_check" type="checkbox" octavalidate="R" ov-required:msg="You have to accept the terms and conditions"&gt;</pre>
             </div>
 
-            <p class="notification is-info p-4 mt-5">NOW, TRY TO BREAK THROUGH! 😎</p>
             <section class="p-5 mt-3" style="background-color: #f7f7f7;">
                 <form class="mt-2 mw-300" id="form_demo" novalidate>
                     <div class="field">
                         <input type="checkbox" id="inp_check" octavalidate="R"
-                            ov-required:msg="You have to accept the terms and conditions">I accept the terms and
-                        conditions
-                    </div>
-                    <div class="field">
-                        <input type="radio" id="inp_terms" octavalidate="R"
                             ov-required:msg="You have to accept the terms and conditions">I accept the terms and
                         conditions
                     </div>
@@ -197,7 +114,7 @@
                 <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4" class="button is-primary has-fa-icon"><i
                         class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
-            <p class="text-gray mt-20">octaValidate @ 1.1.4 🚀 Since January 2022 </p>
+            <p class="text-gray mt-20">octaValidate @ 1.2.0 🚀 Since January 2022 </p>
         </div>
     </footer>
     <script src="./ov.js"></script>

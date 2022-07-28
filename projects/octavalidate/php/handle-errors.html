@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="has-navbar-fixed-top">
+<title>octavalidate | Handle Server Side Errors</title>
+
+<head>
+    <meta name="author" content="Simon Ugorji">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="octaValidate: Learn more about the EqualTo Validation Attribute contained in this GREAT library">
+    <meta name="title" content="octaValidate: EqualTo Validation Attribute">
+    <meta property="og:description"
+        content="octaValidate: Learn more about the EqualTo Validation Attribute contained in this GREAT library">
+    <meta property="og:title" content="octaValidate: EqualTo Validation Attribute">
+    <meta property="og:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta name="twitter:title" content="octaValidate: EqualTo Validation Attribute">
+    <meta name="twitter:description"
+        content="octaValidate: Learn more about the EqualTo Validation Attribute contained in this GREAT library">
+    <meta charset="UTF-8">
+    <link rel="icon" href="../assets/img/ov-image.png">
+    <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <!-- jQuery -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
+    <link rel="stylesheet" href="../assets/prettify/skins/sons-of-obsidian.css" />
+    <link rel="stylesheet" href="../assets/css/ov.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-QS025GYRY5');
+    </script>
+</head>
+
+<body>
+    <header id="header">
+        
+    </header>
+    <section class="container is-fluid p-2 mb-3">
+        <div class="container p-3">
+            <h3 class="title is-4 mt-3 mb-3 has-text-primary">SERVER-SIDE VALIDATION ERRORS</h3>
+            <article>
+                <p class="mb-3">It is really necessary to handle <b>server-side</b> validation errors. This is because the user needs to know what validation test(s) failed and the one(s) that passed.
+                </p>
+                <p class="mb-3">Immediately you invoke the <b>validate</b> method, the library loops through the <b>POST ARRAY</b>, executes validation tests, and stores errors if any test fails. </p>
+                <p class="mb-3"> To retrieve these errors, you would do something like this;</p>
+                <pre class="prettyprint lang-php">if($myForm->validate($valRules) === true){<br>  //process form data here<br>}else{<br>  //return errors<br>  print_r($myForm->getErrors());<br>}</pre>
+                <p class="mt-2 mb-2 notification is-danger is-light">Make sure to invoke the <code>getErrors()</code> method, only when the validate method returns <b>false!</b></p>
+                <p class="mb-5 mt-3">Now that we have retrieved the errors, we need to call a <b>JavaScript</b> function to help us display these errors to the end-user.
+                </p>
+                <h5 class="title is-4 mb-3">HELPER SCRIPT</h5>
+                <p>There is a <b>helper script</b> containing the JavaScript functions needed to display these errors that is attached to the library.</p>
+                <p class="mt-2 mb-2 notification is-info is-light">Navigate to <b>library_root_folder/frontend/helper.js</b> to locate this helper script, then include the functions to your project.</p>
+                <section>
+                    <h6 class="title is-6 tag is-warning mb-2">showErrors</h6>
+                    <p class="p-3">Invoke this function and pass in the error object from the method <code>getErrors()</code> to insert errors to the form.</p>
+                    <h6 class="title is-6 tag is-warning mb-2">removeErrors</h6>
+                    <p class="p-3">Call this function and pass in a formID to remove any error(s) inserted by the <code>showErrors</code> function.</p>
+                </section>
+                <section id="handle-errors-with-ajax" class="mt-4">
+                    <h4 class="mb-4 title is-4">In case you're using ...</h4>
+                    <h5 class="mb-3 title is-5 tag is-primary">AJAX</h5>
+                    <p class="mb-4">If you're using Ajax, within the <b>error method</b>, you need to call the <code>showErrors</code> function and pass in the error object for the function to insert errors into the form, then within the <b>success method</b>, you need to call the  <code>removeErrors</code> function and pass in the formID to remove any errors present in the form. </p>
+
+                    <pre class="prettyprint lang-js"> $.ajax({<br>    ... <br>  success: function (res) {<br>     //pass in the form id to this function<br>     removeErrors(formId);<br>  },<br>  error: function (xhr) {<br>      if (xhr.readyState === 4) {<br>         //pass in the errors array to this function<br>         showErrors(JSON.parse(xhr.responseText));<br>      }<br>  }<br>    ...<br>})</pre>
+
+                    <p class="notification is-warning is-light mt-4 mb-4">Remember that not all <b>failed http requests</b> are to be treated as validation errors. You can set a response code to make your script understand that the failed request is a validation error.</p>
+                    </section>
+                    <section id="handle-errors-with-php" class="mt-3">
+                    <h4 class="mb-3 title is-5 tag is-warning">PHP DIRECT</h4>
+                    <p class="mb-4">If your form is submitted to the page itself, you can easily call the <code>showErrors</code> function and pass in the error object for the function to insert errors into the form.</p>
+
+                    <pre class="prettyprint lang-php">if($myForm->validate($valRules) === true){<br>    //process form data here<br>}else{<br>    //return and display errors<br>    print('&lt;script&gt;<br>    document.addEventListener("DOMContentLoaded", function(){<br>       showErrors(' . $myForm->getErrors() . ');<br>    });&lt;/script&gt;');<br>}</pre>
+                    </section>
+            </article>
+            <hr>
+                <div class="p-2" id="helper-script-for-frontend-library">
+                    <h4 class="title is-4 mb-2">HELPER SCRIPT FOR FRONTEND LIBRARY</h4>
+                    <p class="mb-3">Well if you're using this library for frontend validation, you do not need to include the helper script because the functions contained in that script is already included in the library for frontend validation.</p>
+
+                    <pre class="prettyprint lang-js mb-5">//create new instance<br>const myForm = new octaValidate('FORM_ID');<br>//invoke this method to show server-side validation errors<br>myFrom.showBackendErrors('ERROR_OBJECT');<br>//invoke this method to remove errors present in a form<br>myForm.removeBackendErrors('FORM_ID');</pre>
+                    <div class="notification is-warning is-light">
+                        <p>Do you wish to use this Library for frontend validation? Click on the button below to learn more.</p>
+                    <a class="button is-warning" href="../index.html" class="" target="_blank">Learn more&nbsp;<i class="fas  fa-angle-right"></i></a>
+                    </div>
+                </div>
+            <div class="mt-5">
+                <h5 class="title is-5 mb-3">DEMO FORM</h5>
+                <div class="notification is-info is-light">
+                    <p class="m-0">They are all over the PHP Docs, did you miss any?</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 container has-text-centered">
+            <a href="rules.html" class="has-fa-icon button is-primary is-light">VALIDATION RULES&nbsp;<i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <h3 class="title is-4 has-text-white mb-2">Let's Connect</h3>
+            <ul class="list-inline list-unstyled ml-0">
+                <li class="list-inline-item"><a href="https://twitter.com/ugorji_simon" target="_blank"
+                        class="button is-info">
+                        <i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3" target="_blank"
+                        class="button is-info"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+            <div class="mt-20 mb-20">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
+                    class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
+            </div>
+            <p class="text-gray mt-20">octaValidate PHP @ 1.0 🚀 Since July 2022 </p>
+        </div>
+    </footer>
+    <script src="../ov.js"></script>
+</body>
+
+</html>
