@@ -52,8 +52,9 @@
             <h3 class="title is-4 mt-3 mb-3 has-text-primary">VALIDATION RULES
             </h3>
             <article>
-                <p>Validation rules allows you to perform validations on form inputs.
+                <p class="mb-3">Validation rules allows you to perform validations on form inputs using the rule tiles provided.
                 </p>
+                <pre class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FORM_INPUT_NAME" => array(<br>    ["RULE_TITLE", "CUSTOM_ERROR_MESSAGE"]<br>  )<br>);<br></pre>
                 <p class="mt-2">Here, you can find all validation rules and their description.
                 </p>
                 <div class="table-responsive">
@@ -193,7 +194,7 @@
                     </p>
 
                     <pre
-                        class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FORM_INPUT_NAME" => array(<br>    ["RULE_TITLE", "CUSTOM_ERROR_MESSAGE"]<br>  )<br>);<br>//sample validation<br>$valRules = array(<br>  "username" => array(<br>    ["R", "Your username is required"]<br> ),<br>  "email" => array(<br>    ["R", "Your Email Address is required"],<br>    ["EMAIL", "Your Email Address is invalid!"]<br>  )<br>);</pre>
+                        class="prettyprint lang-php">//sample validation<br>$valRules = array(<br>  "username" => array(<br>    ["R", "Your username is required"]<br> ),<br>  "email" => array(<br>    ["R", "Your Email Address is required"],<br>    ["EMAIL", "Your Email Address is invalid!"]<br>  )<br>);</pre>
                     <p class="mt-3">After defining the rules, pass it to the <b>validate method</b> to begin validation.
                         <a href="api.html">Learn more</a></p>
                 </div>
