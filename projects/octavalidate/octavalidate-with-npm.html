@@ -20,6 +20,8 @@
     <meta name="twitter:title" content="octaValidate: Installing with NPM">
     <meta name="twitter:description"
         content="octaValidate: This JavaScript Library helps to validate your HTML forms using validation rules, sophisticated regular expressions and form input attributes">
+        <script src="./assets/prettify/run_prettify.js?autoload=true"></script>
+        <link rel="stylesheet" href="./assets/prettify/skins/sons-of-obsidian.css" />
     <link rel="icon" href="assets/img/ov-image.png">
     <link rel="stylesheet" href="./assets/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
@@ -36,84 +38,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="https://bulma.io">
-                    <img src="assets/img/web.png">
-                </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="./">
-                        Get started
-                    </a>
-                    <a class="navbar-item" href="octavalidate-with-npm.html">
-                        Get started with NPM
-                    </a>
-
-                    <a class="navbar-item" href="https://octagon-simon.github.io/octaValidate/demo.html">
-                        Demo
-                    </a>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            Documentation
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item" href="./config.html">
-                                Configuration options
-                            </a>
-                            <a class="navbar-item" href="./api.html">
-                                API methods
-                            </a>
-                            <a class="navbar-item" href="./rules.html">
-                                Validation rules
-                            </a>
-                            <a class="navbar-item" href="./length.html">
-                                Length validation
-                            </a>
-                            <a class="navbar-item" href="./equal.html">
-                                Equalto validation
-                            </a>
-                            <a class="navbar-item" href="./check.html">
-                                Checkbox validation
-                            </a>
-                            <a class="navbar-item" href="./file.html">
-                                File validation
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item" href="https://github.com/Octagon-simon/octaValidate/issues/new">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div>
-                    <a class="navbar-item" href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4">
-                        Donate
-                    </a>
-                </div>
-
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-primary"
-                                href="https://github.com/Octagon-simon/octaValidate/archive/refs/tags/v1.1.4.zip">
-                                <strong>Download&nbsp;<i class="fas fa-download"></i></strong>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+    <header id="header">
+        
     </header>
     <section class="container is-fluid p-2 has-navbar-fixed-top">
         <div class="container p-3">
@@ -125,22 +51,20 @@
                 <h5 class="title is-5 mb-2">INSTALL BROWSERIFY</h5>
                 <p class="mt-2 mb-3">There are 2 ways to install <b>browserify.</b></p>
                 <p class="tag is-warning title is-6">Install on your App</p>
-                <pre id="code-section">npm install browserify</pre>
+                <pre class="prettyprint">$ npm install browserify</pre>
                 <p class="tag is-warning title is-6 mt-5">Or Install globally</p>
-                <pre id="code-section">npm install -g browserify</pre>
+                <pre class="prettyprint">$ npm install -g browserify</pre>
                 <hr>
                 <h5 class="title is-5 mb-2">INSTALL OCTAVALIDATE</h5>
-                <pre id="code-section">npm install octavalidate</pre>
+                <pre class="prettyprint">$ npm install octavalidate</pre>
                 <hr>
                 <p class="mb-3">Now create a file <span class="tag is-info is-light">ov.js</span> that will store all
                     form validations for your app.</p>
                 <p>Within this file, require the library, then initialize the function after the <b>DOM</b> is ready,
                     and pass in the form ID and any configuration options as the second argument.</p>
-                <p class="mt-2 mb-2 notification is-info is-light">Learn more about configuration options <a
-                        href="config.html">here</a></p>
+                <p class="mt-2 mb-2 notification is-info is-light">Learn more about configuration options <a href="config.html">here</a></p>
                 <p class="tag is-info mb-2 title is-6">ov.js</p>
-                <pre id="code-section"
-                    class="code-section-npm">&lt;script&gt;<br>//require the module<br>const octaValidate = require ('octavalidate');<br>//initialise the function after DOM is ready!!!<br>document.addEventListener('DOMContentLoaded', function () {<br>  const myForm = new octaValidate('my_form');<br>  //listen for submit event<br>  document.querySelector('#my_form').addEventListener('submit', function(e){<br>    e.preventDefault();<br>    //invoke the method<br>    if(myForm.validate() === true){ <br>      //validation successful, process form data here<br>    } else {<br>      //validation failed<br>    }<br>  })<br>})&lt;/script&gt;</pre>
+                <pre class="prettyprint lang-js">//require the module<br>const octaValidate = require ('octavalidate');<br>//initialise the function after DOM is ready!!!<br>document.addEventListener('DOMContentLoaded', function () {<br>  const myForm = new octaValidate('my_form');<br>  //listen for submit event<br>  document.querySelector('#my_form').addEventListener('submit', function(e){<br>    e.preventDefault();<br>    //invoke the method<br>    if(myForm.validate() === true){ <br>      //validation successful, process form data here<br>    } else {<br>      //validation failed<br>    }<br>  })<br>})</pre>
                 <p class="mt-4 notification is-danger is-light">Make sure to initialise the function after the DOM is
                     ready!</p>
                 <hr>
@@ -151,14 +75,14 @@
                     <b>globally</b>.
                 </p>
                 <p class="mb-3">Type the code below in a command-line to build your validations.</p>
-                <pre id="code-section">browserify ov.js -o validations.js</pre>
+                <pre class="prettyprint">$ browserify ov.js -o validations.js</pre>
                 <hr>
                 <p class="tag title is-6 is-warning mb-2 ">package.json</p>
                 <p class="mb-3">Open your app's <span class="tag is-info is-light">package.json</span> file and add /
                     modify the lines below to build the <span class="tag is-info is-light">ov.js</span>.</p>
-                <pre id="code-section">"scripts": {<br>  "build" : "browserify ov.js -o validations.js"<br>}</pre>
+                <pre class="prettyprint">"scripts": {<br>  "build" : "browserify ov.js -o validations.js"<br>}</pre>
                 <p class="mt-2 mb-2">Then run</p>
-                <pre id="code-section">npm run build</pre>
+                <pre class="prettyprint">$ npm run build</pre>
                 <hr>
                 <p class="mb-3">If you can see the file <span class="tag is-info is-light">validations.js</span>, it
                     means that we have successfully built validations for the form. All you have to do now is to link
@@ -188,7 +112,7 @@
                 <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
                     class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
-            <p class="text-gray mt-20">octaValidate @ 1.1.4 🚀 Since January 2022 </p>
+            <p class="text-gray mt-20">octaValidate @ 1.2.0 🚀 Since January 2022 </p>
         </div>
     </footer>
     <script src="./ov.js"></script>

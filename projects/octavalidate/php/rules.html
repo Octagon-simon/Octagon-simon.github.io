@@ -1,37 +1,38 @@
 <!doctype html>
 <html class="has-navbar-fixed-top">
-<title>octavalidate | Validation Rules</title>
+<title>octavalidate-PHP | Validation Rules</title>
 
 <head>
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="octaValidate: Learn more about the validation rules contained in this GREAT library">
-    <meta name="title" content="octaValidate: Validation rules">
+        content="octaValidate-PHP: Learn more about the validation rules contained in this GREAT library">
+    <meta name="title" content="octaValidate-PHP: Validation rules">
     <meta property="og:description"
-        content="octaValidate: Learn more about the validation rules contained in this GREAT library">
-    <meta property="og:title" content="octaValidate: Validation rules">
+        content="octaValidate-PHP: Learn more about the validation rules contained in this GREAT library">
+    <meta property="og:title" content="octaValidate-PHP: Validation rules">
     <meta property="og:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="octaValidate: Validation rules">
+    <meta name="twitter:title" content="octaValidate-PHP: Validation rules">
     <meta name="twitter:description"
-        content="octaValidate: Learn more about the validation rules contained in this GREAT library">
-    <link rel="icon" href="assets/img/ov-image.png">
+        content="octaValidate-PHP: Learn more about the validation rules contained in this GREAT library">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./assets/css/bulma.min.css" />
-    <link rel="stylesheet" href="./assets/css/all.min.css" />
-    <script src="https://unpkg.com/octavalidate@1.2.0/native/validate.js"></script>
+    <link rel="icon" href="../assets/img/ov-image.png">
+    <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
     <!-- jQuery -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
     <!-- XSAlert CSS -->
-    <link rel="stylesheet" href="assets/css/xs-alert-light-theme.css">
+    <link rel="stylesheet" href="../assets/css/xs-alert-light-theme.css">
     <!-- XAlert core JS -->
-    <script src="assets/js/xs-alert.js"></script>
-    <link rel="stylesheet" href="./assets/css/ov.css" />
+    <script src="../assets/js/xs-alert.js"></script>
+    <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
+    <link rel="stylesheet" href="../assets/prettify/skins/sons-of-obsidian.css" />
+    <link rel="stylesheet" href="../assets/css/ov.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
     <script>
@@ -51,14 +52,9 @@
             <h3 class="title is-4 mt-3 mb-3 has-text-primary">VALIDATION RULES
             </h3>
             <article>
-                <p>validation rules allows you to validate form inputs, and they have a separate attribute to display a
-                    message when a validation test fails.
+                <p>Validation rules allows you to perform validations on form inputs.
                 </p>
-                <p class="notification is-warning is-light">In as much as you are allowed to use any validation rule,
-                    there are rules that are not supported depending on the input type.</p>
-                <p class="mt-2">Here, you can find all validation rules that must be entered within the
-                    <code>octavalidate</code>
-                    attribute, as well as the attribute for a custom message.
+                <p class="mt-2">Here, you can find all validation rules and their description.
                 </p>
                 <div class="table-responsive">
                     <table class="table is-bordered w-50 mt-3">
@@ -69,9 +65,6 @@
                             <th>
                                 Description
                             </th>
-                            <th>
-                                Custom message attribute
-                            </th>
                         </thead>
                         <tbody>
                             <tr>
@@ -81,9 +74,6 @@
                                 <td>
                                     Required
                                 </td>
-                                <td>
-                                    ov-required:msg
-                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -91,9 +81,6 @@
                                 </td>
                                 <td>
                                     Email
-                                </td>
-                                <td>
-                                    ov-email:msg
                                 </td>
                             </tr>
                             <tr>
@@ -103,18 +90,12 @@
                                 <td>
                                     Letters Only
                                 </td>
-                                <td>
-                                    ov-alpha-only:msg
-                                </td>
                             </tr>
                             <tr>
                                 <td>
                                     ALPHA_SPACES
                                 </td>
                                 <td>Letters and Spaces
-                                </td>
-                                <td>
-                                    ov-alpha-spaces:msg
                                 </td>
                             </tr>
                             <tr>
@@ -124,9 +105,6 @@
                                 <td>
                                     Letters with Numbers
                                 </td>
-                                <td>
-                                    ov-alpha-numeric:msg
-                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -134,9 +112,6 @@
                                 </td>
                                 <td>
                                     Lowercase letters
-                                </td>
-                                <td>
-                                    ov-lower-alpha:msg
                                 </td>
                             </tr>
                             <tr>
@@ -146,9 +121,6 @@
                                 <td>
                                     Uppercase letters
                                 </td>
-                                <td>
-                                    ov-upper-alpha:msg
-                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -156,9 +128,6 @@
                                 </td>
                                 <td>
                                     Numbers or Digits
-                                </td>
-                                <td>
-                                    ov-digits:msg
                                 </td>
                             </tr>
                             <tr>
@@ -168,9 +137,6 @@
                                 <td>
                                     Password
                                 </td>
-                                <td>
-                                    ov-pwd:msg
-                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -178,9 +144,6 @@
                                 </td>
                                 <td>
                                     URL
-                                </td>
-                                <td>
-                                    ov-url:msg
                                 </td>
                             </tr>
                             <tr>
@@ -190,9 +153,6 @@
                                 <td>
                                     URL with Query Parameters
                                 </td>
-                                <td>
-                                    ov-url-qp:msg
-                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -201,17 +161,11 @@
                                 <td>
                                     Date in the format MM/DD/YYYY
                                 </td>
-                                <td>
-                                    ov-date-mdy:msg
-                                </td>
                             </tr>
                             <tr>
                                 <td>USERNAME</td>
                                 <td>
                                     Username
-                                </td>
-                                <td>
-                                    ov-username:msg
                                 </td>
                             </tr>
                             <tr>
@@ -219,56 +173,58 @@
                                 <td>
                                     General Text
                                 </td>
-                                <td>
-                                    ov-text:msg
-                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="notification is-info is-light mt-4 mb-2">You can use the <code>R</code> validation rule to
-                    validate all input types, but not
-                    including <b>reset, hidden and submit</b>.</p>
-                <p class="notification is-info is-light">The <code>TEXT</code> validation rule supports these special
-                    characters
-                    <code>(. , / () [] & ! '' "" : ; ?)</code> and this means that any character outside the supported
-                    set will be counted as <b>invalid!</b>
-                </p>
-                <div class="mt-3 notification is-warning is-light">Can't see a rule that you need for your
+                <div class="mt-3 mb-3 notification is-warning is-light">Can't see a rule that you need for your
                     form? Use the <b>custom rule</b> api to build your own validation rule.<br>
                     <a href="api.html#custom-rule-method" class="is-block mt-3 button has-fa-icon is-warning">Learn more
                         <i class="fas fa-angle-right"></i></a>
                 </div>
+                <p class="notification is-info is-light mt-5">The <code>TEXT</code> validation rule supports these
+                    special
+                    characters
+                    <code>(. , / () [] & ! '' "" : ; ?)</code> and this means that any character outside the supported
+                    set will be counted as <b>invalid!</b>
+                </p>
+                <div>
+                    <p class="mb-4">Follow the syntax below to define a validation rule for a <b>form input name.</b>
+                    </p>
+
+                    <pre
+                        class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FORM_INPUT_NAME" => array(<br>    ["RULE_TITLE", "CUSTOM_ERROR_MESSAGE"]<br>  )<br>);<br>//sample validation<br>$valRules = array(<br>  "username" => array(<br>    ["R", "Your username is required"]<br> ),<br>  "email" => array(<br>    ["R", "Your Email Address is required"],<br>    ["EMAIL", "Your Email Address is invalid!"]<br>  )<br>);</pre>
+                    <p class="mt-3">After defining the rules, pass it to the <b>validate method</b> to begin validation.
+                        <a href="api.html">Learn more</a></p>
+                </div>
+                <p class="notification is-info is-light mt-5">
+                    If you don't provide a <b>custom error message</b>, the script will use the default one available.
+                </p>
+                <div class="mt-3 notification is-danger is-light">
+                    <p>You have validated a form and there are validation errors, how do you handle these errors?</p>
+                    <a href="handle-errors.html" class="is-block mt-3 button has-fa-icon is-danger">Learn more <i
+                            class="fas fa-angle-right"></i></a>
+                </div>
+                <p class="notification is-warning is-light">If you want to prevent the browser from using its inbuilt
+                    validation on your form, add the attribute <code>novalidate</code> to the form tag.</p>
             </article>
             <div class="mt-5">
                 <h5 class="title is-5 mb-3">DEMO FORM</h5>
-                <p>Here's a demo form utilising some of the validation rules above and a custom validation message.</p>
-                <pre id="code-section"
-                    class="mt-4">&lt;!-- username --&gt;<br>&lt;input id="inp_uname" type="text" octavalidate="R,USERNAME" ov-username:msg="This username is invalid"&gt;<br>&lt;!-- email --&gt;<br>&lt;input id="inp_email" type="email" octavalidate="R,EMAIL" ov-email:msg="This email address is invalid"&gt;<br>&lt;!-- description --&gt;<br>&lt;textarea id="inp_desc" octavalidate="R,TEXT" ov-text:msg="Your description contains invalid characters"&gt;&lt;/textarea&gt;</pre>
-            </div>
-            <section class="p-5 mt-3" style="background-color: #f7f7f7;">
-                <form class="mt-2 mw-300" id="form_demo" novalidate>
+                <form method="post" id="form_demo" class="demo-form-bg mw-500 p-3" novalidate>
                     <div class="field">
-                        <label class="label">Username <span style="color:#ff0000">*</span></label>
-                        <input id="inp_uname" type="text" octavalidate="R,USERNAME"
-                            ov-username:msg="This username is invalid" class="input">
+                        <label class="label">Username <span class="has-text-danger">*</span></label>
+                        <input id="inp_uname" name="username" class="input" placeholder="username">
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Email <span class="has-text-danger">*</span></label>
+                        <input id="inp_email" name="email" type="email" class="input" placeholder="email">
                     </div>
                     <div class="field">
-                        <label class="label">Email <span style="color:#ff0000">*</span></label>
-                        <input id="inp_email" type="email" octavalidate="R,EMAIL"
-                            ov-email:msg="This email address is invalid" class="input">
-                    </div>
-                    <div class="field">
-                        <label class="label">Description <span style="color:#ff0000">*</span></label>
-                        <textarea id="inp_desc" octavalidate="R,TEXT"
-                            ov-text:msg="Your description contains invalid characters" class="textarea"></textarea>
-                        <small>Try to provide characters outside the allowed set of characters</small>
-                    </div>
-                    <div class="field">
-                        <button class="button is-primary" type="submit">Run test</button>
+                        <button id="btn_form_demo" class="has-fa-icon button is-primary" type="submit">Run test</button>
                     </div>
                 </form>
-            </section>
+            </div>
         </div>
         <div class="mt-5 container has-text-centered">
             <a href="length.html" class="has-fa-icon button is-primary is-light">LENGTH VALIDATION&nbsp;<i
@@ -291,25 +247,27 @@
                 <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
                     class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
-            <p class="text-gray mt-20">octaValidate @ 1.2.0 🚀 Since January 2022 </p>
+            <p class="text-gray mt-20">octaValidate PHP @ 1.0 🚀 Since July 2022 </p>
         </div>
     </footer>
-    <script src="./ov.js"></script>
+    <script src="../ov.js"></script>
     <script>
-        //create instance of class
-        let formVal = new octaValidate('form_demo');
-
-        let formEl = document.querySelector('#form_demo');
-        formEl.addEventListener('submit', function (e) {
-            e.preventDefault();
-            //invoke the validate method
-            if (formVal.validate() === true) {
+        const url = "https://simon-ugorji.000webhostapp.com/projects/octavalidate/demo_forms/demo_val_rules.php";
+        const success = (form_id, data) => {
+            removeErrors(form_id);
+            if (data.success === true) {
                 XSAlert({
                     title: 'Couldn\'t break through?',
                     message: 'Demo Form passed the validation test! 😎',
                     icon: 'question',
                 })
             }
+        }
+        $('#form_demo').on('submit', function (e) {
+            e.preventDefault();
+            $('#btn_form_demo').attr("disabled", "disabled");
+
+            postData(url, 'form_demo', success, showErrors);
         })
     </script>
 </body>

@@ -23,6 +23,9 @@ body{
     display:contents;
     min-height:100%;
 }
+pre{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
 .has-bg-white{
     background-color:#fff !important;
 }
@@ -78,10 +81,16 @@ body{
 }
 .notification.is-info{
     border-left:.3em solid #1d72aa;
-    background-color: #eef6fc;
-    color: #1d72aa;
 }
-
+.notification.is-warning{
+    border-left:.3em solid #dbb416;
+}
+.notification.is-danger{
+    border-left:.3em solid #b10d2e;
+}
+.notification.is-primary{
+    border-left:.3em solid #00d1b2;
+}
 .text-left{
     text-align:left; 
 }

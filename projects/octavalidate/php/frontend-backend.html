@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="has-navbar-fixed-top">
+<title>octavalidate | FRONTEND & BACKEND VALIDATION</title>
+
+<head>
+    <meta name="author" content="Simon Ugorji">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="octaValidate: Learn more about the API methods contained in this GREAT library">
+    <meta name="title" content="octaValidate: API methods">
+    <meta property="og:description"
+        content="octaValidate: Learn more about the API methods contained in this GREAT library">
+    <meta property="og:title" content="octaValidate: API methods">
+    <meta property="og:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta name="twitter:title" content="octaValidate: API methods">
+    <meta name="twitter:description"
+        content="octaValidate: Learn more about the API methods contained in this GREAT library">
+        <meta charset="UTF-8">
+        <link rel="icon" href="../assets/img/ov-image.png">
+        <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+        <link rel="stylesheet" href="../assets/css/all.min.css" />
+        <!-- jQuery -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <!-- XSAlert CSS -->
+    <link rel="stylesheet" href="../assets/css/xs-alert-light-theme.css">
+    <!-- XAlert core JS -->
+    <script src="../assets/js/xs-alert.js"></script>
+        <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
+        <link rel="stylesheet" href="../assets/prettify/skins/sons-of-obsidian.css" />
+        <link rel="stylesheet" href="../assets/css/ov.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
+    <!--load frontend validation-->
+    <script src="https://unpkg.com/octavalidate@1.2.0/native/validate.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QS025GYRY5');
+    </script>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <section class="container is-fluid p-2">
+        <div class="container p-3">
+            <h3 class="title is-3 mt-3 mb-3 has-text-primary">FRONTEND & BACKEND VALIDATION</h3>
+                <div class="p-2">
+                    <p class="mb-4 notification is-warning is-light">Please make sure you've understood how to <a href="handle-errors.html">handle server-side validation errors</a> before you proceed with this documentation.</p>
+                    <p class="mb-3">In this documentation, I will be testing out both the Frontend of this library and the PHP backend of this library in one form.</p>
+                    <p class="mb-3">Since it is <del>slightly</del> impossible to bypass frontend validation, this form will have more validations in the backend section for you to see how <b>AMAZING</b> it is.</p>
+                    <div class="mt-5">
+                        <h5 class="title is-5 mb-3">DEMO FORM</h5>
+                        <form method="post" id="form_demo" class="demo-form-bg mw-500 p-3" novalidate>
+                            <div class="field">
+                                <label class="label">Username <span class="has-text-danger">*</span></label>
+                                <input id="inp_uname" octavalidate="R,USERNAME" name="username" type="text" class="input" placeholder="Your Username">
+                            </div>
+                            <div class="field">
+                                <label class="label">Age <span class="has-text-danger">*</span></label>
+                                <input id="inp_age" octavalidate="R,DIGITS" name="age" type="number" class="input" placeholder="Your Age">
+                            </div>
+                            <div class="field">
+                                <label class="label">Password <span class="has-text-danger">*</span></label>
+                                <input id="inp_pass" octavalidate="R" name="password" type="password" class="input" placeholder="Your password">
+                            </div>
+                            <div class="field">
+                                <label class="label">Confirm Password <span class="has-text-danger">*</span></label>
+                                <input id="inp_con_pass" name="confirm_password" type="password" class="input" placeholder="Re-enter password">
+                            </div>
+                            <div class="field">
+                                <button id="btn_form_demo" class="has-fa-icon button is-primary" type="submit">Run test</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <div class="p-2" id="helper-script-for-frontend-library">
+                    <h4 class="title is-4 mb-2">HELPER SCRIPT FOR FRONTEND LIBRARY</h4>
+                    <p class="mb-3">If you visited the doc page that explained how you can handle server-side validation errors, you will notice that you need to include a <b>helper script</b> that will display & remove the errors on the frontend.</p>
+                    <p class="mb-3">Well if you're using this library for frontend validation, you do not need to include the helper script because the functions contained in that script is already included in the library for frontend validation.</p>
+
+                    <pre class="prettyprint lang-js mb-5">//create new instance<br>const myForm = new octaValidate('FORM_ID');<br>//invoke this method to show backend validation errors<br>myFrom.showBackendErrors('ERROR_OBJECT');<br>//invoke this method to remove errors present in a form<br>myForm.removeBackendErrors('FORM_ID');</pre>
+                    <div class="notification is-warning is-light">
+                        <p>Do you wish to use this Library for frontend validation? Click on the button below to learn more.</p>
+                    <a class="button is-warning" href="../index.html" class="" target="_blank">Learn more&nbsp;<i class="fas  fa-angle-right"></i></a>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <h3 class="title is-4 has-text-white mb-2">Let's Connect</h3>
+            <ul class="list-inline list-unstyled ml-0">
+                <li class="list-inline-item"><a href="https://twitter.com/ugorji_simon" target="_blank"
+                        class="button is-info">
+                        <i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3" target="_blank"
+                        class="button is-info"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+            <div class="mt-20 mb-20">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
+                    class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
+            </div>
+            <p class="text-gray mt-20">octaValidate PHP @ 1.0 🚀 Since July 2022 </p>
+        </div>
+    </footer>
+    <script src="../ov.js"></script>
+    <script>
+        const url = "https://simon-ugorji.000webhostapp.com/projects/octavalidate/demo_forms/demo_val_frontend_backend.php";
+        //load frontend validation
+        const myForm = new octaValidate('form_demo');
+        const success = (form_id, data) => {
+            removeErrors(form_id);
+            if (data.success === true) {
+                XSAlert({
+                    title: 'Couldn\'t break through?',
+                    message: 'Demo Form passed the validation test! 😎',
+                    icon: 'question',
+                })
+            }
+        }
+        //handle form demo
+        $('#form_demo').on('submit', function (e) {
+            e.preventDefault();
+            if(myForm.validate() === true){
+                postData(url, 'form_demo', success, showErrors);
+                $('#btn_form_demo').attr("disabled", "disabled");
+            }
+        });
+    </script>
+</body>
+
+</html>
