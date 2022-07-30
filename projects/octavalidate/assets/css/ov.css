@@ -12,10 +12,6 @@
   background-color: #eee;
 }
 
-::-webkit-scrollbar-thumb{
-background: #00d1b2;
-border-radius:5px ;
-}
 html, body{
     font-family: 'Roboto', sans-serif !important;
 }
