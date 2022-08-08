@@ -1,25 +1,25 @@
 <!doctype html>
 <html class="has-navbar-fixed-top">
-<title>octavalidate-PHP | Equalto validation</title>
+<title>Octavalidate-PHP | Equalto validation</title>
 
 <head>
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="octaValidate-PHP: Learn more about the EqualTo Attribute Validation contained in this GREAT library">
-    <meta name="title" content="octaValidate-PHP: EqualTo Attribute Validation">
+        content="octaValidate-PHP: Learn more about EqualTo Validation">
+    <meta name="title" content="octaValidate-PHP: EqualTo Validation">
     <meta property="og:description"
-        content="octaValidate-PHP: Learn more about the EqualTo Attribute Validation contained in this GREAT library">
-    <meta property="og:title" content="octaValidate-PHP: EqualTo Attribute Validation">
+        content="octaValidate-PHP: Learn more about EqualTo Validation">
+    <meta property="og:title" content="octaValidate-PHP: EqualTo Validation">
     <meta property="og:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="octaValidate-PHP: EqualTo Attribute Validation">
+    <meta name="twitter:title" content="octaValidate-PHP: EqualTo Validation">
     <meta name="twitter:description"
-        content="octaValidate-PHP: Learn more about the EqualTo Attribute Validation contained in this GREAT library">
+        content="octaValidate-PHP: Learn more about EqualTo Validation">
     <meta charset="UTF-8">
     <link rel="icon" href="../assets/img/ov-image.png">
     <link rel="stylesheet" href="../assets/css/bulma.min.css" />
@@ -31,7 +31,7 @@
     <!-- XAlert core JS -->
     <script src="../assets/js/xs-alert.js"></script>
     <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
-    <link rel="stylesheet" href="../assets/prettify/skins/sons-of-obsidian.css" />
+    <link rel="stylesheet" href="../assets/prettify/skins/pinky-night.css" />
     <link rel="stylesheet" href="../assets/css/ov.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
@@ -53,8 +53,21 @@
             <article>
                 <p class="mb-2 mt-3">This validation falls under the group <b>Attributes Validation</b> and they follow
                     this common syntax.</p>
-                <pre
-                    class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FORM_INPUT_NAME" => array(<br>      ["ATTRIBUTE_TITLE", "VALUE", "CUSTOM_ERROR_MESSAGE"]<br> )<br>);</pre>
+                    <div class="code">
+                        <div class="code-header">
+                            <div class="code-header-first">
+                                <p class="cb-round-fancy cb-round-danger"></p>
+                                <p class="cb-round-fancy cb-round-warning"></p>
+                                <p class="cb-round-fancy cb-round-primary"></p>
+                            </div>
+                            <div class="code-header-last">
+                                <p cb-copy-snippet="equal_to" class="cb-copy-btn">Copy</p>
+                            </div>
+    
+                        </div>
+                        <div class="code-content">
+                <pre id="pre_equalto"
+                    class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FORM_INPUT_NAME" => array(<br>      ["ATTRIBUTE_TITLE", "VALUE", "CUSTOM_ERROR_MESSAGE"]<br> )<br>);</pre></div></div>
                 <p class="mt-3">This validation checks if two input names have the same value. To use this validation,
                     you need to
                     define the <b>EQUALTO</b> rule on the <b>first Input Name </b>and then provide the <b>second Input
@@ -87,9 +100,21 @@
                 </p>
                 <div class="mt-3">
                     <p class="mb-4">Follow the syntax below to use the <b>EQUALTO</b> validation rule.</p>
-
-                    <pre
-                        class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FIRST_INPUT_NAME" => array(<br>    ["EQUALTO", "SECOND_INPUT_NAME", "CUSTOM_ERROR_MESSAGE"]<br>  )<br>);<br>//sample validation<br>$valRules = array(<br>  "password" => array(<br>    ["R", "Your password is required"],<br>    ["EQUALTO", "confirm_password", "Both passwords do not match"]<br>  )<br>);</pre>
+                    <div class="code">
+                        <div class="code-header">
+                            <div class="code-header-first">
+                                <p class="cb-round-fancy cb-round-danger"></p>
+                                <p class="cb-round-fancy cb-round-warning"></p>
+                                <p class="cb-round-fancy cb-round-primary"></p>
+                            </div>
+                            <div class="code-header-last">
+                                <p cb-copy-snippet="equal_to_eg" class="cb-copy-btn">Copy</p>
+                            </div>
+    
+                        </div>
+                        <div class="code-content">
+                    <pre id="pre_equal_to_eg"
+                        class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FIRST_INPUT_NAME" => array(<br>    ["EQUALTO", "SECOND_INPUT_NAME", "CUSTOM_ERROR_MESSAGE"]<br>  )<br>);<br>//sample validation<br>$valRules = array(<br>  "password" => array(<br>    ["R", "Your password is required"],<br>    ["EQUALTO", "confirm_password", "Both passwords do not match"]<br>  )<br>);</pre></div></div>
                 </div>
                 <div class="mt-3 notification is-danger is-light">
                     <p>You have validated a form and there are validation errors, how do you handle these errors?</p>
@@ -122,7 +147,7 @@
     </section>
     <footer class="footer">
         <div class="content has-text-centered">
-            <h3 class="title is-4 has-text-white mb-2">Let's Connect</h3>
+            <h3 class="title is-4 has-text-white mb-2">Let's Connect 👋</h3>
             <ul class="list-inline list-unstyled ml-0">
                 <li class="list-inline-item"><a href="https://twitter.com/ugorji_simon" target="_blank"
                         class="button is-info">

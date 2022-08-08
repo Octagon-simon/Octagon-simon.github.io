@@ -28,7 +28,7 @@
     <!-- jQuery -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
-    <link rel="stylesheet" href="../assets/prettify/skins/sons-of-obsidian.css" />
+    <link rel="stylesheet" href="../assets/prettify/skins/pinky-night.css" />
 
     <link rel="stylesheet" href="../assets/css/ov.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -48,11 +48,24 @@
     </header>
     <section class="container is-fluid p-2">
         <div class="container  p-3">
-            <h3 class="title is-3 mt-3 mb-3 has-text-info">CONFIGURATION</h3>
+            <h3 class="title is-3 mt-3 mb-3 has-text-info has-text-centered">CONFIGURATION</h3>
             <article>
                 <p class="mb-3 mt-3">The code below shows the syntax to initialise octavalidate for your form.</p>
-                <pre
-                    class="prettyprint lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//create new instance<br>$myForm = new octaValidate($FORM_ID, $OPTIONS);</pre>
+                <div id="init_octavalidate" class="code">
+                    <div class="code-header">
+                        <div class="code-header-first">
+                            <p class="cb-round-fancy cb-round-danger"></p>
+                            <p class="cb-round-fancy cb-round-warning"></p>
+                            <p class="cb-round-fancy cb-round-primary"></p>
+                        </div>
+                        <div class="code-header-last">
+                            <p cb-copy-snippet="init_octavalidate" class="cb-copy-btn">Copy</p>
+                        </div>
+
+                    </div>
+                    <div class="code-content">
+                <pre id="pre_init_octavalidate"
+                    class="prettyprint lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//create new instance<br>$myForm = new octaValidate($FORM_ID, $OPTIONS);</pre></div></div>
                 <h3 class="title is-5 mt-4 mb-3">CONFIGURATION OPTIONS</h3>
                 <p>To use any of the options below, provide it as an object and pass it as the second argument when
                     creating an instance of octaValidate.</p>
@@ -112,8 +125,21 @@
                     <p class="mt-4">To use any of the configuration options, I will create a new instance of the
                         function like this:
                     </p>
-                    <pre
-                        class="prettyprint lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br>  "stripTags" => true,<br>  "strictMode" => true,<br>  "strictWords" => ["null", "undefined"]<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);</pre>
+                    <div class="code">
+                    <div class="code-header">
+                        <div class="code-header-first">
+                            <p class="cb-round-fancy cb-round-danger"></p>
+                            <p class="cb-round-fancy cb-round-warning"></p>
+                            <p class="cb-round-fancy cb-round-primary"></p>
+                        </div>
+                        <div class="code-header-last">
+                            <p cb-copy-snippet="config" class="cb-copy-btn">Copy</p>
+                        </div>
+
+                    </div>
+                    <div class="code-content">
+                    <pre id="pre_config"
+                        class="prettyprint lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br>  "stripTags" => true,<br>  "strictMode" => true,<br>  "strictWords" => ["null", "undefined"]<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);</pre></div></div>
                     <div class="mt-5">
                         <h5 class="title is-5 mb-3">DEMO FORM</h5>
                         <div class="notification is-info is-light">
@@ -126,7 +152,7 @@
     </section>
     <footer class="footer">
         <div class="content has-text-centered">
-            <h3 class="title is-4 has-text-white mb-2">Let's Connect</h3>
+            <h3 class="title is-4 has-text-white mb-2">Let's Connect 👋</h3>
             <ul class="list-inline list-unstyled ml-0">
                 <li class="list-inline-item"><a href="https://twitter.com/ugorji_simon" target="_blank"
                         class="button is-info">

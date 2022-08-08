@@ -1,4 +1,12 @@
+function findElem(elem){
+  return (document.querySelector(elem) !== null);
+}
 window.addEventListener('load', function () {
+
+  if(typeof PR !== undefined && typeof PR === 'object'){
+    PR.prettyPrint();
+  }
+  
   document.querySelectorAll('#code-section').forEach(c => {
     w3CodeColor(c);
   });
@@ -21,6 +29,27 @@ window.addEventListener('load', function () {
   });
 });
 
+//copy button function to code snippets
+if(findElem('.cb-copy-btn')){
+document.querySelectorAll('.cb-copy-btn').forEach(btn => {
+
+btn.addEventListener('click', function(e) {
+  let preId = this.getAttribute('cb-copy-snippet');
+  const toCopy = document.querySelector('pre#pre_' + preId + '').innerText.trim();
+  if (toCopy.length !== 0) {
+      window.navigator.clipboard.writeText(toCopy)
+          .then(() => {
+              alert("Code snippet has been copied");
+          })
+          .catch(() => {
+              alert("Oops an error has occured");
+          });
+  }
+  //prevent parent elements from receiving event
+  e.stopPropagation();
+});
+});
+}
 /*
 let buildNavbar = () => {
   const reader = new FileReader();
