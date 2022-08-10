@@ -39,14 +39,14 @@
 <body>
     <div class="container">
         <section class="py-4 px-4">
-            <h4 class="title mb-4" style="font-size:1.6rem">DATE CALCULATOR</h4>
+            <h4 class="title mb-4" style="font-size:1.6rem;font-weight:bold">DATE CALCULATOR</h4>
             <div class="form-group mb-3">
                 <label class="label">First Date</label>
-                <input id="inp_date_1" type="date" class="form-control" value="">
+                <input id="inp_date_1" type="date" class="form-control" value="01/01/1970">
             </div>
             <div class="form-group mb-3">
                 <label class="label">Second Date</label>
-                <input id="inp_date_2" type="date" class="form-control" value="">
+                <input id="inp_date_2" type="date" class="form-control" value="08/10/2022">
             </div>
             <div class="form-group">
                 <button id="btn_calc_date" class="btn btn-primary">Calculate</button>
@@ -63,7 +63,7 @@
                     <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <section class="py-4 px-2" style="background-color: #12b6f133;border-radius: 15px;">
+                    <section class="py-4 px-3" style="background-color: #12b6f133;border-radius: 10px;">
                         <h3 id="res" class="title fw-bold mb-4">Result: 2 years, 8 months</h3>
                         <h5 id="res_weeks" class="title">Or <b>18 Weeks,</b></h5>
                         <h5 id="res_days" class="title">Or <b>8 Days,</b></h5>
@@ -115,35 +115,35 @@
 
                     if(result.total_days !== undefined && result.total_days){
                         showElem(res_days);
-                        res_days.innerHTML = `Or <b>${result.total_days} days.</b>`;
+                        res_days.innerHTML = `Or <b>${result.total_days} days</b>`;
                     }else{
                         hideElem(res_days);
                     }
 
                     if(result.total_weeks !== undefined && result.total_weeks){
                         showElem(res_weeks);
-                        res_weeks.innerHTML = `Or <b>${result.total_weeks} weeks.</b>`;
+                        res_weeks.innerHTML = `Or <b>${result.total_weeks} weeks</b>`;
                     }else{
                         hideElem(res_weeks);
                     }
 
                     if(result.total_mins !== undefined && result.total_mins){
                         showElem(res_mins);
-                        res_mins.innerHTML = `Or <b>${result.total_mins} minutes.</b>`;
+                        res_mins.innerHTML = `Or <b>${result.total_mins} minutes</b>`;
                     }else{
                         hideElem(res_mins);
                     }
 
                     if(result.total_hours !== undefined && result.total_hours){
                         showElem(res_hours);
-                        res_hours.innerHTML = `Or <b>${result.total_hours} hours.</b>`;
+                        res_hours.innerHTML = `Or <b>${result.total_hours} hours</b>`;
                     }else{
                         hideElem(res_hours);
                     }
 
                     if(result.total_secs !== undefined && result.total_secs){
                         showElem(res_secs);
-                        res_secs.innerHTML = `Or <b>${result.total_secs} seconds.</b>`;
+                        res_secs.innerHTML = `Or <b>${result.total_secs} seconds</b>`;
                     }else{
                         hideElem(res_secs);
                     }
