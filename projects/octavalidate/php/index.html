@@ -56,8 +56,9 @@
                 <p class="notification is-danger is-light">
                     We don't store data submitted through the forms on this documentation, we only validate & discard them immediately.
                 </p>
+                <hr>
                 <h3 class="title is-4 mt-4">INSTALLATION</h3>
-                <h5 class="tag is-info is-light title is-5 mt-3 mb-4">COMPOSER</h5>
+                <h5 class="tag is-info is-light title is-6 mt-3 mb-4">COMPOSER</h5>
                 <div class="code">
                     <div class="code-header">
                         <div class="code-header-first">
@@ -73,8 +74,8 @@
                     <div class="code-content">
                 <pre id="pre_composer" class="prettyprint">$ composer require simon-ugorji/octavalidate-php</pre></div></div>
                 <hr>
-                <h5 class="tag is-danger is-light title is-5 mb-2">LOCAL</h5>
-                <ul class="ml-4 mb-3" style="list-style-type:disc">
+                <h5 class="tag is-danger is-light title is-6 mb-2">LOCAL</h5>
+                <ul class="ml-4 mb-3 p-3" style="list-style-type:disc">
                     <li>Download and import the latest release to your project.</li>
                     <li>In your project, use the <code>require</code> keyword & include the file <code>Validate.php</code></li>
                     <li>Now with the <code>use</code> keyword, link the class to your project and create a new instance of the class by passing in the form id as the first argument and any configuration as the second argument.</li>
@@ -115,7 +116,7 @@
 
                     </div>
                     <div class="code-content">
-                    <pre id="pre_how_to_use" class="prettyprint lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br>  "stripTags" => true,<br>  "strictMode" => true<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);<br>//define rules for each form input name<br>$valRules = array(<br>  "uname" => array(<br>    ["R", "Your username is required"]<br> ),<br>  "email" => array(<br>    ["R", "Your Email Address is required"],<br>    ["EMAIL", "Your Email Address is invalid!"]<br>) );<br>//begin validation<br>if ($myForm->validate($valRules) === true){<br>//process form data here<br>}else{<br>  //return errors<br>  $myForm->getErrors();<br>}</pre></div></div>
+                    <pre id="pre_how_to_use" class="prettyprint lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br>  "stripTags" => true,<br>  "strictMode" => true<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);<br>//define rules for each form input name<br>$valRules = array(<br>  "uname" => array(<br>    ["R", "Your username is required"]<br> ),<br>  "email" => array(<br>    ["R", "Your Email Address is required"],<br>    ["EMAIL", "Your Email Address is invalid!"]<br>) );<br>//begin validation<br>if ($myForm->validate($valRules) === true){<br>//process form data here<br>}else{<br>  //return errors<br>  print_r(json_encode($myForm->getErrors()));<br>}</pre></div></div>
                 </div>
                 <div class="mt-5">
                     <p>The <b>validate method</b> returns a <b>boolean.</b></p>
@@ -145,7 +146,7 @@
                 <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
                     class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
-            <p class="text-gray mt-20">octaValidate PHP @ 1.1 🚀 Since July 2022 </p>
+            <p class="text-gray mt-20">octaValidate PHP @ 1.2 🚀 Since July 2022 </p>
         </div>
     </footer>
     <script src="../ov.js"></script>
