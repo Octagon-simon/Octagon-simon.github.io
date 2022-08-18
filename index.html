@@ -34,7 +34,6 @@
 </head>
 
 <body>
-    <!-- Want to see some algorithm questions and my slutions, watch this repository, want to learn about javascript folow my blogs, my image should appear above hi my name is simon, automatically switch theme if time is morning, afternoon or night, some of the tools I was able to build with javascript -->
     <header>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -90,22 +89,22 @@
             <article class="p-2 text-start font-roboto">
                 <h2 class="title is-2 mb-4 font-dm">ABOUT ME 👨‍💻</h2>
                 <p>My name is <b>Ugorji Simon Okorie</b> and I am a Developer from Nigeria.</p>
-                <p>I have worked with PHP and JavaScript for 2 years now and I am still surprised by the things that I
+                <p>I have worked with PHP and JavaScript for 2 years now and I am surprised by the things that I
                     learn each day while <b>&lt; coding /&gt.</b></p>
                 <p>I am a self-taught developer but would be glad to accept an <b>internship
                         offer</b> to sharpen my skills.</p>
-                <p>As part of my learning process, I write <b>Technical Articles</b>, build libraries, and
-                    build web apps.</p>
+                <p>As part of my learning process, I write <b>Technical Articles, build libraries, and
+                    build web apps.</b></p>
                 <p>I have experience in Frontend Technologies like <b>HTML, CSS,</b> and CSS frameworks
                     such as <b>Bootstrap, Bulma, and material design for bootstrap</b>.</p>
-                <p>I am a Tech enthusiast and I dream of building <b>big libraries, apps, & renovating the technological section of my country</b>.</p>
+                <p>I am a Tech enthusiast and I can't stop to think of the things that I will do once I complete my journey.</b></p>
             </article>
         </div>
         <!--projects-->
         <div id="project-section" class="container radius-20 py-4 px-4 bg-white mt-5">
             <section class="col-sm-12 mb-4 mt-4">
                 <h1 class="title is-2 font-dm text-center">MY PROJECTS</h1>
-                <h5 class="subtite text-center">Here are my completed projects</h5>
+                <h5 class="subtite text-center">Here are my projects</h5>
             </section>
 
             <section class="row" style="justify-content: space-around;">
@@ -124,7 +123,7 @@
                                 Oshare is a web app that allows you to upload a file, copy the link, and then share the
                                 uploaded file.<br>
                             </p>
-                            <a href="https://oshare.zls.com.ng" class="btn btn-primary">Visit App</a>
+                            <a href="https://oshare.zls.com.ng" class="disabled btn btn-primary">Visit App</a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +142,7 @@
                                 GMAS is a web app that collects customer reviews for your website and helps you to
                                 manage them.
                             </p>
-                            <a href="https://givemeastar.com" class="btn btn-success">Visit App</a>
+                            <a href="https://givemeastar.com" class="disabled btn btn-success">Visit App</a>
                         </div>
                     </div>
                 </div>
@@ -185,7 +184,7 @@
                                 This library helps to validate your HTML forms using sophisticated regular expressions,
                                 validation rules and form input attributes.
                             </p>
-                            <a href="https://octagon-simon.github.io/octaValidate" class="btn btn-outline-success">Visit
+                            <a href="https://octagon-simon.github.io/octavalidate" class="btn btn-outline-success">Visit
                                 Docs</a>
                                 <a href="https://github.com/octagon-simon/octaValidate" class="btn btn-success">Visit
                                     Library</a>
@@ -207,7 +206,7 @@
                                 <br>
                                 This library helps to validate your forms server-side using sophisticated regular expressions, and validation rules.
                             </p>
-                            <a href="https://octagon-simon.github.io/octaValidate/php/" class="btn btn-outline-info">Visit
+                            <a href="https://octagon-simon.github.io/octavalidate/php/" class="btn btn-outline-info">Visit
                                 Docs</a>
                             <a href="https://github.com/octagon-simon/octaValidate-PHP" class="btn btn-info">Visit
                                 Library</a>
@@ -226,7 +225,7 @@
             <section class="row">
                 <div class="col-sm-12 align-self-center">
                     <h3 class="title is-2 mt-4 font-dm">MY BLOGS</h3>
-                    <h5 class="subtitle">I write and publish on</h5>
+                    <h5 class="subtitle">I write and publish on ...</h5>
                     <div class="row mt-5">
                         <div class="col-sm-12 col-md-6">
                             <div class="card blog-card">
@@ -341,7 +340,10 @@
                 <div class="col-sm-12 align-self-center">
                     <h3 class="title is-3 mt-3 font-dm">CONTACT ME</h3>
                     <h5 class="subtitle">Send me a message</h5>
-                    <form method="post" action="https://formbold.com/s/35Ey3" id="form_contact" class="mt-4 mw-700"
+                    <p class="alert alert-info text-center mt-2 mb-2">
+                        Form validation by <a href="https://octagon-simon.github.io/octavalidate/">octavalidate</a>
+                    </p>
+                    <form method="post" action="https://formbold.com/s/35Ey3" id="form_contact" class="mt-3 mw-700"
                         novalidate>
                         <div class="form-group mb-3">
                             <label class="form-label mb-1">Email Address <span class="text-danger">*</span></label>
@@ -352,21 +354,21 @@
                         </div>
                         <div class="form-group mb-3">
                             <label class="form-label mb-1">Name <span class="text-danger">*</span></label>
-                            <input octavalidate="R,ALPHA_ONLY" id="inp_name" ov-required:msg="Your Name is required"
+                            <input octavalidate="R,ALPHA_ONLY" id="inp_name" ov-required:msg="Your name is required"
                                 name="name" type="text" class="form-control" placeholder="John Doe">
                         </div>
                         <div class="form-group mb-3">
                             <label class="form-label mb-1">Subject <span class="text-danger">*</span></label>
-                            <input octavalidate="R,TEXT" id="inp_sub" name="subject" type="text" class="form-control"
+                            <input octavalidate="R,TEXT" id="inp_sub" ov-required:msg="Email subject is required" name="subject" type="text" class="form-control"
                                 placeholder="Partnership">
                         </div>
                         <div class="form-group">
                             <label class="form-label mb-1">Message <span class="text-danger">*</span></label>
-                            <textarea octavalidate="R,TEXT" id="inp_mess" name="message" class="form-control"
+                            <textarea octavalidate="R,TEXT" id="inp_mess" ov-required:msg="Your message is required" name="message" class="form-control"
                                 placeholder="Hello, I'm John from..." rows="3"></textarea>
                         </div>
                         <div class="form-group mt-3">
-                            <button id="btn_contact" class="btn btn-cta shadow-0 text-white">SEND</button>
+                            <button id="btn_contact" class="btn btn-cta shadow-0 text-white">SEND MESSAGE</button>
                         </div>
                     </form>
             </section>
@@ -397,7 +399,7 @@
                             class="fab fa-linkedin-in"></i></a>
                 </li>
             </ul>
-            <p class="gray-text">Last updated: 7th August 2022</p>
+            <p class="gray-text">Last updated: 18th August 2022</p>
         </div>
     </div>
     <!--19th/June/2022-->
