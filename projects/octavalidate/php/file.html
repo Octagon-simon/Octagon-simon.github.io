@@ -53,7 +53,7 @@
                 <h3 class="title is-4 mt-3 mb-3 has-text-info">FILE VALIDATION
                 </h3>
                 <article>
-                    <p class="mb-2 mt-3">This validation falls under the group <b>Attributes Validation</b> and they follow this common syntax.</p>
+                    <p class="mb-2 mt-3">This validation falls under the group <b>"Attributes Validation",</b> and it follows the syntax below.</p>
                     <div class="code">
                     <div class="code-header">
                         <div class="code-header-first">
@@ -68,10 +68,9 @@
                     </div>
                     <div class="code-content">
                     <pre id="pre_file_val_syntax" class="prettyprint lang-php">//syntax<br>$valRules = array(<br>  "FORM_INPUT_NAME" => array(<br>      ["ATTRIBUTE_TITLE", "VALUE", "CUSTOM_ERROR_MESSAGE"]<br> )<br>);</pre> </div></div>
-                    <p class="mb-2 mt-3">To make a file input <b>required,</b> use the <code>R</code> Validation rule.</p>
-                    <p>Here are some of the rules needed to be able to validate a file.</p>
-                    <section>
-                        <h4 class="title is-5 mt-4 mb-1">ACCEPT</h4>
+                    <p>Here are some of the rules needed to validate a file.</p>
+                    <section class="mt-4">
+                        <h4 class="title is-5 mb-1">ACCEPT</h4>
                         <p class="p-3 m-0">
                             Use this rule to list out the file extensions allowed for upload.
                         </p>
@@ -80,7 +79,7 @@
                             .png, .jpg, .jpeg
                         </p>
                         <hr>
-                        <h4 class="title is-5 mt-4 mb-1">ACCEPT-MIME</h4>
+                        <h4 class="title is-5 mb-1">ACCEPT-MIME</h4>
                         <p class="p-3 m-0">
                             Use this rule to list out the file MIME types allowed for upload. This rule also
                             supports MIME types with <b>wildcards</b>.
@@ -99,9 +98,8 @@
                             its original file type.
                         </p>
                     </section>
-                    <hr>
-                    <section>
-                        <h4 class="title is-5 mt-4 mb-1">SIZE</h4>
+                    <section class=" mt-4 ">
+                        <h4 class="title is-5 mb-1">SIZE</h4>
                         <p class="p-3 m-0">
                             Use this rule to validate the selected file(s) size. If you provide <b>5MB</b>, it
                             means that the file uploaded by the user must be 5MB in size.
@@ -310,7 +308,7 @@
                 <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
                     class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
-            <p class="text-gray mt-20">octaValidate PHP @ 1.1 🚀 Since July 2022 </p>
+            <p class="text-gray mt-20">octaValidate PHP @ 1.2 🚀 Since July 2022 </p>
         </div>
     </footer>
     <script src="../ov.js"></script>
