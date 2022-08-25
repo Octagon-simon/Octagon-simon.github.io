@@ -1,54 +1,37 @@
-function findElem(elem){
+function findElem(elem) {
   return (document.querySelector(elem) !== null);
 }
 window.addEventListener('load', function () {
 
-  if(typeof PR !== undefined && typeof PR === 'object'){
+  if (typeof PR !== undefined && typeof PR === 'object') {
     PR.prettyPrint();
   }
-  
+
   document.querySelectorAll('#code-section').forEach(c => {
     w3CodeColor(c);
-  });
-
-  //navbar
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Add a click event on each of them
-  $navbarBurgers.forEach(el => {
-    el.addEventListener('click', () => {
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle('is-active');
-      $target.classList.toggle('is-active');
-    });
   });
 });
 
 //copy button function to code snippets
-if(findElem('.cb-copy-btn')){
-document.querySelectorAll('.cb-copy-btn').forEach(btn => {
+if (findElem('.cb-copy-btn')) {
+  document.querySelectorAll('.cb-copy-btn').forEach(btn => {
 
-btn.addEventListener('click', function(e) {
-  let preId = this.getAttribute('cb-copy-snippet');
-  const toCopy = document.querySelector('pre#pre_' + preId + '').innerText.trim();
-  if (toCopy.length !== 0) {
-      window.navigator.clipboard.writeText(toCopy)
+    btn.addEventListener('click', function (e) {
+      let preId = this.getAttribute('cb-copy-snippet');
+      const toCopy = document.querySelector('pre#pre_' + preId + '').innerText.trim();
+      if (toCopy.length !== 0) {
+        window.navigator.clipboard.writeText(toCopy)
           .then(() => {
-              alert("Code snippet has been copied");
+            alert("Code snippet has been copied");
           })
           .catch(() => {
-              alert("Oops an error has occured");
+            alert("Oops an error has occured");
           });
-  }
-  //prevent parent elements from receiving event
-  e.stopPropagation();
-});
-});
+      }
+      //prevent parent elements from receiving event
+      e.stopPropagation();
+    });
+  });
 }
 /*
 let buildNavbar = () => {
@@ -140,6 +123,22 @@ let buildNavbar = () => {
   //append navbar to document
   navbarData.then(data => {
     document.getElementById('header').innerHTML = data;
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(el => {
+      el.addEventListener('click', () => {
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
   })
 
 })();
@@ -492,7 +491,7 @@ function postData(url, formId, success, error) {
       error: function (xhr) {
         if (xhr.readyState === 4) {
           //HTTP ERROR
-          if(xhr.status === 400){
+          if (xhr.status === 400) {
             error(JSON.parse(xhr.responseText));
           }
         } else if (xhr.readyState === 0) {

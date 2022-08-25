@@ -1,90 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
-html,body{
-    background-color:#f4f4f4;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html,
+body {
+    background-color: #f4f4f4;
 }
-.font-bree{
+
+.font-bree {
     font-family: 'Bree Serif', serif !important;
 }
-.font-dm{
+
+.font-dm {
     font-family: 'DM Serif Text', serif !important;
 }
-.font-roboto{
+
+.font-roboto {
     font-family: 'Roboto', sans-serif !important;
 }
-.is-primary{
+
+.font-pacifico {
+    font-family: 'Pacifico', cursive !important;
+}
+
+.is-primary {
     color: var(--primary-2) !important;
 }
-/** BUTTONS **/
-.navbar-toggler{
-    background-color:#d4fcff;
-    color: var(--primary) !important;
-    height:2.5rem;
-    font-weight:bold;
+
+.radius-0 {
+    border-radius: 0 !important
 }
-.btn-cta{
+
+
+.fw-bold {
+    font-weight: bold
+}
+
+/** BUTTONS **/
+.navbar-toggler {
+    background-color: #d4fcff;
+    color: var(--primary) !important;
+    height: 2.5rem;
+    font-weight: bold;
+}
+
+.btn-cta {
     background-color: var(--primary);
     box-shadow: 0px 0px 8px var(--primary) !important;
 }
-.btn-cta:hover{
+
+.btn-cta:hover {
     background-color: #0fc100 !important;
 }
+
 /** TEXT **/
-.title-2{
+.title-2 {
     font-size: 2.5rem;
     font-weight: bold;
     color: #000000cc;
 }
-.title{
+
+.title {
     color: #363636;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.125;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.125;
 }
 
 .title.is-1 {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 .title.is-2 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 .title.is-3 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .title.is-4 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .title.is-5 {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 .title.is-6 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .title.is-7 {
-  font-size: 0.75rem;
+    font-size: 0.75rem;
 }
 
 .subtitle {
-  color: #4a4a4a;
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.25;
+    color: #4a4a4a;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
 }
 
-.project-card{
-    max-width:400px;
+.project-card {
+    max-width: 400px;
 }
-.project-card img{
+
+.project-card img {
     width: 100%;
     /*height: 161px;*/
-    max-height:250px;
+    max-height: 250px;
 }
+
 .project-card {
     max-width: 400px;
     margin: auto;
@@ -106,7 +133,8 @@ html,body{
 .css-9pjwvg {
     fill: #fff;
 }
-.gray-text{
+
+.gray-text {
     color: rgb(187, 187, 187);
 }
 
@@ -118,10 +146,13 @@ html,body{
     height: auto;
     font-size: 2.5rem;
 }
-input:focus, textarea:focus{
-    border-color:rgb(21, 255, 0) !important;
-    box-shadow:none !important;
+
+input:focus,
+textarea:focus {
+    border-color: rgb(21, 255, 0) !important;
+    box-shadow: none !important;
 }
+
 .blog-card>.card-img {
     background-color: #50d38a;
     max-height: 153px;
@@ -130,15 +161,17 @@ input:focus, textarea:focus{
 .radius-0 {
     border-radius: 0%;
 }
-.shadow-0{
+
+.shadow-0 {
     box-shadow: none !important;
 }
 
 .radius-20 {
     border-radius: 20px;
 }
-.mw-700{
-    max-width:700px;
+
+.mw-700 {
+    max-width: 700px;
 }
 
 .card-img-svg {
@@ -151,9 +184,11 @@ input:focus, textarea:focus{
     border-radius: 50%;
     box-shadow: 0 0 8px #cfcfcf;
 }
-.footer{
+
+.footer {
     background-color: #282c27;
 }
+
 .drop-cap {
     float: left;
     line-height: 85%;
@@ -177,6 +212,7 @@ input:focus, textarea:focus{
         font-size: 2rem !important;
     }
 }
+
 /** EXPERIENCE**/
 .cbp_tmtimeline {
     margin: 0;
@@ -346,20 +382,24 @@ input:focus, textarea:focus{
     .cbp_tmtimeline:before {
         display: none
     }
+
     .cbp_tmtimeline>li .cbp_tmtime {
         width: 100%;
         position: relative;
         padding: 0 0 20px 0
     }
+
     .cbp_tmtimeline>li .cbp_tmtime span {
         text-align: left
     }
+
     .cbp_tmtimeline>li .cbp_tmlabel {
         margin: 0 0 30px 0;
         padding: 1em;
         font-weight: 400;
         font-size: 95%
     }
+
     .cbp_tmtimeline>li .cbp_tmlabel:after {
         right: auto;
         left: 20px;
@@ -367,12 +407,14 @@ input:focus, textarea:focus{
         border-bottom-color: #f5f5f6;
         top: -20px
     }
+
     .cbp_tmtimeline>li .cbp_tmicon {
         position: relative;
         float: right;
         left: auto;
         margin: -64px 5px 0 0px
     }
+
     .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
         border-right-color: transparent;
         border-bottom-color: #f5f5f6
@@ -399,19 +441,24 @@ input:focus, textarea:focus{
 }
 
 /**Particles js **/
-/* ---- reset ---- */ 
-canvas{ display: block; vertical-align: bottom; } 
-/* ---- particles.js container ---- */ 
-#particles-js{  
-    width: 100%; 
-    height: 100vh; 
-    background-color: #111111; 
-    background-image: url(""); 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position: 100% 100%; 
+/* ---- reset ---- */
+canvas {
+    display: block;
+    vertical-align: bottom;
 }
-:root{
-    --primary:#12de00;
-    --primary-2:#00d1b2;
+
+/* ---- particles.js container ---- */
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    background-color: #111111;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+
+:root {
+    --primary: #12de00;
+    --primary-2: #00d1b2;
 }
