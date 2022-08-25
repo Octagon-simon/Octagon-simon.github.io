@@ -41,15 +41,20 @@ window.addEventListener('load', function () {
         //disable button
         this.classList.add("disabled");
         //sanitiza input value
-        const inputValue = document.querySelector("#inp_word").value.trim().toString();
+        const inputValue = document.querySelector("#inp_word").value.trim().toString().replaceAll(' ','');
         //call the function
-        unscramble( (inputValue !== "") ? inputValue : "rosry" ).then(data => {
-            //append data
+        unscramble( (inputValue !== "") ? inputValue.toLowerCase() : "nowordsfound" ).then(data => {
+            if(data.length > 0){
+                //append data
             data.forEach(item => {
                 document.querySelector("#results_list").innerHTML += `
                     <li>${item}</li>
                 `;
             })
+            }else{
+                document.querySelector("#results_list").innerHTML = 'NO WORDS FOUND';
+            }
+            
             //show modal
             new mdb.Modal(document.getElementById('resultModal')).show();
             //enable button
