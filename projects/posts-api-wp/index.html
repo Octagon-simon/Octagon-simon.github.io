@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Turn your WordPress Blog to an API | Posts API WP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="author" content="Simon Ugorji">
+    <base href=".">
+    <meta property="og:title" content="Posts API WP by Simon Ugorji">
+    <meta property="og:description" content="Turn your WordPress Blog to an API with Posts API WP">
+    <meta property="og:image" content="https://octagon-simon.github.io/projects/posts-api-wp/icon-256x256.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- MDB -->
+    <link href="../../assets/css/mdb.min.css" rel="stylesheet" />
+    <!--Custom CSS-->
+    <link href="../../assets/css/simon-ugorji.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script type="text/javascript" src="../../assets/js/mdb.min.js"></script>
+    <!--animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- wow js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!--jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- app css -->
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QS025GYRY5');
+    </script>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Navbar brand -->
+                <span class="navbar-brand me-2"><img src="./assets/img/nav-menu.png" width="50px"></span>
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars fa-sm"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse justify-content-end navbar-collapse" id="navbarButtonsExample">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 font-roboto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://wordpress.org/plugins/posts-api-wp">Download</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4">Donate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#how-to-use">How to use</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Octagon-simon/posts-api-wp/issues/new">Submit Issue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Octagon-simon/posts-api-wp">View GitHub Repo</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+        <!-- Background image -->
+        <div class="hero" class="text-center">
+            <div class="mask" style="position:static">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-center p-3 p-md-0 ">
+                        <img src="./assets/img/icon-256x256.png" width="100px" class="mb-4">
+                        <h4 class="title is-2 text-white">Welcome To</h4>
+                        <h1 class="mb-4 hero-text title">POSTS API WP</h1>
+                        <h5 class="mb-4 title is-5 text-white fw-normal">Posts API WP is a WordPress plugin that creates
+                            a virtual API for accessing your WordPress Posts.</h5>
+                        <div class="d-flex hero-btn-group justify-content-center">
+                            <div class="hero-single-btn">
+                                <a class="btn btn-cta text-white btn-lg me-2" href="https://wordpress.org/plugins/posts-api-wp"
+                                    role="button">Download</a>
+                            </div>
+                            <div class="hero-single-btn">
+                                <a class="btn btn-cta-outline text-white btn-lg" href="#how-to-use" role="button">How to
+                                    use</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background image -->
+    </header>
+    <main class="mb-5">
+        <div class="container-fluid">
+            <div class="container p-4 mt-4 wow  animate__fadeInUp">
+                <div class="row">
+                    <div class="text-center col-sm-12 col-md-6 mb-4 mb-md-0">
+                        <div class="intro-logo m-auto">
+                            <img src="./assets/img/bolt.png" class="h-100">
+                        </div>
+                    </div>
+                    <div class="text-center align-self-center col-sm-12 col-md-6">
+                        <h3 class="title is-3">QUICK API RESPONSE</h3>
+                        <article>
+                            <p class="m-0">
+                                Instead of firing up all WordPress functions, we leveraged on a special WordPress
+                                feature to reduce the load on your server and make API calls faster.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="container p-4 mt-4 wow  animate__fadeInLeft">
+                <div class="row flex-sm-row-reverse">
+                    <div class="text-center col-sm-12 col-md-6 mb-4 mb-md-0">
+                        <div class="intro-logo m-auto">
+                            <img src="./assets/img/cogs.png" class="h-100">
+                        </div>
+                    </div>
+                    <div class="text-center align-self-center col-sm-12 col-md-6">
+                        <h3 class="title is-3">EASY SETUP</h3>
+                        <article>
+                            <p class="m-0">
+                                On the plugin Interface, you can generate an <span class="text-app-primary">API
+                                    key</span> for making requests to the EndPoint, as well as configure parameters
+                                needed for the request.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="container p-4 mt-4 wow  animate__fadeInRight">
+                <div class="row">
+                    <div class="text-center col-sm-12 col-md-6 mb-4 mb-md-0">
+                        <div class="intro-logo m-auto">
+                            <img src="./assets/img/secured.png" class="h-100">
+                        </div>
+                    </div>
+                    <div class="text-center align-self-center col-sm-12 col-md-6">
+                        <h3 class="title is-3">SECURED ENDPOINT</h3>
+                        <article>
+                            <p class="m-0">
+                                API Endpoint is secured with an <span class="text-app-primary">X-API-Key</span>
+                                Authorization Header. This means that you need an <strong>API Key</strong> to make a
+                                request to the EndPoint.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="container p-4 mt-4">
+                <article class="text-center">
+                    <i class="text-app-primary fas fa-6x fa-check"></i>
+                    <h3 class="title is-3 mt-4 mb-4"><q id="a">I want to integrate my WordPress posts into my static
+                            site</q></h3>
+                    <p class="mb-4">Download this plugin now and Enjoy a <span class="text-app-primary">Free Virtual
+                            API</span> for your WordPress posts.</p>
+                    <a class="wow  animate__bounce btn btn-cta text-white btn-lg" href="https://wordpress.org/plugins/posts-api-wp"
+                        role="button">Download Now</a>
+                </article>
+            </div>
+            <div id="how-to-use" class="container p-4 mt-4 wow  animate__fadeInUp">
+                <article class="text-start">
+                    <h4 class="title is-3 mb-4 text-center">HOW TO USE</h4>
+                    <ol class="mb-2">
+                        <li><a href="https://wordpress.org/plugins/posts-api-wp">Download</a> & install the plugin from the WordPress plugins directory.
+                        </li>
+                        <li>Head over to the <strong>"Configuration Page"</strong> and generate an API key for your
+                            EndPoint.</li>
+                        <li>Still on the configuration page, configure the API parameters such as the number of posts to
+                            retrieve, the categories to select the post from, etc. Then save the configuration.</li>
+                        <li>Now the EndPoint is ready to be
+                            used.<br><code>https://YOUR_WORDPRESS_DOMAIN/posts-api-wp/</code> <br> Just replace
+                            <strong>"YOUR_WORDPRESS_DOMAIN"</strong> with your wordpress installation path.</li>
+                        <li>Now send a GET request to the EndPoint and include the header below for authentication.<br>
+                            <code>X-API-Key: YOUR_API_KEY</code><br>
+                            Make sure the API Key is the recent one which you generated on the configuration page.
+                        </li>
+                        <li>The EndPoint URL will respond quickly with a JSON object containing your posts or it will
+                            respond with a JSON object containing a message if the request failed.</li>
+                        <li>In the case of a failed request, visit the <strong>"HOW TO USE"</strong> page for help with
+                            debugging the error or you submit an issue for us to look at it.</li>
+                    </ol>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="text-center">
+            <h3 class="title is-4 text-white mb-2">Let's Connect 👋</h3>
+            <ul class="list-inline list-unstyled ml-0">
+                <li class="list-inline-item">
+                    <a href="https://twitter.com/ugorji_simon" target="_blank" class="btn btn-info">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3" target="_blank" class="btn btn-info"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+            <div class="mt-2 mb-2">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
+                    class="btn btn-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
+            </div>
+            <p class="text-white mt-2 mb-0">Posts API WP @ 1.0.0 🚀 Since September 2022 </p>
+        </div>
+    </footer>
+    <script>
+
+        const wow = new WOW({
+            boxClass: 'wow', // animated element css class (default is wow)
+            animateClass: 'animate__animated', // animation css class (default is animated)
+            offset: 0, // distance to the element when triggering the animation (default is 0)
+            mobile: true, // trigger animations on mobile devices (default is true)
+            live: true, // act on asynchronously loaded content (default is true)
+            callback: function (box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null, // optional scroll container selector, otherwise use window,
+            resetAnimation: true, // reset animation on end (default is true)
+        });
+        wow.init();
+
+    </script>
+</body>
