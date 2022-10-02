@@ -49,72 +49,25 @@
     </header>
     <section class="container is-fluid p-2 mb-3">
         <div class="container p-3">
-            <h3 class="title is-4 mt-3 mb-3 has-text-info">EQUALTO VALIDATION</h3>
+            <h3 class="title is-4 mt-3 mb-3 has-text-info">FIELDS & FILES VALIDATION</h3>
             <article>
-                <p class="mb-2 mt-3">This validation falls under the group <b>Attributes Validation</b> and they follow
-                    this common syntax.</p>
-                    <div classnames="lang-php" class="embed-snippet">//syntax<br>$valRules = array(<br>  "FORM_INPUT_NAME" => array(<br>      ["ATTRIBUTE_TITLE", "VALUE", "CUSTOM_ERROR_MESSAGE"]<br> )<br>);</div>
-                <p class="mt-3">This validation checks if two input names have the same value. To use this validation,
-                    you need to
-                    define the <b>EQUALTO</b> rule on the <b>first Input Name </b>and then provide the <b>second Input
-                        Name</b> as a value to this validation rule.
-                </p>
-                <div class="table-responsive">
-                    <table class="table is-bordered w-50 mt-3">
-                        <thead>
-                            <th>
-                                Rule Title
-                            </th>
-                            <th>
-                                Possible value <span class="tag is-warning">Input Name</span>
-                            </th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    EQUALTO
-                                </td>
-                                <td>
-                                    confirm_password
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <p class="mb-2 mt-3">Assuming you have a single form which allows users to submit data and to upload files, how would you validate the subitted data & uploaded files?</p>
+                <p class="mb-2 mt-3">We know that the syntax to begin validation on either the <code>$_POST</code> array or the <code>$_GET</code> array is;</p>
+                <div classnames="lang-php" class="embed-snippet">
+                    //begin validation on $_POST array<br>$myForm->validateFields($_POST, $valRules);<br>//begin validation on $_GET array<br>$myForm->validateFields($_GET, $valRules);
                 </div>
-                <p class="notification is-info is-light mt-3 mb-3">This is useful if you need to validate a
-                    <b>password</b> and <b>confirm password</b> fields.
-                </p>
-                <div class="mt-3">
-                    <p class="mb-4">Follow the syntax below to use the <b>EQUALTO</b> validation rule.</p>
-                    <div classnames="lang-php" class="embed-snippet">//syntax<br>$valRules = array(<br>  "FIRST_INPUT_NAME" => array(<br>    ["EQUALTO", "SECOND_INPUT_NAME", "CUSTOM_ERROR_MESSAGE"]<br>  )<br>);<br>//sample validation<br>$valRules = array(<br>  "password" => array(<br>    ["R", "Your password is required"],<br>    ["EQUALTO", "confirm_password", "Both passwords do not match"]<br>  )<br>);</div>
+                <p class="mb-3 mt-3">And the method to begin validation on uploaded files is;</p>
+                <div classnames="lang-php" class="embed-snippet">
+                    //begin validation on uploaded files<br>$myForm->validateFiles($valRules);
                 </div>
-                <div class="mt-3 notification is-danger is-light">
-                    <p>You have validated a form and there are validation errors, how do you handle these errors?</p>
-                    <a href="handle-errors.html" class="is-block mt-3 button has-fa-icon is-danger">Learn more <i
-                            class="fas fa-angle-right"></i></a>
+                <p class="mt-3">So what if you need to use both methods on your forms? 
+                </p>
+                <p class="mt-3 mb-3">It's simple! Just create different variables and store the return value of the methods and compare them.
+                </p>
+                <div classnames="lang-php" class="embed-snippet">
+                    //store validation of form fields<br>$fieldsVal = $myForm->validateFields($_POST, $fieldRules);<br>//store validation of uploaded files<br>$filesVal = $myForm->validateFiles($fileRules);<br>//compare and check if the were successful<br>if ($fieldsVal && filesVal){<br>    //process form data here<br>}else{<br>    //validation failed, print errors<br>    print_r(json_encode($myForm->getErrors()));<br>}
                 </div>
             </article>
-            <div class="mt-5">
-                <h5 class="title is-5 mb-3">DEMO FORM</h5>
-                <form method="post" id="form_demo" class="demo-form-bg mw-500 p-3" novalidate>
-                    <div class="field">
-                        <label class="label">Password <span class="has-text-danger">*</span></label>
-                        <input id="inp_pass" name="password" class="input" type="password" placeholder="Your Password">
-                    </div>
-                    <div class="field">
-                        <label class="label">Confirm password <span class="has-text-danger">*</span></label>
-                        <input id="inp_con_pass" name="confirm_password" type="password" class="input"
-                            placeholder="Re-enter password">
-                    </div>
-                    <div class="field">
-                        <button id="btn_form_demo" class="has-fa-icon button is-info" type="submit">Run test</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="mt-3 container has-text-centered">
-            <a href="file.html" class="has-fa-icon button is-info is-light">FILE VALIDATION&nbsp;<i
-                    class="fas fa-arrow-right"></i></a>
         </div>
     </section>
     <footer class="footer">

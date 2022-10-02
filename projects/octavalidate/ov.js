@@ -1,8 +1,115 @@
 function findElem(elem) {
   return (document.querySelector(elem) !== null);
 }
-window.addEventListener('load', function () {
 
+const adjustSnippetColor = () => {
+  /* change header color */
+  //check if elem exists to avoid error
+  if (this.findElem('pre')) {
+    //collect background-color from pre element
+    const bgColor = getComputedStyle(document.documentElement.querySelector('pre')).backgroundColor;
+    document.querySelectorAll('.code-header').forEach(ch => {
+      ch.style.backgroundColor = bgColor;
+    });
+
+    /** change copy button color */
+    const classNames = [".kwd", ".tag", ".str"];
+    let copyColor = "";
+    classNames.forEach( item => {
+      if(document.querySelector(`pre ${item}`)){
+        copyColor = getComputedStyle(document.querySelector(`pre ${item}`)).color;
+        document.querySelectorAll('.cb-copy-btn').forEach(ch => {
+          ch.style.color = copyColor;
+        });
+        return;
+        }
+    })
+
+  }
+}
+
+function embedSnippet(elem = ""){
+
+  let classNames = elem.getAttribute('classnames').split(' ');
+  classNames.push('prettyprint');
+
+  const code = elem.innerHTML;
+
+  elem.innerHTML = ''
+
+  const randomId  = ( () => {
+    const y = "abcdeuvLMNOPQRST3456UVWXYZ12wxyzABCDEFGHIfghijklmnopqrstJK7890";
+    let res = ""
+    
+    let i = 0;
+
+    while(i < 15){
+        res+= y.charAt(Math.floor(Math.random() * y.length))
+        i++;
+    }
+    return res;
+})()
+
+const frag = document.createDocumentFragment();
+const c1 = document.createElement('div');
+c1.classList.add('code')
+
+const c2 = document.createElement('div')
+c2.classList.add('code-header')
+//first
+const c2s1 = document.createElement('div')
+c2s1.classList.add('code-header-first')
+
+const c2s1p1 = document.createElement('p')
+c2s1p1.classList.add('cb-round-fancy', 'cb-round-danger')
+const c2s1p2 = document.createElement('p')
+c2s1p2.classList.add('cb-round-fancy', 'cb-round-warning')
+const c2s1p3 = document.createElement('p')
+c2s1p3.classList.add('cb-round-fancy', 'cb-round-primary')
+//append into header-first
+c2s1.appendChild(c2s1p1)
+c2s1.appendChild(c2s1p2)
+c2s1.appendChild(c2s1p3)
+//last
+const c2s2 = document.createElement('div')
+c2s2.classList.add('code-header-last')
+const c2s2p1 = document.createElement('p')
+c2s2p1.classList.add('cb-copy-btn')
+c2s2p1.setAttribute('cb-copy-snippet', randomId)
+c2s2p1.innerText = "Copy"
+//append into header-last
+c2s2.appendChild(c2s2p1)
+
+//append into code header
+c2.appendChild(c2s1)
+c2.appendChild(c2s2)
+
+//code content
+const c3 = document.createElement('div');
+c3.classList.add('code-content')
+const c3p1 = document.createElement('pre');
+c3p1.setAttribute('id', `pre_${randomId}`)
+c3p1.classList.add(...classNames)
+c3p1.innerHTML = code.trim()
+//append into code content
+c3.appendChild(c3p1)
+
+//append into main tag
+c1.appendChild(c2)
+c1.appendChild(c3)
+
+frag.appendChild(c1)
+
+elem.append(frag)
+
+}
+
+document.querySelectorAll('.embed-snippet').forEach( (elem, index) => {
+  embedSnippet(elem);
+})
+window.addEventListener('load', function () {
+  //automatically adjust snippet's color
+  adjustSnippetColor();
   if (typeof PR !== undefined && typeof PR === 'object') {
     PR.prettyPrint();
   }
