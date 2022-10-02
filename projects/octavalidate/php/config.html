@@ -28,7 +28,7 @@
     <!-- jQuery -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
-    <link rel="stylesheet" href="../assets/prettify/skins/pinky-night.css" />
+    <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
 
     <link rel="stylesheet" href="../assets/css/ov.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -51,21 +51,8 @@
             <h3 class="title is-3 mt-3 mb-3 has-text-info has-text-centered">CONFIGURATION</h3>
             <article>
                 <p class="mb-3 mt-3">The code below shows the syntax to initialise octavalidate for your form.</p>
-                <div id="init_octavalidate" class="code">
-                    <div class="code-header">
-                        <div class="code-header-first">
-                            <p class="cb-round-fancy cb-round-danger"></p>
-                            <p class="cb-round-fancy cb-round-warning"></p>
-                            <p class="cb-round-fancy cb-round-primary"></p>
-                        </div>
-                        <div class="code-header-last">
-                            <p cb-copy-snippet="init_octavalidate" class="cb-copy-btn">Copy</p>
-                        </div>
-
-                    </div>
-                    <div class="code-content">
-                <pre id="pre_init_octavalidate"
-                    class="prettyprint lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//create new instance<br>$myForm = new octaValidate($FORM_ID, $OPTIONS);</pre></div></div>
+                <div classnames="lang-php" class="embed-snippet">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//create new instance<br>$myForm = new octaValidate($FORM_ID, $OPTIONS);</div>
+                <hr>
                 <h3 class="title is-5 mt-4 mb-3">CONFIGURATION OPTIONS</h3>
                 <p>To use any of the options below, provide it as an object and pass it as the second argument when
                     creating an instance of octaValidate.</p>
@@ -125,21 +112,7 @@
                     <p class="mt-4">To use any of the configuration options, I will create a new instance of the
                         function like this:
                     </p>
-                    <div class="code">
-                    <div class="code-header">
-                        <div class="code-header-first">
-                            <p class="cb-round-fancy cb-round-danger"></p>
-                            <p class="cb-round-fancy cb-round-warning"></p>
-                            <p class="cb-round-fancy cb-round-primary"></p>
-                        </div>
-                        <div class="code-header-last">
-                            <p cb-copy-snippet="config" class="cb-copy-btn">Copy</p>
-                        </div>
-
-                    </div>
-                    <div class="code-content">
-                    <pre id="pre_config"
-                        class="prettyprint lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br>  "stripTags" => true,<br>  "strictMode" => true,<br>  "strictWords" => ["null", "undefined"]<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);</pre></div></div>
+                    <div classnames="lang-php" class="embed-snippet">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br>  "stripTags" => true,<br>  "strictMode" => true,<br>  "strictWords" => ["null", "undefined"]<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);</div>
                     <div class="mt-5">
                         <h5 class="title is-5 mb-3">DEMO FORM</h5>
                         <div class="notification is-info is-light">
@@ -166,7 +139,7 @@
                 <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
                     class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
-            <p class="text-gray mt-20">octaValidate @ 1.4 🚀 Since January 2022 </p>
+            <p class="text-gray mt-20">octaValidate @ 2.0 🚀 Since January 2022 </p>
         </div>
     </footer>
     <script src="../ov.js"></script>

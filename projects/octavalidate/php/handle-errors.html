@@ -27,7 +27,7 @@
     <!-- jQuery -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
-    <link rel="stylesheet" href="../assets/prettify/skins/pinky-night.css" />
+    <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
     <link rel="stylesheet" href="../assets/css/ov.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
@@ -45,33 +45,16 @@
     </header>
     <section class="container is-fluid p-2 mb-3">
         <div class="container p-3">
-            <h3 class="title is-3 mt-3 mb-3 has-text-info has-text-centered">HOW TO HANDLE SERVER-SIDE FORM VALIDATION
+            <h3 class="title is-3 mt-3 mb-3 has-text-info has-text-centered">HOW TO HANDLE SERVER-SIDE VALIDATION
                 ERRORS</h3>
             <article>
-                <p class="mb-3">It is really necessary to handle <b>server-side</b> form validation errors. This is
-                    because the user needs to know the input value with the failed validation test and the ones
+                <p class="mb-3">It is necessary to handle <b>server-side</b> form validation errors. This is
+                    because the user needs to know the input field with the failed validation test and the input fields
                     that passed.
                 </p>
-                <p class="mb-3">Immediately you invoke the <b>validate</b> method, the library loops through the <b>POST
-                        ARRAY</b>, executes validation tests, and stores errors if any test fails. </p>
+                <p class="mb-3">Immediately you begin validation on the form fields, the library loops through your validation rules and executes the tests provided, then stores errors if any test fails. </p>
                 <p class="mb-3"> To retrieve these errors, you would do something like this;</p>
-                <div class="code">
-                    <div class="code-header">
-                        <div class="code-header-first">
-                            <p class="cb-round-fancy cb-round-danger"></p>
-                            <p class="cb-round-fancy cb-round-warning"></p>
-                            <p class="cb-round-fancy cb-round-primary"></p>
-                        </div>
-                        <div class="code-header-last">
-                            <p cb-copy-snippet="handle_errors_1" class="cb-copy-btn">Copy</p>
-                        </div>
-
-                    </div>
-                    <div class="code-content">
-                        <pre id="pre_handle_errors_1"
-                            class="prettyprint lang-php">if($myForm->validate($valRules) === true){<br>  //process form data here<br>}else{<br>  //return errors<br>  print_r(json_encode($myForm->getErrors()));<br>}</pre>
-                    </div>
-                </div>
+                <div classnames="lang-php" class="embed-snippet">if($myForm->validateFields($_POST, $valRules) === true){<br>  //process form data here<br>}else{<br>  //return errors<br>  print_r(json_encode($myForm->getErrors()));<br>}</div>
                 <p class="mt-2 mb-2 notification is-danger is-light">Make sure to invoke the <code>getErrors()</code>
                     method, only when the validate method returns <b>false!</b></p>
                 <p class="mb-5 mt-3">Now that we have retrieved the errors, we need to call a <b>JavaScript</b> function
@@ -81,7 +64,7 @@
                 <h5 class="title is-4 mb-3">HELPER SCRIPT</h5>
                 <p>There is a <b>helper script</b> attached to the library that contains the JavaScript functions needed
                     to display these errors.</p>
-                <p class="mt-2 mb-2 notification is-info is-light">Navigate to <code>/frontend/helper.js</code> to
+                <p class="mt-2 mb-2 notification is-info is-light">Navigate to the directory <code>/frontend/helper.js</code> to
                     locate this helper script, then include the functions to your project.</p>
                 <p class="mb-3 mt-3">The helper script contains 2 functions which are;</p>
                 <section class="p-2">
@@ -90,36 +73,20 @@
                         <code>getErrors()</code> to insert errors to the form.
                     </p>
                     <h6 class="title is-6 tag is-warning mb-2">removeErrors</h6>
-                    <p class="p-3">Call this function and pass in a formID to remove any error(s) inserted by the
+                    <p class="p-3">Invoke this function and pass in a formID to remove any error(s) inserted by the
                         <code>showErrors</code> function.
                     </p>
                 </section>
                 <section id="handle-errors-with-ajax" class="mt-4">
                     <h4 class="mb-4 title is-4 text-center">In case you're using ...</h4>
-                    <h5 class="mb-3 title is-6 tag is-info">AJAX</h5>
+                    <p class="mb-3 tag is-info">AJAX</p>
                     <p class="mb-4">If you're using Ajax, within the <b>error method</b>, you need to call the
                         <code>showErrors</code> function and pass in the error object for the function to insert errors
                         into the form, then within the <b>success method</b>, you need to call the
                         <code>removeErrors</code> function and pass in the formID to remove any errors present in the
                         form.
                     </p>
-                    <div class="code">
-                        <div class="code-header">
-                            <div class="code-header-first">
-                                <p class="cb-round-fancy cb-round-danger"></p>
-                                <p class="cb-round-fancy cb-round-warning"></p>
-                                <p class="cb-round-fancy cb-round-primary"></p>
-                            </div>
-                            <div class="code-header-last">
-                                <p cb-copy-snippet="handle_errors_2" class="cb-copy-btn">Copy</p>
-                            </div>
-
-                        </div>
-                        <div class="code-content">
-                            <pre id="pre_handle_errors_2"
-                                class="prettyprint lang-js"> $.ajax({<br>  //... <br>  success: function (res) {<br>     //pass in the form id to this function<br>     removeErrors(formId);<br>  },<br>  error: function (xhr) {<br>      if (xhr.readyState === 4) {<br>         //pass in the errors array to this function<br>         showErrors(JSON.parse(xhr.responseText));<br>      }<br>  }<br>  //...<br>})</pre>
-                        </div>
-                    </div>
+                    <div classnames="lang-php" class="embed-snippet"> $.ajax({<br>  //... <br>  success: function (res) {<br>     //pass in the form id to this function<br>     removeErrors(formId);<br>  },<br>  error: function (xhr) {<br>      if (xhr.readyState === 4) {<br>         //pass in the errors array to this function<br>         showErrors(JSON.parse(xhr.responseText));<br>      }<br>  }<br>  //...<br>})</div>
 
                     <p class="notification is-warning is-light mt-4 mb-4">Remember that not all <b>failed http
                             requests</b> are to be treated as validation errors. You can set a <b>response code</b> to
@@ -137,49 +104,17 @@
                         page itself or to another PHP script, because the page will reload on every submit. However, it
                         is necessary that you call the function if you're using <b>Ajax</b> to process form submission.
                     </p>
-                    <div class="code">
-                        <div class="code-header">
-                            <div class="code-header-first">
-                                <p class="cb-round-fancy cb-round-danger"></p>
-                                <p class="cb-round-fancy cb-round-warning"></p>
-                                <p class="cb-round-fancy cb-round-primary"></p>
-                            </div>
-                            <div class="code-header-last">
-                                <p cb-copy-snippet="handle_errors_3" class="cb-copy-btn">Copy</p>
-                            </div>
-
-                        </div>
-                        <div class="code-content">
-                            <pre id="pre_handle_errors_3"
-                                class="prettyprint lang-php">if($myForm->validate($valRules) === true){<br>    //process form data here<br>}else{<br>    //return and display errors<br>    print('&lt;script&gt;<br>    document.addEventListener("DOMContentLoaded", function(){<br>       showErrors(' . json_encode($myForm->getErrors()) . ');<br>    });&lt;/script&gt;');<br>}</pre>
-                        </div>
-                    </div>
+                    <div classnames="lang-php" class="embed-snippet">if($myForm->validateFields($_POST, $valRules) === true){<br>    //process form data here<br>}else{<br>    //return and display errors<br>    print('&lt;script&gt;<br>    document.addEventListener("DOMContentLoaded", function(){<br>       showErrors(' . json_encode($myForm->getErrors()) . ');<br>    });&lt;/script&gt;');<br>}</div>
                 </section>
             </article>
             <hr>
             <div class="p-2" id="helper-script-for-frontend-library">
                 <h4 class="title is-4 mb-2">HELPER SCRIPT FOR FRONTEND LIBRARY</h4>
-                <p class="mb-3">If you're using this library for frontend form validation, you do not need to include
+                <p class="mb-3 mt-3">If you're using the JavaScrip release of this library to validate your frontend forms, you do not need to include
                     the
                     helper script because the functions contained in that script is already included from version <b
                         class="tag is-danger">1.2.0</b> of the frontend JS library.</p>
-                <div class="code">
-                    <div class="code-header">
-                        <div class="code-header-first">
-                            <p class="cb-round-fancy cb-round-danger"></p>
-                            <p class="cb-round-fancy cb-round-warning"></p>
-                            <p class="cb-round-fancy cb-round-primary"></p>
-                        </div>
-                        <div class="code-header-last">
-                            <p cb-copy-snippet="handle_errors_4" class="cb-copy-btn">Copy</p>
-                        </div>
-
-                    </div>
-                    <div class="code-content">
-                        <pre id="pre_handle_errors_4"
-                            class="prettyprint lang-js mb-5">//create new instance<br>const myForm = new octaValidate('FORM_ID');<br>//invoke this method to show server-side validation errors<br>myForm.showBackendErrors('ERROR_OBJECT');<br>//invoke this method to remove errors present in a form<br>myForm.removeBackendErrors('FORM_ID');</pre>
-                    </div>
-                </div>
+                        <div classnames="lang-php" class="embed-snippet mt-4">//create new instance<br>const myForm = new octaValidate(FORM_ID);<br>//invoke this method to show server-side validation errors<br>myForm.showBackendErrors(ERROR_OBJECT);<br>//invoke this method to remove errors present in a form<br>myForm.removeBackendErrors(FORM_ID);</div>
                 <div class="notification is-warning is-light">
                     <p>Do you wish to use this Library for frontend validation? Click on the button below to learn more.
                     </p>
@@ -190,25 +125,9 @@
             <div class="p-2" id="custom_valiation_errors">
                 <h4 class="title is-4 mb-2">DISPLAY CUSTOM ERRORS</h4>
                 <p class="mb-3">Assuming you want to show the user a custom validation error like <b>"This Email address is taken"</b> or <b>"Your password is not correct"</b>, you can still use the helper script to achieve this but you must follow the syntax below to construct the error object.</p>
-                <div class="code">
-                    <div class="code-header">
-                        <div class="code-header-first">
-                            <p class="cb-round-fancy cb-round-danger"></p>
-                            <p class="cb-round-fancy cb-round-warning"></p>
-                            <p class="cb-round-fancy cb-round-primary"></p>
-                        </div>
-                        <div class="code-header-last">
-                            <p cb-copy-snippet="handle_errors_3" class="cb-copy-btn">Copy</p>
-                        </div>
-
-                    </div>
-                    <div class="code-content">
-                        <pre id="pre_handle_errors_5"
-                            class="prettyprint lang-php">//syntax<br>$errObject = array(<br>  "FORM_ID" => array(<br>    "INPUT_NAME" => "ERROR_MESSAGE",<br>    "ANOTHER_INPUT_NAME" => "ERROR_MESSAGE"<br>)); <br> <br>//example<br>$errObject = array(<br>  "form_login" => array(<br>    "email" => "This Email Address does not exist!"<br>));
-                            </pre>
-                            </div>
-                            </div>
-                            <p>So you may go ahead and call the <code>showErrors()</code> function, then pass in the custom error object as its argument.</p>
+                <div classnames="lang-php" class="embed-snippet">//syntax<br>$errObject = array(<br>  "FORM_ID" => array(<br>    "INPUT_NAME" => "ERROR_MESSAGE",<br>    "ANOTHER_INPUT_NAME" => "ERROR_MESSAGE"<br>)); <br> <br>//example<br>$errObject = array(<br>  "form_login" => array(<br>    "email" => "This Email Address does not exist!"<br>));
+                </div>
+                <p>You may go ahead and invoke the <code>showErrors()</code> function, then pass in the custom error object as an argument.</p>
             </div>
             <div class="mt-5">
                 <h5 class="title is-5 mb-3">DEMO FORM</h5>
@@ -237,7 +156,7 @@
                 <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
                     class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
             </div>
-            <p class="text-gray mt-20">octaValidate PHP @ 1.4 🚀 Since July 2022 </p>
+            <p class="text-gray mt-20">octaValidate PHP @ 2.0 🚀 Since July 2022 </p>
         </div>
     </footer>
     <script src="../ov.js"></script>
