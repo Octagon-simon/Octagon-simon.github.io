@@ -28,7 +28,7 @@ const adjustSnippetColor = () => {
   }
 }
 
-function embedSnippet(elem = ""){
+function embedSnippet(elem = "") {
 
   let classNames = elem.getAttribute('classnames').split(' ');
   classNames.push('prettyprint');
@@ -37,74 +37,74 @@ function embedSnippet(elem = ""){
 
   elem.innerHTML = ''
 
-  const randomId  = ( () => {
+  const randomId = (() => {
     const y = "abcdeuvLMNOPQRST3456UVWXYZ12wxyzABCDEFGHIfghijklmnopqrstJK7890";
     let res = ""
-    
+
     let i = 0;
 
-    while(i < 15){
-        res+= y.charAt(Math.floor(Math.random() * y.length))
-        i++;
+    while (i < 15) {
+      res += y.charAt(Math.floor(Math.random() * y.length))
+      i++;
     }
     return res;
-})()
+  })()
 
-const frag = document.createDocumentFragment();
-const c1 = document.createElement('div');
-c1.classList.add('code')
+  const frag = document.createDocumentFragment();
+  const c1 = document.createElement('div');
+  c1.classList.add('code')
 
-const c2 = document.createElement('div')
-c2.classList.add('code-header')
-//first
-const c2s1 = document.createElement('div')
-c2s1.classList.add('code-header-first')
+  const c2 = document.createElement('div')
+  c2.classList.add('code-header')
+  //first
+  const c2s1 = document.createElement('div')
+  c2s1.classList.add('code-header-first')
 
-const c2s1p1 = document.createElement('p')
-c2s1p1.classList.add('cb-round-fancy', 'cb-round-danger')
-const c2s1p2 = document.createElement('p')
-c2s1p2.classList.add('cb-round-fancy', 'cb-round-warning')
-const c2s1p3 = document.createElement('p')
-c2s1p3.classList.add('cb-round-fancy', 'cb-round-primary')
-//append into header-first
-c2s1.appendChild(c2s1p1)
-c2s1.appendChild(c2s1p2)
-c2s1.appendChild(c2s1p3)
-//last
-const c2s2 = document.createElement('div')
-c2s2.classList.add('code-header-last')
-const c2s2p1 = document.createElement('p')
-c2s2p1.classList.add('cb-copy-btn')
-c2s2p1.setAttribute('cb-copy-snippet', randomId)
-c2s2p1.innerText = "Copy"
-//append into header-last
-c2s2.appendChild(c2s2p1)
+  const c2s1p1 = document.createElement('p')
+  c2s1p1.classList.add('cb-round-fancy', 'cb-round-danger')
+  const c2s1p2 = document.createElement('p')
+  c2s1p2.classList.add('cb-round-fancy', 'cb-round-warning')
+  const c2s1p3 = document.createElement('p')
+  c2s1p3.classList.add('cb-round-fancy', 'cb-round-primary')
+  //append into header-first
+  c2s1.appendChild(c2s1p1)
+  c2s1.appendChild(c2s1p2)
+  c2s1.appendChild(c2s1p3)
+  //last
+  const c2s2 = document.createElement('div')
+  c2s2.classList.add('code-header-last')
+  const c2s2p1 = document.createElement('p')
+  c2s2p1.classList.add('cb-copy-btn')
+  c2s2p1.setAttribute('cb-copy-snippet', randomId)
+  c2s2p1.innerText = "Copy"
+  //append into header-last
+  c2s2.appendChild(c2s2p1)
 
-//append into code header
-c2.appendChild(c2s1)
-c2.appendChild(c2s2)
+  //append into code header
+  c2.appendChild(c2s1)
+  c2.appendChild(c2s2)
 
-//code content
-const c3 = document.createElement('div');
-c3.classList.add('code-content')
-const c3p1 = document.createElement('pre');
-c3p1.setAttribute('id', `pre_${randomId}`)
-c3p1.classList.add(...classNames)
-c3p1.innerHTML = code.trim()
-//append into code content
-c3.appendChild(c3p1)
+  //code content
+  const c3 = document.createElement('div');
+  c3.classList.add('code-content')
+  const c3p1 = document.createElement('pre');
+  c3p1.setAttribute('id', `pre_${randomId}`)
+  c3p1.classList.add(...classNames)
+  c3p1.innerHTML = code.trim()
+  //append into code content
+  c3.appendChild(c3p1)
 
-//append into main tag
-c1.appendChild(c2)
-c1.appendChild(c3)
+  //append into main tag
+  c1.appendChild(c2)
+  c1.appendChild(c3)
 
-frag.appendChild(c1)
+  frag.appendChild(c1)
 
-elem.append(frag)
+  elem.append(frag)
 
 }
-
-document.querySelectorAll('.embed-snippet').forEach( (elem, index) => {
+//loop through elements that are code snippets then embed them
+document.querySelectorAll('.embed-snippet').forEach( elem => {
   embedSnippet(elem);
 })
 window.addEventListener('load', function () {
@@ -227,6 +227,14 @@ let buildNavbar = () => {
       resolve(responseText);
     });
   })
+
+    //fetch footer
+  const footerData = new Promise(function (resolve) {
+    ajax.get("./includes/footer.html", {}, function (responseText) {
+      resolve(responseText);
+    });
+  })
+
   //append navbar to document
   navbarData.then(data => {
     document.getElementById('header').innerHTML = data;
@@ -246,6 +254,11 @@ let buildNavbar = () => {
         $target.classList.toggle('is-active');
       });
     });
+  })
+
+  //append footer to document
+  footerData.then(data => {
+    document.querySelector('.footer').innerHTML = data;
   })
 
 })();
