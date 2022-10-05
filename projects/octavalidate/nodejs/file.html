@@ -1,37 +1,35 @@
 <!doctype html>
 <html class="has-navbar-fixed-top">
-<title>Octavalidate - JS | FILE VALIDATION</title>
+<title>Octavalidate - NodeJS | FILE VALIDATION</title>
 
 <head>
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="Octavalidate - JS: Learn how you can validate a file using this library">
-    <meta name="title" content="Octavalidate - JS: FILE Validation">
+        content="Octavalidate - NodeJS: Learn how you can validate a file using this library">
+    <meta name="title" content="Octavalidate - NodeJS: FILE Validation">
     <meta property="og:description"
-        content="Octavalidate - JS: Learn how you can validate a file using this library">
-    <meta property="og:title" content="Octavalidate - JS: FILE Validation">
+        content="Octavalidate - NodeJS: Learn how you can validate a file using this library">
+    <meta property="og:title" content="Octavalidate - NodeJS: FILE Validation">
     <meta property="og:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="Octavalidate - JS: FILE Validation">
+    <meta name="twitter:title" content="Octavalidate - NodeJS: FILE Validation">
     <meta name="twitter:description"
-        content="Octavalidate - JS: Learn how you can validate a file using this library">
-    <link rel="icon" href="assets/img/ov-image.png">
+        content="Octavalidate - NodeJS: Learn how you can validate a file using this library">
+    <link rel="icon" href="../assets/img/ov-image.png">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./assets/css/bulma.min.css" />
-    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
     <script src="https://unpkg.com/octavalidate@1.2.2/native/validate.js"></script>
     <!-- jQuery -->
-    <script src="assets/js/jquery.min.js"></script>
-    <!-- XSAlert CSS -->
-    <link rel="stylesheet" href="assets/css/xs-alert-light-theme.css">
-    <!-- XAlert core JS -->
-    <script src="assets/js/xs-alert.js"></script>
-    <link rel="stylesheet" href="./assets/css/ov.css" />
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
+    <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
+    <link rel="stylesheet" href="../assets/css/ov.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
     <script>
@@ -49,14 +47,15 @@
     <section class="container is-fluid p-2">
         <div class="container p-3">
             <div class="column is-12">
-                <h3 class="title is-4 mt-3 mb-3 has-text-primary text-center">FILE VALIDATION
+                <h3 class="title is-4 mt-3 mb-3 has-text-success text-center">FILE VALIDATION
                 </h3>
                 <h5 class="subtitle text-center mt-2">Learn how you can validate a file using this library</h5>
                 <article>
-                    <p class="mb-2">To make a file input <b>required,</b> use the <code>R</code> validation rule.</p>
-                    <p>Here are some of the attributes needed to validate a file.</p>
+                    <p class="mb-3">This type of validation enables you to validate an uploaded file. It is under the group <strong>Attributes Validation</strong> and they all follow the syntax below;</p>
+                    <div class="embed-snippet" classnames="lang-js">//syntax<br>const fieldRules = {<br>    FIELD_NAME : {<br>        RULE_TITLE : [VALUE, ERROR_MESSAGE]<br>    }<br>}</div>
+                    <p>Here are some of the rules needed to validate a file.</p>
                     <section>
-                        <h4 class="title is-5 mt-4 mb-1 has-text-primary">ACCEPT</h4>
+                        <h4 class="title is-5 mt-4 mb-1 has-text-success">ACCEPT</h4>
                         <p class="p-3 m-0">
                             Use this attribute to list out the file extensions allowed for upload.
                         </p>
@@ -65,7 +64,7 @@
                             .png, .jpg, .jpeg
                         </p>
                         <hr>
-                        <h4 class="title is-5 mt-4 mb-1 has-text-primary">ACCEPT-MIME</h4>
+                        <h4 class="title is-5 mt-4 mb-1 has-text-success">ACCEPT-MIME</h4>
                         <p class="p-3 m-0">
                             Use this attribute to list out the file MIME types allowed for upload. This attribute also
                             supports MIME types with <b>wildcards</b>.
@@ -86,7 +85,7 @@
                     </section>
                     <hr>
                     <section>
-                        <h4 class="title is-5 mt-4 mb-1 has-text-primary">SIZE</h4>
+                        <h4 class="title is-5 mt-4 mb-1 has-text-success">SIZE</h4>
                         <p class="p-3 m-0">
                             Use this attribute to validate the selected file(s) size. If you provide <b>5MB</b>, it
                             means that the file selected by the user must be 5MB in size.
@@ -100,7 +99,7 @@
                     </section>
                     <hr>
                     <section>
-                        <h4 class="title is-5 mt-4 mb-1 has-text-primary">MINSIZE</h4>
+                        <h4 class="title is-5 mt-4 mb-1 has-text-success">MINSIZE</h4>
                         <p class="p-3 m-0">
                             Use this attribute to validate the minimum size of the selected file(s). If you provide
                             <b>5MB</b>, it means that the file selected by the user must be 5MB in size or more.
@@ -114,7 +113,7 @@
                     </section>
                     <hr>
                     <section>
-                        <h4 class="title is-5 mt-4 mb-1 has-text-primary">MAXSIZE</h4>
+                        <h4 class="title is-5 mt-4 mb-1 has-text-success">MAXSIZE</h4>
                         <p class="p-3 m-0">
                             Use this attribute to validate the maximum size of the selected file(s). If you provide
                             <b>5MB</b>, it means that the file selected by the user must be 5MB in size or less.
@@ -130,7 +129,7 @@
                     </section>
                     <hr>
                     <section>
-                        <h4 class="title is-5 mt-4 mb-1 has-text-primary">FILES</h4>
+                        <h4 class="title is-5 mt-4 mb-1 has-text-success">FILES</h4>
                         <p class="p-3 m-0">
                             Use this attribute to check the number of files selected by the user. If you provide
                             <b>5</b>, it means that the user must select <b>5 files</b>.
@@ -144,7 +143,7 @@
                     </section>
                     <hr>
                     <section>
-                        <h4 class="title is-5 mt-4 mb-1 has-text-primary">MINFILES</h4>
+                        <h4 class="title is-5 mt-4 mb-1 has-text-success">MINFILES</h4>
                         <p class="p-3 m-0">
                             Use this attribute to check the minimum number of files selected by the user. If you provide
                             <b>5</b>, it means that the user must select <b>5 files or more</b>.
@@ -158,7 +157,7 @@
                     </section>
                     <hr>
                     <section>
-                        <h4 class="title is-5 mt-4 mb-1 has-text-primary">MAXFILES</h4>
+                        <h4 class="title is-5 mt-4 mb-1 has-text-success">MAXFILES</h4>
                         <p class="p-3 m-0">
                             Use this attribute to check the maximum number of files selected by the user. If you provide
                             <b>5</b>, it means that the user must select <b>5 files or less</b>.
@@ -170,7 +169,7 @@
                             20
                         </p>
                     </section>
-                    <div class="table-responsive">
+                    <div class="table-responsive mb-3">
                         <table class="table is-bordered w-50 mt-3">
                             <thead>
                                 <th>
@@ -178,9 +177,6 @@
                                 </th>
                                 <th>
                                     Possible values
-                                </th>
-                                <th>
-                                    Custom message
                                 </th>
                             </thead>
                             <tbody>
@@ -191,9 +187,6 @@
                                     <td>
                                         .png, .jpg, .jpeg
                                     </td>
-                                    <td>
-                                        ov-accept:msg
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -201,9 +194,6 @@
                                     </td>
                                     <td>
                                         image/png, image/jpg, image/jpeg, audio/*
-                                    </td>
-                                    <td>
-                                        ov-accept-mime:msg
                                     </td>
                                 </tr>
                                 <tr>
@@ -213,9 +203,6 @@
                                     <td>
                                         20Bytes
                                     </td>
-                                    <td>
-                                        ov-size:msg
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -223,9 +210,6 @@
                                     </td>
                                     <td>
                                         5MB
-                                    </td>
-                                    <td>
-                                        ov-minsize:msg
                                     </td>
                                 </tr>
                                 <tr>
@@ -235,9 +219,6 @@
                                     <td>
                                         10GB
                                     </td>
-                                    <td>
-                                        ov-maxsize:msg
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -245,9 +226,6 @@
                                     </td>
                                     <td>
                                         5
-                                    </td>
-                                    <td>
-                                        ov-files:msg
                                     </td>
                                 </tr>
                                 <tr>
@@ -257,9 +235,6 @@
                                     <td>
                                         10
                                     </td>
-                                    <td>
-                                        ov-minfiles:msg
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -268,59 +243,20 @@
                                     <td>
                                         30
                                     </td>
-                                    <td>
-                                        ov-maxfiles:msg
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                    <p class="mb-3">Here's an example</p>
+                    <div class="embed-snippet" classnames="lang-js">//validation rules for file upload<br>const fileRules = {<br>    profile : {<br>        'R' : "Please upload a profile picture",<br>        'ACCEPT' : ["image/png", "File type is not supported"],<br>        'MAXSIZE' : ["5MB", "Image file should not be greater than 5MB"]<br>    }<br>}</div>
                 </article>
-                <div class="mt-3 mb-5 notification is-warning is-light">To prevent the browser from using its inbuilt validation on your form, add the attribute <code>novalidate</code> to the form tag.
-                </div>
-                <h4 class="title is-5 mt-4">DEMO FORM</h4>
-                <section class="p-5" style="background-color: #f7f7f7;">
-                    <form class="mw-500" id="form_demo" novalidate>
-                        <div class="field">
-                            <label class="label">Single file upload <span style="color:#ff0000">*</span></label>
-                            <input id="inp_single_file" type="file" accept="image/*" maxsize="2mb" octavalidate="R">
-                            <small>Image files only allowed, maximum size of file is 2MB</small>
-                        </div>
-                        <div class="field">
-                            <label class="label">Multiple Files Upload <span style="color:#ff0000">*</span></label>
-                            <input id="inp_multi_file" type="file" accept=".mp3,.ogg" maxsize="10mb" octavalidate="R"
-                                multiple>
-                            <small>.mp3 or .ogg files only allowed, maximum size of files is 10MB.</small>
-                        </div>
-                        <div class="field">
-                            <button class="button is-primary" type="submit">Run test</button>
-                        </div>
-                    </form>
-                </section>
             </div>
         </div>
     </section>
     <footer class="footer">
         
     </footer>
-    <script src="./ov.js"></script>
-    <script>
-        //create instance of class
-        let formVal = new octaValidate('form_demo');
-
-        let formEl = document.querySelector('#form_demo');
-        formEl.addEventListener('submit', function (e) {
-            e.preventDefault();
-            //invoke the validate method
-            if (formVal.validate() === true) {
-                XSAlert({
-                    title: 'Couldn\'t break through?',
-                    message: 'Demo Form passed the validation test! 😎',
-                    icon: 'question',
-                })
-            }
-        })
-    </script>
+    <script src="../ov.js"></script>
 </body>
 
 </html>

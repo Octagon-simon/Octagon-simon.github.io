@@ -85,10 +85,11 @@
                     <h3 class="title is-4 mt-5 mb-3">HOW TO USE</h3>
                     <p class="mb-3">Create a new instance of the class <b>octavalidate</b>, and pass in the form ID as
                         the first argument, then any configuration as the second argument.</p>
-                    <p class="mb-3">To begin validation, define validation rules for the form fields, then pass in an
-                        array of the form fields as the first argument to the <code>validateFields</code> method, and an
-                        array of the validation rules as the second argument.</p>
-                    <p class="notification is-info is-light">The first argument of <code>validateFields</code> method
+                    <p class="mb-3">To begin validation, define validation rules for the form fields, then pass in an array of the
+                        validation rules
+                        as the first argument to the <code>validateFields</code> method, and an array of the form fields
+                        as the second argument. It defaults to the <code>$_POST</code> array if no value is provided.</p>
+                    <p class="notification is-info is-light">The second argument of <code>validateFields</code> method
                         could be fields from the <code>$_POST</code> array or fields from the <code>$_GET</code> array.
                     </p>
 
@@ -97,7 +98,7 @@
                         <a href="config.html" class="button is-warning mt-2">Learn more&nbsp;<i
                                 class="fas fa-angle-right"></i></a>
                     </div>
-                    <div class="embed-snippet" classnames="lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br> "stripTags" => true,<br> "strictMode" => true<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);<br>//define rules for each form input name<br>$valRules = array(<br> "uname" => array(<br>     ["R", "Your username is required"]<br> ),<br> "email" => array(<br>     ["R", "Your Email Address is required"],<br>     ["EMAIL", "Your Email Address is invalid!"]<br>) );<br>//begin validation on form fields from $_POST array<br>if ($myForm->validateFields($_POST, $valRules) === true){<br>//process form data here<br>}else{<br> //return errors<br> print_r(json_encode($myForm->getErrors()));<br>}</pre>
+                    <div class="embed-snippet" classnames="lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br> "stripTags" => true,<br> "strictMode" => true<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);<br>//define rules for each form input name<br>$valRules = array(<br> "uname" => array(<br>     ["R", "Your username is required"]<br> ),<br> "email" => array(<br>     ["R", "Your Email Address is required"],<br>     ["EMAIL", "Your Email Address is invalid!"]<br>) );<br>//begin validation on form fields from $_POST array<br>if ($myForm->validateFields($valRules, $_POST) === true){<br>//process form data here<br>}else{<br> //return errors<br> print_r(json_encode($myForm->getErrors()));<br>}</pre>
                     </div>
                 </div>
                 <hr>
@@ -130,23 +131,7 @@
         </article>
     </section>
     <footer class="footer">
-        <div class="content has-text-centered">
-            <h3 class="title is-4 has-text-white mb-2">Let's Connect 👋</h3>
-            <ul class="list-inline list-unstyled ml-0">
-                <li class="list-inline-item"><a href="https://twitter.com/ugorji_simon" target="_blank"
-                        class="button is-info">
-                        <i class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3" target="_blank"
-                        class="button is-info"><i class="fab fa-linkedin-in"></i></a>
-                </li>
-            </ul>
-            <div class="mt-20 mb-20">
-                <a href="https://www.paypal.com/donate/?hosted_button_id=ZYK9PQ8UFRTA4"
-                    class="button is-primary has-fa-icon"><i class="fas fa-heart has-text-danger"></i>&nbsp;Donate</a>
-            </div>
-            <p class="text-gray mt-20">octaValidate PHP @ 2.0 🚀 Since July 2022 </p>
-        </div>
+        
     </footer>
     <script src="../ov.js"></script>
 
