@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://octagon-simon.github.io/</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/php/</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/nodejs/</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/unscrambler/</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/posts-api-wp/</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/octavalidate-with-npm.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/rules.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/api.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/php/config.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/php/api.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/nodejs/api.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/config.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/length.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/php/handle-errors.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/php/rules.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/nodejs/rules.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/equal.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/index.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/php/length.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/nodejs/length.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/check.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/php/equal.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/nodejs/equal.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/file.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/php/file.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://octagon-simon.github.io/projects/octavalidate/nodejs/file.html</loc>
+  <lastmod>2022-10-07T04:51:16+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+
+
+</urlset>
