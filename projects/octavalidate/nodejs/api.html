@@ -64,7 +64,7 @@
                 <div class="p-2">
                     <h5 class="title is-6 mb-3">GET ERRORS</h5>
                     <p class="mb-3">Invoke the <code>getErrors()</code> method to return validation errors on the form</p>
-                    <div class="embed-snippet mb-3" classnames="lang-js">//Your validation instance<br>const myForm = new octaValidate('form_register');<br>//check if validation is successful<br>if ( validate.validateFields(fieldRules, req.body) ) {<br>    //process form data here<br>    return res.status(200).json({<br>        message: "Form validation successful"<br>    })<br>}else{<br>    //validation error, now return the errors<br>    return res.status(406).json({<br>        message: "Form validation failed",<br>        validationErrors: JSON.stringify(validate.getErrors())<br>    })<br>}</div>
+                    <div class="embed-snippet mb-3" classnames="lang-js">//Your validation instance<br>const myForm = new octaValidate('form_register');<br>//check if validation is successful<br>if ( validate.validateFields(fieldRules, req.body) ) {<br>    //process form data here<br>    return res.status(200).json({<br>        message: "Form validation successful"<br>    })<br>}else{<br>    //validation error, now return the errors<br>    return res.status(400).json({<br>        message: "Form validation failed",<br>        formErrors: JSON.stringify(validate.getErrors())<br>    })<br>}</div>
                     <p class="mb-3">Return type: <span class="tag is-warning">boolean</span></p>
                     <p class="notification is-info is-light p-3">It is recommended to invoke this method only when validation returns <code>false</code></p>
                 </div>
