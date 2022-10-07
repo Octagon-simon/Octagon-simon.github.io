@@ -1,27 +1,27 @@
 <!doctype html>
 <html class="has-navbar-fixed-top">
-<title>Octavalidate - JS | Installing with NPM</title>
+<title>Octavalidate - JS | Client-side Validation Library for NodeJS</title>
 
 <head>
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
         content="Octavalidate - JS: Learn how to install this JavaScript library with NPM and validate your frontend HTML forms">
-    <meta name="title" content="Octavalidate - JS: Installing with NPM">
+    <meta name="title" content="Octavalidate - JS: Client-side Validation Library for NodeJS">
     <meta property="og:description"
         content="Octavalidate - JS: Learn how to install this JavaScript library with NPM and validate your frontend HTML forms">
-    <meta property="og:title" content="Octavalidate - JS: Installing with NPM">
+    <meta property="og:title" content="Octavalidate - JS: Client-side Validation Library for NodeJS">
     <meta property="og:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="Octavalidate - JS: Installing with NPM">
+    <meta name="twitter:title" content="Octavalidate - JS: Client-side Validation Library for NodeJS">
     <meta name="twitter:description"
         content="Octavalidate - JS: Learn how to install this JavaScript library with NPM and validate your frontend HTML forms">
         <script src="./assets/prettify/run_prettify.js?autoload=true"></script>
-        <link rel="stylesheet" href="./assets/prettify/skins/sons-of-obsidian.css" />
+    <link rel="stylesheet" href="./assets/prettify/skins/tomorrow-night-blue.css" />
     <link rel="icon" href="assets/img/ov-image.png">
     <link rel="stylesheet" href="./assets/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
@@ -43,28 +43,29 @@
     </header>
     <section class="container is-fluid p-2 has-navbar-fixed-top">
         <div class="container p-3">
-            <h3 class="title is-3 mt-3 mb-3 font-weight-bold has-text-primary">INSTALLING WITH NPM</h3>
+            <h3 class="title is-3 mt-3 text-center font-weight-bold has-text-primary">INSTALLING WITH NPM</h3>
+            <h5 class="subtitle text-center">Client-side Validation Library for NodeJS</h5>
             <article>
-                <p><b>octaValidate</b> is a front-end library, and before you can use it in your application, you have
+                <p><b>octaValidate - JS</b> is a front-end library, and before you can use it in your NodeJS frontend project, you have
                     to install it through <b>NPM</b> an build the library with <b>browserify</b>.</p>
                 <p class="mt-3 mb-5">Below are the steps to achieve this.</p>
                 <h5 class="title is-5 mb-2">INSTALL BROWSERIFY</h5>
                 <p class="mt-2 mb-3">There are 2 ways to install <b>browserify.</b></p>
                 <p class="tag is-warning title is-6">Install on your App</p>
-                <pre class="prettyprint">$ npm install browserify</pre>
+                <div class="embed-snippet" classnames="lang-shell">$ npm install browserify</div>
                 <p class="tag is-warning title is-6 mt-5">Or Install globally</p>
-                <pre class="prettyprint">$ npm install -g browserify</pre>
+                <div class="embed-snippet" classnames="lang-shell">$ npm install -g browserify</div>
                 <hr>
-                <h5 class="title is-5 mb-2">INSTALL OCTAVALIDATE</h5>
-                <pre class="prettyprint">$ npm install octavalidate</pre>
+                <h5 class="title is-5 mb-3">INSTALL OCTAVALIDATE</h5>
+                <div class="embed-snippet" classnames="lang-shell">$ npm install octavalidate</div>
                 <hr>
                 <p class="mb-3">Now create a file <span class="tag is-info is-light">ov.js</span> that will store all
-                    form validations for your app.</p>
+                    form validations for your project.</p>
                 <p>Within this file, require the library, then initialize the function after the <b>DOM</b> is ready,
                     and pass in the form ID and any configuration options as the second argument.</p>
-                <p class="mt-2 mb-2 notification is-info is-light">Learn more about configuration options <a href="config.html">here</a></p>
-                <p class="tag is-info mb-2 title is-6">ov.js</p>
-                <pre class="prettyprint lang-js">//require the module<br>const octaValidate = require ('octavalidate');<br>//initialise the function after DOM is ready!!!<br>document.addEventListener('DOMContentLoaded', function () {<br>  const myForm = new octaValidate('my_form');<br>  //listen for submit event<br>  document.querySelector('#my_form').addEventListener('submit', function(e){<br>    e.preventDefault();<br>    //invoke the method<br>    if(myForm.validate() === true){ <br>      //validation successful, process form data here<br>    } else {<br>      //validation failed<br>    }<br>  })<br>})</pre>
+                <p class="mt-2 mb-3 notification is-info is-light">Learn more about configuration options <a href="config.html">here</a></p>
+                <p class="tag is-info mb-3 title is-6">ov.js</p>
+                <div class="embed-snippet" classnames="lang-js">//require the module<br>const octaValidate = require ('octavalidate');<br>//initialise the function after DOM is ready!!!<br>document.addEventListener('DOMContentLoaded', function () {<br>  const myForm = new octaValidate('my_form');<br>  //listen for submit event<br>  document.querySelector('#my_form').addEventListener('submit', function(e){<br>    e.preventDefault();<br>    //invoke the method<br>    if(myForm.validate() === true){ <br>      //validation successful, process form data here<br>    } else {<br>      //validation failed<br>    }<br>  })<br>})</div>
                 <p class="mt-4 notification is-danger is-light">Make sure to initialise the function after the DOM is
                     ready!</p>
                 <hr>
@@ -75,14 +76,14 @@
                     <b>globally</b>.
                 </p>
                 <p class="mb-3">Type the code below in a command-line to build your validations.</p>
-                <pre class="prettyprint">$ browserify ov.js -o validations.js</pre>
+                <div class="embed-snippet" classnames="lang-shell">$ browserify ov.js -o validations.js</div>
                 <hr>
                 <p class="tag title is-6 is-warning mb-2 ">package.json</p>
-                <p class="mb-3">Open your app's <span class="tag is-info is-light">package.json</span> file and add /
+                <p class="mb-3">Open your app's <span class="tag is-info is-light">package.json</span> file and add or
                     modify the lines below to build the <span class="tag is-info is-light">ov.js</span>.</p>
-                <pre class="prettyprint">"scripts": {<br>  "build" : "browserify ov.js -o validations.js"<br>}</pre>
+                <div class="embed-snippet" classnames="lang-shell">"scripts": {<br>  "build" : "browserify ov.js -o validations.js"<br>}</div>
                 <p class="mt-2 mb-2">Then run</p>
-                <pre class="prettyprint">$ npm run build</pre>
+                <div class="embed-snippet" classnames="lang-shell">$ npm run build</div>
                 <hr>
                 <p class="mb-3">If you can see the file <span class="tag is-info is-light">validations.js</span>, it
                     means that we have successfully built validations for the form. All you have to do now is to link
@@ -91,7 +92,7 @@
                 <pre
                     id="code-section">&lt;!-- form validation --&gt;<br>&lt;script src="public/js/validations.js"&gt;&lt;/script&gt;<br><br>&lt;form id="my_form"&gt;<br>  &lt;input octavalidate="R,EMAIL" id="inp_email" name="email" type="email"&gt;<br>  &lt;input octavalidate="R,DIGITS" id="inp_age" name="age" type="number"&gt;<br>  &lt;button type="submit"&gt;submit&lt;/button&gt;<br>&lt;/form&gt;</pre>
                 <p class="notification is-warning is-light mt-3">
-                    If you're using <b>node js</b>, make sure your app is set up to serve <b>static files.</b>
+                    Make sure your app is set up to serve <b>static files.</b>
                 </p>
             </article>
         </div>
