@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body.dark{
+            color: #fff;
+            background-color: #0c0c0c;
+        }
+
+        body.light{
+            color: #000;
+            background-color: #fff;
+        }
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: var(--text-medium);
+            line-height: var(--text-lh-medium);
+            font-weight: 700;
+        }
+
+        h1 {
+            margin: 0px;
+            line-height: 40;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 110%;
+        }
+
+        h1 {
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .nav-area {
+            display: flex;
+            padding: 15px;
+            border-bottom: 2px solid inherit;
+            background-color: rgb(153 164 255 / 11%);
+            width: 100%;
+            z-index: 5555555;
+            top: 0;
+            height: 70px;
+        }
+
+        .main {
+            margin-top: 70px;
+        }
+
+        .nav-area .nav-brand {
+            flex-basis: 15%;
+            align-self: center;
+        }
+
+        a {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .pb-70 {
+            padding-bottom: 70px
+        }
+
+        .pt-70 {
+            padding-top: 70px
+        }
+
+        .pt-50 {
+            padding-top: 50px
+        }
+
+        .pt-100 {
+            padding-top: 100px;
+        }
+
+        .pt-pb-70 {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        a.nav-brand {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .nav-area .nav-search-area {
+            flex-basis: 40%;
+        }
+
+        .nav-search-area .input input {
+            width: 80%
+        }
+
+        .nav-search-area .input i {
+            align-self: center;
+            text-align: center;
+            width: 20%;
+            font-size: 1.3rem;
+        }
+
+        .nav-area .nav-menu-area {
+            align-self: center;
+            flex-basis: 45%;
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        .nav-menu-area ul {
+            display: flex;
+            align-self: center;
+            list-style-type: none;
+        }
+
+        .nav-menu-area ul li:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        input {
+            border-radius: 5px;
+            padding: 5px;
+            padding-inline-start: 15px;
+            width: 100%;
+            border: 2px solid transparent;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 1);
+            /*box-shadow: 0 0 50px 1px #c1caef;*/
+            font-size: .9rem;
+        }
+
+        .input:hover {
+            box-shadow: 0 0 10px 1px #04AA6D;
+        }
+
+        .input:hover *:not(input) {
+            color: #04AA6D !important;
+        }
+
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .nft-section {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .nft-item {
+            width: 300px;
+            height: 350px;
+            overflow: hidden !important;
+            position: relative;
+            box-shadow: 7px 9px 0px 0px #015238;
+        }
+        .nft-item img{
+            position: absolute;
+            height: 100%;
+        }
+
+        footer {
+            color: rgb(255, 255, 255);
+            height: auto;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            background-color: rgb(24, 104, 183);
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .w-50 {
+            width: 50%
+        }
+
+        .bg-white {
+            background-color: #fff !important
+        }
+
+        .input {
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .nft-desc {
+            position: absolute;
+            z-index: 5;
+            top: 65%;
+            height: 150px;
+            width: 300px;
+            background-color: #1b1c26c2;
+            padding: 10px;
+            overflow: hidden;
+            border-radius: 0 0 20px;
+        }
+
+        .nft-desc h4 {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .nft-desc p {
+            color: #fff;
+        }
+
+        .nft-overlay {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('nft.png') 50% 50% !important;
+            height: 100%;
+        }
+
+        footer h5 {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .pre-title {
+            color: #009d6a;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .desc {
+            font-size: 1rem;
+            color: #5e5e5e;
+            line-height: 1.5rem;
+        }
+
+        .btn-cta {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            border: 2px solid transparent;
+            background-color: #00eba0;
+            height: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-10px);
+        }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
+        .mb-20{
+            margin-bottom:20px
+        }
+        /* Style the navigation menu */
+        .topnav {
+            overflow: hidden;
+            background-color: #1c1d27;
+            position: relative;
+        }
+
+        /* Hide the links inside the navigation menu (except for logo/home) */
+        .topnav #myLinks {
+            display: none;
+        }
+
+        /* Style navigation menu links */
+        .topnav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+        }
+
+        /* Style the hamburger menu */
+        .topnav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        /* Add a grey background color on mouse-over */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Style the active link (or home/logo) */
+        .active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        nav a:hover {
+            color: #04AA6D
+        }
+
+        .text-primary {
+            color: var(--primary) !important;
+        }
+        button, a {
+            cursor:pointer
+        }
+        @media screen and (min-width:0px) and (max-width:700px) {
+            .nft-section {
+                flex-direction: column;
+            }
+
+            .nft-item {
+                margin: auto auto 50px auto;
+                margin-right: auto !important;
+            }
+        }
+
+        @media screen and (min-width:0px) and (max-width: 650px) {
+            .nav-area {
+                display: none !important;
+            }
+
+            .nav-area-mobile {
+                display: block !important;
+            }
+
+            /* remove margin top because of position fixed */
+            .main {
+                margin-top: 0 !important;
+            }
+        }
+
+        :root {
+            --primary: #00eba0;
+            --text-large: 48px;
+            --text-medium: 32px;
+            --text-small: 24px;
+            --text-lh-large: 56px;
+            --text-lh-medium: 40px;
+            --text-lh-small: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="preloader" style="position: fixed;width:100%;height:100%;z-index:5555555555;background-color: #fff;color: #000;display: flex;justify-content: center;flex-direction: column;">
+        <div class="text-center">
+            <p class="preloader-text" style="transition: all 3s;
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 600;"></p>
+        </div>
+    </section>
+
+    <header>
+        <div class="nav-area">
+            <a class="nav-brand text-primary">NEFTA</a>
+            <div class="nav-search-area">
+                <div class="input d-flex">
+                    <input class="" placeholder="Search for an NFT">
+                    <i class="fa fa-search texts-primary" style="color:rgb(51, 51, 51)"></i>
+                </div>
+
+            </div>
+            <div class="nav-menu-area">
+                <nav>
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Buy NFT</a></li>
+                        <li><a>Sell NFT</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <div class="nav-area-mobile" style="display:none">
+            <!-- Top Navigation Menu -->
+            <div class="topnav">
+                <a href="#home" class="active">NEFTA</a>
+                <!-- Navigation links (hidden by default) -->
+                <div id="myLinks">
+                    <a href="#">Home</a>
+                    <a href="#">Buy NFT</a>
+                    <a href="#">Sell NFT</a>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a class="icon nav-toggler">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section style="padding:40px; max-width: 700px;
+        margin: auto;">
+            <div class="text-center">
+                <p class="pre-title">#NFT Listings</p>
+                <h1 style="margin:10px 0px 10px 0">Explore, Collect and Sell NFTs</h1>
+                <p class="desc">Browse and keep brosing just keep browsing for nft collections everywhere I dont think
+                    you understand a thing here</p>
+            </div>
+        </section>
+        <section class="nft-section">
+            <div class="nft-item">
+                <div class="nft-overlay"></div>
+                <div class="nft-desc">
+                    <h4>Some Name </h4>
+                    <p>Some description</p>
+                </div>
+            </div>
+            <div class="nft-item">
+                <div class="nft-overlay"></div>
+                <div class="nft-desc">
+                    <h4>Some Name </h4>
+                    <p>Some description</p>
+                </div>
+            </div>
+            <div class="nft-item">
+                <div class="nft-overlay"></div>
+                <div class="nft-desc">
+                    <h4>Some Name </h4>
+                    <p>Some description</p>
+                </div>
+            </div>
+            <div class="nft-item">
+                <div class="nft-overlay"></div>
+                <div class="nft-desc">
+                    <h4>Some Name </h4>
+                    <p>Some description</p>
+                </div>
+            </div>
+        </section>
+        <section style="background-color: rgb(153 164 255 / 11%);">
+            <div class="text-center" style="padding:40px; max-width: 800px;
+        margin: auto;">
+                <h3 style="font-size: 2.3rem;font-weight:800">The Only <span style="color:#00eba0;">NFT Market
+                        Place</span><br>That You Can Trust</h3>
+                <button class="btn-cta mt-20">Get Started <i class="fa fa-arrow-right"></i></button>
+            </div>
+        </section>
+        <div style="position:fixed;top: 80%;right: 3%;    box-shadow: 0px 0px 8px #00dca0;
+        border-radius: 50%;">
+            <button class="btn-theme-switch" style="width: 40px;height: 40px;border-radius:50%;border: 0;color: var(--primary);color: var(--primary);
+            background-color: #015238;">
+            <i class="fa fa-sun-o" style="font-size:1.5em"></i>
+            </button>
+            </div>
+    </main>
+</body>
+
+</html>
+
+<script>
+    let theme = "dark";
+
+    const changeTheme = (theme) => {
+        document.body.classList.remove('light', 'dark')
+        document.body.classList.add(theme)
+    }
+    /*Preloader type writer effect*/
+    let plI = 0;
+    let preloadStatus = 'please wait ...'
+    let typeWrite = function (){
+        if(plI < preloadStatus.length){
+                document.querySelector('.preloader-text').innerHTML+=preloadStatus.charAt(plI)
+                plI++;
+            }
+            setTimeout( typeWrite, 100)
+    }
+    typeWrite()
+
+    //change theme when window has loaded
+    window.addEventListener('load', function(){
+        changeTheme(theme);
+    })
+
+    document.addEventListener('DOMContentLoaded', function () {
+        //toggle navbar for mobile devices
+        document.querySelector('.nav-toggler').addEventListener('click', function () {
+            const x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        })
+        //theme btn-theme-switch
+        document.querySelector('.btn-theme-switch').addEventListener('click', function(){
+            document.body.classList.remove('light', 'dark')
+            document.querySelector('.btn-theme-switch i').removeAttribute('class')
+            if(theme == 'light'){
+                theme = 'dark'
+                document.querySelector('.btn-theme-switch i').setAttribute('class', 'fa fa-sun-o')
+            }else{
+                theme = 'light'
+                document.querySelector('.btn-theme-switch i').setAttribute('class', 'fa fa-moon-o')
+            }
+            document.body.classList.add(theme)
+        })
+    })
+    
+
+    //k()
+    const tokens = [
+        '0x9cd6a32765ece5f30b916d6c00eb9efae2c180a7/175', '0xccb5c4e5fcfb6c85b79e0a41617df55a5ddbce7e/89', '0x3203de5830c7deb61a0b2ee45178474a93269f01/45', '0x183276cf6dd6195de7d09d3ff4e80e97e3de1fee/2395', '0xfb173e1661d4076888d02ec14c3d53e44ff53f3b/35', '0x018ae5620758a28d39b1c03f4a03f6b2db9f55ca/313', '0xdd44443d8a3563e947ead8a2254b36f8d8b28581/22103', '0x00a52503faff391507fc90a2f931f8f61f67d816/673',
+        '0x8f6a4d8ad2493adfd7d1540ccdba11bde5c7eb9e/3103']
+
+    const opts = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'ApplIcation/json',
+            'Authorization': '148ec29b-3009-4919-b7aa-ec533d4796db'
+        }
+    }
+
+    //h())
+    const nftS = document.querySelector('.nft-section')
+    nftS.innerHTML = '';
+
+    let i = 0;
+    const interval = setInterval(() => {
+        if(i === tokens.length) clearInterval(interval)
+        if (i < tokens.length) {
+            preloadStatus = 'Preparing To Fetch NFTs ...'
+            document.querySelector('.preloader-text').innerHTML = ''
+            plI = 0
+            fetch(`https://api.nftport.xyz/v0/nfts/${tokens[i]}?chain=ethereum`, opts)
+                .then(res => res.json())
+                .then(data => {
+                    const img = data.nft.cached_file_url
+                    const name = data.nft.metadata.name
+                    const link = data.nft.metadata.external_url || data.nft.metadata_url || '#'
+                    const desc = data.nft.metadata.description || 'No description Provided'
+                    //i++;
+                    nftS.innerHTML += `
+                    
+            <div class="nft-item" onclick="window.location.href='${link}'" >
+                <img src="${img}">
+                <div class="nft-desc">
+                    <h4>${name}</h4>
+                    <p>${(desc.length >= 113) ? desc.substring(0, 113)+'...' : desc}</p>
+                </div>
+            </div>`;
+            //remove preloader
+            document.querySelector('.preloader').style.display = "none"
+            //stop typewriting
+            typeWrite = preloadStatus = ' '; plI = 0
+            //add fixed position to navbar
+            document.querySelector('.nav-area').style.position ="fixed"
+                })
+                .catch(err =>{
+                    typeWrite = preloadStatus = ' '; plI = 0
+                    document.querySelector('.preloader-text').innerHTML = `Couldn\'t fetch NFTs.<br><span onclick="document.querySelector('.preloader').style.display = 'none';document.querySelector('.nav-area').style.position = 'fixed' ">Would you like to check out NEFTA?</span>`;
+                    document.querySelector('.preloader-text').style.color="red"
+                    //add static nfts
+                    nftS.innerHTML = `
+                    <div class="nft-item">
+                <div class="nft-overlay"></div>
+                <div class="nft-desc">
+                    <h4>Some Name </h4>
+                    <p>Some description</p>
+                </div>
+            </div>
+            <div class="nft-item">
+                <div class="nft-overlay"></div>
+                <div class="nft-desc">
+                    <h4>Some Name </h4>
+                    <p>Some description</p>
+                </div>
+            </div>
+            <div class="nft-item">
+                <div class="nft-overlay"></div>
+                <div class="nft-desc">
+                    <h4>Some Name </h4>
+                    <p>Some description</p>
+                </div>
+            </div>
+            <div class="nft-item">
+                <div class="nft-overlay"></div>
+                <div class="nft-desc">
+                    <h4>Some Name </h4>
+                    <p>Some description</p>
+                </div>
+            </div>`;
+                    console.error(err)
+                } )
+                i++;
+            } else {
+            clearInterval(interval)
+        }
+    }, 5000)
+
+</script>
