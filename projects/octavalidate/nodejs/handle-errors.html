@@ -98,7 +98,7 @@
                 <p class="mb-3">Assuming you want to show the user a custom validation error like <b>"This Email address is taken"</b> or <b>"Your password is not correct"</b>, you can still use the helper script to achieve this but you must follow the syntax below to construct the error object.</p>
                 <div classnames="lang-php" class="embed-snippet">//syntax<br>const errObject = {<br>  "FORM_ID" : {<br>    "INPUT_NAME" : "ERROR_MESSAGE",<br>    "ANOTHER_INPUT_NAME" : "ERROR_MESSAGE"<br>    }<br>} <br> <br>//example<br>const errObject = {<br>  "form_login" : {<br>    "email" : "This Email Address does not exist!"<br>    }<br>}
                 </div>
-                <p>You may go ahead and invoke the <code>showErrors()</code> function, then pass in the custom error object as an argument.</p>
+                <p>You may go ahead and invoke the <code>showErrors()</code> function in the helper script and pass in the custom error object as an argument.</p>
             </div>
             <div class="mt-5">
                 <h5 class="title is-5 mb-3">DEMO FORM</h5>
