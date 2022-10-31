@@ -58,7 +58,10 @@ h1 {
     font-size: 2em;
     font-weight: bold;
 }
-
+/*prevent user highlight action on nav links*/
+header a{
+    user-select:none !important;
+}
 .nav-area {
     display: flex;
     padding: 15px;
@@ -512,8 +515,10 @@ background-color: #171822;
 margin: 15% auto;
 padding: 20px;
 /* border: 1px solid #888; */
-width: 70%;
+width: 80%;
 border-radius: 20px;
+position: relative;
+top: 10%;
 }
 
 .modal-content div{

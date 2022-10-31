@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
             }
         }
 
-        const nftS = document.querySelector('.nft-section')
+        const nftS = $('.nft-section')
         let clearedNfts = false;
         const interval = setInterval(() => {
             if (i === tokens.length) {
@@ -57,7 +57,6 @@ window.addEventListener('load', function () {
                                         $(`[nft-data="${nft}"]`).setAttribute('disabled', 'disabled')
                                         $(`[nft-data="${nft}"]`).innerHTML = 'Added to cart'
                                     }
-
                                 })
                             }
                             //add a new nft to cart
@@ -94,7 +93,6 @@ window.addEventListener('load', function () {
             </div>`;
                         console.error(err)
                     })
-                i++;
             } else {
                 clearInterval(interval)
             }

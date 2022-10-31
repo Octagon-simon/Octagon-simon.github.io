@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <script>
         if (!sessionStorage.getItem('loggedIn'))
@@ -80,25 +80,27 @@
                         class="fa fa-arrow-right"></i></button>
             </div>
         </section>
- <!-- The Modal -->
- <div id="modal_buy_nft" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <div class="buy-content text-center">
-            <h4 class="text-primary" style="font-size:1.4em">Confirm your purchase</h4>
-            <p><i class="fas fa-info fa-3x text-primary mt-20"></i></p>
-            <p class="text-light" style="line-height:25px;margin-top:20px">Please confirm if you want to buy an NFT with this address</p>
-            <p id="buy-info" class="text-primary mt-20">0xj3u8hb4uhn</p>
-            <div class="d-flex" style="gap:20px;width:80%;margin:30px auto">
-                <button class="btn-act buy-confirm w-50">Proceed</button>
-                <button class="btn-danger buy-cancel w-50">Cancel</button>
-            </div>
-            <p class="mt-20" style="line-height:25px;color:#999">We will charge you with the address linked to your wallet</p>
-        </div>
+        <!-- The Modal -->
+        <div id="modal_buy_nft" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="buy modal-close">&times;</span>
+                <div class="buy-content text-center">
+                    <h4 class="text-primary" style="font-size:1.4em">Confirm your purchase</h4>
+                    <p><i class="fas fa-info fa-3x text-primary mt-20"></i></p>
+                    <p class="text-light" style="line-height:25px;margin-top:20px;">Please confirm if you want to buy an
+                        NFT with this address</p>
+                    <p id="buy-info" class="text-primary mt-20" style="word-break: break-all;">0xj3u8hb4uhn</p>
+                    <div class="d-flex" style="gap:20px;width:80%;margin:30px auto">
+                        <button class="btn-act buy-confirm w-50">Proceed</button>
+                        <button class="btn-danger buy-cancel w-50">Cancel</button>
+                    </div>
+                    <p class="mt-20" style="line-height:25px;color:#999">We will charge you with the address linked to
+                        your wallet</p>
+                </div>
 
-    </div>
-</div>
+            </div>
+        </div>
     </main>
     <script src="./app.js"></script>
     <script src="./cart.js"></script>
