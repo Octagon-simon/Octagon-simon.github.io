@@ -19,37 +19,37 @@ window.addEventListener('load', function () {
                     $('#price_tag').value
             }
         }
-        document.addEventListener('DOMContentLoaded', function () {
-            //listen for image input change event
-            $('#inp_nft').addEventListener('change', function () {
-                //destructure array
-                const [file] = this.files
-                //check if file type is an image
-                if (file.type.includes('image'))
-                    //show preview
-                    $('#nft-img').src = URL.createObjectURL(file)
-            })
-            //listen for nft name input change event
-            $('#inp_name').addEventListener('change', function () {
-                //check if value is not empty
-                this.value = this.value.trim()
-                if (this.value.trim() !== "") {
-                    $('.nft-desc h4').innerHTML = this.value
-                }
-            })
-            //listen for nft description input change event
-            $('#inp_desc').addEventListener('change', function () {
-                //check if value is not empty
-                this.value = this.value.trim()
-                if (this.value.trim() !== "") {
-                    $('.nft-desc p').innerHTML = this.value
-                }
-            })
-            //listen for nft price change event
-            $('#inp_price').addEventListener('change', setNftPrice)
-            //listen for nft price change event
-            $('#price_tag').addEventListener('change', setNftPrice)
+
+        //listen for image input change event
+        $('#inp_nft').addEventListener('change', function () {
+            //destructure array
+            const [file] = this.files
+            //check if file type is an image
+            if (file.type.includes('image'))
+                //show preview
+                $('#nft-img').src = URL.createObjectURL(file)
         })
+        //listen for nft name input change event
+        $('#inp_name').addEventListener('change', function () {
+            //check if value is not empty
+            this.value = this.value.trim()
+            if (this.value.trim() !== "") {
+                $('.nft-desc h4').innerHTML = this.value
+            }
+        })
+        //listen for nft description input change event
+        $('#inp_desc').addEventListener('change', function () {
+            //check if value is not empty
+            this.value = this.value.trim()
+            if (this.value.trim() !== "") {
+                $('.nft-desc p').innerHTML = this.value
+            }
+        })
+        //listen for nft price change event
+        $('#inp_price').addEventListener('change', setNftPrice)
+        //listen for nft price change event
+        $('#price_tag').addEventListener('change', setNftPrice)
+
         $('#form_submit_nft').addEventListener('submit', function (e) {
             //prevent the form from submitting
             e.preventDefault()
