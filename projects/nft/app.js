@@ -1,4 +1,4 @@
-const url = "https://octagon-simon.github.io/projects/nft";
+const url = "http://127.0.0.1:3000/projects/nft";
 //use $ as global query selector
 const $ = (elem) => document.querySelector(elem);
 //use $$ as global query selectorAll
