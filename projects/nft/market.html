@@ -9,8 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://unpkg.com/octavalidate@1.2.3/native/validate.js"></script>
     <link rel="stylesheet" href="app.css">
-    <title>Document</title>
+    <title>NEFTA NFT MARKETPLACE</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin:auto;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -24,37 +32,36 @@
             </div>
         </section>
     </noscript>
-    <header>
-
-    </header>
+    <header></header>
 
     <main class="main">
         <section style="padding:40px; max-width: 700px;
         margin: auto;">
             <div class="text-center">
-                <p class="pre-title">#NFT Listings</p>
-                <h1 id="home-title" style="margin:10px 0px 10px 0;min-height:36px;"></h1>
-                <p class="desc">On this page, you can explore a wide range of NFTs and collect them or you can sell your own NFT.</p>
+                <p class="pre-title">#NFT Marketplace</p>
+                <h1 style="margin:10px 0px 10px 0">Welcome To The Largest NFT MARKETPLACE</h1>
+                <p class="desc">On this page, you can explore a wide range of NFTs and either buy or sell your NFT.</p>
+                <button id="showWalletAddrModal" class="btn-cta mt-20">Connect your wallet <i class="fa fa-arrow-right"></i></button>
             </div>
         </section>
-        <section class="nft-section">
-            <p class="text-center">
-                <i class="fas fa-spinner fa-spin fa-4x text-primary"></i>
-            </p>
-        </section>
+        <div class="container p-20">
+
+            <section class="nft-section">
+                <p class="text-center text-primary"><i class="fas fa-spinner fa-spin fa-3x"></i></p>
+            </section>
+        </div>
+
         <section style="background-color: rgb(153 164 255 / 11%);">
             <div class="text-center" style="padding:40px; max-width: 800px;
         margin: auto;">
-                <h3 style="font-size: 2.3rem;font-weight:800">The Only <span style="color:#00eba0;">NFT Market
-                        Place</span><br>That You Can Trust</h3>
-                <button class="btn-cta mt-20" onclick="window.location.assign('login.html')">Get Started <i
-                        class="fa fa-arrow-right"></i></button>
+                <h3 style="font-size: 2.3rem;font-weight:800">Do You <span style="color:#00eba0;">Own</span> An NFT You Want To <span style="color:#00eba0;">SELL?</span></h3>
+                <button onclick="window.location.assign('sell.html')" class="btn-cta mt-20">Sell Now <i class="fa fa-arrow-right"></i></button>
             </div>
         </section>
 
     </main>
-    <script src="app.js"></script>
-    <script src="index.js"></script>
+    <script src="./app.js"></script>
+    <script src="./market.js"></script>
 </body>
 
 </html>
