@@ -47,23 +47,23 @@
             <h5 class="subtitle text-center">Client-side Validation Library for ReactJS</h5>
             <article>
                 <p><b>Octavalidate - ReactJS</b> is a front-end validation library that you can import as a module and then use it within a Form component in <strong>React</strong>.</p>
-                <p class="notification is-info is-light p-3 mt-3 mb-3">Before you continue, please note that the documentation on how to use this library is the same as the <strong>Native JavaScript</strong> release of this library.</p>
+                <p class="notification is-info is-light p-3 mt-3 mb-3">Before you continue, please note that the documentation on how to use this library is the same as the documentation for the <strong>Native JavaScript</strong> release.</p>
                 <hr>
                 <h5 class="title is-5 mb-3">INSTALL OCTAVALIDATE</h5>
                 <div class="embed-snippet" classnames="lang-shell">$ npm install octavalidate-reactjs</div>
                 <hr>
-                <p class="mb-1">Once the package is installed; </p>
+                <p class="mb-1">Once the package has been installed; </p>
                 <ol class="ml-3 p-3 mb-3">
                     <li>Import the module and </li>
                     <li>Initialize the library on the page containing the form that you wish to validate.</li>
                 </ol>
-                <h4 class="tag title is-6 mb-2 is-primary iss-light p-4">login.js</h4>
-                <div class="embed-snippet" classnames="lang-js">import octaValidate from 'octavalidate'<br><br>export default function Login() {<br>    //initialize the library<br>    const myForm = new octaValidate('form_login')<br>    //handle form submission<br>    const handleSubmit = function (e) {         <br>        //prevent reload<br>        e.preventDefault();<br>        //begin validation on form<br>        if(myForm.validate()){<br>           /** process form data here **/<br>        }<br>    }<br>    //return the form<br>    return(<br>        &lt;form id="form_login" method="post" 
+                <h4 class="tag title is-6 mb-2 is-primary iss-light p-4">login.jsx</h4>
+                <div class="embed-snippet" classnames="lang-js">import octaValidate from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //initialize the library<br>    const myForm = new octaValidate('form_login')<br>    //handle form submission<br>    const handleSubmit = function (e) {         <br>        //prevent reload<br>        e.preventDefault();<br>        //begin validation on form<br>        if(myForm.validate()){<br>           /** process form data here **/<br>        }<br>    }<br>    //return the form<br>    return(<br>        &lt;form id="form_login" method="post" 
                     noValidate onSubmit={handleSubmit}&gt;<br>            &lt;input id="inp_email" name="email" type="email" 
                     octavalidate="R,EMAIL" /><br>            &lt;input id="inp_pass" name="password" type="password" 
                     octavalidate="R" minLength="8" /><br>            &lt;button type="submit"&gt;Login&lt;/button&gt;<br>        &lt;/form&gt;<br>    )<br>}    </div>
                 <p class="mt-2 mb-3">You can even choose to initialize the library with <strong>configuration options</strong> like the code below</p>
-                <div class="embed-snippet" classnames="lang-js">import octaValidate from 'octavalidate'<br><br>export default function Login() {<br>    ...<br>    const configOpts = {<br>        strictMode : true,<br>        strictWords = ['admin', 'null', 'undefined']<br>    }<br>    //initialize the library<br>    const myForm = new octaValidate('form_login', configOpts)<br>    ...<br>}</div>
+                <div class="embed-snippet" classnames="lang-js">import octaValidate from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    ...<br>    const configOpts = {<br>        strictMode : true,<br>        strictWords = ['admin', 'null', 'undefined']<br>    }<br>    //initialize the library<br>    const myForm = new octaValidate('form_login', configOpts)<br>    ...<br>}</div>
                 <p class="mt-4 notification is-danger is-light">Make sure your <strong>form IDs</strong> exist and they are unique!</p>
                 <div class="mt-3 has-text-centered">
                     <a href="config.html" class="button is-primary">Keep Reading&nbsp;<i class="fas fa-arrow-right"></i></a>
