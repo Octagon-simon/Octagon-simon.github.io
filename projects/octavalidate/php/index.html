@@ -21,7 +21,7 @@
     <meta name="twitter:description"
         content="octavalidate-PHP: This PHP Library helps to validate your forms server-side using validation rules, PHP's inbuilt validation, and sophisticated regular expressions.">
     <meta charset="UTF-8">
-    <link rel="icon" href="../assets/img/ov-image.png">
+    <link rel="icon" href="https://octagon-simon.github.io/projects/octavalidate/assets/img/ov-image.png">
     <link rel="stylesheet" href="../assets/css/bulma.min.css" />
     <link rel="stylesheet" href="../assets/css/all.min.css" />
     <!-- jQuery -->
@@ -99,7 +99,7 @@
                         <a href="config.html" class="button is-warning mt-2">Learn more&nbsp;<i
                                 class="fas fa-angle-right"></i></a>
                     </div>
-                    <div class="embed-snippet" classnames="lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br> "stripTags" => true,<br> "strictMode" => true<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);<br>//define rules for each form input name<br>$valRules = array(<br> "uname" => array(<br>     ["R", "Your username is required"]<br> ),<br> "email" => array(<br>     ["R", "Your Email Address is required"],<br>     ["EMAIL", "Your Email Address is invalid!"]<br>) );<br>//begin validation on form fields from $_POST array<br>if ($myForm->validateFields($valRules, $_POST) === true){<br>//process form data here<br>}else{<br> //return errors<br> print_r(json_encode($myForm->getErrors()));<br>}</pre>
+                    <div class="embed-snippet" classnames="lang-php">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br>    "stripTags" => true,<br>    "strictMode" => true<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);<br>//define rules for each form input name<br>$valRules = array(<br>    "uname" => array(<br>        ["R", "Your username is required"]<br>    ),<br>    "email" => array(<br>        ["R", "Your Email Address is required"],<br>        ["EMAIL", "Your Email Address is invalid!"]<br>    )<br> );<br>//begin validation on form fields from $_POST array<br>if ($myForm->validateFields($valRules, $_POST) === true){<br>    //process form data here<br>}else{<br>    //return errors<br>    print_r(json_encode($myForm->getErrors()));<br>}</pre>
                     </div>
                 </div>
                 <hr>
