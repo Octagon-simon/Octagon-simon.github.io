@@ -23,7 +23,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
-    <script src="https://unpkg.com/octavalidate@1.2.3/native/validate.js"></script>
+    <script src="https://unpkg.com/octavalidate@1.2.7/native/validate.js"></script>
     <!-- jQuery -->
     <script src="assets/js/jquery.min.js"></script>
     <!-- XSAlert CSS -->
@@ -43,6 +43,7 @@
 </head>
 
 <body>
+<noscript style="padding:10px;position:fixed;bottom:0;text-align:center;width:100%;color:#fff;background-color:rgb(221, 17, 2);z-index:99999">Please enable JavaScript to view this page</noscript>
     <header id="header">
     </header>
     <section class="container is-fluid p-2">
@@ -185,9 +186,7 @@
                         <p>Invoke this method and pass in a <b>form id</b> to remove any errors present in the form.</p>
                     </div>
                     <div class="notification is-warning is-light mt-3 mb-3">
-                        <p class="m-0">Server-side form validation is built for <b>PHP</b> at the moment. Please refer to its documentation.</p>
-                        <a href="./php/" class="button is-warning mt-2">PHP DOCS&nbsp;<i class="fas fa-angle-right"></i></a>
-                        
+                        <p class="m-0">Server-side form validation is built for <b>PHP & NodeJS</b>. Please refer to their documentation.</p>
                     </div>
                     <pre
                         id="code-section">&lt;script&gt;<br>//create new instance of the function<br>const myForm = new octaValidate('my_form');<br>//show server-side validation Errors<br>myForm.showBackendErrors();<br>//remove server-side validation Errors<br>myForm.removeBackendErrors();<br>&lt;/script&gt;</pre>

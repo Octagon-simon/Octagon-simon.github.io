@@ -1,35 +1,31 @@
 <!doctype html>
 <html class="has-navbar-fixed-top">
-<title>octavalidate-PHP | Configuration options</title>
+<title>Octavalidate - React JS | Configuration options</title>
 
 <head>
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="Octavalidate-PHP: Learn how you can configure this library using configuration options">
-    <meta name="title" content="Octavalidate-PHP: Configuration options">
+        content="Octavalidate - React JS: Learn how you can configure this library using configuration options">
+    <meta name="title" content="Octavalidate - React JS: Configuration options">
     <meta property="og:description"
-        content="Octavalidate-PHP: Learn how you can configure this library using configuration options">
-    <meta property="og:title" content="Octavalidate-PHP: Configuration options">
-    <meta property="og:image"
-        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+        content="Octavalidate - React JS: Learn how you can configure this library using configuration options">
+    <meta property="og:title" content="Octavalidate - React JS: Configuration options">
+    <meta property="og:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image"
-        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="Octavalidate-PHP: Configuration options">
+    <meta name="twitter:image" content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta name="twitter:title" content="Octavalidate - React JS: Configuration options">
     <meta name="twitter:description"
-        content="Octavalidate-PHP: Learn how you can configure this library using configuration options">
+        content="Octavalidate - React JS: Learn how you can configure this library using configuration options">
     <link rel="icon" href="https://octagon-simon.github.io/projects/octavalidate/assets/img/ov-image.png">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../assets/css/bulma.min.css" />
     <link rel="stylesheet" href="../assets/css/all.min.css" />
-    <script src="https://unpkg.com/octavalidate@1.2.7/native/validate.js"></script>
     <!-- jQuery -->
-    <script src="../assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
     <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
-
     <link rel="stylesheet" href="../assets/css/ov.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
@@ -45,18 +41,16 @@
 <body>
 <noscript style="padding:10px;position:fixed;bottom:0;text-align:center;width:100%;color:#fff;background-color:rgb(221, 17, 2);z-index:99999">Please enable JavaScript to view this page</noscript>
     <header id="header">
-
+        
     </header>
     <section class="container is-fluid p-2">
-        <div class="container  p-3">
-            <h3 class="title is-3 mt-3 mb-3 has-text-info has-text-centered">CONFIGURATION</h3>
+        <div class="container p-3">
+            <h3 class="title is-4 has-text-centered mt-3 mb-3 has-text-info">CONFIGURATION</h3>
             <article>
                 <p class="mb-3 mt-3">The code below shows the syntax to initialise octavalidate for your form.</p>
-                <div classnames="lang-php" class="embed-snippet">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//create new instance<br>$myForm = new octaValidate($FORM_ID, $OPTIONS);</div>
-                <hr>
+                <div class="embed-snippet" classnames="lang-js">//import the library<br>import { octaValidate } from 'octavalidate-reactjs'<br>//syntax to create new instance<br>const myForm = new octaValidate(FORM_ID, CONFIGURATION);</div>
                 <h3 class="title is-5 mt-4 mb-3">CONFIGURATION OPTIONS</h3>
-                <p>To use any of the options below, provide it as an object and pass it as the second argument when
-                    creating an instance of octaValidate.</p>
+                <p>Here are some of the configuration options.</p>
                 <div class="table-responsive">
                     <table class="table is-bordered w-50 mt-3">
                         <thead>
@@ -86,47 +80,58 @@
                             </tr>
                             <tr>
                                 <td>
+                                    successBorder <span class="tag is-warning">Boolean</span>
+                                </td>
+                                <td>
+                                    This option will automatically set a green border on an input element when its validation test is passed. Default value is <b>true</b>.
+                                </td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td>
                                     strictWords <span class="tag is-warning">Array</span>
                                 </td>
                                 <td>
-                                    This option alows you to provide words that users are not supposed to submit. For eg
+                                    This option allows you to provide words that users are not supposed to submit. For eg
                                     ["null", "error", "false"]. In order to use this option, you must set
                                     <b>strictMode</b> to <b>true</b>.
                                 </td>
                                 <td>["null", "error", "false"]</td>
                             </tr>
-                            <tr>
-                                <td>
-                                    stripTags <span class="tag is-warning">Boolean</span>
-                                </td>
-                                <td>
-                                    Just like PHP's inbuilt <code>stripTags</code> function, this option loops through
-                                    the POST Array and removes anything enclosed within a tag. Default value
-                                    is <b>false</b>.
-                                </td>
-                                <td>true</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="mt-2">
-                    <p class="mt-4">To use any of the configuration options, I will create a new instance of the
+                <p class="mt-4 mb-4">To use any of the configuration options, I will create a new instance of the
                         function like this:
                     </p>
-                    <div classnames="lang-php" class="embed-snippet">//require the library<br>require 'src/Validate.php';<br>use Validate\octaValidate;<br>//set configuration<br>$options = array(<br>  "stripTags" => true,<br>  "strictMode" => true,<br>  "strictWords" => ["null", "undefined"]<br>);<br>//create new instance<br>$myForm = new octaValidate('my_form', $options);</div>
-                    <div class="mt-5">
-                        <h5 class="title is-5 mb-3">DEMO FORM</h5>
-                        <div class="notification is-info is-light">
-                            <p class="m-0">They are all over the PHP Docs, did you miss any?</p>
-                        </div>
+                    <div class="embed-snippet" classnames="lang-js">//configuration options<br>const myFormOptions = {<br> successBorder: true,<br> strictMode : true,<br> strictWords : ["admin", "null", "undefined"]<br>};<br>//create new instance of the function<br>const myForm = new octaValidate('my_form', myFormOptions);</div>
+                    <div class="mt-3 has-text-centered">
+                        <a href="./api.html" class="button is-info is-light">API Methods&nbsp;<i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
             </article>
         </div>
     </section>
     <footer class="footer">
+        
     </footer>
     <script src="../ov.js"></script>
+    <script>
+        const myFormOptions = { successBorder: true, strictMode: true, strictWords: ["admin", "null", "undefined"] };
+        const myForm = new octaValidate('my_form', myFormOptions);
+        let formEl = document.querySelector('#my_form');
+        //listen on third form
+        formEl.addEventListener('submit', function (e) {
+            e.preventDefault();
+            //invoke the validate method
+            if (myForm.validate() === true) {
+                XSAlert({
+                    title: 'Couldn\'t break through?',
+                    message: 'Demo Form passed the validation test! 😎',
+                    icon: 'question',
+                })
+            }
+        });
+    </script>
 </body>
 
 </html>
