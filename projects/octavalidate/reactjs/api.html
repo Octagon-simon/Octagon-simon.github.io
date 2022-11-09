@@ -1,0 +1,151 @@
+<!doctype html>
+<html class="has-navbar-fixed-top">
+<title>Octavalidate - ReactJS | API methods</title>
+
+<head>
+    <meta name="author" content="Simon Ugorji">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Octavalidate - ReactJS: Learn about the methods that can be invoked in this library">
+    <meta name="title" content="Octavalidate - ReactJS: API methods">
+    <meta property="og:description"
+        content="Octavalidate - ReactJS: Learn about the methods that can be invoked in this library">
+    <meta property="og:title" content="Octavalidate - ReactJS: API methods">
+    <meta property="og:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image"
+        content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
+    <meta name="twitter:title" content="Octavalidate - ReactJS: API methods">
+    <meta name="twitter:description"
+        content="Octavalidate - ReactJS: Learn about the methods that can be invoked in this library">
+    <link rel="icon" href="https://octagon-simon.github.io/projects/octavalidate/assets/img/ov-image.png">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <!-- jQuery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
+    <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
+    <link rel="stylesheet" href="../assets/css/ov.css" />
+    <link rel="stylesheet" href="../assets/css/ov.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QS025GYRY5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QS025GYRY5');
+    </script>
+</head>
+
+<body>
+<noscript style="padding:10px;position:fixed;bottom:0;text-align:center;width:100%;color:#fff;background-color:rgb(221, 17, 2);z-index:99999">Please enable JavaScript to view this page</noscript>
+    <header id="header">
+    </header>
+    <section class="container is-fluid p-2">
+        <div class="container p-3">
+            <h3 class="title is-4 mt-3 mb-3 has-text-info text-center">API METHODS</h3>
+                <div class="p-2">
+                    <h5 class="title is-6 mb-3">VALIDATE</h5>
+                    <p class="mb-3">Invoke this method <code>validate()</code> to begin validation on the form.</p>
+                    <div class="embed-snippet" classnames="lang-js">
+                        import octaValidate from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) {         <br>        //initialize the library<br>        const myForm = new octaValidate('form_login')<br>        //prevent reload<br>        e.preventDefault();<br>        //begin validation on form and check if it passed<br>        if(<span class="tag is-danger">myForm.validate()</span> === true){<br>           /** process form data here **/<br>        }<br>    }<br>    //return the form<br>    ...<br>}</div>
+                    <p class="mt-3">Return type: <span class="tag is-info">boolean</span></p>
+                </div>
+                <hr>
+                <div class="p-2">
+                    <h5 class="title is-6 mb-3">STATUS</h5>
+                    <p class="mb-3">This method <code>status()</code> returns the <b>number of validation errors</b> on the form.</p>
+                    <div class="embed-snippet" classnames="lang-js">//create new instance of the function<br>const myForm = new octaValidate('my_form');<br>//get the number of validation errors on the form<br>myForm.status();</div>
+                    <p class="mt-3">Return type: <span class="tag is-info">integer</span></p>
+                    </div>
+                <hr>
+                <div class="p-2">
+                    <h5 class="title is-6 mb-3">FORM</h5>
+                    <p class="mb-3">This method <code>form()</code> returns the form id attached to the instance.</p>
+                    <div class="embed-snippet" classnames="lang-js">//create new instance of the function<br>const myForm = new octaValidate('my_form');<br>//get form id<br>myForm.form();</div>
+                    <p class="mt-3">Return type: <span class="tag is-info">string</span></p>
+                </div>
+                <hr>
+                <section id="custom-rule-method">
+                    <div class="p-2 mt-3">
+                        <h5 class="title is-6 mb-3">CUSTOM RULE</h5>
+                        <p class="mb-3">This method <code>customRule()</code> allows you to construct a single validation rule. To construct a rule, you need the rule's <b>title, regular expression and an error message</b>.</p>
+                        <p class="mb-3">This method returns <b>true</b> on success and <b>false</b> on failure.</p>
+                        <p class="notification is-info is-light mt-3 mb-3">
+                            This method allows you to construct <b>a single rule.</b> Use the <b>multiple
+                                rules</b> method to construct more rules.
+                        </p>
+                        <div class="embed-snippet" classnames="lang-js">//create new instance of the function<br>const myForm = new octaValidate('my_form');<br><br>//Here's the syntax<br>//myForm.customRule(RULE_TITLE, REG_EXP, ERROR_TEXT);<br><br>//custom password validation<br>const rule_title = "PASS";<br>const reg_exp = /12345/;<br>const err_txt = "Please enter 12345";<br>//build the rule<br>myForm.customRule(rule_title, reg_exp, err_txt);</div>
+                        <p class="mt-3">Return type: <span class="tag is-info">Boolean</span></p>
+                        <p class="mb-3 mt-3">Then in your form input, provide the rule title within the <b>octvalidate</b> attribute.</p>
+                        <p class="notification is-danger is-light mt-3 mb-3">All <b>rule titles</b> are case-sensitive!
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="p-2">
+                        <h5 class="title is-6 mb-3">MORE CUSTOM RULES</h5>
+                        <p class="mb-3">This method <code>moreCustomRules()</code> allows you to construct more custom rules.</p>
+                        <p class="mb-3">To use this method, create an object that will contain the rule title as the object's
+                            property, and its value is an array containing the rule's regular
+                            expression, and error text separated by a comma.
+                        </p>
+                        <p class="mb-3">This method returns <b>true</b> on success and <b>false</b> on failure.</p>
+                        <div class="embed-snippet" classnames="lang-js">//create new instance of the function<br>const myForm = new octaValidate('my_form');<br><br>//Here's the syntax<br>//myForm.moreCustomRules(RULES);<br><br>//custom password validation<br>var RULES = {<br>"PASS": [/12345/, "Please Enter 12345"],<br>"USERNAME": /simon/, "Please enter simon"]<br>};<br>//build the rule<br>myForm.moreCustomRules(RULES);</div>
+                        <p class="mt-3">Return type: <span class="tag is-info">Boolean</span></p>
+                        <p class="mb-3 mt-3">Then in your form input, provide the rule title within the <b>octvalidate</b> attribute.</p>
+                        <p class="notification is-info is-light mt-5">You do not need to pass in your <b>regular expression</b> as a
+                            string! This is because the <b>JavaScript engine</b> natively recognizes regular
+                            expressions.
+                        </p>
+                    </div>
+                </section>
+                <hr>
+                <section id="callback">
+                <div class="p-2">
+                    <h5 class="title is-6 mb-3">CALLBACK</h5>
+                    <p>This method allows you to provide additional functions that will be executed when validation tests are
+                        passed or when a validation test fails.</p>
+                    <p class="mt-2 mb-2">To use this method, provide your <b>success callback</b> and <b>error callback</b> as arguments to the method <code>validateCallBack</code>. The <b>success callback</b> will execute when validation tests are passed and the <b>error callback</b> will execute when any validation test fails.</p>
+                    <div class="embed-snippet" classnames="lang-js">//create new instance of the function<br>const myForm = new octaValidate('my_form');<br><br>//Here's the syntax<br>//myForm.validateCallBack(SUCCESS_CALLBACK, ERROR_CALLBACK);<br><br>//success callback<br>let successCB = function(){<br>  alert("No validation error");<br>}<br>//error callback<br>let errorCB = function(){<br>  alert(myForm.status() + " validation error(s)")<br>}<br>//invoke the method<br>myForm.validateCallBack(successCB, errorCB);</div>
+                    <p class="mt-3">Return type: <span class="tag is-info">function</span></p>
+                </div>
+                </section>
+                <hr>
+                <div class="p-2">
+                    <h5 class="title is-6 mb-3">VERSION</h5>
+                    <p class="mb-5">This method returns the version of the release that you are using.</p>
+                    <div class="embed-snippet" classnames="lang-js">//create new instance of the function<br>const myForm = new octaValidate('my_form');<br>//get version<br>myForm.version();</div>
+                    <p class="mt-3">Return type: <span class="tag is-info">string</span></p>
+                </div>
+                <hr>
+                <section id="server-side-errors">
+                    <h5 class="title is-6 mb-3">SHOW & HIDE SERVER-SIDE FORM ERRORS</h5>
+                    <p class="mb-3">This method allows the library to display server-side validation errors on the form.</p>
+                    <p class="mb-3">If you must use this Library to process server-side validations, invoke the methods below instead of using the <b>helper script</b> attached to that release.</p>
+                    <div class="p-2 mt-2">
+                        <h6 class="title is-6 mb-2">1. showBackendErrors</h6>
+                        <p>Invoke this method and pass in the error object to insert server-side validation errors into the form.</p>
+                        <h6 class="title is-6 mt-4 mb-2">2. removeBackendErrors</h6>
+                        <p>Invoke this method and pass in a <b>form id</b> to remove any errors present in the form.</p>
+                    </div>
+                    <div class="notification is-info is-light mt-3 mb-3">
+                        <p class="m-0">Server-side form validation is built for <b>PHP & NodeJS</b>. Please refer to their documentation.</p>
+                    </div>
+                    <div class="embed-snippet" classnames="lang-js">//create new instance of the function<br>const myForm = new octaValidate('my_form');<br>//show server-side validation Errors<br>myForm.showBackendErrors(error_object);<br>//remove server-side validation Errors<br>myForm.removeBackendErrors(form_id);</div>
+                </section>
+                <div class="mt-5 container has-text-centered">
+                    <a href="rules.html" class="has-fa-icon button is-info is-light">VALIDATION RULES&nbsp;<i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+        </div>
+    </section>
+    <footer class="footer">
+        
+    </footer>
+    <script src="../ov.js"></script>
+</body>
+
+</html>
