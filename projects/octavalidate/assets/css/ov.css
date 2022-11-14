@@ -19,6 +19,7 @@ border-radius:5px ;
 
 html, body{
     font-family: 'Roboto', sans-serif !important;
+    font-size:1em;
 }
 body{
     display:contents;

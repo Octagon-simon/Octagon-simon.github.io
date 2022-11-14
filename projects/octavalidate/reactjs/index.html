@@ -57,7 +57,7 @@
                 <ol class="ml-3 p-3 mb-3">
                     <li>Import the module</li>
                     <li>Create a component</li>
-                    <li>Within your component, creae a function that will handle form submission</li>
+                    <li>Within your component, create a function that will handle form submission</li>
                     <li>Initialize the library within this function.</li>
                     <li>Now invoke the <code>validate()</code> method</li>
                 </ol>
@@ -67,13 +67,13 @@
                         <li><b>false</b> means there are validation errors</li>
                     </ul>
                 <h4 class="tag title is-6 mb-2 is-primary iss-light p-4">login.jsx</h4>
-                <div class="embed-snippet" classnames="lang-js">import octaValidate from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) {         <br>        //initialize the library<br>        const myForm = new octaValidate('form_login')<br>        //prevent reload<br>        e.preventDefault();<br>        //begin validation on form and check if it passed<br>        if(myForm.validate() === true){<br>           /** process form data here **/<br>        }<br>    }<br>    //return the form<br>    return(<br>        &lt;form id="form_login" method="post" 
+                <div class="embed-snippet" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) {         <br>        //initialize the library<br>        const myForm = new octaValidate('form_login')<br>        //prevent reload<br>        e.preventDefault();<br>        //begin validation on form and check if it passed<br>        if(myForm.validate() === true){<br>           /** process form data here **/<br>        }<br>    }<br>    //return the form<br>    return(<br>        &lt;form id="form_login" method="post" 
                     noValidate onSubmit={handleSubmit}&gt;<br>            &lt;input id="inp_email" name="email" type="email" 
                     octavalidate="R,EMAIL" /><br>            &lt;input id="inp_pass" name="password" type="password" 
                     octavalidate="R" minLength="8" /><br>            &lt;button type="submit"&gt;Login&lt;/button&gt;<br>        &lt;/form&gt;<br>    )<br>}    </div>
                 <p class="notification is-warning p-3 is-light">To prevent <b>inconsistent form validation</b>, only initialize the validation library within the callback function that handles form submission!</p>
                 <p class="mt-2 mb-4">You can even choose to initialize the library with <strong>configuration options</strong> like the code below</p>
-                <div class="embed-snippet" classnames="lang-js">import octaValidate from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    const configOpts = {<br>        strictMode : true,<br>        strictWords = ['admin', 'null', 'undefined']<br>    }<br>    //handle form submission<br>    const handleSubmit = function (e) {<br>        //initialize the library<br>        const myForm = new octaValidate('form_login', configOpts)<br>    }<br>}</div>
+                <div class="embed-snippet" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    const configOpts = {<br>        strictMode : true,<br>        strictWords = ['admin', 'null', 'undefined']<br>    }<br>    //handle form submission<br>    const handleSubmit = function (e) {<br>        //initialize the library<br>        const myForm = new octaValidate('form_login', configOpts)<br>    }<br>}</div>
                 <p class="mt-4 notification is-danger is-light">Make sure the <strong>form ID</strong> exists and the input element ids are unique!</p>
                 <div class="mt-3 has-text-centered">
                     <a href="config.html" class="button is-primary">Keep Reading&nbsp;<i class="fas fa-arrow-right"></i></a>
