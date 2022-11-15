@@ -48,7 +48,7 @@
         <div class="container p-3">
             <h3 class="title is-3 mt-3 text-center font-weight-bold has-text-info">OCTAVALIDATE FOR REACTJS</h3>
             <h5 class="subtitle text-center">Client-side Validation Library for ReactJS</h5>
-            <article>
+            <article class="mb-4">
                 <p><b>Octavalidate - ReactJS</b> is a front-end validation library that you can use to validate your forms in ReactJS.</p>
                 <p class="notification is-info is-light p-3 mt-3 mb-3">Before you continue, please note that the
                     documentation on how to use this library is almost the same as the documentation on how to use the
@@ -79,14 +79,11 @@
                 <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br></div>
                 <p class="mb-3">Within this component, create a function that will handle form submission
                 </p>
-                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br> 
-                       const handleSubmit = function (e) { <br></div>
+                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) { <br></div>
                 <p class="mb-3">Now initialize the library within this function.</p>
                 <p class="notification is-info is-light p-2 mb-3">Make sure that the <strong>id</strong> used to initialize this
                     library is the same as the form itself.</p>
-                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br> 
-                       const handleSubmit = function (e) { <br>        //initialize the library<br> 
-                               const myForm = new
+                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) { <br>        //initialize the library<br>        const myForm = new
                     octaValidate('form_login')<br></div>
                 <p class="mb-3">Once you have initialized the library, invoke the <code>validate()</code>
                     method on the validation instance to begin validation on the form </p>
@@ -99,10 +96,9 @@
                         class="tag is-primary">true</span>, we are free to process the form. </p>
                 <p class="mb-2">Here's the full code</p>
                 <h4 class="tag title is-6 mb-2 is-primary iss-light p-4">login.jsx</h4>
-                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br> //handle form submission<br>    const handleSubmit = function (e) { <br> //initialize the library<br>        const myForm = new octaValidate('form_login')<br> //prevent reload<br> e.preventDefault();<br> //begin validation on form and check if it passed<br>        if(myForm.validate() === true){<br>            /** process form data here**/<br>        }<br>    }<br> //return the form<br> return(<br>        &lt;form id="form_login" method="post" noValidate onSubmit={handleSubmit}&gt;<br>            &lt;input id="inp_email" name="email" type="email"
+                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br> //handle form submission<br>    const handleSubmit = function (e) { <br> //initialize the library<br>        const myForm = new octaValidate('form_login')<br>        //prevent reload<br>        e.preventDefault();<br>        //begin validation on form and check if it passed<br>        if(myForm.validate() === true){<br>            /** process form data here**/<br>        }<br>    }<br>    //return the form<br>    return(<br>        &lt;form id="form_login" method="post" noValidate onSubmit={handleSubmit}&gt;<br>            &lt;input id="inp_email" name="email" type="email"
                     octavalidate="R,EMAIL" /><br>            &lt;input id="inp_pass" name="password" type="password"
-                    octavalidate="R" minLength="8" /><br>            &lt;button type="submit"&gt;Login&lt;/button&gt;<br>
-                    &lt;/form&gt;<br>    )<br>} </div>
+                    octavalidate="R" minLength="8" /><br>            &lt;button type="submit"&gt;Login&lt;/button&gt;<br>        &lt;/form&gt;<br>    )<br>} </div>
                 <p class="mb-2">If you look at the code above, you will notice that a form was returned from the
                     component. </p>
                 <p class="mb-2">This form has an <strong>ID</strong> that is equal to the one used to initialize the
@@ -120,11 +116,11 @@
                 <hr>
                 <h5 class="title is-5 mb-2">DEMO</h5>
                 <p class="mt-4 notification is-warning is-light">Would you like to see a simple implementation of this
-                    library on a react project? Click the button below to visit the repository <br>
+                    library on a react project? Click the button below to visit the repository <br><br>
                     <a href="https://github.com/Octagon-simon/octaValidate-reactjs#demo" class="button is-warning">Vist repo</a>
                 </p>
                 <h5 class="title is-5 mb-2">Visit the package</h5>
-                <p class="mt-4 notification is-primary is-light">Click the button below to visit this package on NPM<br>
+                <p class="mt-4 notification is-primary is-light">Click the button below to visit this package on NPM<br><br>
                     <a href="https://npmjs.com/package/octavalidate-reactjs" class="button is-primary">Vist package</a>
                 </p>
             </article>
