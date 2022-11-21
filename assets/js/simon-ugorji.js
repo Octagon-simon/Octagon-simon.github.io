@@ -1,6 +1,6 @@
 /**TYPED JS**/
 const typedOpts = {
-    strings: ["&lt; Backend Developer /&gt;", "&lt; Technical Writer /&gt;", "&lt; Product hunter /&gt;"],
+    strings: ["&lt; Backend Web Developer /&gt;", "&lt; Technical Writer /&gt;", "&lt; Product hunter /&gt;"],
     typeSpeed: 50,
     backSpeed: 50,
     loop: true,
