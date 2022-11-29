@@ -24,7 +24,7 @@
     <meta name="twitter:image" content="https://octagon-simon.github.io/projects/nft/nefta-nft.jpg">
     <meta name="twitter:title" content="NEFTA NFT MARKETPLACE">
     <meta name="twitter:description" content="NEFTA NFT: The only NFT marketplace that you can trust">
-    <script src="https://unpkg.com/octavalidate@1.2.3/native/validate.js"></script>
+    <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
     <style>
         .form-section {
             box-shadow: none;
@@ -115,7 +115,7 @@
                     <div class="form-group">
                         <label>Choose an Art, 3D Model ... anything</label>
                         <input id="inp_nft" octavalidate="R" type="file" class="form-control"
-                            ov-required:msg="NFT is required">
+                            ov-required-msg="NFT is required">
                     </div>
                     <div class="form-group">
                         <label>Floor price</label>
@@ -124,19 +124,19 @@
                                 <option value="ETH">Ethereum</option>
                             </select>
                             <input id="inp_price" octavalidate="R,PRICE" class="bs-0 form-control"
-                                ov-required:msg="Floor price is required">
+                                ov-required-msg="Floor price is required">
                         </div>
 
                     </div>
                     <div class="form-group">
                         <label>Item Name</label>
                         <input id="inp_name" octavalidate="R,TEXT" class="form-control"
-                            ov-required:msg="NFT name is required" placeholder="NEFTA NFT">
+                            ov-required-msg="NFT name is required" placeholder="NEFTA NFT">
                     </div>
                     <div class="form-group">
                         <label>Item Description</label>
                         <textarea id="inp_desc" octavalidate="R,TEXT" class="form-control"
-                            ov-required:msg="Item description is required"
+                            ov-required-msg="Item description is required"
                             placeholder="The world's largest NFT marketplace" minlength="10" maxlength="100"></textarea>
                     </div>
                     <div class="form-group">

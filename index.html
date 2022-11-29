@@ -21,7 +21,7 @@
     <!-- Typed JS -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!--Octavalidate CDN-->
-    <script src="https://unpkg.com/octavalidate@1.2.3/native/validate.js"></script>
+    <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
     <!--Particles JS-->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
     <!--Custom Javascript-->
@@ -540,23 +540,23 @@
                         <div class="form-group mb-3">
                             <label class="form-label mb-1">Email Address <span class="text-danger">*</span></label>
                             <input octavalidate="R,EMAIL" id="inp_email"
-                                ov-required:msg="Your email address is required"
-                                ov-email:msg="Please provide a valid email address" name="email" type="email"
+                                ov-required-msg="Your email address is required"
+                                ov-email-msg="Please provide a valid email address" name="email" type="email"
                                 class="form-control" placeholder="me@you.com">
                         </div>
                         <div class="form-group mb-3">
                             <label class="form-label mb-1">Name <span class="text-danger">*</span></label>
-                            <input octavalidate="R,ALPHA_ONLY" id="inp_name" ov-required:msg="Your name is required"
+                            <input octavalidate="R,ALPHA_ONLY" id="inp_name" ov-required-msg="Your name is required"
                                 name="name" type="text" class="form-control" placeholder="John Doe">
                         </div>
                         <div class="form-group mb-3">
                             <label class="form-label mb-1">Subject <span class="text-danger">*</span></label>
-                            <input octavalidate="R,TEXT" id="inp_sub" ov-required:msg="Email subject is required"
+                            <input octavalidate="R,TEXT" id="inp_sub" ov-required-msg="Email subject is required"
                                 name="subject" type="text" class="form-control" placeholder="Partnership">
                         </div>
                         <div class="form-group">
                             <label class="form-label mb-1">Message <span class="text-danger">*</span></label>
-                            <textarea octavalidate="R,TEXT" id="inp_mess" ov-required:msg="Your message is required"
+                            <textarea octavalidate="R,TEXT" id="inp_mess" ov-required-msg="Your message is required"
                                 name="message" class="form-control" placeholder="Hello, I'm John from..."
                                 rows="3"></textarea>
                         </div>
