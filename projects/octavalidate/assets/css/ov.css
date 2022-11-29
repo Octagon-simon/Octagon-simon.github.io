@@ -42,6 +42,12 @@ pre{
 .mw-300{
     max-width:300px;
 }
+.m-auto{
+    margin: auto;
+}
+.w-100{
+    width: 100%;
+}
 .mw-500{
     max-width:500px;
 }

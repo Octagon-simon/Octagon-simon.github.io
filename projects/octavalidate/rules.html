@@ -24,7 +24,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
-    <script src="https://unpkg.com/octavalidate@1.2.7/native/validate.js"></script>
+    <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
     <!-- jQuery -->
     <script src="assets/js/jquery.min.js"></script>
     <!-- XSAlert CSS -->
@@ -81,7 +81,7 @@
                                     Required
                                 </td>
                                 <td>
-                                    ov-required:msg
+                                    ov-required-msg
                                 </td>
                             </tr>
                             <tr>
@@ -92,7 +92,7 @@
                                     Email
                                 </td>
                                 <td>
-                                    ov-email:msg
+                                    ov-email-msg
                                 </td>
                             </tr>
                             <tr>
@@ -103,7 +103,7 @@
                                     Letters Only
                                 </td>
                                 <td>
-                                    ov-alpha-only:msg
+                                    ov-alpha-only-msg
                                 </td>
                             </tr>
                             <tr>
@@ -113,7 +113,7 @@
                                 <td>Letters and Spaces
                                 </td>
                                 <td>
-                                    ov-alpha-spaces:msg
+                                    ov-alpha-spaces-msg
                                 </td>
                             </tr>
                             <tr>
@@ -124,7 +124,7 @@
                                     Letters with Numbers
                                 </td>
                                 <td>
-                                    ov-alpha-numeric:msg
+                                    ov-alpha-numeric-msg
                                 </td>
                             </tr>
                             <tr>
@@ -135,7 +135,7 @@
                                     Lowercase letters
                                 </td>
                                 <td>
-                                    ov-lower-alpha:msg
+                                    ov-lower-alpha-msg
                                 </td>
                             </tr>
                             <tr>
@@ -146,7 +146,7 @@
                                     Uppercase letters
                                 </td>
                                 <td>
-                                    ov-upper-alpha:msg
+                                    ov-upper-alpha-msg
                                 </td>
                             </tr>
                             <tr>
@@ -157,7 +157,7 @@
                                     Numbers or Digits
                                 </td>
                                 <td>
-                                    ov-digits:msg
+                                    ov-digits-msg
                                 </td>
                             </tr>
                             <tr>
@@ -168,7 +168,7 @@
                                     Password
                                 </td>
                                 <td>
-                                    ov-pwd:msg
+                                    ov-pwd-msg
                                 </td>
                             </tr>
                             <tr>
@@ -179,7 +179,7 @@
                                     URL
                                 </td>
                                 <td>
-                                    ov-url:msg
+                                    ov-url-msg
                                 </td>
                             </tr>
                             <tr>
@@ -190,7 +190,7 @@
                                     URL with Query Parameters
                                 </td>
                                 <td>
-                                    ov-url-qp:msg
+                                    ov-url-qp-msg
                                 </td>
                             </tr>
                             <tr>
@@ -201,7 +201,7 @@
                                     Date in the format MM/DD/YYYY
                                 </td>
                                 <td>
-                                    ov-date-mdy:msg
+                                    ov-date-mdy-msg
                                 </td>
                             </tr>
                             <tr>
@@ -210,7 +210,7 @@
                                     Username
                                 </td>
                                 <td>
-                                    ov-username:msg
+                                    ov-username-msg
                                 </td>
                             </tr>
                             <tr>
@@ -219,7 +219,7 @@
                                     General Text
                                 </td>
                                 <td>
-                                    ov-text:msg
+                                    ov-text-msg
                                 </td>
                             </tr>
                         </tbody>
@@ -243,24 +243,24 @@
                 <h5 class="title is-5 mb-3">DEMO FORM</h5>
                 <p>Here's a demo form utilising some of the validation rules above and a custom validation message.</p>
                 <pre id="code-section"
-                    class="mt-4">&lt;!-- username --&gt;<br>&lt;input id="inp_uname" type="text" octavalidate="R,USERNAME" ov-username:msg="This username is invalid"&gt;<br>&lt;!-- email --&gt;<br>&lt;input id="inp_email" type="email" octavalidate="R,EMAIL" ov-email:msg="This email address is invalid"&gt;<br>&lt;!-- description --&gt;<br>&lt;textarea id="inp_desc" octavalidate="R,TEXT" ov-text:msg="Your description contains invalid characters"&gt;&lt;/textarea&gt;</pre>
+                    class="mt-4">&lt;!-- username --&gt;<br>&lt;input id="inp_uname" type="text" octavalidate="R,USERNAME" ov-username-msg="This username is invalid"&gt;<br>&lt;!-- email --&gt;<br>&lt;input id="inp_email" type="email" octavalidate="R,EMAIL" ov-email-msg="This email address is invalid"&gt;<br>&lt;!-- description --&gt;<br>&lt;textarea id="inp_desc" octavalidate="R,TEXT" ov-text-msg="Your description contains invalid characters"&gt;&lt;/textarea&gt;</pre>
             </div>
             <section class="p-5 mt-3" style="background-color: #f7f7f7;">
                 <form class="mt-2 mw-300" id="form_demo" novalidate>
                     <div class="field">
                         <label class="label">Username <span style="color:#ff0000">*</span></label>
                         <input id="inp_uname" type="text" octavalidate="R,USERNAME"
-                            ov-username:msg="This username is invalid" class="input">
+                            ov-username-msg="This username is invalid" class="input">
                     </div>
                     <div class="field">
                         <label class="label">Email <span style="color:#ff0000">*</span></label>
                         <input id="inp_email" type="email" octavalidate="R,EMAIL"
-                            ov-email:msg="This email address is invalid" class="input">
+                            ov-email-msg="This email address is invalid" class="input">
                     </div>
                     <div class="field">
                         <label class="label">Description <span style="color:#ff0000">*</span></label>
                         <textarea id="inp_desc" octavalidate="R,TEXT"
-                            ov-text:msg="Your description contains invalid characters" class="textarea"></textarea>
+                            ov-text-msg="Your description contains invalid characters" class="textarea"></textarea>
                         <small>Try to provide characters outside the allowed set of characters</small>
                     </div>
                     <div class="field">

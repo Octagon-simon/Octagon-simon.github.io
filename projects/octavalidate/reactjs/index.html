@@ -1,25 +1,25 @@
 <!doctype html>
 <html class="has-navbar-fixed-top">
-<title>Octavalidate - React JS | Client-side Validation Library for ReactJS</title>
+<title>Octavalidate - React JS | Client-side React Form Validation Library</title>
 
 <head>
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="Octavalidate - ReactJS: Use this Library to validate your Frontend Forms with ReactJS">
-    <meta name="title" content="Octavalidate - ReactJS: Client-side Validation Library for ReactJS">
+        content="Octavalidate - ReactJS: Use this Library to validate your React Forms">
+    <meta name="title" content="Octavalidate - ReactJS: Client-side React Form Validation Library">
     <meta property="og:description"
-        content="Octavalidate - ReactJS: Use this Library to validate your Frontend Forms with ReactJS">
-    <meta property="og:title" content="Octavalidate - ReactJS: Client-side Validation Library for ReactJS">
+        content="Octavalidate - ReactJS: Use this Library to validate your React Forms">
+    <meta property="og:title" content="Octavalidate - ReactJS: Client-side React Form Validation Library">
     <meta property="og:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="Octavalidate - ReactJS: Client-side Validation Library for ReactJS">
+    <meta name="twitter:title" content="Octavalidate - ReactJS: Client-side React Form Validation Library">
     <meta name="twitter:description"
-        content="Octavalidate - ReactJS: Use this Library to validate your Frontend Forms with ReactJS">
+        content="Octavalidate - ReactJS: Use this Library to validate your React Forms">
     <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
     <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
     <link rel="icon" href="https://octagon-simon.github.io/projects/octavalidate/assets/img/ov-image.png">
@@ -47,13 +47,10 @@
     <section class="container is-fluid p-2 has-navbar-fixed-top">
         <div class="container p-3">
             <h3 class="title is-3 mt-3 text-center font-weight-bold has-text-info">OCTAVALIDATE FOR REACTJS</h3>
-            <h5 class="subtitle text-center">Client-side Validation Library for ReactJS</h5>
+            <h5 class="subtitle text-center">Client-side form validation library for ReactJS</h5>
             <article class="mb-4">
-                <p><b>Octavalidate - ReactJS</b> is a front-end validation library that you can use to validate your forms in ReactJS.</p>
-                <p class="notification is-info is-light p-3 mt-3 mb-3">Before you continue, please note that the
-                    documentation on how to use this library is almost the same as the documentation on how to use the
-                    <a href="https://octagon-simon.github.io/projects/octavalidate/"><strong>Native JavaScript</strong></a> release.
-                </p>
+                <p class="mb-2"><b>Octavalidate - ReactJS</b> is a react form validation library that helps you validate your react forms.</p>
+                <p>It is very easy to implement and offers a wide range of validation rules.</p>
                 <hr>
                 <h5 class="title is-5 mb-3">INSTALL OCTAVALIDATE</h5>
                 <p class="mb-2">In order to use this library, you have to install it through NPM.</p>
@@ -79,11 +76,11 @@
                 <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br></div>
                 <p class="mb-3">Within this component, create a function that will handle form submission
                 </p>
-                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) { <br></div>
+                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) { <br><br>    }<br>}</div>
                 <p class="mb-3">Now initialize the library within this function.</p>
                 <p class="notification is-info is-light p-2 mb-3">Make sure that the <strong>id</strong> used to initialize this
                     library is the same as the form itself.</p>
-                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) { <br>        //initialize the library<br>        const myForm = new octaValidate('form_login')<br></div>
+                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) { <br>        //initialize the library<br>        const myForm = new octaValidate('form_login')<br>    }<br>}</div>
                 <p class="mb-3">Once you have initialized the library, invoke the <code>validate()</code>
                     method on the validation instance to begin validation on the form </p>
                 <p class="mb-2">The return type of <code>validate()</code> method is <b>Boolean</b></p>
@@ -91,11 +88,11 @@
                     <li><b>true</b> means there are no validation errors</li>
                     <li><b>false</b> means there are validation errors</li>
                 </ul>
-                <p class="mb-2">This means that when the <code>validate()</code> method returns <span
+                <p class="mb-2">This means that if the <code>validate()</code> method returns <span
                         class="tag is-primary">true</span>, we are free to process the form. </p>
                 <p class="mb-2">Here's the full code</p>
                 <h4 class="tag title is-6 mb-2 is-primary iss-light p-4">login.jsx</h4>
-                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) { <br> //initialize the library<br>        const myForm = new octaValidate('form_login')<br>        //prevent reload<br>        e.preventDefault();<br>        //begin validation on form and check if it passed<br>        if(myForm.validate() === true){<br>            /** process form data here**/<br>        }<br>    }<br>    //return the form<br>    return(<br>        &lt;form id="form_login" method="post" noValidate onSubmit={handleSubmit}&gt;<br>            &lt;input id="inp_email" name="email" type="email"
+                <div class="embed-snippet mb-3" classnames="lang-js">import { octaValidate } from 'octavalidate-reactjs'<br><br>export default function Login() {<br>    //handle form submission<br>    const handleSubmit = function (e) { <br>        //initialize the library<br>        const myForm = new octaValidate('form_login')<br>        //prevent reload<br>        e.preventDefault();<br>        //begin validation on form and check if it passed<br>        if(myForm.validate() === true){<br>            /** process form data here**/<br>        }<br>    }<br>    //return the form<br>    return(<br>        &lt;form id="form_login" method="post" noValidate onSubmit={handleSubmit}&gt;<br>            &lt;input id="inp_email" name="email" type="email"
                     octavalidate="R,EMAIL" /><br>            &lt;input id="inp_pass" name="password" type="password"
                     octavalidate="R" minLength="8" /><br>            &lt;button type="submit"&gt;Login&lt;/button&gt;<br>        &lt;/form&gt;<br>    )<br>} </div>
                 <p class="mb-2">If you look at the code above, you will notice that a form was returned from the

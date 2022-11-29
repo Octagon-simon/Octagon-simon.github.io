@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/css/all.min.css" />
-    <script src="https://unpkg.com/octavalidate@1.2.7/native/validate.js"></script>
+    <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
     <!-- jQuery -->
     <script src="assets/js/jquery.min.js"></script>
     <!-- XSAlert CSS -->
@@ -51,7 +51,7 @@
             <h5 class="subtitle mt-2 has-text-centered">Learn how you can validate a checkbox element using this library</h5>
             <article>
                 <p>To make a checkbox element <b>required,</b> use the <code>R</code> validation rule.</p>
-                <p class="mt-2">You may also provide a custom message using <code>ov-required:msg</code> attribute.</p>
+                <p class="mt-2">You may also provide a custom message using <code>ov-required-msg</code> attribute.</p>
                 <h5 class="title is-5 mt-4 mb-2">Custom message attribute</h5>
                 <div class="table-responsive">
                     <table class="table is-bordered w-50 mt-3">
@@ -69,7 +69,7 @@
                                     R
                                 </td>
                                 <td>
-                                    ov-required:msg
+                                    ov-required-msg
                                 </td>
                             </tr>
                         </tbody>
@@ -79,14 +79,14 @@
             <div class="mt-5">
                 <h5 class="title is-5 mb-3">DEMO FORM</h5>
                 <pre id="code-section"
-                    class="mt-4">&lt;!-- checkbox --&gt;<br>&lt;input id="inp_check" type="checkbox" octavalidate="R" ov-required:msg="You have to accept the terms and conditions"&gt;</pre>
+                    class="mt-4">&lt;!-- checkbox --&gt;<br>&lt;input id="inp_check" type="checkbox" octavalidate="R" ov-required-msg="You have to accept the terms and conditions"&gt;</pre>
             </div>
 
             <section class="p-5 mt-3" style="background-color: #f7f7f7;">
                 <form class="mt-2 mw-300" id="form_demo" novalidate>
                     <div class="field">
                         <input type="checkbox" id="inp_check" octavalidate="R"
-                            ov-required:msg="You have to accept the terms and conditions">I accept the terms and
+                            ov-required-msg="You have to accept the terms and conditions">I accept the terms and
                         conditions
                     </div>
                     <div class="field">
