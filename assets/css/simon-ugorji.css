@@ -9,6 +9,7 @@ body {
     font-family : 'poppins', sans-serif;
     font-size: 1rem !important;
     color: unset;
+    overflow-x: hidden;
 }
 
 body{
