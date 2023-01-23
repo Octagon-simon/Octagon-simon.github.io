@@ -1,0 +1,161 @@
+/* @import url('../fonts/trump/stylesheet.css'); */
+@import url('../fonts/raleway/stylesheet.css');
+
+html,body{
+    background-color: #0f0f0f !important;
+    color: #fff;
+    font-size: 1rem !important;
+    scroll-behavior: smooth;
+}
+.hero-wrapper{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 10%);
+    z-index: 99999999999;
+}
+.my-me{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.skills-list li{
+    list-style-image: url('../img/SVGRepo_iconCarrier.png');
+}
+#my_intro{
+    min-height: 60px;
+    color: var(--success);
+    text-transform: uppercase;
+}
+
+.hero{
+    height: 100vh;
+}
+.mw-500{
+    max-width:500px !important;
+}
+
+#projects img{
+    border-radius: 20px;
+}
+
+.font-trump{
+    font-family: 'Trump Gothic Pro' !important;
+}
+
+.font-raleway{
+    font-family: 'Raleway' !important;
+}
+
+p, span, button {
+    font-family: 'Raleway' !important;
+}
+.project-title{
+    font-size: 4rem;
+}
+.project-content{
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid var(--grey) !important;
+}
+.radius-0{
+    border-radius: 0;
+}
+
+.btn-app-primary{
+    background-color: var(--primary) !important;
+    color:#fff;
+}
+
+.btn-app-primary:hover{
+    transform: translateY(-3px);
+    box-shadow: 3px 3px var(--success);
+}
+.navbar-brand, .navbar .nav-link{
+    color: #fff;
+}
+.card{
+    background-color:  #6947ef30 !important;
+}
+.card-img{
+    padding: 20px;
+    background-color: #fff !important;
+}
+
+.card-img img{
+    width: 100px !important;
+    margin: auto;
+}
+.navbar-toggler{
+    color: var(--grey) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.nefta-color{
+    color : #00d1b2 !important;
+}
+
+.has-text-info{
+    color: var(--info) !important;
+}
+.has-text-primary{
+    color: var(--primary)
+}
+.has-text-success{
+    color: var(--success) !important;
+}
+
+.section{
+    margin: 0 0 50px 0 !important;
+}
+
+.has-border-bottom{
+    border-bottom: 1px solid var(--grey);
+}
+
+input.form-control,textarea.form-control{
+    background-color: transparent !important;
+    border: 2px solid var(--grey);
+}
+/* input.form-c */
+.owl-carousel .item{
+    width: 300px !important;
+    text-align: center;
+    margin: auto;
+}
+/**Particles js **/
+/* ---- reset ---- */
+canvas {
+    display: block;
+    filter: blur(3px);
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    background-color: #111111;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+.link:hover{
+    color: var(--success);
+    padding: 5px;
+    transition: all .2s;
+}
+footer{
+    background-color: var(--grey);
+}
+:root{
+    --primary : #6947EF;
+    --info: #479eef;
+    --success : #00d1b2;
+    --grey : #222222;
+}
