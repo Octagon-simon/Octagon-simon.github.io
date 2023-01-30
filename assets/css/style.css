@@ -100,7 +100,7 @@ p, span, button {
     color: var(--info) !important;
 }
 .has-text-primary{
-    color: var(--primary)
+    color: var(--info)
 }
 .has-text-success{
     color: var(--success) !important;
