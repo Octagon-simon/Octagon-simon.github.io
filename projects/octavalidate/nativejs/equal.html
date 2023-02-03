@@ -2,31 +2,33 @@
 <html>
     <title>EqualTo Validation</title>
 <head>
-    <base href="/reactjs/">
+    <base href="/nativejs/">
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="Octavalidate - ReactJS: Learn how you can compare 2 input values using this library">
-    <meta name="title" content="Octavalidate - ReactJS: EqualTo Validation Attribute">
+        content="Octavalidate - NativeJS: Learn how you can compare 2 input values using this library">
+    <meta name="title" content="Octavalidate - NativeJS: EqualTo Validation">
     <meta property="og:description"
-        content="Octavalidate - ReactJS: Learn how you can compare 2 input values using this library">
-    <meta property="og:title" content="Octavalidate - ReactJS: EqualTo Validation Attribute">
+        content="Octavalidate - NativeJS: Learn how you can compare 2 input values using this library">
+    <meta property="og:title" content="Octavalidate - NativeJS: EqualTo Validation">
     <meta property="og:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="Octavalidate - ReactJS: EqualTo Validation Attribute">
+    <meta name="twitter:title" content="Octavalidate - NativeJS: EqualTo Validation Attribute">
     <meta name="twitter:description"
-        content="Octavalidate - ReactJS: Learn how you can compare 2 input values using this library">
+        content="Octavalidate - NativeJS: Learn how you can compare 2 input values using this library">
     <link rel="icon" href="https://octagon-simon.github.io/projects/octavalidate/assets/img/ov-image.png">
     <meta charset="UTF-8">
+    <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
     <!-- jQuery -->
     <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
-    <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
-    <link rel="stylesheet" href="../assets/css/ov.css" />
+    <!-- XSAlert CSS -->
+    <link rel="stylesheet" href="../assets/css/xs-alert-light-theme.css">
+    <!-- XAlert core JS -->
+    <script src="../assets/js/xs-alert.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3QPVV79ZV"></script>
     <script>
@@ -36,14 +38,6 @@
 
         gtag('config', 'G-S3QPVV79ZV');
     </script>
-    <style>
-        span.tag {
-            border: 0 !important;
-            background-color: unset !important;
-            padding: 0 !important;
-            color: #ddd !important;
-        }
-    </style>
     <link rel="stylesheet" href="../assets/css/bulma.min.css" />
     <link rel="stylesheet" href="../assets/css/ov.css" />
     <link rel="stylesheet" href="../assets/css/docs.css" />
@@ -59,26 +53,26 @@
                     class="button is-primary is-light navbar-item is-align-self-center" onclick="openNav()"><i
                         class="mdi mdi-forwardburger"></i>&nbsp;Menu</button>
                 <div class="social-section is-align-self-center">
-                    <a href="https://github.com/Octagon-simon/octaValidate-reactjs/archive/refs/heads/main.zip" class="button is-dark" target="_blank"><span class="icon"><i class="mdi mdi-github mdi-2px"></i></span> <span>Github</span> </a>
-                    
+                    <a href="https://github.com/Octagon-simon/octaValidate" class="button is-dark" target="_blank"><span class="icon"><i class="mdi mdi-github mdi-2px"></i></span> <span>Github</span> </a>
+                    <a href="https://blog.bitsrc.io/client-side-form-validation-using-octavalidate-javascript-b150f2d14e99" class="button  is-info" target="_blank"><span class="icon"><i class="mdi mdi-book mdi-2px"></i></span> <span>Read</span> </a>
                 </div>
             </div>
             <section class="container is-fluid p-2 mb-3">
                 <div class="container p-3">
-                    <h3 class="title is-4 mt-3 mb-3 has-text-info text-center">EQUALTO VALIDATION</h3>
+                    <h3 class="title is-4 mt-3 mb-3 has-text-primary text-center">EQUALTO VALIDATION</h3>
                     <h5 class="subtitle mt-2 text-center">Learn how you can compare 2 input values using this library</h5>
                     <article>
-                        <p>This validation checks if two input fields have the same value. To use this validation, you need to provide the <b>ID</b> of the other input element to check against within the attribute
+                        <p class="mb-3">This validation checks if two input fields have the same value. To use this validation, you need to provide the <b>ID</b> of the other input element to check against within the attribute
                             <code>equalto</code>.
                         </p>
-                        <div class="table-responsive">
-                            <table class="table is-bordered w-50 mt-3">
+                        <div class="table-responsive has-text-centered">
+                            <table class="table is-bordered m-auto w-50 mt-3">
                                 <thead>
                                     <th>
                                         Attribute
                                     </th>
                                     <th>
-                                        Possible values
+                                        Possible values <br /><span class="tag is-warning">Input element ID</span>
                                     </th>
                                     <th>
                                         Custom message
@@ -103,8 +97,27 @@
                             <b>password</b> and <b>confirm password</b> fields.
                         </p>
                     </article>
-                    <h4 class="title is-5 mt-5 mb-5">DEMO FORM</h4>
-                    <div class="embed-snippet" classnames="lang-js">&lt;!-- password --&gt;<br>&lt;input id="inp_pass" type="password" octavalidate="R"&gt;<br>&lt;!-- confirm password --&gt;<br>&lt;input id="inp_con_pass" type="password" equalto="inp_pass"  ov-equalto-msg="Both passwords do not match"&gt;</div>
+                    <h4 class="title is-5 mt-3 mb-3">DEMO FORM</h4>
+                    <pre
+                        id="code-section">&lt;!-- password --&gt;<br>&lt;input id="inp_pass" type="password" octavalidate="R"&gt;<br>&lt;!-- confirm password --&gt;<br>&lt;input id="inp_con_pass" type="password" equalto="inp_pass"  ov-equalto-msg="Both passwords do not match"&gt;</pre>
+                    <section class="p-5 mt-3" style="background-color: #f7f7f7;">
+                        <form class="mt-2 mw-300" id="form_demo" novalidate>
+                            <div class="field">
+                                <label class="label">Enter password <span style="color:#ff0000">*</span></label>
+                                <input class="input" id="inp_pass" type="password" octavalidate="R">
+                                <small>Enter random text</small>
+                            </div>
+                            <div class="field">
+                                <label class="label">Re-enter password <span style="color:#ff0000">*</span></label>
+                                <input id="inp_con_pass" type="password" equalto="inp_pass" class="input"
+                                    ov-equalto-msg="Both passwords do not match">
+                                <small>Re-enter password</small>
+                            </div>
+                            <div class="field">
+                                <button class="button is-primary" type="submit">Run test</button>
+                            </div>
+                        </form>
+                    </section>
                 </div>
             </section>
         </div>
@@ -112,6 +125,23 @@
     <footer class="footer"></footer>
     <script src="../assets/js/docs.js"></script>
     <script src="../assets/js/ov.js"></script>
+    <script>
+        //create instance of class
+        let formVal = new octaValidate('form_demo');
+
+        let formEl = document.querySelector('#form_demo');
+        formEl.addEventListener('submit', function (e) {
+            e.preventDefault();
+            //invoke the validate method
+            if (formVal.validate() === true) {
+                XSAlert({
+                    title: 'Couldn\'t break through?',
+                    message: 'Demo Form passed the validation test! 😎',
+                    icon: 'question',
+                })
+            }
+        })
+    </script>
 </body>
 
 </html>

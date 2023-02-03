@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="has-navbar-fixed-top">
+<html>
 <title>Octavalidate - NodeJS | Server-side Validation Library for NodeJS</title>
-
 <head>
+    <base href="/nodejs/">
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
@@ -19,8 +19,6 @@
     <meta name="twitter:description"
         content="Octavalidate-NodeJS: This NPM package helps to validate your NodeJS form fields server-side using validation rules and sophisticated regular expressions">
     <link rel="icon" href="https://octagon-simon.github.io/projects/octavalidate/assets/img/ov-image.png">
-    <link rel="stylesheet" href="../assets/css/bulma.min.css" />
-    <link rel="stylesheet" href="../assets/css/all.min.css" />
     <!-- jQuery -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
@@ -36,86 +34,94 @@
 
         gtag('config', 'G-S3QPVV79ZV');
     </script>
+    <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="../assets/css/ov.css" />
+    <link rel="stylesheet" href="../assets/css/docs.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 </head>
 
 <body>
-<noscript style="padding:10px;position:fixed;bottom:0;text-align:center;width:100%;color:#fff;background-color:rgb(221, 17, 2);z-index:99999">Please enable JavaScript to view this page</noscript>
-    <header id="header">
-    </header>
-    <section class="container is-fluid p-2 has-navbar-fixed-top">
-        <div class="container p-3">
-            <h3 class="title is-3 mt-3 font-weight-bold has-text-success text-center">GETTING STARTED</h3>
-            <h5 class="subtitle text-center">Server-side Validation Library for NodeJS</h5>
-            <article>
-                <p>Welcome to this <strong>NPM package</strong> that helps to validate your NodeJS form fields server-side using validation rules and sophisticated regular expressions.</p>
-                <p class="notification is-warning is-light mt-3">Sadly, there are no <b>Demo
-                        forms</b> yet 😢</p>
-                <h3 class="title is-4 mt-4">INSTALLATION</h3>
-                <h5 class="tag is-warning is-light title is-5 mt-4 mb-2">NPM</h5>
-                <div class="embed-snippet" classnames="lang-bash">$ npm install octavalidate-nodejs</div>
-                <hr>
-                <div class="mt-5">
-                    <h3 class="title is-4 mt-5  has-text-success mb-3">HOW TO USE</h3>
-                    <h5 class="subtitle mt-2">Middleware Approach</h5>
-                    <p class="mb-3">To use this package as a middleware, follow the process below</p>
-                    <ul class="ml-3 p-3" style="list-style-type:disc">
-                        <li>Create a new file within your middleware folder or modify an already existing middleware.</li>
-                        <li>Import the library.</li>
-                        <li>Create a new instance of <code>octaValidate</code> and pass in the <code>form id</code> as the first argument then any configuration option as the second argument.</li>
-                    </ul>
-                    <div class="embed-snippet" classnames="lang-js">//import library<br>const octaValidate = require('octavalidate-nodejs')<br><br>//syntax<br>//const validate = new octaValidate('my_form', CONFIG_OPTIONS)<br><br>const config = {<br>    strictMode : true,<br>    strictWords : ["admin", "fake", "empty", "null"]<br>}<br>//create new instance<br>const validate = new octaValidate('my_form', config)</div>
-                    <p class="mb-3">Now define validation rules for that particular form. </p>
-                    <p class="notification is-warning p-3 is-light mb-3">If the form has a file upload field, define separate rules for that field.</p>
-                    <p class="mb-3">Here's the syntax to define validation rules</p>
-                    <div class="embed-snippet mb-3" classnames="lang-js">//syntax<br>const fieldRules = {<br>    FIELD_NAME : {<br>        RULE_TITLE : ERROR_MESSAGE<br>    }<br>}</div>
-                    <p class="mb-3">Here's an example</p>
-                    <div class="embed-snippet mb-3" classnames="lang-js">//define valiation rules for field names<br>const fieldRules = {<br>    email : {<br>        'R' : "Your Email Address is required",<br>        'EMAIL' : "This Email is invalid"<br>   },<br>    username : {<br>        'R' : "Your username is required",<br>        'USERNAME' : "Your username contains invalid characters"<br>    }<br>}</div>
-                    <p class="mb-3">Begin validation on the form fields by invoking the method <code>validateFields()</code>.</p>
-                    <p class="mb-3">The method  <code>validateFields()</code> takes in 2 arguments</p>
-                    <ul class="ml-3 p-3 mb-3" style="list-style-type:disc">
-                        <li>The first argument is the <strong>validation rules</strong> on the form fields</li>
-                        <li>The second argument is the <strong>form fields</strong> to validate.</li>
-                    </ul>
-                    <div class="embed-snippet mb-3" classnames="lang-js">module.exports = (req, res, next) => {<br>    try{<br>        //req.body contains the form fields<br>        //check if validation is successful<br>        if ( validate.validateFields(fieldRules, req.body) ) {<br>            //process form data here<br>            return res.status(200).json({<br>                message: "Form validation successful"<br>            })<br>        }else{<br>            //validation error, now return the errors<br>            return res.status(400).json({<br>               message: "Form validation failed",<br>               formErrors: JSON.stringify(validate.getErrors())<br>            })<br>        }<br>    }catch(err){<br>        //handle error<br>        console.log(err)<br>    }<br>    //move on to the next middleware<br>    next()<br>}</div>
-                    <p class="mb-3">That's it! It is that simple.
-                    </p>
-                    <h5 class="subtitle mt-2">Validating an uploaded File</h5>
-                    <p class="mb-3">Now, what if you want to validate an uploaded file, how would you achieve that?</p>
-                    <p class="mb-3">To validate an uploaded file, invoke the <code>validateFiles()</code> method.</p>
-                    <p class="mb-3">This method accepts 2 arguments;</p>    
-                    <ul class="ml-3 p-3 mb-3" style="list-style-type:disc">
-                        <li>The first argument is the <strong>validation rules</strong> on the file upload fields</li>
-                        <li>The second argument is the <strong>file upload fields</strong> to validate.</li>
-                    </ul>    
-                    <div class="embed-snippet" classnames="lang-js">//validation rules for file upload<br>const fileRules = {<br>    profile : {<br>        'R' : "Please upload a profile picture",<br>        'ACCEPT' : ["image/png", "File type is not supported"],<br>        'MAXSIZE' : ["5MB", "Image file should not be greater than 5MB"]<br>    }<br>}<br><br>module.exports = (req, res, next) => {<br>    try{<br>        //req.files contains the file upload fields with the help of multer package<br>        //check if validation is successful<br>        if ( validate.validateFiles(fieldRules, req.files) ) {<br>            //process form data here<br>            return res.status(200).json({<br>                message: "Form validation successful"<br>            })<br>        }else{<br>            //validation error, now return the errors<br>            return res.status(400).json({<br>               message: "Form validation failed",<br>               formErrors: JSON.stringify(validate.getErrors())<br>            })<br>        }<br>    }catch(err){<br>        //handle error<br>        console.log(err)<br>    }<br>    //move on to the next middleware<br>    next()<br>}</div>   
-                    <hr>
-                    <h5 class="subtitle">Other Approach</h5>
-                    <p class="mb-3">In your <code>server file</code>, you can also validate your form fields by following the process below;</p>
-                    <ul class="ml-3 mb-3 p-3" style="list-style-type:disc">
-                        <li>Import the library.</li>
-                        <li>Define validation rules for form fields</li>
-                        <li>Invoke the <code>validateFields()</code> method to begin validation.</li>
-                    </ul>
-                    <div class="embed-snippet mb-3" classnames="lang-js">//define validation rules for field names<br>const fieldRules = {<br>    email : {<br>        'R' : "Your Email Address is required",<br>        'EMAIL' : "This Email is invalid"<br>   },<br>    username : {<br>        'R' : "Your username is required",<br>        'USERNAME' : "Your username contains invalid characters"<br>    }<br>}<br><br>app.post('auth/register', (req, res) => {<br>    try{<br>        if ( validate.validateFields(fieldRules, req.body) ) {<br>            //process form data here<br>            return res.status(200).json({<br>               message: "Form validation successful"<br>            })<br>        }else{<br>            //validation error, now return the errors<br>            return res.status(400).json({<br>                message: "Form validation failed",<br>                formErrors: JSON.stringify(validate.getErrors())<br>            })<br>        }<br>    }catch(e){<br>        console.log(e)<br>    }<br>})</div>
+    <noscript style="padding:10px;position:fixed;bottom:0;text-align:center;width:100%;color:#fff;background-color:rgb(221, 17, 2);z-index:99999">Please enable JavaScript to view this page</noscript>
+    <div class="page-wrapper">
+        <div class="main-content">
+            <div class="header-wrap">
+                <button type="button" data-toggle="tooltip" title="Click to Open Sidebar" id="menuBtn"
+                    class="button is-primary is-light navbar-item is-align-self-center" onclick="openNav()"><i
+                        class="mdi mdi-forwardburger"></i>&nbsp;Menu</button>
+                <div class="social-section is-align-self-center">
+                    <a href="https://github.com/Octagon-simon/octaValidate-nodejs" class="button is-dark" target="_blank"><span class="icon"><i class="mdi mdi-github mdi-2px"></i></span> <span>Github</span> </a>
                 </div>
-                <div class="mt-5">
-                    <p>The return type of <code>validateFields()</code> and <code>validateFiles()</code> methods is <b>Boolean</b></p>
-                    <ul class="ml-3 p-3 list-disc mt-2">
-                        <li><b class="tag is-success is-light">true</b> means there are no validation errors</li>
-                        <li><b class="tag is-danger is-light">false</b> means there are validation errors</li>
-                    </ul>
-                    <div class="mt-5 container has-text-centered">
-                        <a href="api.html" class="has-fa-icon button is-primary is-light">API methods&nbsp;<i
-                                class="fas fa-arrow-right"></i></a>
-                    </div>
-            </article>
+            </div>
+            <section class="container is-fluid p-2 has-navbar-fixed-top">
+                <div class="container p-3">
+                    <h3 class="title is-4 mt-3 font-weight-bold has-text-success text-center">GETTING STARTED</h3>
+                    <h5 class="subtitle text-center">Server-side Validation Library for NodeJS</h5>
+                    <article>
+                        <p>Welcome to this <strong>NPM package</strong> that helps to validate your NodeJS form fields server-side using validation rules and sophisticated regular expressions.</p>
+                        <p class="notification is-warning is-light mt-3">Sadly, there are no <b>Demo
+                                forms</b> at the moment 😢</p>
+                        <h3 class="title is-4 mt-4">INSTALLATION</h3>
+                        <h5 class="tag is-warning is-light title is-5 mt-4 mb-2">NPM</h5>
+                        <div class="embed-snippet" classnames="lang-bash">$ npm install octavalidate-nodejs</div>
+                        <hr>
+                        <div class="mt-5">
+                            <h3 class="title is-4 mt-5  has-text-success mb-3">HOW TO USE</h3>
+                            <h5 class="subtitle mt-2">Middleware Approach</h5>
+                            <p class="mb-3">To use this package as a middleware, follow the process below</p>
+                            <ul class="ml-3 p-3" style="list-style-type:disc">
+                                <li>Create a new file within your middleware folder or modify an already existing middleware.</li>
+                                <li>Import the library.</li>
+                                <li>Create a new instance of <code>octaValidate</code> and pass in the <code>form id</code> as the first argument then any configuration option as the second argument.</li>
+                            </ul>
+                            <div class="embed-snippet" classnames="lang-js">//import library<br>const octaValidate = require('octavalidate-nodejs')<br><br>//syntax<br>//const validate = new octaValidate('my_form', CONFIG_OPTIONS)<br><br>const config = {<br>    strictMode : true,<br>    strictWords : ["admin", "fake", "empty", "null"]<br>}<br>//create new instance<br>const validate = new octaValidate('my_form', config)</div>
+                            <p class="mb-3">Now define validation rules for that particular form. </p>
+                            <p class="notification is-warning p-3 is-light mb-3">If the form has a file upload field, define separate rules for that field.</p>
+                            <p class="mb-3">Here's the syntax to define validation rules</p>
+                            <div class="embed-snippet mb-3" classnames="lang-js">//syntax<br>const fieldRules = {<br>    FIELD_NAME : {<br>        RULE_TITLE : ERROR_MESSAGE<br>    }<br>}</div>
+                            <p class="mb-3">Here's an example</p>
+                            <div class="embed-snippet mb-3" classnames="lang-js">//define valiation rules for field names<br>const fieldRules = {<br>    email : {<br>        'R' : "Your Email Address is required",<br>        'EMAIL' : "This Email is invalid"<br>   },<br>    username : {<br>        'R' : "Your username is required",<br>        'USERNAME' : "Your username contains invalid characters"<br>    }<br>}</div>
+                            <p class="mb-3">Begin validation on the form fields by invoking the method <code>validateFields()</code>.</p>
+                            <p class="mb-3">The method  <code>validateFields()</code> takes in 2 arguments</p>
+                            <ul class="ml-3 p-3 mb-3" style="list-style-type:disc">
+                                <li>The first argument is the <strong>validation rules</strong> on the form fields</li>
+                                <li>The second argument is the <strong>form fields</strong> to validate.</li>
+                            </ul>
+                            <div class="embed-snippet mb-3" classnames="lang-js">module.exports = (req, res, next) => {<br>    try{<br>        //req.body contains the form fields<br>        //check if validation is successful<br>        if ( validate.validateFields(fieldRules, req.body) ) {<br>            //process form data here<br>            return res.status(200).json({<br>                message: "Form validation successful"<br>            })<br>        }else{<br>            //validation error, now return the errors<br>            return res.status(400).json({<br>               message: "Form validation failed",<br>               formErrors: JSON.stringify(validate.getErrors())<br>            })<br>        }<br>    }catch(err){<br>        //handle error<br>        console.log(err)<br>    }<br>    //move on to the next middleware<br>    next()<br>}</div>
+                            <p class="mb-3">That's it! It is that simple.
+                            </p>
+                            <h5 class="subtitle mt-2">Validating an uploaded File</h5>
+                            <p class="mb-3">Now, what if you want to validate an uploaded file, how would you achieve that?</p>
+                            <p class="mb-3">To validate an uploaded file, invoke the <code>validateFiles()</code> method.</p>
+                            <p class="mb-3">This method accepts 2 arguments;</p>    
+                            <ul class="ml-3 p-3 mb-3" style="list-style-type:disc">
+                                <li>The first argument is the <strong>validation rules</strong> on the file upload fields</li>
+                                <li>The second argument is the <strong>file upload fields</strong> to validate.</li>
+                            </ul>    
+                            <div class="embed-snippet" classnames="lang-js">//validation rules for file upload<br>const fileRules = {<br>    profile : {<br>        'R' : "Please upload a profile picture",<br>        'ACCEPT' : ["image/png", "File type is not supported"],<br>        'MAXSIZE' : ["5MB", "Image file should not be greater than 5MB"]<br>    }<br>}<br><br>module.exports = (req, res, next) => {<br>    try{<br>        //req.files contains the file upload fields with the help of multer package<br>        //check if validation is successful<br>        if ( validate.validateFiles(fieldRules, req.files) ) {<br>            //process form data here<br>            return res.status(200).json({<br>                message: "Form validation successful"<br>            })<br>        }else{<br>            //validation error, now return the errors<br>            return res.status(400).json({<br>               message: "Form validation failed",<br>               formErrors: JSON.stringify(validate.getErrors())<br>            })<br>        }<br>    }catch(err){<br>        //handle error<br>        console.log(err)<br>    }<br>    //move on to the next middleware<br>    next()<br>}</div>   
+                            <hr>
+                            <h5 class="subtitle">Other Approach</h5>
+                            <p class="mb-3">In your <code>server file</code>, you can also validate your form fields by following the process below;</p>
+                            <ul class="ml-3 mb-3 p-3" style="list-style-type:disc">
+                                <li>Import the library.</li>
+                                <li>Define validation rules for form fields</li>
+                                <li>Invoke the <code>validateFields()</code> method to begin validation.</li>
+                            </ul>
+                            <div class="embed-snippet mb-3" classnames="lang-js">//define validation rules for field names<br>const fieldRules = {<br>    email : {<br>        'R' : "Your Email Address is required",<br>        'EMAIL' : "This Email is invalid"<br>   },<br>    username : {<br>        'R' : "Your username is required",<br>        'USERNAME' : "Your username contains invalid characters"<br>    }<br>}<br><br>app.post('auth/register', (req, res) => {<br>    try{<br>        if ( validate.validateFields(fieldRules, req.body) ) {<br>            //process form data here<br>            return res.status(200).json({<br>               message: "Form validation successful"<br>            })<br>        }else{<br>            //validation error, now return the errors<br>            return res.status(400).json({<br>                message: "Form validation failed",<br>                formErrors: JSON.stringify(validate.getErrors())<br>            })<br>        }<br>    }catch(e){<br>        console.log(e)<br>    }<br>})</div>
+                        </div>
+                        <div class="mt-5">
+                            <p>The return type of <code>validateFields()</code> and <code>validateFiles()</code> methods is <b>Boolean</b></p>
+                            <ul class="ml-3 p-3 list-disc mt-2">
+                                <li><b class="tag is-success is-light">true</b> means there are no validation errors</li>
+                                <li><b class="tag is-danger is-light">false</b> means there are validation errors</li>
+                            </ul>
+                    </article>
+                </div>
+            </section>
         </div>
-    </section>
-    <footer class="footer">
-
-    </footer>
-    <script src="../ov.js"></script>
-
+    </div>
+    <footer class="footer"></footer>
+    <script src="../assets/js/docs.js"></script>
+    <script src="../assets/js/ov.js"></script>
 </body>
 
 </html>

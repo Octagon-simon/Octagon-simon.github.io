@@ -2,6 +2,22 @@ function findElem(elem) {
   return (document.querySelector(elem) !== null);
 }
 
+// Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach(el => {
+    el.addEventListener('click', () => {
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+    });
+  });
+
 const adjustSnippetColor = () => {
   /* change header color */
   //check if elem exists to avoid error
@@ -15,14 +31,14 @@ const adjustSnippetColor = () => {
     /** change copy button color */
     const classNames = [".kwd", ".tag", ".str"];
     let copyColor = "";
-    classNames.forEach( item => {
-      if(document.querySelector(`pre ${item}`)){
+    classNames.forEach(item => {
+      if (document.querySelector(`pre ${item}`)) {
         copyColor = getComputedStyle(document.querySelector(`pre ${item}`)).color;
         document.querySelectorAll('.cb-copy-btn').forEach(ch => {
           ch.style.color = copyColor;
         });
         return;
-        }
+      }
     })
 
   }
@@ -104,7 +120,7 @@ function embedSnippet(elem = "") {
 
 }
 //loop through elements that are code snippets then embed them
-document.querySelectorAll('.embed-snippet').forEach( elem => {
+document.querySelectorAll('.embed-snippet').forEach(elem => {
   embedSnippet(elem);
 })
 window.addEventListener('load', function () {
@@ -169,99 +185,114 @@ let buildNavbar = () => {
 }
 */
 
-(function () {
-  //NATIVE AJAX
-  var ajax = {};
-  ajax.x = function () {
-    if (typeof XMLHttpRequest !== 'undefined') {
-      return new XMLHttpRequest();
-    }
-    var versions = [
-      "MSXML2.XmlHttp.6.0",
-      "MSXML2.XmlHttp.5.0",
-      "MSXML2.XmlHttp.4.0",
-      "MSXML2.XmlHttp.3.0",
-      "MSXML2.XmlHttp.2.0",
-      "Microsoft.XmlHttp"
-    ];
+// (function () {
+//   //NATIVE AJAX
+//   var ajax = {};
+//   ajax.x = function () {
+//     if (typeof XMLHttpRequest !== 'undefined') {
+//       return new XMLHttpRequest();
+//     }
+//     var versions = [
+//       "MSXML2.XmlHttp.6.0",
+//       "MSXML2.XmlHttp.5.0",
+//       "MSXML2.XmlHttp.4.0",
+//       "MSXML2.XmlHttp.3.0",
+//       "MSXML2.XmlHttp.2.0",
+//       "Microsoft.XmlHttp"
+//     ];
 
-    var xhr;
-    for (var i = 0; i < versions.length; i++) {
-      try {
-        xhr = new ActiveXObject(versions[i]);
-        break;
-      } catch (e) {
-      }
-    }
-    return xhr;
-  };
-  ajax.send = function (url, callback, method, data, async) {
-    if (async === undefined) {
-      async = true;
-    }
-    var x = ajax.x();
-    x.open(method, url, async);
-    x.onreadystatechange = function () {
-      if (x.readyState == 4) {
-        callback(x.responseText)
-      }
-    };
-    if (method == 'POST') {
-      x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    }
-    //const formData = new FormData(data);
-    x.send(data);
-    return x.responseText;
-  };
+//     var xhr;
+//     for (var i = 0; i < versions.length; i++) {
+//       try {
+//         xhr = new ActiveXObject(versions[i]);
+//         break;
+//       } catch (e) {
+//       }
+//     }
+//     return xhr;
+//   };
+//   ajax.send = function (url, callback, method, data, async) {
+//     if (async === undefined) {
+//       async = true;
+//     }
+//     var x = ajax.x();
+//     x.open(method, url, async);
+//     x.onreadystatechange = function () {
+//       if (x.readyState == 4) {
+//         callback(x.responseText)
+//       }
+//     };
+//     if (method == 'POST') {
+//       x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+//     }
+//     //const formData = new FormData(data);
+//     x.send(data);
+//     return x.responseText;
+//   };
 
-  ajax.get = function (url, data, callback, async) {
-    var query = [];
-    for (var key in data) {
-      query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
-    }
-    ajax.send(url + (query.length ? '?' + query.join('&') : ''), callback, 'GET', null, async)
-  };
-  //fetch navbar
-  const navbarData = new Promise(function (resolve) {
-    ajax.get("./includes/navbar.html", {}, function (responseText) {
-      resolve(responseText);
-    });
-  })
+//   ajax.get = function (url, data, callback, async) {
+//     var query = [];
+//     for (var key in data) {
+//       query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+//     }
+//     ajax.send(url + (query.length ? '?' + query.join('&') : ''), callback, 'GET', null, async)
+//   };
+//   //fetch navbar
+//   const navbarData = new Promise(function (resolve) {
+//     ajax.get("./includes/navbar.html", {}, function (responseText) {
+//       resolve(responseText);
+//     });
+//   })
 
-    //fetch footer
-  const footerData = new Promise(function (resolve) {
-    ajax.get("./includes/footer.html", {}, function (responseText) {
-      resolve(responseText);
-    });
-  })
+//    //fetch sidemenu
+//    const sideMenuData = new Promise(function (resolve) {
+//     ajax.get("./includes/sidenav.html", {}, function (responseText) {
+//       resolve(responseText);
+//     });
+//   })
 
-  //append navbar to document
-  navbarData.then(data => {
-    document.getElementById('header').innerHTML = data;
+//     //fetch footer
+//   const footerData = new Promise(function (resolve) {
+//     ajax.get("./includes/footer.html", {}, function (responseText) {
+//       resolve(responseText);
+//     });
+//   })
 
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+//   // //append navbar to document
+//   // navbarData.then(data => {
+//   //   document.getElementById('header').innerHTML = data;
 
-    // Add a click event on each of them
-    $navbarBurgers.forEach(el => {
-      el.addEventListener('click', () => {
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+//   //   // Get all "navbar-burger" elements
+//   //   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-      });
-    });
-  })
+//   //   // Add a click event on each of them
+//   //   $navbarBurgers.forEach(el => {
+//   //     el.addEventListener('click', () => {
+//   //       // Get the target from the "data-target" attribute
+//   //       const target = el.dataset.target;
+//   //       const $target = document.getElementById(target);
 
-  //append footer to document
-  footerData.then(data => {
-    document.querySelector('.footer').innerHTML = data;
-  })
+//   //       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+//   //       el.classList.toggle('is-active');
+//   //       $target.classList.toggle('is-active');
+//   //     });
+//   //   });
+//   // })
 
-})();
+//   //append sidenav to document
+//   sideMenuData.then(data => {
+//     document.querySelector('.page-wrapper').insertAdjacentHTML('afterbegin', data);
+//     $('.aside_a').on("click", function () {
+//       closeNav();
+//     });
+//   })
+
+//   //append footer to document
+//   footerData.then(data => {
+//     document.querySelector('.footer').innerHTML = data;
+//   })
+
+// })();
 
 
 function w3CodeColor(elmnt, mode) {
@@ -592,7 +623,7 @@ function w3CodeColor(elmnt, mode) {
 function postData(url, formId, success, error) {
   const formData = new FormData($('#' + formId)[0]);
   const btn = $('#btn_' + formId)[0];
-  btn.innerHTML = '&nbsp;<i class="fas fa-spinner fa-spin"></i>';
+  btn.classList.add('is-loading');
 
   return (
     $.ajax({
@@ -607,6 +638,7 @@ function postData(url, formId, success, error) {
         success(formId, res);
         btn.innerHTML = 'Try again';
         btn.removeAttribute("disabled");
+        btn.classList.remove('is-loading')
       },
       error: function (xhr) {
         if (xhr.readyState === 4) {
@@ -623,6 +655,7 @@ function postData(url, formId, success, error) {
         }
         btn.innerHTML = 'Try again';
         btn.removeAttribute("disabled");
+        btn.classList.remove('is-loading')
       }
     })
   );
