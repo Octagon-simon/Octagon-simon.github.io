@@ -1,6 +1,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     outline: none;
     margin:0px;
@@ -18,7 +18,7 @@ border-radius:5px ;
 }
 
 html, body{
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     font-size:1em;
 }
 body{

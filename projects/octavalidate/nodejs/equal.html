@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="has-navbar-fixed-top">
-<title>Octavalidate - NodeJS | Equalto validation</title>
-
+<html>
+    <title>EqualTo Validation</title>
 <head>
+    <base href="/nodejs/">
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
@@ -22,10 +22,8 @@
         content="Octavalidate - NodeJS: Learn how you can compare 2 input values using this library">
     <link rel="icon" href="https://octagon-simon.github.io/projects/octavalidate/assets/img/ov-image.png">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../assets/css/bulma.min.css" />
-    <link rel="stylesheet" href="../assets/css/all.min.css" />
     <!-- jQuery -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
     <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
     <link rel="stylesheet" href="../assets/css/ov.css" />
@@ -38,37 +36,46 @@
 
         gtag('config', 'G-S3QPVV79ZV');
     </script>
+    <link rel="stylesheet" href="../assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="../assets/css/ov.css" />
+    <link rel="stylesheet" href="../assets/css/docs.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 </head>
 
 <body>
-<noscript style="padding:10px;position:fixed;bottom:0;text-align:center;width:100%;color:#fff;background-color:rgb(221, 17, 2);z-index:99999">Please enable JavaScript to view this page</noscript>
-    <header id="header">
+    <noscript style="padding:10px;position:fixed;bottom:0;text-align:center;width:100%;color:#fff;background-color:rgb(221, 17, 2);z-index:99999">Please enable JavaScript to view this page</noscript>
+    <div class="page-wrapper">
+        <div class="main-content">
+            <div class="header-wrap">
+                <button type="button" data-toggle="tooltip" title="Click to Open Sidebar" id="menuBtn"
+                    class="button is-primary is-light navbar-item is-align-self-center" onclick="openNav()"><i
+                        class="mdi mdi-forwardburger"></i>&nbsp;Menu</button>
+                <div class="social-section is-align-self-center">
+                    <a href="https://github.com/Octagon-simon/octaValidate-nodejs" class="button is-dark" target="_blank"><span class="icon"><i class="mdi mdi-github mdi-2px"></i></span> <span>Github</span> </a>
+                </div>
+            </div>
+            <section class="container is-fluid p-2 mb-3">
+                <div class="container p-3">
+                    <h3 class="title is-4 mt-3 mb-3 has-text-primary text-center">EQUALTO VALIDATION</h3>
+                    <h5 class="subtitle mt-2 text-center">Learn how you can compare 2 input values using this library</h5>
+                    <article>
+                        <p class="mb-3">This validation checks if two form fields have the same value. To use this validation, you need to provide the name of the other <b>form field</b> to check against. Here's the syntax
+                        </p>
+                        <div class="embed-snippet mb-3" classnames="lang-js">//syntax<br>const fieldRules = {<br>    FIELD_NAME : {<br>        EQUALTO : [OTHER_FIELD_NAME, ERROR_MESSAGE]<br>    }<br>}</div>
         
-    </header>
-    <section class="container is-fluid p-2 mb-3">
-        <div class="container p-3">
-            <h3 class="title is-4 mt-3 mb-3 has-text-primary text-center">EQUALTO VALIDATION</h3>
-            <h5 class="subtitle mt-2 text-center">Learn how you can compare 2 input values using this library</h5>
-            <article>
-                <p class="mb-3">This validation checks if two form fields have the same value. To use this validation, you need to provide the name of the other <b>form field</b> to check against. Here's the syntax
-                </p>
-                <div class="embed-snippet mb-3" classnames="lang-js">//syntax<br>const fieldRules = {<br>    FIELD_NAME : {<br>        EQUALTO : [OTHER_FIELD_NAME, ERROR_MESSAGE]<br>    }<br>}</div>
-
-                <p class="notification is-info is-light mt-3 mb-3">This is useful if you need to validate a
-                    <b>password</b> and <b>confirm password</b> fields.
-                </p>
-                <p class="mb-3">Here's an example</p>
-                <div class="embed-snippet mb-3" classnames="lang-js">//equalto validation<br>const fieldRules = {<br>    password : {<br>       'R' : "Your password is required",<br>        'EQUALTO' : ['confirmPassword', 'Both passwords do not match']<br>    }<br>    confirmPassword : {<br>        'R' : "Please re-enter your password"<br>    }<br>}</div>
-            </article>
+                        <p class="notification is-info is-light mt-3 mb-3">This is useful if you need to validate a
+                            <b>password</b> and <b>confirm password</b> fields.
+                        </p>
+                        <p class="mb-3">Here's an example</p>
+                        <div class="embed-snippet mb-3" classnames="lang-js">//equalto validation<br>const fieldRules = {<br>    password : {<br>       'R' : "Your password is required",<br>        'EQUALTO' : ['confirmPassword', 'Both passwords do not match']<br>    }<br>    confirmPassword : {<br>        'R' : "Please re-enter your password"<br>    }<br>}</div>
+                    </article>
+                </div>
+            </section>
         </div>
-        <div class="mt-3 container has-text-centered">
-            <a href="file.html" class="has-fa-icon button is-primary is-light">FILE VALIDATION&nbsp;<i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
-    <footer class="footer">
-        
-    </footer>
-    <script src="../ov.js"></script>
+    </div>
+    <footer class="footer"></footer>
+    <script src="../assets/js/docs.js"></script>
+    <script src="../assets/js/ov.js"></script>
 </body>
 
 </html>

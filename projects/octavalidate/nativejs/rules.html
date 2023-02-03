@@ -2,31 +2,33 @@
 <html>
     <title>Validation Rules</title>
 <head>
-    <base href="/nodejs/">
+    <base href="/nativejs/">
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="Octavalidate - NodeJS: Learn more about the default validation rules in this GREAT library">
-    <meta name="title" content="Octavalidate - NodeJS: Validation rules">
+        content="Octavalidate - NativeJS: Learn more about the default validation rules in this GREAT library">
+    <meta name="title" content="Octavalidate - NativeJS: Validation rules">
     <meta property="og:description"
-        content="Octavalidate - NodeJS: Learn more about the default validation rules in this GREAT library">
-    <meta property="og:title" content="Octavalidate - NodeJS: Validation rules">
+        content="Octavalidate - NativeJS: Learn more about the default validation rules in this GREAT library">
+    <meta property="og:title" content="Octavalidate - NativeJS: Validation rules">
     <meta property="og:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="Octavalidate - NodeJS: Validation rules">
+    <meta name="twitter:title" content="Octavalidate - NativeJS: Validation rules">
     <meta name="twitter:description"
-        content="Octavalidate - NodeJS: Learn more about the default validation rules in this GREAT library">
+        content="Octavalidate - NativeJS: Learn more about the default validation rules in this GREAT library">
     <link rel="icon" href="https://octagon-simon.github.io/projects/octavalidate/assets/img/ov-image.png">
     <meta charset="UTF-8">
+    <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
     <!-- jQuery -->
     <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
-    <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
-    <link rel="stylesheet" href="../assets/css/ov.css" />
+    <!-- XSAlert CSS -->
+    <link rel="stylesheet" href="../assets/css/xs-alert-light-theme.css">
+    <!-- XAlert core JS -->
+    <script src="../assets/js/xs-alert.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3QPVV79ZV"></script>
     <script>
@@ -51,19 +53,23 @@
                     class="button is-primary is-light navbar-item is-align-self-center" onclick="openNav()"><i
                         class="mdi mdi-forwardburger"></i>&nbsp;Menu</button>
                 <div class="social-section is-align-self-center">
-                    <a href="https://github.com/Octagon-simon/octaValidate-nodejs" class="button is-dark" target="_blank"><span class="icon"><i class="mdi mdi-github mdi-2px"></i></span> <span>Github</span> </a>
+                    <a href="https://github.com/Octagon-simon/octaValidate" class="button is-dark" target="_blank"><span class="icon"><i class="mdi mdi-github mdi-2px"></i></span> <span>Github</span> </a>
+                    <a href="https://blog.bitsrc.io/client-side-form-validation-using-octavalidate-javascript-b150f2d14e99" class="button  is-info" target="_blank"><span class="icon"><i class="mdi mdi-book mdi-2px"></i></span> <span>Read</span> </a>
                 </div>
             </div>
             <section class="container is-fluid p-2 mb-3">
                 <div class="container p-3">
-                    <h3 class="title is-4 has-text-centered mt-3 mb-3 has-text-success">VALIDATION RULES
+                    <h3 class="title is-4 mt-3 mb-3 has-text-centered has-text-primary">VALIDATION RULES
                     </h3>
                     <article>
-                        <p class="mt-2 mb-3">Here, you can find the default rule titles that you can use when defining validation rules for a form.
+                        <p class="mb-2">Validation rules are rules that specifies the type of tests to perform on a form input.</p>
+                        <p>With octavalidate, you can display a custom error message when a validation test fails.
                         </p>
-                        <p class="mb-3">Here's the syntax for defining validation rules.</p>
-                        <div class="embed-snippet mb-3" classnames="lang-js">//syntax<br>const fieldRules = {<br>    FIELD_NAME : {<br>        RULE_TITLE : ERROR_MESSAGE<br>    }<br>}</div>
-                        <div class="table-responsive mb-3">
+                        <p class="mt-2">On the table below, you can find all validation rules that can be used within the
+                            <code>octavalidate</code>
+                            attribute. You will also be able to see the attribute for a custom error message.
+                        </p>
+                        <div class="table-responsive">
                             <table class="table is-bordered w-50 mt-3">
                                 <thead>
                                     <th>
@@ -71,6 +77,9 @@
                                     </th>
                                     <th>
                                         Description
+                                    </th>
+                                    <th>
+                                        Custom message attribute
                                     </th>
                                 </thead>
                                 <tbody>
@@ -81,6 +90,9 @@
                                         <td>
                                             Required
                                         </td>
+                                        <td>
+                                            ov-required-msg
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -88,6 +100,9 @@
                                         </td>
                                         <td>
                                             Email
+                                        </td>
+                                        <td>
+                                            ov-email-msg
                                         </td>
                                     </tr>
                                     <tr>
@@ -97,12 +112,18 @@
                                         <td>
                                             Letters Only
                                         </td>
+                                        <td>
+                                            ov-alpha-only-msg
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             ALPHA_SPACES
                                         </td>
                                         <td>Letters and Spaces
+                                        </td>
+                                        <td>
+                                            ov-alpha-spaces-msg
                                         </td>
                                     </tr>
                                     <tr>
@@ -112,6 +133,9 @@
                                         <td>
                                             Letters with Numbers
                                         </td>
+                                        <td>
+                                            ov-alpha-numeric-msg
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -119,6 +143,9 @@
                                         </td>
                                         <td>
                                             Lowercase letters
+                                        </td>
+                                        <td>
+                                            ov-lower-alpha-msg
                                         </td>
                                     </tr>
                                     <tr>
@@ -128,6 +155,9 @@
                                         <td>
                                             Uppercase letters
                                         </td>
+                                        <td>
+                                            ov-upper-alpha-msg
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -135,6 +165,9 @@
                                         </td>
                                         <td>
                                             Numbers or Digits
+                                        </td>
+                                        <td>
+                                            ov-digits-msg
                                         </td>
                                     </tr>
                                     <tr>
@@ -144,6 +177,9 @@
                                         <td>
                                             Password
                                         </td>
+                                        <td>
+                                            ov-pwd-msg
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -151,6 +187,9 @@
                                         </td>
                                         <td>
                                             URL
+                                        </td>
+                                        <td>
+                                            ov-url-msg
                                         </td>
                                     </tr>
                                     <tr>
@@ -160,6 +199,9 @@
                                         <td>
                                             URL with Query Parameters
                                         </td>
+                                        <td>
+                                            ov-url-qp-msg
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -168,11 +210,17 @@
                                         <td>
                                             Date in the format MM/DD/YYYY
                                         </td>
+                                        <td>
+                                            ov-date-mdy-msg
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>USERNAME</td>
                                         <td>
                                             Username
+                                        </td>
+                                        <td>
+                                            ov-username-msg
                                         </td>
                                     </tr>
                                     <tr>
@@ -180,10 +228,16 @@
                                         <td>
                                             General Text
                                         </td>
+                                        <td>
+                                            ov-text-msg
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+                        <p class="notification is-info is-light mt-4 mb-2">You can use the <code>R</code> validation rule to
+                            validate all input types, but not
+                            including <b>reset, hidden and submit</b>.</p>
                         <p class="notification is-info is-light">The <code>TEXT</code> validation rule supports these special
                             characters
                             <code>(. , / () [] & ! '' "" : ; ?)</code> and this means that any character outside the supported
@@ -195,6 +249,35 @@
                                 <i class="fas fa-angle-right"></i></a>
                         </div>
                     </article>
+                    <div class="mt-5">
+                        <h5 class="title is-5 mb-3">DEMO FORM</h5>
+                        <p>Here's a demo form utilising some of the validation rules above and a custom error message.</p>
+                        <pre id="code-section"
+                            class="mt-4">&lt;!-- username --&gt;<br>&lt;input id="inp_uname" type="text" octavalidate="R,USERNAME" ov-username-msg="This username is invalid"&gt;<br>&lt;!-- email --&gt;<br>&lt;input id="inp_email" type="email" octavalidate="R,EMAIL" ov-email-msg="This email address is invalid"&gt;<br>&lt;!-- description --&gt;<br>&lt;textarea id="inp_desc" octavalidate="R,TEXT" ov-text-msg="Your description contains invalid characters"&gt;&lt;/textarea&gt;</pre>
+                    </div>
+                    <section class="p-5 mt-3" style="background-color: #f7f7f7;">
+                        <form class="mt-2 mw-300" id="form_demo" novalidate>
+                            <div class="field">
+                                <label class="label">Username <span style="color:#ff0000">*</span></label>
+                                <input id="inp_uname" type="text" octavalidate="R,USERNAME"
+                                    ov-username-msg="This username is invalid" class="input">
+                            </div>
+                            <div class="field">
+                                <label class="label">Email <span style="color:#ff0000">*</span></label>
+                                <input id="inp_email" type="email" octavalidate="R,EMAIL"
+                                    ov-email-msg="This email address is invalid" class="input">
+                            </div>
+                            <div class="field">
+                                <label class="label">Description <span style="color:#ff0000">*</span></label>
+                                <textarea id="inp_desc" octavalidate="R,TEXT"
+                                    ov-text-msg="Your description contains invalid characters" class="textarea"></textarea>
+                                <small>Try to provide characters outside the allowed set of characters (. , / () [] & ! '' "" : ; ?)</small>
+                            </div>
+                            <div class="field">
+                                <button class="button is-primary" type="submit">Run test</button>
+                            </div>
+                        </form>
+                    </section>
                 </div>
             </section>
         </div>
@@ -202,6 +285,23 @@
     <footer class="footer"></footer>
     <script src="../assets/js/docs.js"></script>
     <script src="../assets/js/ov.js"></script>
+    <script>
+        //create instance of class
+        let formVal = new octaValidate('form_demo');
+
+        let formEl = document.querySelector('#form_demo');
+        formEl.addEventListener('submit', function (e) {
+            e.preventDefault();
+            //invoke the validate method
+            if (formVal.validate() === true) {
+                XSAlert({
+                    title: 'Couldn\'t break through?',
+                    message: 'Demo Form passed the validation test! 😎',
+                    icon: 'question',
+                })
+            }
+        })
+    </script>
 </body>
 
 </html>

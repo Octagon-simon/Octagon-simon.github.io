@@ -2,31 +2,33 @@
 <html>
     <title>Length Validation</title>
 <head>
-    <base href="/reactjs/">
+    <base href="/nativejs/">
     <meta name="author" content="Simon Ugorji">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-        content="Octavaliate - ReactJS: Learn how you can check for input lengths with this library">
-    <meta name="title" content="Octavaliate - ReactJS: Length Validation Attributes">
+        content="Octavaliate - JS: Learn how you can check for input lengths with this library">
+    <meta name="title" content="Octavaliate - JS: Length Validation">
     <meta property="og:description"
-        content="Octavaliate - ReactJS: Learn how you can check for input lengths with this library">
-    <meta property="og:title" content="Octavaliate - ReactJS: Length Validation Attributes">
+        content="Octavaliate - JS: Learn how you can check for input lengths with this library">
+    <meta property="og:title" content="Octavaliate - JS: Length Validation">
     <meta property="og:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
     <meta property="og:url" content="https://octagon-simon.github.io/projects/octavalidate">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image"
         content="https://octagon-simon.github.io/projects/octavalidate/assets/img/octavalidate.png">
-    <meta name="twitter:title" content="Octavaliate - ReactJS: Length Validation Attributes">
+    <meta name="twitter:title" content="Octavaliate - JS: Length Validation">
     <meta name="twitter:description"
-        content="Octavaliate - ReactJS: Learn how you can check for input lengths with this library">
+        content="Octavaliate - JS: Learn how you can check for input lengths with this library">
     <link rel="icon" href="https://octagon-simon.github.io/projects/octavalidate/assets/img/ov-image.png">
     <meta charset="UTF-8">
+    <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
     <!-- jQuery -->
     <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/prettify/run_prettify.js?autoload=true"></script>
-    <link rel="stylesheet" href="../assets/prettify/skins/tomorrow-night-blue.css" />
-    <link rel="stylesheet" href="../assets/css/ov.css" />
+    <!-- XSAlert CSS -->
+    <link rel="stylesheet" href="../assets/css/xs-alert-light-theme.css">
+    <!-- XAlert core JS -->
+    <script src="../assets/js/xs-alert.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3QPVV79ZV"></script>
     <script>
@@ -36,15 +38,6 @@
 
         gtag('config', 'G-S3QPVV79ZV');
     </script>
-    
-    <style>
-        span.tag{
-            border:0 !important;
-            background-color:unset !important;
-            padding:0 !important;
-            color:#ddd !important;
-        }
-    </style>
     <link rel="stylesheet" href="../assets/css/bulma.min.css" />
     <link rel="stylesheet" href="../assets/css/ov.css" />
     <link rel="stylesheet" href="../assets/css/docs.css" />
@@ -60,22 +53,21 @@
                     class="button is-primary is-light navbar-item is-align-self-center" onclick="openNav()"><i
                         class="mdi mdi-forwardburger"></i>&nbsp;Menu</button>
                 <div class="social-section is-align-self-center">
-                    <a href="https://github.com/Octagon-simon/octaValidate-reactjs/archive/refs/heads/main.zip" class="button is-dark" target="_blank"><span class="icon"><i class="mdi mdi-github mdi-2px"></i></span> <span>Github</span> </a>
-                    
+                    <a href="https://github.com/Octagon-simon/octaValidate" class="button is-dark" target="_blank"><span class="icon"><i class="mdi mdi-github mdi-2px"></i></span> <span>Github</span> </a>
+                    <a href="https://blog.bitsrc.io/client-side-form-validation-using-octavalidate-javascript-b150f2d14e99" class="button  is-info" target="_blank"><span class="icon"><i class="mdi mdi-book mdi-2px"></i></span> <span>Read</span> </a>
                 </div>
             </div>
             <section class="container is-fluid p-2 mb-3">
                 <div class="container p-3">
-                    <h3 class="title is-4 mt-3 mb-3 has-text-info has-text-centered">LENGTH
+                    <h3 class="title is-4 has-text-centered mt-3 mb-3 has-text-primary">LENGTH
                         VALIDATION</h3>
                     <article>
                         <p>This validation enables you to check the number of characters provided by the user.</p>
-                        <h4 class="title is-5 mt-3 mb-2 has-text-info"
-                        >LENGTH</h4>
+                        <h4 class="title is-5 mt-3 mb-2 has-text-primary">LENGTH</h4>
                         <p class="mt-3">Use this to check for exact number of characters. For Eg If you provide 5, it means that the user must provide 5 characters.</p>
-                        <h4 class="title is-5 mt-3 mb-2 has-text-info">MINLENGTH</h4>
+                        <h4 class="title is-5 mt-3 mb-2 has-text-primary">MINLENGTH</h4>
                         <p class="mt-3">Use this to check for minimum number of characters. For Eg If you provide 5, it means that the user must provide 5 characters or more.</p>
-                        <h4 class="title is-5 mt-3 mb-2 has-text-info">MAXLENGTH</h4>
+                        <h4 class="title is-5 mt-3 mb-2 has-text-primary">MAXLENGTH</h4>
                         <p class="mt-3">Use this to check for maximum number of characters. For Eg If you provide 5, it means that the user must provide 5 characters or less.</p>
                         <div class="table-responsive mt-5 mb-5">
                             <table class="table is-bordered w-50">
@@ -133,8 +125,31 @@
                             <code>novalidate</code> to the form tag.
                         </div>
                     </article>
-                    <h4 class="title is-5 mt-5 mb-5">DEMO FORM</h4>
-                    <div class="embed-snippet" classnames="lang-html">&lt;!-- length --&gt;<br>&lt;input id="inp_length" type="number" length="2" octavalidate="R"&gt;<br>&lt;!-- min length--&gt;<br>&lt;input id="inp_min_length" type="text" minlength="5" octavalidate="R"&gt;<br>&lt;!-- max length--&gt;<br>&lt;input id="inp_max_length" type="text" maxlength="10" octavalidate="R"&gt;</div>
+                    <h4 class="title is-5 mt-3 mb-3">DEMO FORM</h4>
+                    <pre
+                        id="code-section">&lt;!-- length --&gt;<br>&lt;input id="inp_length" type="number" length="2" octavalidate="R"&gt;<br>&lt;!-- min length--&gt;<br>&lt;input id="inp_min_length" type="text" minlength="5" octavalidate="R"&gt;<br>&lt;!-- max length--&gt;<br>&lt;input id="inp_max_length" type="text" maxlength="10" octavalidate="R"&gt;</pre>
+                    <section class="p-5 mt-3" style="background-color: #f7f7f7;">
+                        <form class="mt-2 mw-300" id="form_demo" novalidate>
+                            <div class="field">
+                                <label class="label">Length <span style="color:#ff0000">*</span></label>
+                                <input class="input" id="inp_length" type="number" length="2" octavalidate="R">
+                                <small>Provide 2 numbers</small>
+                            </div>
+                            <div class="field">
+                                <label class="label">Minimum Length <span style="color:#ff0000">*</span></label>
+                                <input class="input" id="inp_min_length" type="text" minlength="5" octavalidate="R">
+                                <small>Provide at least 5 characters</small>
+                            </div>
+                            <div class="field">
+                                <label class="label">Maximum Length <span style="color:#ff0000">*</span></label>
+                                <input class="input" id="inp_max_length" type="text" maxlength="10" octavalidate="R">
+                                <small>Provide 10 characters or less</small>
+                            </div>
+                            <div class="field">
+                                <button class="button is-primary" type="submit">Run test</button>
+                            </div>
+                        </form>
+                    </section>
                 </div>
             </section>
         </div>
@@ -142,6 +157,23 @@
     <footer class="footer"></footer>
     <script src="../assets/js/docs.js"></script>
     <script src="../assets/js/ov.js"></script>
+    <script>
+        //create instance of class
+        let formVal = new octaValidate('form_demo');
+
+        let formEl = document.querySelector('#form_demo');
+        formEl.addEventListener('submit', function (e) {
+            e.preventDefault();
+            //invoke the validate method
+            if (formVal.validate() === true) {
+                XSAlert({
+                    title: 'Couldn\'t break through?',
+                    message: 'Demo Form passed the validation test! 😎',
+                    icon: 'question',
+                })
+            }
+        })
+    </script>
 </body>
 
 </html>
