@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Simon Ugorji - Full Stack Web Developer & Technical Writer</title>
     <meta name="author" content="Simon Ugorji">
     <meta property="title" content="Simon Ugorji - Full-Stack Web Developer">
@@ -37,6 +37,41 @@
 
         gtag('config', 'G-G8TW41FQR2');
     </script>
+    <style>
+        .card {
+            max-width: 230px;
+            margin: auto;
+            box-shadow: 5px 5px 0 rgb(0, 209, 178);
+            border: 2px solid #000;
+        }
+
+        .card-img {
+            height: 100px;
+            display: flex;
+            background-color: #5c54b9 !important;
+        }
+
+        .card-img img {
+            width: initial !important;
+            max-width: 100% !important;
+        }
+
+        .card-footer {
+            padding: 10px 0 !important;
+            text-align: center;
+        }
+
+        .card-footer a {
+            max-width: 50%;
+        }
+
+        @media screen and (max-width: 800px) {
+            .col-md-4:not(:last-child)>.card {
+                margin-bottom: 20px;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
@@ -80,10 +115,9 @@
             <h4 class="mb-3 display-5 fw-bold has-text-app-success" id="my_intro">Full-Stack Web Developer</h4>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">When it comes to programming, I look at the problem & implement the best
-                        solution
-                        by writing it with lines of codes</p>
+                    solution with lines of code</p>
                 <div class="">
-                    <a target="_blank" download href="assets/Resume-Simon-Ugorji-24-12-2022.pdf"
+                    <a target="_blank" download href="assets/Resume-Simon-Ugorji-21-02-2023.pdf"
                         class="btn btn-app-primary btn-lg btn-app">Download CV&nbsp;<i class="mdi mdi-download"></i></a>
                 </div>
             </div>
@@ -93,10 +127,10 @@
     <main class="px-4 py-5">
         <!-- about me-->
         <section id="about" class="section">
-            <div class="container col-xxl-8">
-                <h3 class="display-5 text-center fw-bold mb-3 has-text-primary">#ABOUT ME
+            <div class="container-fluid">
+                <h3 class="display-5 text-center fw-bold mb-3">ABOUT ME
                 </h3>
-                <article class="lead">
+                <article class="lead m-auto">
                     <p>I'm <b>Ugorji Simon Okorie</b>, a Full-Stack Web Developer from Nigeria.</p>
                     <p>I have worked with PHP and JavaScript for 3 years now and I have a solid experience building
                         <b>web Apps and projects</b> in both languages.
@@ -106,47 +140,80 @@
                     <p>As part of my learning process, I write technical articles on <b>medium, hashnode, tealfeed</b>
                         and <b>dev community</b> and I love to work on side projects.</p>
                     <p>I have experience in <b>HTML, CSS, ReactJS, PHP, MySQL, NodeJs, MongoDB, </b> and <b>Express
-                            JS</b>.</p>
-                    <p>I currently have <b>7 active side projects</b>.</p>
-                    <p class="pb-3 has-border-bottom">I am a tech enthusiast and would love to see myself as a
-                        <strong>computer
-                            scientist</strong> one day.
+                            JS</b> and I currently have <b>8 active projects</b>.</p>
+                    <p>Give me a problem and I will implement the best solution with lines of code.
                     </p>
+                    <p class="pb-3 has-border-bottom"> <a target="_blank" href="https://www.polywork.com/octagon_simon/"
+                            class="btn btn-app-primary">View my journey</a>
+                    </p>
+
                 </article>
             </div>
         </section>
         <section class="section" id="blogs">
-            <div class="container col-xxl-8">
-                <h3 class="display-6 text-center fw-bold mb-3 has-text-primary">#MY BLOGS</h3>
-                <article class="lead">
-                    <ul class="skills-list">
-                        <li><a class="link" target="_blank" href="https://simon-ugorji.medium.com">Check out my Medium
-                                blog</a></li>
-                        <li><a class="link" target="_blank" href="https://dev.to/ugorji_simon">Check out my DEV
-                                Community blog</a></li>
-                        <li><a class="link" target="_blank" href="https://tealfeed.com/simon_ugorji">Check out my
-                                Tealfeed blog</a></li>
-                        <li><a class="link" target="_blank" href="https://octagon.hashnode.dev">Check out my Hashnode
-                                blog</a></li>
-                    </ul>
-                </article>
-            </div>
-
-        </section>
-        <section class="section">
-            <div class="container col-xxl-8">
-                <div class="p-3 alert alert-success radius-0 mw-500 m-auto">
-                    <p class="mb-2">I document most of my activities on <b>polywork</b>.</p>
-                    <a target="_blank" href="https://www.polywork.com/octagon_simon/" class="btn btn-success">Check it
-                        out</a>
+            <div class="container-fluid">
+                <h3 class="display-6 text-center fw-bold mb-3">MY BLOGS</h3>
+                <div class="row mt-4">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card p-0" style="padding: 0 !important;">
+                            <div class="card-body p-0">
+                                <div class="card-img text-center class=" mb-3">
+                                    <img class="img-fluid" src="/assets/img/medium.png">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a target="_blank" href="https://simon-ugorji.medium.com"
+                                    class="btn  btn-app-primary">Visit blog</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card p-0" style="padding: 0 !important;">
+                            <div class="card-body p-0">
+                                <div class="card-img text-center class=" mb-3">
+                                    <img class="img-fluid" src="/assets/img/hashnode.png">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a target="_blank" href="https://octagon.hashnode.dev"
+                                    class="btn  btn-app-primary">Visit blog</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card p-0" style="padding: 0 !important;">
+                            <div class="card-body p-0">
+                                <div class="card-img" class="mb-3">
+                                    <img class="img-fluid" src="/assets/img/dev-to.png">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a target="_blank" href="https://dev.to/ugorji_simon" class="btn  btn-app-primary">Visit
+                                    blog</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 m-auto mt-sm-3">
+                        <div class="card p-0" style="padding: 0 !important;">
+                            <div class="card-body p-0">
+                                <div class="card-img text-center class=" mb-3">
+                                    <img class="img-fluid" src="/assets/img/tealfeed.png">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a target="_blank" href="https://tealfeed.com/simon_ugorji"
+                                    class="btn btn-app-primary">Visit blog</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <p class="pb-3 has-border-bottom"></p>
             </div>
-
         </section>
         <!-- projects -->
         <section id="projects" class="section">
-            <div class="container col-xxl-8">
-                <h3 class="display-5 mb-4 text-center fw-bold has-text-primary">#PROJECTS</h3>
+            <div class="container-fluid">
+                <h3 class="display-5 mb-4 text-center fw-bold">PROJECTS</h3>
                 <!--project 1-->
                 <div class="row align-items-center g-3 py-3">
                     <div class="col-10 col-sm-8 col-lg-6">
@@ -183,6 +250,7 @@
                         <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">Octavalidate</h1>
                         <p class="mt-2 mb-2">
                             <span class="badge bg-warning text-dark rounded-pill">JavaScript</span>
+                            <span class="badge bg-info text-dark rounded-pill">PHP</span>
                         </p>
                         <p class="fw-bold has-text-primary">January 2022 - Present</p>
                         <p class="lead">This library has over 4 releases and it helps to validate your client-side and
@@ -234,8 +302,8 @@
                         <p class="fw-bold has-text-primary">
                             September 2022 - Present
                         </p>
-                        <p class="lead">This plugin creates a virtual API that can be used to share your wordpress posts
-                            to other websites.</p>
+                        <p class="lead">This wordpress plugin creates a virtual API that can be used to share your
+                            wordpress posts to other websites.</p>
                         <div class="project-content">
                             <a target="_blank" href="https://wordpress.org/plugins/posts-api-wp"
                                 class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
@@ -259,9 +327,7 @@
                         </p>
                         <p class="fw-bold has-text-primary">November 2022</p>
                         <p class="alert alert-info p-3">This project was inspired by a 30-days coding challenge</p>
-                        <p class="lead">This project lists
-                            out NFTs through an API request, details about each NFT, and simulates the purchasing of
-                            an NFT.</p>
+                        <p class="lead">This is a simple web app that simulates the purchase of an NFT.</p>
                         <div class="project-content">
                             <a target="_blank" href="https://octagon-simon.github.io/projects/nft"
                                 class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
@@ -286,7 +352,7 @@
                             <span class="badge bg-success rounded-pill">NodeJS</span>
                         </p>
                         <p class="fw-bold has-text-primary">November 2022 - Present</p>
-                        <p class="alert alert-info p-3">This project was inspired by a 30-days coding challenge.</p>
+                        <p class="alert alert-info fw-bold">This project was inspired by a 30-days coding challenge.</p>
                         <p class="lead">Using the <b>MERN stack</b>, I was able to build a full functional blogging
                             website and
                             it stands to be my <b>first fullstack app</b>.</p>
@@ -315,10 +381,7 @@
                         <p class="has-text-primary fw-bold">
                             December 2022 - Present
                         </p>
-                        <p class="lead">Oshare is an <b>app</b> that allows you to upload a file and share
-                            a link to the
-                            uploaded file. <br />With this solution, you don't have to worry about sending large files
-                            individually to a group of people.</p>
+                        <p class="lead">This web app allows you to upload and share links to files.</p>
                         <div class="project-content">
                             <a target="_blank" href="https://oshare.onrender.com"
                                 class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
@@ -327,39 +390,102 @@
                         </div>
                     </div>
                 </div>
+                <!--project 6-->
+                <div class="row flex-lg-row-reverse align-items-center g-3 py-3">
+                    <div class="col-10 col-sm-8 col-lg-6">
+                        <img src="assets/img/tailorskit.png" class="d-block mx-lg-auto img-fluid" alt="Tailorskit"
+                            width="400" height="400" loading="lazy">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">TailorsKit</h1>
+                        <p>
+                            <span class="badge bg-info rounded-pill">PHP</span>
+                            <span class="badge bg-info rounded-pill">ReactJS</span>
+                        </p>
+                        <p class="fw-bold has-text-primary">March 2023 - Present</p>
+                        <p class="alert alert-info fw-bold">This is my first marketable product.</p>
+                        <p class="lead">TailorsKit is a solution for tailors all over Nigeria to save, manage and access
+                            their client's data, anywhere and at anytime with ease.</p>
+                        <div class="project-content">
+                            <a target="_blank" href="https://tailorskit.com"
+                                class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
+                            <a target="_blank" href="https://github.com/tekprenuers/tailors-kit"
+                                class="btn btn-dark btn-lg px-4"><i class="mdi mdi-github"></i>&nbsp;Github</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--skills-->
         <section id="skills" class="section">
-            <div class="container col-xxl-8">
-                <h3 class="display-5 text-center fw-bold mb-3 has-text-primary">#SKILLS
+            <div class="container-fluid">
+                <h3 class="display-5 text-center fw-bold mb-3">SKILLS
                 </h3>
-                <p class="lead mb-4 text-center">Here are some of the languages, frameworks and Database Systems that I
+                <p class="lead mb-4 text-center">Here are some of the languages and frameworks that I
                     work with.</p>
-                <article>
-                    <ul class="skills-list">
-                        <li>JavaScript</li>
-                        <li>ReactJS</li>
-                        <li>NodeJS</li>
-                        <li>ExpressJS</li>
-                        <li>PHP</li>
-                        <li>SQL</li>
-                        <li>MongoDB</li>
-                    </ul>
-                </article>
-                <p class="has-border-bottom pb-3"></p>
+                <div class="row mt-4">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card p-0" style="padding: 0 !important;">
+                            <div class="card-body p-0">
+                                <div class="card-img text-center" class="mb-3">
+                                    <img class="img-fluid" src="/assets/img/js-svgrepo-com.png">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn  btn-app-primary">JavaScript</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card p-0" style="padding: 0 !important;">
+                            <div class="card-body p-0">
+                                <div class="card-img text-center" class="mb-3">
+                                    <img class="img-fluid" src="/assets/img/react.png">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn  btn-app-primary">ReactJS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card p-0" style="padding: 0 !important;">
+                            <div class="card-body p-0">
+                                <div class="card-img text-center" class="mb-3">
+                                    <img class="img-fluid" src="/assets/img/node.png">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn  btn-app-primary">NodeJS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 m-auto mt-sm-3">
+                        <div class="card p-0" style="padding: 0 !important;">
+                            <div class="card-body p-0">
+                                <div class="card-img text-center" class="mb-3">
+                                    <img class="img-fluid" src="/assets/img/php.png">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn  btn-app-primary">PHP</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="has-border-bottom pb-3">&nbsp;</p>
             </div>
         </section>
         <!--contact -->
         <section id="contact" class="section">
-            <h3 class="display-5 text-center fw-bold mb-3 has-text-primary">#CONTACT ME
+            <h3 class="display-5 text-center fw-bold mb-3">CONTACT ME
             </h3>
-            <p class="lead mb-4 text-center">Send me a message by submitting the form below.</p>
+            <p class="lead mb-4 text-center">Send me a message</p>
             <div class="mw-500 m-auto">
                 <form method="post" action="https://formbold.com/s/35Ey3" id="form_contact"
                     class="mt-3 m-auto mw-700 text-start" novalidate>
                     <p class="alert alert-primary mt-2 mb-3 radius-0">
-                        Form validation served by my project <a target="_blank"
+                        Form validation was served by <a target="_blank"
                             href="https://octagon-simon.github.io/projects/octavalidate/">octavalidate</a>
                     </p>
                     <div class="form-group mb-3">
@@ -421,7 +547,7 @@
                             class="mdi mdi-linkedin"></i></a>
                 </li>
             </ul>
-            <p class="gray-text">Last updated: 23<sup>rd</sup> January 2023</p>
+            <p class="gray-text">Last updated: 28<sup>th</sup> February 2023</p>
         </div>
     </div>
     <!--23rd/January/2023-->
