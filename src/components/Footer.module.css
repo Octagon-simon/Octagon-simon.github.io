@@ -1,0 +1,13 @@
+.footer {
+    background-color: var(--brand-blue-dark-3);
+    padding: 1.5rem 1.5rem;
+    color: var(--white1);
+    font-size: 0.95rem !important;
+}
+
+.footerSocial{
+    display: inline-flex;
+    gap:10px;
+    justify-content: center;
+    width: 100%;
+}

@@ -1,0 +1,29 @@
+You can calculate the width for each child element based on the number of child elements you want to display per row by using CSS. Here's how you can calculate it yourself:
+
+Suppose you want to display 4 child elements per row. You can calculate the width for each child element as follows:
+
+1. Determine the total width available for the children within the parent container. This depends on the parent container's width and any gaps between child elements.
+
+2. Divide the total width by the number of child elements you want to display in a row (in this case, 4).
+
+3. This result will be the width that each child element should have to evenly distribute them in a row.
+
+Here's an example:
+
+Let's say your parent container has a width of 800px, and you want to display 4 child elements per row with a 10px gap between them.
+
+1. Total available width for children = 800px - (10px * 3 gaps) = 800px - 30px = 770px.
+
+2. Width for each child element = 770px / 4 = 192.5px.
+
+So, each child element should have a width of approximately 192.5px to display 4 elements in a row within an 800px wide container with 10px gaps.
+
+You can then set the width of your child elements in your CSS like this:
+
+```css
+.child {
+  width: 192.5px;
+}
+```
+
+This will distribute the child elements evenly across the available width, ensuring that there are 4 child elements in each row. Adjust the values according to your specific layout and container dimensions.
