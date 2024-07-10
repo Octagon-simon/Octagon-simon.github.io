@@ -1,0 +1,111 @@
+.hero{
+    min-height: 100vh;
+}
+
+.hero-body {
+    padding: 5rem 4.5rem !important;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar {
+    background-color: #7b4be214 !important;
+    /* max-width: 970px; */
+    margin: auto;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.navbar-brand {
+    align-items: center !important;
+}
+
+.navbar .navbar-brand img {
+    width: 35px;
+    height: 35px;
+}
+
+.navbar a.navbar-item.is-active {
+    color: var(--brand-purple);
+}
+
+.title {
+    color: #fff !important;
+}
+
+.section-content {
+    padding: 3rem 0;
+}
+
+.button {
+    border-radius: 15px !important;
+}
+
+.show-on-mobile {
+    display: none;
+}
+
+/*Media Queries*/
+
+/* Styles for Mobile Screens */
+@media screen and (max-width: 767px) {
+
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .show-on-mobile {
+        display: block !important;
+    }
+
+    h2.title.is-2 {
+        font-size: 1.5rem !important;
+    }
+
+    .centered-on-mobile {
+        text-align: center !important;
+    }
+
+    .navbar {
+        padding: 0 10px !important;
+    }
+
+}
+
+/* Styles for Desktop Screens */
+@media screen and (min-width: 768px) {
+    .hero.is-medium .hero-body {
+        padding: 2.5rem;
+    }
+
+    .hide-on-desktop {
+        display: none !important;
+    }
+
+    .has-text-right-desktop {
+        text-align: right !important;
+    }
+}
+
+/* Your tablet-specific styles here */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .hide-on-tablet {
+        display: none !important;
+    }
+}
+
+/* Styles for screens wider than 1920 pixels (very large screens) */
+@media screen and (min-width: 1921px) {
+
+    /**Reduce the length of the hero section*/
+    .hero {
+        min-height: 600px !important;
+    }
+
+    /**Reduce the width of Navbar**/
+    .navbar {
+        width: 1380px !important;
+        margin: auto !important;
+    }
+}

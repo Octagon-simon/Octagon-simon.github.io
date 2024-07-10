@@ -1,0 +1,495 @@
+.heroNameContainer {
+  margin-bottom: 15px;
+}
+
+.heroNameContainer h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.heroSocial {
+  display: flex;
+  gap: 10px;
+}
+
+.heroMyMe img {
+  width: 500px;
+  height: 500px;
+}
+
+.hasIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heroContactButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.heroContactButtons a:first-child {
+  color: var(--brand-blue);
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: .8em !important;
+}
+
+.isFilled {
+  background-color: var(--brand-blue-dark-2) !important;
+  border-color: transparent !important;
+  color: var(--brand-blue) !important;
+}
+
+.isOutlined {
+  border-color: var(--brand-blue);
+  background-color: transparent !important;
+  color: var(--brand-blue) !important;
+}
+
+.isOutlined:hover{
+    background-color: var(--brand-blue-dark-2) !important;
+  border-color: transparent !important;
+  color: var(--brand-blue) !important;
+}
+
+.sectionContent {
+  padding: 3rem;
+}
+
+.hasPadding {
+  padding: 1rem;
+}
+
+.sectionExperience {
+  /* border-top-width: 1px; */
+  border-style: solid;
+  border-color: var(--brand-blue-dark-2);
+  /* border-bottom-width: 1px; */
+  border-width: 1px 0;
+}
+
+.experienceInner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.experienceInner .experienceCards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 80%;
+  /* max-width: 900px; */
+}
+
+.experienceInner .experienceCards .experienceItem {
+  border: 1px solid var(--brand-blue-dark-1);
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  max-width: 100%;
+  height: 200px;
+}
+
+.experienceInner .experienceCards .experienceItem:nth-child(2) {
+  background-color: var(--brand-blue-dark-3);
+}
+
+.experienceInner .experienceCards .experienceItem .experienceContent {
+  text-align: center;
+  color: #fff;
+}
+
+.experienceInner .experienceCards .experienceItem .experienceContent p:last-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.experienceInner .experienceDescription {
+  display: flex;
+  gap: 20px;
+  background-color: var(--brand-blue-dark-3);
+  padding: 20px 40px;
+  border-radius: 15px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 80%;
+}
+
+.experienceInner .experienceDescription .descriptionItem {
+  text-align: center;
+  color: var(--brand-blue);
+}
+
+.experienceInner .experienceDescription .descriptionItem p:last-child {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.sectionAbout .aboutLargeText {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.largeText {
+  /* 48px */
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 15px 0;
+}
+
+.heroMobile {
+  display: none;
+}
+
+.worksAndProjectsBtnGroup {
+  display: flex;
+  justify-content: end;
+  /* align-self: end; */
+}
+
+.hideCard {
+  display: none !important;
+}
+
+.projectCardsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projectCard {
+  border: 1px solid var(--brand-blue-dark-1);
+  padding: 2rem;
+  width: 100%;
+  /* Limit to 4 child elements per row that is (100% / 4) - the gap */
+  max-width: calc(33.3% - 20px);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.projectCard .projectCardHead {
+  text-align: left;
+}
+
+.projectCard .projectCardHead h4 {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.projectCard .projectCardHead p {
+  width: 250px;
+}
+
+.projectCard .projectCardBody .imageContainer {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.projectCard .projectCardBody .imageContainer img {
+  border-radius: 10px;
+  color: transparent;
+  object-fit: cover;
+  height: 200px;
+}
+
+.badgeContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dateBadge {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  max-width: 150px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: var(--brand-blue-dark-3);
+  color: var(--brand-blue);
+}
+
+.seeMore {
+  padding: 2rem 0;
+  text-align: right;
+}
+
+.anchorTag {
+  color: var(--brand-blue-dark-1) !important;
+  font-weight: 600;
+}
+
+.projectCardsContainerMobile {
+  display: none !important;
+}
+
+.badge {
+  background-color: var(--brand-blue-dark-3);
+  width: 100%;
+  max-width: fit-content !important;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.badge p {
+  color: var(--brand-blue);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.badge.badgeBrandGreen {
+  background-color: var(--brand-green-dark-1);
+  color: var(--brand-green);
+  font-weight: bold;
+}
+
+.badge.badgeBrandPurple {
+  background-color: var(--brand-blue-dark-3);
+  color: var(--brand-blue);
+}
+
+.badge.badgeBrandRose {
+  background-color: var(--brand-rose-dark-1);
+  border-radius: 10px;
+  color: var(--brand-rose);
+  font-weight: bold;
+}
+
+.skillsSection .techIcons {
+  display: inline-flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skillsSection .badge, .journeySection .badge{
+  margin: auto;
+}
+
+.skillsSection .largeText, .journeySection .largeText{
+  text-align: center;
+}
+
+.journey {
+  margin: auto;
+  background-color: var(--brand-blue-dark-3);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.journey .journeyBody h5 {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.journey .journeyBody p {
+  font-size: .8rem;
+}
+
+.journey .journeyFooter {
+  text-align: right;
+}
+
+.contactForm{
+  max-width: 500px;
+  margin: auto;
+}
+
+.label {
+  color: inherit !important;
+}
+
+.input {
+  background-color: transparent !important;
+  color: #fff;
+  border-color: var(--brand-blue-dark-1) !important;
+}
+
+.input::placeholder{
+  color: rgba(255, 255, 255, 0.199) !important;
+}
+
+.input:focus, .input:active{
+  background-color: transparent !important;
+}
+
+.contactButton{
+  background-color: var(--brand-blue) !important;
+  color: #fff !important;
+  border-color: var(--brand-blue) !important;
+  width: 100%;
+}
+
+.backToTop{
+  background-color: transparent !important;
+  border: unset;
+  color: var(--brand-blue-dark-1);
+  cursor: pointer;
+}
+
+.techIconsWrapper{
+  padding-top: 3rem;
+  text-align: center;
+}
+
+/* Mobile*/
+@media screen and (max-width: 767px) {
+  .heroBody {
+    padding: 1rem !important;
+  }
+
+  .sectionContent {
+    padding: 2rem 1rem !important;
+  }
+
+  .heroDesktop {
+    display: none !important;
+  }
+
+  .heroMobile {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .heroMobile .heroSocial {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .heroContactButtons {
+    align-items: center !important;
+    gap: 10px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .heroContactButtons a {
+    margin-bottom: 0 !important;
+  }
+
+  .heroContactButtons a {
+    justify-content: flex-start;
+  }
+
+  .experienceInner .experienceCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sectionExperience .experienceDescription {
+    display: none !important;
+  }
+
+  .sectionAbout .aboutLargeText {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .largeText {
+    font-size: 1.25rem;
+  }
+
+  .sectionExperience {
+    border: unset !important;
+  }
+
+  .sectionAbout img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .worksAndProjectsBtnGroup {
+    justify-content: start;
+  }
+
+  .projectCardsContainer {
+    display: none !important;
+  }
+
+  .projectCardsContainerMobile {
+    display: block !important;
+  }
+
+  .projectCard .projectCardHead p {
+    width: 100% !important;
+  }
+
+  .projectCardsContainerMobile .projectCard {
+    max-width: 100% !important;
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+    min-height: 680px;
+  }
+
+  .worksAndProjectsBtnGroup {
+    display: none !important;
+  }
+
+  .skillsSection .badge, .journeySection .badge{
+    margin: 0 !important;
+  }
+
+  .skillsSection .largeText, .journeySection .largeText{
+    text-align: left !important;
+  }
+
+  .skillsSection .badge, .contactSection .badge{
+    margin: 0 !important;
+  }
+
+  .skillsSection .largeText, .contactSection .largeText{
+    text-align: left !important;
+  }
+
+  .techIconsWrapper{
+    padding-top: 2rem;
+    text-align: left;
+  }
+}
+
+/* Styles for Desktop Screens */
+@media screen and (min-width: 768px) {}
+
+/* Tablet Styles here */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .projectCard {
+    max-width: calc(50% - 20px) !important;
+  }
+}
+
+/* Styles for screens wider than 1920 pixels (very large screens) */
+@media screen and (min-width: 1921px) {}
