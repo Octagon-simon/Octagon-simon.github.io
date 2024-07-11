@@ -7,10 +7,10 @@ import Script from 'next/script';
 
 export const metadata = {
   metadataBase: 'https://octagon-simon.github.io',
-  title: 'Simon Ugorji (Octagon): Your favourite Software Developer ✨',
+  title: 'Simon Ugorji Okorie (also known as the Octagon): Your favourite Software Developer ✨',
   description: 'Simon is an experienced software engineer with a track record of collaborating with businesses to create top-quality software solutions. Additionally, he is a dedicated technical writer, sharing valuable content on platforms like Medium, Hashnode, and Dev.to, with a monthly readership of over 10,000 views. He loves technology and hopes to build his dream company one day.',
   openGraph: {
-    title: 'Simon Ugorji (Octagon): Your favourite Software Developer ✨',
+    title: 'Simon Ugorji Okorie (also known as the Octagon): Your favourite Software Developer ✨',
     description: 'Simon is an experienced software engineer with a track record of collaborating with businesses to create top-quality software solutions. Additionally, he is a dedicated technical writer, sharing valuable content on platforms like Medium, Hashnode, and Dev.to, with a monthly readership of over 10,000 views. He loves technology and hopes to build his dream company one day',
   }
 }
