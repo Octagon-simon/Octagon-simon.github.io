@@ -296,7 +296,10 @@ export default function Home() {
     e.preventDefault();
 
     try {
-      const ov = new octaValidate('form_contact');
+      const ov = new octaValidate('form_contact', {
+        strictMode: true,
+        strictWords: ['builder', 'website', 'online', 'tele', 'silesia', 'beauty', 'rightbliss']
+      });
 
       if (ov.validate()) {
         e.currentTarget.submit();
@@ -822,7 +825,7 @@ export default function Home() {
               </div>
               <div className='field mb-5'>
                 <label className={`label ${styles.label}`}>Message (*)</label>
-                <textarea name="message" style={{ minHeight: '150px' }} id="inp_message" octavalidate="R,TEXT" ov-required-msg="Your message is required" placeholder="Hello, I'm John from" className={`input ${styles.input}`}></textarea>
+                <textarea name="message" minLength={"25"} style={{ minHeight: '150px' }} id="inp_message" octavalidate="R,TEXT" ov-required-msg="Your message is required" placeholder="Hello, I'm John from" className={`input ${styles.input}`}></textarea>
               </div>
               <div className='field mb-3'>
                 <button className={`button ${styles.contactButton}`}>Send message</button>
