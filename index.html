@@ -3,556 +3,2128 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>Simon Ugorji - Full Stack Web Developer & Technical Writer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Simon Ugorji — Software Engineer | Full-Stack, Backend & Mobile</title>
     <meta name="author" content="Simon Ugorji">
-    <meta property="title" content="Simon Ugorji - Full-Stack Web Developer">
-    <meta property="description"
-        content="Simon Ugorji is a Technical Writer & Full-Stack Web Developer On PHP & JAVASCRIPT with over 3 years of experience.">
-    <meta property="og:title" content="Simon Ugorji - Full-Stack Web Developer">
+    <meta name="description"
+        content="Simon Ugorji is a Software Engineer from Nigeria specialising in full-stack web development, backend APIs, and cross-platform mobile apps with React Native & Expo. HNG11 Finalist — top 2.2% of 24,123 interns.">
+    <meta name="keywords"
+        content="Simon Ugorji, Software Engineer, Full Stack Developer, React Native, Expo, Node.js, PHP, TypeScript, Mobile Developer, Nigeria, HNG11">
+    <meta property="og:title" content="Simon Ugorji — Software Engineer">
     <meta property="og:description"
-        content="Simon Ugorji is a Technical Writer & Full-Stack Web Developer On PHP & JAVASCRIPT with over 3 years of experience.">
+        content="Full-Stack Web, Backend & Mobile Engineer. HNG11 Finalist. React Native, Node.js, PHP, TypeScript.">
     <meta property="og:image" content="https://octagon-simon.github.io/assets/img/my-me.jpg">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <!-- Typed JS -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <!--Octavalidate CDN-->
-    <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
-    <!--Particles JS-->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
-    <!--Custom Javascript-->
-    <script src="assets/js/simon-ugorji.js" defer="true"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="/assets/owlcarousel/css/owl.carousel.min.css" />
-    <!-- Google tag (gtag.js) -->
+    <meta property="og:url" content="https://octagon-simon.github.io">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ugorji_simon">
+    <meta name="twitter:title" content="Simon Ugorji — Software Engineer">
+    <meta name="twitter:description"
+        content="Full-Stack Web, Backend & Mobile Engineer. HNG11 Finalist — top 2.2% of 24,123 interns.">
+    <meta name="twitter:image" content="https://octagon-simon.github.io/assets/img/my-me.jpg">
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8TW41FQR2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-G8TW41FQR2');
     </script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <!-- Material Design Icons -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Octavalidate -->
+    <script src="https://unpkg.com/octavalidate@latest/native/validate.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
+
+    <!-- Schema.org Person — boosts Google name search results -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Simon Ugorji",
+        "alternateName": "The Octagon",
+        "url": "https://octagon-simon.github.io",
+        "image": "https://octagon-simon.github.io/assets/img/my-me.jpg",
+        "jobTitle": "Software Engineer",
+        "description": "Software Engineer specialising in full-stack web, backend APIs, and mobile apps with React Native & Expo. HNG11 Finalist.",
+        "knowsAbout": ["React Native", "Node.js", "TypeScript", "PHP", "React.js", "Expo", "MongoDB", "MySQL"],
+        "sameAs": [
+            "https://github.com/octagon-simon",
+            "https://www.linkedin.com/in/simon-ugorji-57a6a41a3/",
+            "https://twitter.com/ugorji_simon",
+            "https://simon-ugorji.medium.com",
+            "https://dev.to/ugorji_simon"
+        ]
+    }
+    </script>
+
     <style>
-        .card {
-            max-width: 230px;
-            margin: auto;
-            box-shadow: 5px 5px 0 rgb(0, 209, 178);
-            border: 2px solid #000;
+        :root {
+            --primary: #033af4;
+            --primary-dark: #0229c4;
+            --accent: #00d1b2;
+            --bg: #0d0d0d;
+            --bg-card: #141414;
+            --bg-card-hover: #1c1c1c;
+            --border: #252525;
+            --text: #e8e8e8;
+            --muted: #777;
+            --font: 'Inter', sans-serif;
+            --font-head: 'Space Grotesk', sans-serif;
         }
 
-        .card-img {
-            height: 100px;
+        *,
+        *::before,
+        *::after,
+        ul,
+        ol {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font);
+            line-height: 1.7;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: var(--font-head);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 48px;
+            font-size: 0.95rem;
+        }
+
+        hr.divider {
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── Buttons ── */
+        .btn-solid {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: background .2s, transform .2s, box-shadow .2s;
+        }
+
+        .btn-solid:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(105, 71, 239, .35);
+            color: #fff;
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--text);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: border-color .2s, color .2s, transform .2s, background .2s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(0, 209, 178, .06);
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 7px 14px;
+            font-size: 0.8rem;
+            border-radius: 6px;
+        }
+
+        /* ── Role banner ── */
+        #role-banner {
+            display: none;
+            background: linear-gradient(90deg, #033af4, #00a896);
+            color: #fff;
+            text-align: center;
+            padding: 10px 16px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2000;
+        }
+
+        #role-banner a {
+            color: #fff;
+            text-decoration: underline;
+            margin-left: 12px;
+        }
+
+        /* ── Navbar ── */
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 14px 24px;
+            transition: background .3s, box-shadow .3s, top .3s;
+        }
+
+        #navbar.scrolled {
+            background: rgba(13, 13, 13, .96);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 1px 0 var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-right {
             display: flex;
-            background-color: #5c54b9 !important;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
         }
 
-        .card-img img {
-            width: initial !important;
-            max-width: 100% !important;
+        .nav-brand {
+            font-family: var(--font-head);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text);
+            white-space: nowrap;
         }
 
-        .card-footer {
-            padding: 10px 0 !important;
+        .nav-brand span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 4px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 11px;
+            border-radius: 6px;
+            transition: color .2s, background .2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text);
+            background: var(--bg-card);
+        }
+
+        .role-pills {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            padding-left: 12px;
+            border-left: 1px solid var(--border);
+        }
+
+        .rpill {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all .2s;
+        }
+
+        .rpill:hover,
+        .rpill.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* ── Hero ── */
+        #home {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        #particles-js {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        #particles-js canvas {
+            filter: blur(2px);
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            padding: 0 24px;
+        }
+
+        .hero-name {
+            font-size: clamp(2.8rem, 9vw, 5.5rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 14px;
+        }
+
+        .hero-role {
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            color: var(--accent);
+            font-weight: 600;
+            min-height: 36px;
+            margin-bottom: 18px;
+        }
+
+        .hero-sub {
+            color: var(--muted);
+            max-width: 520px;
+            margin: 0 auto 32px;
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── About ── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .about-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 0 6px rgba(105, 71, 239, .12);
+            display: block;
+        }
+
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 14px;
+            line-height: 1.8;
+        }
+
+        .about-text p strong {
+            color: var(--text);
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ── Achievement ── */
+        #achievements {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, rgba(105, 71, 239, .06), rgba(0, 209, 178, .03));
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary), #00a896);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            margin-bottom: 20px;
+        }
+
+        .ach-title {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            margin-bottom: 10px;
+        }
+
+        .ach-desc {
+            color: var(--muted);
+            max-width: 560px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .stat-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px 16px;
             text-align: center;
         }
 
-        .card-footer a {
-            max-width: 50%;
+        .stat-num {
+            font-family: var(--font-head);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 4px;
         }
 
-        @media screen and (max-width: 800px) {
-            .col-md-4:not(:last-child)>.card {
-                margin-bottom: 20px;
+        .stat-lbl {
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        /* ── Skills ── */
+        .skill-group {
+            margin-bottom: 36px;
+        }
+
+        .skill-group-title {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: var(--muted);
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skill-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            padding: 7px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            transition: border-color .2s, transform .2s;
+        }
+
+        .chip:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* ── Projects ── */
+        .proj-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            transition: border-color .25s, transform .25s, box-shadow .25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .proj-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(105, 71, 239, .14);
+        }
+
+        .proj-img {
+            width: 100%;
+            height: 195px;
+            object-fit: cover;
+            display: block;
+            background: var(--bg-card-hover);
+        }
+
+        .proj-placeholder {
+            width: 100%;
+            height: 195px;
+            background: linear-gradient(135deg, #1a1428, #0e1a2e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 0.78rem;
+            text-align: center;
+            padding: 16px;
+            line-height: 1.5;
+        }
+
+        .proj-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .proj-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .proj-desc {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+            line-height: 1.65;
+            flex: 1;
+        }
+
+        .proj-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .tbadge {
+            font-size: 0.68rem;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            color: var(--muted);
+        }
+
+        .proj-links {
+            display: flex;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .btn-visit {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 7px 14px;
+            border-radius: 6px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            transition: background .2s;
+        }
+
+        .btn-visit:hover {
+            background: var(--primary-dark);
+            color: #fff;
+        }
+
+        .btn-repo {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 7px 14px;
+            border-radius: 6px;
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+            transition: border-color .2s, color .2s;
+        }
+
+        .btn-repo:hover {
+            border-color: var(--text);
+            color: var(--text);
+        }
+
+        .hidden-by-filter {
+            display: none !important;
+        }
+
+        /* ── Project section label (divider inside grid) ── */
+        .proj-section-label {
+            padding: 20px 0 4px;
+        }
+
+        @media (max-width: 768px) {
+            .proj-section-label {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+
+        .proj-section-label-inner {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .proj-section-label-inner span {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .proj-section-label-inner::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* ── Archived badge (inline with project title) ── */
+        .archived-tag {
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            padding: 2px 8px;
+            border-radius: 20px;
+            border: 1px solid #3a3a3a;
+            color: #555;
+            background: transparent;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
+        .proj-card.is-archived {
+            opacity: 0.72;
+        }
+
+        .proj-card.is-archived:hover {
+            opacity: 1;
+        }
+
+        /* ── Experience ── */
+        .exp-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin-bottom: 16px;
+        }
+
+        .exp-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .exp-role {
+            font-family: var(--font-head);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .exp-company {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .exp-period {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--muted);
+            background: var(--bg-card-hover);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .exp-bullets li {
+            color: var(--muted);
+            font-size: 0.875rem;
+            line-height: 1.65;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .exp-bullets li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 0.75rem;
+            top: 3px;
+        }
+
+        .exp-bullets li strong {
+            color: var(--text);
+        }
+
+        .exp-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .exp-cta {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .exp-card {
+                padding: 20px 16px;
+            }
+        }
+
+        .li-icon {
+            font-size: 3.5rem;
+            color: #0A66C2;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        /* ── Writing ── */
+        .writing-banner {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 32px;
+            text-decoration: none;
+            color: var(--text);
+            transition: border-color .2s, transform .2s, box-shadow .2s;
+        }
+
+        .writing-banner:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 209, 178, .09);
+            color: var(--text);
+        }
+
+        .writing-banner-logo {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #fff;
+            padding: 8px;
+        }
+
+        .writing-banner-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .writing-banner-name {
+            font-family: var(--font-head);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .writing-banner-desc {
+            color: var(--muted);
+            font-size: 0.83rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .writing-banner-cta {
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 700;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 500px) {
+            .writing-banner {
+                padding: 20px;
+                gap: 16px;
             }
 
+            .writing-banner-cta {
+                display: none;
+            }
+        }
+
+        /* ── Contact ── */
+        .contact-box {
+            max-width: 540px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        .form-label {
+            color: var(--muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .form-control {
+            background: transparent !important;
+            border: 1px solid var(--border) !important;
+            color: var(--text) !important;
+            border-radius: 8px !important;
+            padding: 11px 14px !important;
+            font-size: 0.9rem !important;
+            width: 100%;
+            display: block;
+        }
+
+        .form-control:focus {
+            outline: none !important;
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 3px rgba(105, 71, 239, .15) !important;
+        }
+
+        .form-control::placeholder {
+            color: #444 !important;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: #0a0a0a;
+            border-top: 1px solid var(--border);
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .soc-links {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .soc-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 1.1rem;
+            transition: border-color .2s, color .2s, transform .2s;
+        }
+
+        .soc-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* ── Hero alias ── */
+        .hero-alias {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .hero-alias span {
+            color: var(--accent);
+        }
+
+        /* ── About quick stats ── */
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .astat strong {
+            display: block;
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .astat span {
+            color: var(--muted);
+            font-size: 0.73rem;
+        }
+
+        /* ── Project inline filter bar ── */
+        .proj-filter-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 28px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            scrollbar-width: none;
+        }
+
+        .proj-filter-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .proj-filter-bar .fpill {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all .2s;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .proj-filter-bar .fpill:hover,
+        .proj-filter-bar .fpill.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* ── Hamburger button (mobile only) ── */
+        .hamburger-btn {
+            display: none;
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 7px 11px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            align-items: center;
+            justify-content: center;
+            transition: border-color .2s;
+        }
+
+        .hamburger-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* ── Mobile full-screen overlay ── */
+        .mob-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            background: var(--bg);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-10px);
+            transition: opacity .22s ease, transform .22s ease;
+            overflow-y: auto;
+        }
+
+        .mob-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0);
+        }
+
+        .mob-overlay-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 36px;
+        }
+
+        .mob-close-btn {
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text);
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: border-color .2s;
+        }
+
+        .mob-close-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .mob-nav {
+            list-style: none;
+            margin-bottom: 36px;
+        }
+
+        .mob-nav li {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mob-nav a {
+            display: block;
+            padding: 16px 4px;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: var(--font-head);
+            transition: color .15s;
+        }
+
+        .mob-nav a:hover {
+            color: var(--accent);
+        }
+
+        .mob-section-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .mob-role-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .mob-role-grid .rpill {
+            padding: 12px 8px;
+            font-size: 0.82rem;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* ── Scroll fade-in ── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity .55s ease, transform .55s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            section {
+                padding: 56px 0;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-photo {
+                margin: 0 auto;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-cta .btn-solid,
+            .hero-cta .btn-ghost {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .role-pills {
+                display: none;
+                border-left: none;
+            }
+
+            .hamburger-btn {
+                display: flex;
+            }
+
+            .nav-inner {
+                grid-template-columns: 1fr auto;
+            }
+
+            .contact-box {
+                padding: 24px 16px;
+            }
+
+            .exp-cta {
+                padding: 32px 20px;
+            }
+
+            .writing-banner {
+                padding: 18px 20px;
+                gap: 14px;
+            }
+
+            .wrap {
+                padding: 0 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+
+            .astat strong {
+                font-size: 1.2rem;
+            }
+
+            .hero-name {
+                font-size: clamp(2.2rem, 10vw, 3rem);
+            }
         }
     </style>
 </head>
 
 <body>
-    <header id="home">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Octagon</a>
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="mdi mdi-code"></span>
-                </button> -->
-                <!-- <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#blogs">My Blogs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">My projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">My skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact me</a>
-                        </li>
-                    </ul>
-                </div> -->
+
+    <!-- Role-specific banner -->
+    <div id="role-banner"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-brand">The Octagon<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="role-pills">
+                    <button class="rpill" data-role="all">All</button>
+                    <button class="rpill" data-role="frontend">Frontend</button>
+                    <button class="rpill" data-role="backend">Backend</button>
+                    <button class="rpill" data-role="mobile">Mobile</button>
+                </div>
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu">
+                    <i class="mdi mdi-menu"></i>
+                </button>
             </div>
-        </nav>
-    </header>
-    <div id="particles-js" class="text-center hero">
-        <!-- <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-        <div class="hero-wrapper">
-            <h1 class="display-3 fw-bold">Simon Ugorji</h1>
-            <h4 class="mb-3 display-5 fw-bold has-text-app-success" id="my_intro">Full-Stack Web Developer</h4>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">When it comes to programming, I look at the problem & implement the best
-                    solution with lines of code</p>
-                <div class="">
-                    <a target="_blank" download href="assets/Resume-Simon-Ugorji-21-02-2023.pdf"
-                        class="btn btn-app-primary btn-lg btn-app">Download CV&nbsp;<i class="mdi mdi-download"></i></a>
+        </div>
+    </nav>
+
+    <!-- Mobile full-screen overlay -->
+    <div class="mob-overlay" id="mob-overlay" role="dialog" aria-modal="true">
+        <div class="mob-overlay-head">
+            <a href="#home" class="nav-brand" onclick="closeMobMenu()">The Octagon<span>.</span></a>
+            <button class="mob-close-btn" id="mob-close-btn" aria-label="Close menu">
+                <i class="mdi mdi-close"></i>
+            </button>
+        </div>
+        <ul class="mob-nav">
+            <li><a href="#about" onclick="closeMobMenu()">About</a></li>
+            <li><a href="#achievements" onclick="closeMobMenu()">Achievements</a></li>
+            <li><a href="#skills" onclick="closeMobMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="closeMobMenu()">Projects</a></li>
+            <li><a href="#experience" onclick="closeMobMenu()">Experience</a></li>
+            <li><a href="#writing" onclick="closeMobMenu()">Writing</a></li>
+            <li><a href="#contact" onclick="closeMobMenu()">Contact</a></li>
+        </ul>
+        <div class="mob-section-label">View portfolio as</div>
+        <div class="mob-role-grid">
+            <button class="rpill" data-role="all" onclick="closeMobMenu()">All</button>
+            <button class="rpill" data-role="frontend" onclick="closeMobMenu()">Frontend</button>
+            <button class="rpill" data-role="backend" onclick="closeMobMenu()">Backend</button>
+            <button class="rpill" data-role="mobile" onclick="closeMobMenu()">Mobile</button>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section id="home">
+        <div id="particles-js"></div>
+        <div class="hero-inner">
+            <h1 class="hero-name">Simon Ugorji</h1>
+            <p class="hero-alias">aka <span>The Octagon</span></p>
+            <div class="hero-role"><span id="typed-role"></span></div>
+            <p class="hero-sub">I turn ideas into shipped products. Web apps, backend APIs, and cross-platform mobile
+                apps. Based in Nigeria, open to remote.</p>
+            <div class="hero-cta">
+                <a href="assets/simon_ugorji_resume.pdf" download class="btn-solid">
+                    <i class="mdi mdi-download"></i> Download CV
+                </a>
+                <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3/" target="_blank" class="btn-ghost">
+                    <i class="mdi mdi-linkedin"></i> LinkedIn
+                </a>
+                <a href="#contact" class="btn-ghost">
+                    <i class="mdi mdi-email-outline"></i> Contact me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="wrap fade-up">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-sub">Who I am and what drives me</p>
+            <div class="about-grid">
+                <div>
+                    <img src="assets/img/simon.png" alt="Simon Ugorji" class="about-photo">
+                </div>
+                <div class="about-text">
+                    <p>I'm <strong>Simon Ugorji</strong>, known online as <strong>The Octagon</strong>, a software
+                        engineer from Nigeria who builds across the full stack: web, backend services, and
+                        cross-platform mobile apps.</p>
+                    <p>I work with <strong>React, Node.js, TypeScript, PHP</strong> on the web side and <strong>React
+                            Native / Expo</strong> for mobile. I've shipped npm libraries, fintech apps, SaaS products,
+                        and agentic developer tools.</p>
+                    <p>I'm a <strong>HNG11 Finalist</strong>. One of 523 engineers who graduated out of 24,123 interns.
+                        That programme shaped my discipline around speed, quality, and delivering under real pressure.
+                    </p>
+                    <p>I also write technical articles on <strong>Medium and Dev.to</strong>, and I consistently build
+                        side projects that solve real problems.</p>
+                    <div class="about-stats">
+                        <div class="astat">
+                            <strong>5+</strong>
+                            <span>Years building</span>
+                        </div>
+                        <div class="astat">
+                            <strong>10+</strong>
+                            <span>Projects shipped</span>
+                        </div>
+                        <div class="astat">
+                            <strong>3</strong>
+                            <span>Live mobile apps</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
-    <main class="px-4 py-5">
-        <!-- about me-->
-        <section id="about" class="section">
-            <div class="container-fluid">
-                <h3 class="display-5 text-center fw-bold mb-3">ABOUT ME
-                </h3>
-                <article class="lead m-auto">
-                    <p>I'm <b>Ugorji Simon Okorie</b>, a Full-Stack Web Developer from Nigeria.</p>
-                    <p>I have worked with PHP and JavaScript for 3 years now and I have a solid experience building
-                        <b>web Apps and projects</b> in both languages.
-                    </p>
-                    <p>I am a self-taught developer and would be glad to accept an <b>internship
-                            offer</b> to sharpen my skills.</p>
-                    <p>As part of my learning process, I write technical articles on <b>medium, hashnode, tealfeed</b>
-                        and <b>dev community</b> and I love to work on side projects.</p>
-                    <p>I have experience in <b>HTML, CSS, ReactJS, PHP, MySQL, NodeJs, MongoDB, </b> and <b>Express
-                            JS</b> and I currently have <b>8 active projects</b>.</p>
-                    <p>Give me a problem and I will implement the best solution with lines of code.
-                    </p>
-                    <p class="pb-3 has-border-bottom"> <a target="_blank" href="https://www.polywork.com/octagon_simon/"
-                            class="btn btn-app-primary">View my journey</a>
-                    </p>
+    <hr class="divider">
 
-                </article>
-            </div>
-        </section>
-        <section class="section" id="blogs">
-            <div class="container-fluid">
-                <h3 class="display-6 text-center fw-bold mb-3">MY BLOGS</h3>
-                <div class="row mt-4">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="card p-0" style="padding: 0 !important;">
-                            <div class="card-body p-0">
-                                <div class="card-img text-center class=" mb-3">
-                                    <img class="img-fluid" src="/assets/img/medium.png">
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" href="https://simon-ugorji.medium.com"
-                                    class="btn  btn-app-primary">Visit blog</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="card p-0" style="padding: 0 !important;">
-                            <div class="card-body p-0">
-                                <div class="card-img text-center class=" mb-3">
-                                    <img class="img-fluid" src="/assets/img/hashnode.png">
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" href="https://octagon.hashnode.dev"
-                                    class="btn  btn-app-primary">Visit blog</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="card p-0" style="padding: 0 !important;">
-                            <div class="card-body p-0">
-                                <div class="card-img" class="mb-3">
-                                    <img class="img-fluid" src="/assets/img/dev-to.png">
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" href="https://dev.to/ugorji_simon" class="btn  btn-app-primary">Visit
-                                    blog</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 m-auto mt-sm-3">
-                        <div class="card p-0" style="padding: 0 !important;">
-                            <div class="card-body p-0">
-                                <div class="card-img text-center class=" mb-3">
-                                    <img class="img-fluid" src="/assets/img/tealfeed.png">
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <a target="_blank" href="https://tealfeed.com/simon_ugorji"
-                                    class="btn btn-app-primary">Visit blog</a>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Achievements -->
+    <section id="achievements">
+        <div class="wrap fade-up" style="text-align:center;">
+            <span class="badge-pill"><i class="mdi mdi-trophy-outline"></i>&nbsp;Standout Achievement</span>
+            <h2 class="ach-title">HNG11 Finalist</h2>
+            <p class="ach-desc">
+                HNG Internship is one of Africa's most competitive tech programmes. Fast-paced, high-stakes, and
+                unforgiving.
+                I went through the full gauntlet and finished among the <strong style="color:var(--text)">top
+                    2.2%</strong>.
+            </p>
+            <div class="stat-grid" style="max-width:580px; margin:40px auto 0;">
+                <div class="stat-box">
+                    <span class="stat-num">24,123</span>
+                    <div class="stat-lbl">Interns who started</div>
                 </div>
-                <p class="pb-3 has-border-bottom"></p>
-            </div>
-        </section>
-        <!-- projects -->
-        <section id="projects" class="section">
-            <div class="container-fluid">
-                <h3 class="display-5 mb-4 text-center fw-bold">PROJECTS</h3>
-                <!--project 1-->
-                <div class="row align-items-center g-3 py-3">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="assets/img/coding_block.png" class="d-block mx-lg-auto img-fluid" alt="Coding blocks"
-                            width="400" height="400" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">Coding Blocks</h1>
-                        <p class="mt-2 mb-2">
-                            <span class="badge bg-primary rounded-pill">PHP</span>
-                            <span class="badge bg-warning rounded-pill text-dark ">JavaScript</span>
-                            <span class="badge bg-success rounded-pill">WordPress</span>
-                        </p>
-                        <p class="fw-bold has-text-primary">July 2021 - Present
-                        </p>
-                        <p class="lead"> This is a <b>wordpress plugin</b> that allows you to embed code snippets
-                            directly into
-                            your wordpress posts.</p>
-                        <div class="project-content">
-                            <a target="_blank" href="https://wordpress.org/plugins/coding-blocks"
-                                class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
-                            <a target="_blank" href="https://github.com/Octagon-simon/coding-blocks"
-                                class="btn btn-dark btn-lg px-4"><i class="mdi mdi-github"></i>&nbsp;Github</a>
-                        </div>
-                    </div>
+                <div class="stat-box">
+                    <span class="stat-num">523</span>
+                    <div class="stat-lbl">Graduates (top 2.2%)</div>
                 </div>
-                <!--project 2-->
-                <div class="row flex-lg-row-reverse align-items-center g-3 py-3">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="assets/img/octavalidate.png" class="d-block mx-lg-auto img-fluid" alt="Octavalidate"
-                            width="400" height="400" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">Octavalidate</h1>
-                        <p class="mt-2 mb-2">
-                            <span class="badge bg-warning text-dark rounded-pill">JavaScript</span>
-                            <span class="badge bg-info text-dark rounded-pill">PHP</span>
-                        </p>
-                        <p class="fw-bold has-text-primary">January 2022 - Present</p>
-                        <p class="lead">This library has over 4 releases and it helps to validate your client-side and
-                            server-side forms using sophisticated regular expressions & validation rules.</p>
-                        <div class="project-content">
-                            <a target="_blank" href="https://octagon-simon.github.io/projects/octavalidate/"
-                                class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
-                            <a target="_blank" href="https://github.com/octagon-simon/octaValidate"
-                                class="btn btn-dark btn-lg px-4"><i class="mdi mdi-github"></i>&nbsp;Github</a>
-                        </div>
-                    </div>
-                </div>
-                <!--project 3-->
-                <div class="row align-items-center g-3 py-3">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="assets/img/word_unscrambler.png" class="d-block mx-lg-auto img-fluid"
-                            alt="Word unscrambler" width="400" height="400" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">Word Unscrambler</h1>
-                        <p>
-                            <span class="badge bg-warning text-dark rounded-pill">JavaScript</span>
-                        </p>
-                        <p class="fw-bold has-text-primary">August 2022</p>
-                        <p class="lead">This project implements a simple word unscrambler that you can use to unscramble
-                            any word using javaScript.</p>
-                        <div class="project-content">
-                            <a target="_blank" href="https://octagon-simon.github.io/projects/unscrambler/"
-                                class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
-                            <a target="_blank"
-                                href="https://github.com/Octagon-simon/Octagon-simon.github.io/tree/main/projects/unscrambler"
-                                type="button" class="btn btn-dark btn-lg px-4"><i
-                                    class="mdi mdi-github"></i>&nbsp;Github</a>
-                        </div>
-                    </div>
-                </div>
-                <!--project 4-->
-                <div class="row flex-lg-row-reverse align-items-center g-3 py-3">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="assets/img/posts-api-wp.png" class="d-block mx-lg-auto img-fluid" alt="Posts API WP"
-                            width="400" height="400" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">Posts API WP</h1>
-                        <p>
-                            <span class="badge bg-warning text-dark rounded-pill">WordPress</span>
-                            <span class="badge bg-primary rounded-pill">PHP</span>
-                        </p>
-                        <p class="fw-bold has-text-primary">
-                            September 2022 - Present
-                        </p>
-                        <p class="lead">This wordpress plugin creates a virtual API that can be used to share your
-                            wordpress posts to other websites.</p>
-                        <div class="project-content">
-                            <a target="_blank" href="https://wordpress.org/plugins/posts-api-wp"
-                                class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
-                            <a target="_blank" href="https://octagon-simon.github.io/projects/posts-api-wp/"
-                                class="btn btn-dark btn-lg px-4"><i class="mdi mdi-github"></i>&nbsp;Github</a>
-                        </div>
-                    </div>
-                </div>
-                <!--project 5-->
-                <div class="row align-items-center g-3 py-3">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="/assets/img/nefta-nft.jpg" class="d-block mx-lg-auto img-fluid" alt="NEFTA NFT"
-                            width="400" height="400" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">NEFTA NFT</h1>
-                        <p>
-                            <span class="badge bg-info rounded-pill">HTML</span>
-                            <span class="badge bg-success rounded-pill">CSS</span>
-                            <span class="badge bg-warning text-dark rounded-pill">JavaScript</span>
-                        </p>
-                        <p class="fw-bold has-text-primary">November 2022</p>
-                        <p class="alert alert-info p-3">This project was inspired by a 30-days coding challenge</p>
-                        <p class="lead">This is a simple web app that simulates the purchase of an NFT.</p>
-                        <div class="project-content">
-                            <a target="_blank" href="https://octagon-simon.github.io/projects/nft"
-                                class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
-                            <a target="_blank"
-                                href="https://github.com/Octagon-simon/Octagon-simon.github.io/tree/main/projects/nft"
-                                class="btn btn-dark btn-lg px-4"><i class="mdi mdi-github"></i>&nbsp;Github</a>
-                        </div>
-                    </div>
-                </div>
-                <!--project 6-->
-                <div class="row flex-lg-row-reverse align-items-center g-3 py-3">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="assets/img/sanblog.png" class="d-block mx-lg-auto img-fluid" alt="Sanblog" width="400"
-                            height="400" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">Sanblog</h1>
-                        <p>
-                            <span class="badge bg-success rounded-pill">MongoDB</span>
-                            <span class="badge bg-info rounded-pill">ExpressJS</span>
-                            <span class="badge bg-info rounded-pill">ReactJS</span>
-                            <span class="badge bg-success rounded-pill">NodeJS</span>
-                        </p>
-                        <p class="fw-bold has-text-primary">November 2022 - Present</p>
-                        <p class="alert alert-info fw-bold">This project was inspired by a 30-days coding challenge.</p>
-                        <p class="lead">Using the <b>MERN stack</b>, I was able to build a full functional blogging
-                            website and
-                            it stands to be my <b>first fullstack app</b>.</p>
-                        <div class="project-content">
-                            <a target="_blank" href="https://san-blog.onrender.com"
-                                class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
-                            <a target="_blank" href="https://github.com/Octagon-simon/san-blog"
-                                class="btn btn-dark btn-lg px-4"><i class="mdi mdi-github"></i>&nbsp;Github</a>
-                        </div>
-                    </div>
-                </div>
-                <!--project 7-->
-                <div class="row align-items-center g-3 py-3">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="assets/img/oshare-new.png" class="d-block mx-lg-auto img-fluid" alt="Oshare"
-                            width="400" height="400" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">Oshare</h1>
-                        <p>
-                            <span class="badge bg-info rounded-pill">ReactJS</span>
-                            <span class="badge bg-primary rounded-pill">PHP</span>
-                            <span class="badge bg-warning text-dark rounded-pill">JavaScript</span>
-                            <span class="badge bg-success rounded-pill">SQL</span>
-                        </p>
-                        <p class="has-text-primary fw-bold">
-                            December 2022 - Present
-                        </p>
-                        <p class="lead">This web app allows you to upload and share links to files.</p>
-                        <div class="project-content">
-                            <a target="_blank" href="https://oshare.onrender.com"
-                                class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
-                            <a target="_blank" href="https://github.com/Octagon-simon/oshare"
-                                class="btn btn-dark btn-lg px-4"><i class="mdi mdi-github"></i>&nbsp;Github</a>
-                        </div>
-                    </div>
-                </div>
-                <!--project 6-->
-                <div class="row flex-lg-row-reverse align-items-center g-3 py-3">
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <img src="assets/img/tailorskit.png" class="d-block mx-lg-auto img-fluid" alt="Tailorskit"
-                            width="400" height="400" loading="lazy">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-6 fw-bold lh-1 mb-3 nefta-color">TailorsKit</h1>
-                        <p>
-                            <span class="badge bg-warning rounded-pill">JavaScript</span>
-                            <span class="badge bg-info rounded-pill">ReactJS</span>
-                            <span class="badge bg-primary rounded-pill">PHP</span>
-                            <span class="badge bg-success rounded-pill">SQL</span>
-                        </p>
-                        <p class="fw-bold has-text-primary">March 2023 - Present</p>
-                        <p class="alert alert-info fw-bold">This is my first marketable product.</p>
-                        <p class="lead">TailorsKit is a solution for tailors all over Nigeria to save, manage and access
-                            their client's data, anywhere and at anytime with ease.</p>
-                        <div class="project-content">
-                            <a target="_blank" href="https://tailorskit.com"
-                                class="btn btn-app-primary btn-lg px-4 me-md-2">Visit</a>
-                            <a target="_blank" href="https://github.com/tekprenuers/tailors-kit"
-                                class="btn btn-dark btn-lg px-4"><i class="mdi mdi-github"></i>&nbsp;Github</a>
-                        </div>
-                    </div>
+                <div class="stat-box">
+                    <span class="stat-num">HNG11</span>
+                    <div class="stat-lbl">Finalist cohort</div>
                 </div>
             </div>
-        </section>
-        <!--skills-->
-        <section id="skills" class="section">
-            <div class="container-fluid">
-                <h3 class="display-5 text-center fw-bold mb-3">SKILLS
-                </h3>
-                <p class="lead mb-4 text-center">Here are some of the languages and frameworks that I
-                    work with.</p>
-                <div class="row mt-4">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="card p-0" style="padding: 0 !important;">
-                            <div class="card-body p-0">
-                                <div class="card-img text-center" class="mb-3">
-                                    <img class="img-fluid" src="/assets/img/js-svgrepo-com.png">
-                                </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="wrap fade-up">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-sub">Technologies I use across web, backend, and mobile</p>
+
+            <!-- Frontend skills -->
+            <div class="skill-group" data-skill-cat="frontend">
+                <div class="skill-group-title">Frontend</div>
+                <div class="skill-chips">
+                    <span class="chip">HTML5</span>
+                    <span class="chip">CSS3</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">TypeScript</span>
+                    <span class="chip">React.js</span>
+                </div>
+            </div>
+
+            <!-- Backend skills -->
+            <div class="skill-group" data-skill-cat="backend">
+                <div class="skill-group-title">Backend</div>
+                <div class="skill-chips">
+                    <span class="chip">Node.js</span>
+                    <span class="chip">Express.js</span>
+                    <span class="chip">PHP</span>
+                    <span class="chip">TypeScript</span>
+                    <span class="chip">MySQL</span>
+                    <span class="chip">MongoDB</span>
+                    <span class="chip">REST APIs</span>
+                </div>
+            </div>
+
+            <!-- Mobile skills -->
+            <div class="skill-group" data-skill-cat="mobile">
+                <div class="skill-group-title">Mobile</div>
+                <div class="skill-chips">
+                    <span class="chip">React Native</span>
+                    <span class="chip">Expo</span>
+                    <span class="chip">TypeScript</span>
+                    <span class="chip">JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Tools (always visible) -->
+            <div class="skill-group">
+                <div class="skill-group-title">Tools & Other</div>
+                <div class="skill-chips">
+                    <span class="chip">Git & GitHub</span>
+                    <span class="chip">WordPress</span>
+                    <span class="chip">npm / Yarn</span>
+                    <span class="chip">Technical Writing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="wrap fade-up">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-sub">Things I've shipped across web, backend, and mobile</p>
+            <div class="proj-filter-bar">
+                <button class="fpill" data-role="all">All</button>
+                <button class="fpill" data-role="frontend">Frontend</button>
+                <button class="fpill" data-role="backend">Backend</button>
+                <button class="fpill" data-role="mobile">Mobile</button>
+            </div>
+            <div class="row g-4" id="projects-grid">
+
+                <!-- Lacuna — agentic CLI -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="backend">
+                    <div class="proj-card">
+                        <img src="assets/img/lacuna.png" alt="Lacuna" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Lacuna</h3>
+                            <p class="proj-desc">An agentic CLI that automatically writes tests for your codebase, runs
+                                them, then fixes the failing ones. Powered by AI.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">Node.js</span>
+                                <span class="tbadge">TypeScript</span>
+                                <span class="tbadge">CLI</span>
                             </div>
-                            <div class="card-footer">
-                                <button type="button" class="btn  btn-app-primary">JavaScript</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="card p-0" style="padding: 0 !important;">
-                            <div class="card-body p-0">
-                                <div class="card-img text-center" class="mb-3">
-                                    <img class="img-fluid" src="/assets/img/react.png">
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <button type="button" class="btn  btn-app-primary">ReactJS</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="card p-0" style="padding: 0 !important;">
-                            <div class="card-body p-0">
-                                <div class="card-img text-center" class="mb-3">
-                                    <img class="img-fluid" src="/assets/img/node.png">
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <button type="button" class="btn  btn-app-primary">NodeJS</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 m-auto mt-sm-3">
-                        <div class="card p-0" style="padding: 0 !important;">
-                            <div class="card-body p-0">
-                                <div class="card-img text-center" class="mb-3">
-                                    <img class="img-fluid" src="/assets/img/php.png">
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <button type="button" class="btn  btn-app-primary">PHP</button>
+                            <div class="proj-links">
+                                <a href="https://www.npmjs.com/package/lacuna-cli" target="_blank" class="btn-visit"><i
+                                        class="mdi mdi-npm"></i> lacuna-cli</a>
+                                <a href="https://github.com/Octagon-simon/lacuna" class="btn-repo"><i
+                                        class="mdi mdi-github"></i> Github</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="has-border-bottom pb-3">&nbsp;</p>
+
+                <!-- Berry by Rivabit — survey rewards -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="mobile">
+                    <div class="proj-card">
+                        <img src="assets/img/berry.png" alt="Berry by Rivabit" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Berry by Rivabit</h3>
+                            <p class="proj-desc">A customer survey app that rewards users with points for completing
+                                surveys, turning feedback into real value.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">React Native</span>
+                                <span class="tbadge">Expo</span>
+                                <span class="tbadge">TypeScript</span>
+                            </div>
+                            <div class="proj-links">
+                                <!-- TODO: replace # with live link -->
+                                <!-- <a href="#" class="btn-visit">Visit</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SchoolMug — school management system -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="frontend backend">
+                    <div class="proj-card">
+                        <img src="assets/img/schoolmug.png" alt="SchoolMug" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">SchoolMug</h3>
+                            <p class="proj-desc">A cloud-based school management system built for Nigerian schools. Covers student enrollment, attendance, grading, fee collection, automated report cards, and
+                                role-based portals for admins, teachers, and students.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">React.js</span>
+                                <span class="tbadge">Node.js</span>
+                                <span class="tbadge">TypeScript</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://schoolmug.com" target="_blank" class="btn-visit">Visit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CheflyMenu — restaurant digital menu SaaS -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="frontend backend">
+                    <div class="proj-card">
+                        <img src="assets/img/cheflymenu.png" alt="CheflyMenu" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">CheflyMenu</h3>
+                            <p class="proj-desc">A SaaS platform for restaurants to replace physical menus with
+                                interactive digital ones. QR codes, WhatsApp ordering, AI-powered branding, and time-based menu scheduling.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">React.js</span>
+                                <span class="tbadge">Node.js</span>
+                                <span class="tbadge">TypeScript</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://cheflymenu.app" target="_blank" class="btn-visit">Visit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rivabit — product verification -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="mobile">
+                    <div class="proj-card">
+                        <img src="assets/img/rivabit.png" alt="Rivabit" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Rivabit</h3>
+                            <p class="proj-desc">A consumer product verification app that helps users confirm the
+                                authenticity of products before purchase.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">React Native</span>
+                                <span class="tbadge">Expo</span>
+                                <span class="tbadge">TypeScript</span>
+                            </div>
+                            <div class="proj-links">
+                                <!-- TODO: replace # with live link -->
+                                <a href="https://rivabit.com/" class="btn-visit">Visit</a>
+                                <!-- TODO: replace # with repo link -->
+                                <!-- <a href="#" class="btn-repo"><i class="mdi mdi-github"></i> Github</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KaboCash — mobile fintech -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="mobile">
+                    <div class="proj-card">
+                        <img src="assets/img/kabocash.png" alt="KaboCash" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">KaboCash</h3>
+                            <p class="proj-desc">A mobile fintech app that simplifies financial transactions for
+                                everyday users.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">React Native</span>
+                                <span class="tbadge">Expo</span>
+                                <span class="tbadge">TypeScript</span>
+                            </div>
+                            <div class="proj-links">
+                                <!-- TODO: replace # with live link -->
+                                <a href="https://kabocash.com" class="btn-visit">Visit</a>
+                                <!-- TODO: replace # with repo link (or remove if private) -->
+                                <!-- <a href="#" class="btn-repo"><i class="mdi mdi-github"></i> Github</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── Earlier work divider ── -->
+                <div class="col-12 proj-section-label">
+                    <div class="proj-section-label-inner">
+                        <span>Earlier work &amp; learning projects</span>
+                    </div>
+                    <p style="color:var(--muted); font-size:0.78rem; margin-top:6px; margin-bottom:0;">Projects from
+                        when I was actively learning to code. No longer actively maintained.</p>
+                </div>
+
+                <!-- TailorsKit — fullstack SaaS -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="frontend backend">
+                    <div class="proj-card is-archived">
+                        <img src="assets/img/tailorskit.png" alt="TailorsKit" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">TailorsKit <span class="archived-tag">Unmaintained</span></h3>
+                            <p class="proj-desc">A SaaS platform for tailors across Nigeria to save, manage, and access
+                                client data anywhere.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">React.js</span>
+                                <span class="tbadge">PHP</span>
+                                <span class="tbadge">MySQL</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://github.com/tekprenuers/tailors-kit" target="_blank" class="btn-repo"><i
+                                        class="mdi mdi-github"></i> Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Octavalidate -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="frontend backend">
+                    <div class="proj-card is-archived">
+                        <img src="assets/img/octavalidate.png" alt="Octavalidate" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Octavalidate <span class="archived-tag">Unmaintained</span></h3>
+                            <p class="proj-desc">A form validation library (4+ releases) for client-side JS and
+                                server-side PHP, using sophisticated regex and custom rules.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">JavaScript</span>
+                                <span class="tbadge">PHP</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://octagon-simon.github.io/projects/octavalidate/" target="_blank"
+                                    class="btn-visit">Visit</a>
+                                <a href="https://github.com/octagon-simon/octaValidate" target="_blank"
+                                    class="btn-repo"><i class="mdi mdi-github"></i> Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshare -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="frontend backend">
+                    <div class="proj-card is-archived">
+                        <img src="assets/img/oshare-new.png" alt="Oshare" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Oshare <span class="archived-tag">Unmaintained</span></h3>
+                            <p class="proj-desc">A web app for uploading and sharing links to files. Clean, fast, and easy to use.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">React.js</span>
+                                <span class="tbadge">PHP</span>
+                                <span class="tbadge">MySQL</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://github.com/Octagon-simon/oshare" target="_blank" class="btn-repo"><i
+                                        class="mdi mdi-github"></i> Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sanblog -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="frontend backend">
+                    <div class="proj-card is-archived">
+                        <img src="assets/img/sanblog.png" alt="Sanblog" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Sanblog <span class="archived-tag">Unmaintained</span></h3>
+                            <p class="proj-desc">A fully functional MERN-stack blogging platform. Built in a 30-day
+                                coding challenge. My first full-stack app.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">MongoDB</span>
+                                <span class="tbadge">Express.js</span>
+                                <span class="tbadge">React.js</span>
+                                <span class="tbadge">Node.js</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://github.com/Octagon-simon/san-blog" target="_blank" class="btn-repo"><i
+                                        class="mdi mdi-github"></i> Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coding Blocks -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="backend">
+                    <div class="proj-card is-archived">
+                        <img src="assets/img/coding_block.png" alt="Coding Blocks" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Coding Blocks <span class="archived-tag">Unmaintained</span></h3>
+                            <p class="proj-desc">A WordPress plugin for embedding syntax-highlighted code snippets
+                                directly into blog posts.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">PHP</span>
+                                <span class="tbadge">JavaScript</span>
+                                <span class="tbadge">WordPress</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://wordpress.org/plugins/coding-blocks" target="_blank"
+                                    class="btn-visit">Visit</a>
+                                <a href="https://github.com/Octagon-simon/coding-blocks" target="_blank"
+                                    class="btn-repo"><i class="mdi mdi-github"></i> Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Posts API WP -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="backend">
+                    <div class="proj-card is-archived">
+                        <img src="assets/img/posts-api-wp.png" alt="Posts API WP" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Posts API WP <span class="archived-tag">Unmaintained</span></h3>
+                            <p class="proj-desc">A WordPress plugin that creates a virtual REST API to share your posts
+                                to any external website.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">PHP</span>
+                                <span class="tbadge">WordPress</span>
+                                <span class="tbadge">REST API</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://wordpress.org/plugins/posts-api-wp" target="_blank"
+                                    class="btn-visit">Visit</a>
+                                <a href="https://octagon-simon.github.io/projects/posts-api-wp/" target="_blank"
+                                    class="btn-repo">Docs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Word Unscrambler -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="frontend">
+                    <div class="proj-card is-archived">
+                        <img src="assets/img/word_unscrambler.png" alt="Word Unscrambler" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Word Unscrambler <span class="archived-tag">Unmaintained</span></h3>
+                            <p class="proj-desc">A minimal browser tool that unscrambles any word using a clean
+                                JavaScript implementation.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">JavaScript</span>
+                                <span class="tbadge">HTML</span>
+                                <span class="tbadge">CSS</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://octagon-simon.github.io/projects/unscrambler/" target="_blank"
+                                    class="btn-visit">Visit</a>
+                                <a href="https://github.com/Octagon-simon/Octagon-simon.github.io/tree/main/projects/unscrambler"
+                                    target="_blank" class="btn-repo"><i class="mdi mdi-github"></i> Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEFTA NFT -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="frontend">
+                    <div class="proj-card is-archived">
+                        <img src="assets/img/nefta-nft.jpg" alt="NEFTA NFT" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">NEFTA NFT <span class="archived-tag">Unmaintained</span></h3>
+                            <p class="proj-desc">A frontend web app simulating NFT purchases, built during a 30-day
+                                coding challenge.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">HTML</span>
+                                <span class="tbadge">CSS</span>
+                                <span class="tbadge">JavaScript</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://octagon-simon.github.io/projects/nft" target="_blank"
+                                    class="btn-visit">Visit</a>
+                                <a href="https://github.com/Octagon-simon/Octagon-simon.github.io/tree/main/projects/nft"
+                                    target="_blank" class="btn-repo"><i class="mdi mdi-github"></i> Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
-        <!--contact -->
-        <section id="contact" class="section">
-            <h3 class="display-5 text-center fw-bold mb-3">CONTACT ME
-            </h3>
-            <p class="lead mb-4 text-center">Send me a message</p>
-            <div class="mw-500 m-auto">
-                <form method="post" action="https://formbold.com/s/35Ey3" id="form_contact"
-                    class="mt-3 m-auto mw-700 text-start" novalidate>
-                    <p class="alert alert-primary mt-2 mb-3 radius-0">
-                        Form validation was served by <a target="_blank"
-                            href="https://octagon-simon.github.io/projects/octavalidate/">octavalidate</a>
-                    </p>
-                    <div class="form-group mb-3">
-                        <label class="form-label mb-1">Email Address <span class="text-danger">*</span></label>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Experience -->
+    <section id="experience">
+        <div class="wrap fade-up">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-sub">Selected professional contributions</p>
+
+            <div class="exp-card">
+                <div class="exp-card-header">
+                    <div>
+                        <div class="exp-role">Software Engineer</div>
+                        <div class="exp-company">Afriex</div>
+                    </div>
+                    <span class="exp-period">2023 - Present</span>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Built <strong>Lacuna</strong>, an agentic CLI that autonomously wrote, ran, and fixed tests for
+                        the admin dashboard, raising test coverage from near-zero to <strong>90%</strong></li>
+                    <li>Built and maintained the <strong>admin dashboard</strong> and <strong>business web
+                            dashboard</strong> with React and Tailwind CSS, improving operational visibility and
+                        usability for internal teams</li>
+                    <li>Implemented responsive, mobile-first layouts with Tailwind CSS utilities across all device sizes
+                    </li>
+                    <li>Diagnosed and resolved critical UI/UX bugs including input formatting, search functionality, state
+                        synchronisation, and text truncation</li>
+                    <li>Contributed to backend development with <strong>Node.js and MongoDB</strong>, delivering secure
+                        APIs for transaction processing and automated payouts</li>
+                    <li>Documented <strong>B2B APIs and SDK</strong> (hackathon project) on Mintlify, accelerating
+                        developer onboarding</li>
+                    <li>Reviewed pull requests across the codebase and consistently delivered own PRs ahead of deadline
+                    </li>
+                    <li>Collaborated with backend, design, and ops teams on tooling for secure transactions and
+                        operational efficiency</li>
+                </ul>
+                <div class="exp-tech" style="margin-bottom:16px;">
+                    <span class="tbadge">React</span>
+                    <span class="tbadge">Tailwind CSS</span>
+                    <span class="tbadge">Node.js</span>
+                    <span class="tbadge">MongoDB</span>
+                    <span class="tbadge">TypeScript</span>
+                    <span class="tbadge">Mintlify</span>
+                    <span class="tbadge">Testing</span>
+                </div>
+                <a href="https://github.com/simon-ugorji" target="_blank" class="btn-repo btn-sm">
+                    <i class="mdi mdi-github"></i> Work GitHub
+                </a>
+            </div>
+
+            <div class="exp-cta">
+                <i class="mdi mdi-linkedin li-icon"></i>
+                <h3 style="font-size:1.1rem; margin-bottom:10px;">Full work history on LinkedIn</h3>
+                <p style="color:var(--muted); margin-bottom:20px; font-size:0.875rem; line-height:1.8;">
+                    All roles, timelines, and endorsements are kept up to date on my LinkedIn profile.
+                </p>
+                <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3/" target="_blank" class="btn-solid">
+                    <i class="mdi mdi-open-in-new"></i> Open LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Writing -->
+    <section id="writing">
+        <div class="wrap fade-up">
+            <h2 class="section-title">Technical Writing</h2>
+            <p class="section-sub">I document what I learn and share it with the community</p>
+            <div style="max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
+                <a href="https://simon-ugorji.medium.com" target="_blank" class="writing-banner">
+                    <img src="assets/img/medium.png" alt="Medium" class="writing-banner-logo">
+                    <div class="writing-banner-body">
+                        <div class="writing-banner-name">Medium</div>
+                        <p class="writing-banner-desc">In-depth articles on web development, backend architecture, and
+                            lessons from building real products.</p>
+                    </div>
+                    <span class="writing-banner-cta">Read articles <i class="mdi mdi-arrow-right"></i></span>
+                </a>
+                <a href="https://dev.to/ugorji_simon" target="_blank" class="writing-banner">
+                    <img src="assets/img/dev-to.png" alt="Dev.to" class="writing-banner-logo">
+                    <div class="writing-banner-body">
+                        <div class="writing-banner-name">Dev.to</div>
+                        <p class="writing-banner-desc">Tutorials, tips, and guides for developers, from form validation
+                            to full-stack project walkthroughs.</p>
+                    </div>
+                    <span class="writing-banner-cta">Read articles <i class="mdi mdi-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="wrap fade-up">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-sub">Have a project in mind? Let's talk.</p>
+            <div class="contact-box">
+                <form method="post" action="https://formbold.com/s/35Ey3" id="form_contact" novalidate>
+                    <div class="form-group">
+                        <label class="form-label">Email Address <span style="color:#ef4444">*</span></label>
                         <input octavalidate="R,EMAIL" id="inp_email" ov-required-msg="Your email address is required"
                             ov-email-msg="Please provide a valid email address" name="email" type="email"
-                            class="form-control" placeholder="me@you.com">
+                            class="form-control" placeholder="you@email.com">
                     </div>
-                    <div class="form-group mb-3">
-                        <label class="form-label mb-1">Name <span class="text-danger">*</span></label>
+                    <div class="form-group">
+                        <label class="form-label">Name <span style="color:#ef4444">*</span></label>
                         <input octavalidate="R,ALPHA_ONLY" id="inp_name" ov-required-msg="Your name is required"
                             name="name" type="text" class="form-control" placeholder="John Doe">
                     </div>
-                    <div class="form-group mb-3">
-                        <label class="form-label mb-1">Subject <span class="text-danger">*</span></label>
-                        <input octavalidate="R,TEXT" id="inp_sub" ov-required-msg="Email subject is required"
-                            name="subject" type="text" class="form-control" placeholder="Partnership">
+                    <div class="form-group">
+                        <label class="form-label">Subject <span style="color:#ef4444">*</span></label>
+                        <input octavalidate="R,TEXT" id="inp_sub" ov-required-msg="Subject is required" name="subject"
+                            type="text" class="form-control" placeholder="Project proposal">
                     </div>
                     <div class="form-group">
-                        <label class="form-label mb-1">Message <span class="text-danger">*</span></label>
+                        <label class="form-label">Message <span style="color:#ef4444">*</span></label>
                         <textarea octavalidate="R,TEXT" id="inp_mess" ov-required-msg="Your message is required"
-                            name="message" class="form-control" placeholder="Hello, I'm John from..."
-                            rows="3"></textarea>
+                            name="message" class="form-control" placeholder="Tell me about your project..."
+                            rows="4"></textarea>
                     </div>
-                    <div class="form-group mt-3">
-                        <button id="btn_contact" class="btn btn-app-primary text-white">SEND MESSAGE</button>
-                    </div>
+                    <button type="button" id="btn_contact" class="btn-solid"
+                        style="width:100%; justify-content:center; margin-top:4px;">
+                        <i class="mdi mdi-send"></i> Send Message
+                    </button>
                 </form>
             </div>
-        </section>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-</body>
-<footer class="footer p-3 z-depth-2 mt-5">
-    <div class="row text-center">
-        <div class="col-12">
-            <h4 class="title is-4 mb-3  text-white">Let's connect 👋</h4>
-            <ul class="list-unstyled list-inline">
-                <li class="list-inline-item"><a target="_blank" title="Follow me on Twitter"
-                        class="btn btn-floating btn-info " href="https://twitter.com/ugorji_simon" role="button"><i
-                            class="mdi mdi-twitter"></i></a></li>
-                <li class="list-inline-item"><a target="_blank" title="Follow me on Instagram"
-                        class="btn btn-floating btn-danger " href="https://instagram.com/ugorji_simon" role="button"><i
-                            class="mdi mdi-instagram"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a target="_blank" title="Connect with me on Facebook" class="btn btn-floating btn-primary "
-                        href="https://facebook.com/simon.ugorji.106" role="button"><i class="mdi mdi-facebook"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a target="_blank" title="Check me out & follow me on Github" class="btn btn-floating btn-light"
-                        href="https://github.com/octagon-simon" role="button"><i class="mdi mdi-github"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a target="_blank" title="Connect with me on Linkedin" class="btn btn-floating btn-primary "
-                        href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3/" role="button"><i
-                            class="mdi mdi-linkedin"></i></a>
-                </li>
-            </ul>
-            <p class="gray-text">Last updated: 28<sup>th</sup> February 2023</p>
         </div>
-    </div>
-    <!--23rd/January/2023-->
-</footer>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="soc-links">
+            <a href="https://twitter.com/ugorji_simon" target="_blank" title="Twitter" class="soc-btn"><i
+                    class="mdi mdi-twitter"></i></a>
+            <a href="https://github.com/octagon-simon" target="_blank" title="Personal GitHub" class="soc-btn"><i
+                    class="mdi mdi-github"></i></a>
+            <a href="https://github.com/simon-ugorji" target="_blank" title="Work GitHub" class="soc-btn" style="font-size:0.65rem; font-weight:700; letter-spacing:.04em; width:auto; padding:0 10px; color:var(--muted);">
+                <i class="mdi mdi-github" style="font-size:1rem; margin-right:4px;"></i>work
+            </a>
+            <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3/" target="_blank" title="LinkedIn"
+                class="soc-btn"><i class="mdi mdi-linkedin"></i></a>
+            <a href="https://instagram.com/ugorji_simon" target="_blank" title="Instagram" class="soc-btn"><i
+                    class="mdi mdi-instagram"></i></a>
+            <a href="https://facebook.com/simon.ugorji.106" target="_blank" title="Facebook" class="soc-btn"><i
+                    class="mdi mdi-facebook"></i></a>
+            <a href="https://simon-ugorji.medium.com" target="_blank" title="Medium" class="soc-btn"><i
+                    class="mdi mdi-book-open-page-variant"></i></a>
+        </div>
+        <p style="color:var(--muted); font-size:0.8rem;">© 2025 The Octagon &nbsp;·&nbsp; Built with care and TypeScript
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <script>
+        (function () {
+
+            /* ── Role definitions ── */
+            const ROLES = {
+                frontend: {
+                    label: 'Frontend Portfolio',
+                    typed: ['Frontend Developer', 'UI Engineer', 'React Developer'],
+                },
+                backend: {
+                    label: 'Backend Portfolio',
+                    typed: ['Backend Developer', 'Node.js Engineer', 'API Developer'],
+                },
+                mobile: {
+                    label: 'Mobile Portfolio',
+                    typed: ['Mobile Engineer', 'React Native Developer', 'Expo Developer'],
+                },
+            };
+
+            const DEFAULT_TYPED = ['Software Engineer', 'Full-Stack Developer', 'Backend Developer', 'Mobile Engineer'];
+
+            /* ── Typed.js instance ── */
+            let typedInstance = null;
+
+            function startTyped(strings) {
+                if (typedInstance) { typedInstance.destroy(); }
+                typedInstance = new Typed('#typed-role', {
+                    strings,
+                    typeSpeed: 60,
+                    backSpeed: 38,
+                    backDelay: 1900,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|',
+                });
+            }
+
+            /* ── Read role from URL ── */
+            function getRole() {
+                const r = new URLSearchParams(window.location.search).get('role');
+                return (r && ROLES[r]) ? r : null;
+            }
+
+            /* ── Apply filter ── */
+            function applyFilter(role) {
+                const banner = document.getElementById('role-banner');
+                const navbar = document.getElementById('navbar');
+                const pills = document.querySelectorAll('.rpill');
+                const projCards = document.querySelectorAll('#projects-grid [data-proj-cat]');
+                const skillGroups = document.querySelectorAll('#skills [data-skill-cat]');
+
+                /* active pill */
+                pills.forEach(p => p.classList.toggle('active', p.dataset.role === (role || 'all')));
+
+                if (!role) {
+                    banner.style.display = 'none';
+                    navbar.style.top = '0';
+                    projCards.forEach(el => el.classList.remove('hidden-by-filter'));
+                    skillGroups.forEach(el => el.classList.remove('hidden-by-filter'));
+                    startTyped(DEFAULT_TYPED);
+                    return;
+                }
+
+                /* banner */
+                banner.innerHTML = 'Viewing: <strong>' + ROLES[role].label + '</strong>'
+                    + ' &nbsp;·&nbsp; <a href="' + window.location.pathname + '">View full portfolio →</a>';
+                banner.style.display = 'block';
+                navbar.style.top = '40px';
+
+                /* filter projects */
+                projCards.forEach(el => {
+                    const cats = el.dataset.projCat.split(' ');
+                    el.classList.toggle('hidden-by-filter', !cats.includes(role));
+                });
+
+                /* filter skill groups */
+                skillGroups.forEach(el => {
+                    el.classList.toggle('hidden-by-filter', el.dataset.skillCat !== role);
+                });
+
+                startTyped(ROLES[role].typed);
+            }
+
+            /* ── Shared role-switch handler ── */
+            function switchRole(role) {
+                const url = new URL(window.location.href);
+                if (role) url.searchParams.set('role', role);
+                else url.searchParams.delete('role');
+                window.history.pushState({}, '', url);
+                applyFilter(role);
+                /* sync fpill active state */
+                document.querySelectorAll('.fpill').forEach(p =>
+                    p.classList.toggle('active', p.dataset.role === (role || 'all'))
+                );
+            }
+
+            /* ── Role pill clicks (navbar + mobile overlay) ── */
+            document.querySelectorAll('.rpill').forEach(pill => {
+                pill.addEventListener('click', () => {
+                    switchRole(pill.dataset.role === 'all' ? null : pill.dataset.role);
+                });
+            });
+
+            /* ── Inline filter bar clicks ── */
+            document.querySelectorAll('.fpill').forEach(pill => {
+                pill.addEventListener('click', () => {
+                    switchRole(pill.dataset.role === 'all' ? null : pill.dataset.role);
+                });
+            });
+
+            /* ── Mobile menu ── */
+            window.closeMobMenu = function () {
+                document.getElementById('mob-overlay').classList.remove('open');
+                document.body.style.overflow = '';
+            };
+            document.getElementById('hamburger-btn').addEventListener('click', () => {
+                document.getElementById('mob-overlay').classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+            document.getElementById('mob-close-btn').addEventListener('click', window.closeMobMenu);
+
+            /* ── Navbar scroll effect ── */
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 60);
+            }, { passive: true });
+
+            /* ── Scroll-reveal ── */
+            const revealObserver = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                        revealObserver.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.07 });
+
+            document.querySelectorAll('.fade-up').forEach(el => revealObserver.observe(el));
+
+            /* ── Nav link scroll-spy ── */
+            const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+            const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+            const spyObserver = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+                    }
+                });
+            }, { threshold: 0.35 });
+
+            sections.forEach(s => spyObserver.observe(s));
+
+            /* ── Particles.js ── */
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 55, density: { enable: true, value_area: 900 } },
+                    color: { value: '#033af4' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.38, random: true },
+                    size: { value: 2.4, random: true },
+                    line_linked: { enable: true, distance: 145, color: '#033af4', opacity: 0.18, width: 1 },
+                    move: { enable: true, speed: 1.4, random: true, out_mode: 'out' },
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: false } },
+                    modes: { repulse: { distance: 75 } },
+                },
+                retina_detect: true,
+            });
+
+            /* ── Contact form validation ── */
+            document.getElementById('btn_contact').addEventListener('click', function () {
+                if (typeof octaValidate !== 'undefined') {
+                    const OV = new octaValidate('form_contact');
+                    if (OV.validate()) document.getElementById('form_contact').submit();
+                } else {
+                    document.getElementById('form_contact').submit();
+                }
+            });
+
+            /* ── Init on load ── */
+            const initialRole = getRole();
+            applyFilter(initialRole);
+            document.querySelectorAll('.fpill').forEach(p =>
+                p.classList.toggle('active', p.dataset.role === (initialRole || 'all'))
+            );
+
+        })();
+    </script>
+</body>
 
 </html>
