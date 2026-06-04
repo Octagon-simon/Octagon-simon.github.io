@@ -762,6 +762,56 @@
             gap: 6px;
         }
 
+        .proof-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 10px;
+        }
+
+        .proof-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 16px 0;
+        }
+
+        .proof-item a {
+            display: block;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: border-color .2s, transform .2s;
+        }
+
+        .proof-item a:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .proof-item img {
+            width: 100%;
+            height: 90px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .proof-caption {
+            font-size: 0.7rem;
+            color: var(--muted);
+            margin-top: 5px;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 576px) {
+            .proof-strip {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         .exp-cta {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -1458,7 +1508,7 @@
                 <!-- Lacuna — agentic CLI -->
                 <div class="col-md-6 col-lg-4" data-proj-cat="backend">
                     <div class="proj-card">
-                        <img src="assets/img/lacuna.png" alt="Lacuna" class="proj-img">
+                        <img src="assets/img/lacuna.png" alt="Lacuna CLI running on Afriex admin" class="proj-img" style="object-position: top;">
                         <div class="proj-body">
                             <h3 class="proj-title">Lacuna</h3>
                             <p class="proj-desc">An agentic CLI that automatically writes tests for your codebase, runs
@@ -1534,6 +1584,25 @@
                             </div>
                             <div class="proj-links">
                                 <a href="https://cheflymenu.app" target="_blank" class="btn-visit">Visit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Polishly — AI Chrome/Brave extension -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="frontend">
+                    <div class="proj-card">
+                        <img src="assets/img/polishy.png" alt="Polishly" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Polishly</h3>
+                            <p class="proj-desc">A Chrome and Brave extension that uses AI to instantly rewrite selected text on freshdesk. Built out of a real need: I used it daily in my customer support role at Afriex to handle queries from customers across multiple languages and ensure every response was professional and error-free.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">JavaScript</span>
+                                <span class="tbadge">Chrome Extension</span>
+                                <span class="tbadge">AI</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://github.com/Octagon-simon/polishly" target="_blank" class="btn-repo"><i class="mdi mdi-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -1793,7 +1862,7 @@
                 </div>
                 <ul class="exp-bullets">
                     <li>Built <strong>Lacuna</strong>, an agentic CLI that autonomously wrote, ran, and fixed tests for
-                        the admin dashboard, raising test coverage from near-zero to <strong>90%</strong></li>
+                        the admin dashboard, raising test coverage from near-zero to <strong>92%</strong></li>
                     <li>Built and maintained the <strong>admin dashboard</strong> and <strong>business web
                             dashboard</strong> with React and Tailwind CSS, improving operational visibility and
                         usability for internal teams</li>
@@ -1810,6 +1879,29 @@
                     <li>Collaborated with backend, design, and ops teams on tooling for secure transactions and
                         operational efficiency</li>
                 </ul>
+
+                <div class="proof-label">Lacuna in action</div>
+                <div class="proof-strip">
+                    <div class="proof-item">
+                        <a href="assets/lacuna/afriex-admin-lacuna.jpeg" target="_blank" title="Lacuna autonomously fixing failing tests">
+                            <img src="assets/lacuna/afriex-admin-lacuna.jpeg" alt="Lacuna fixing tests" style="object-position: top;">
+                        </a>
+                        <div class="proof-caption">Lacuna fixing 90 failing tests</div>
+                    </div>
+                    <div class="proof-item">
+                        <a href="assets/lacuna/afriex-admin-lacuna-success.png" target="_blank" title="92.96% statement coverage after Lacuna">
+                            <img src="assets/lacuna/afriex-admin-lacuna-success.png" alt="92.96% coverage" style="object-position: top;">
+                        </a>
+                        <div class="proof-caption">92.96% statement coverage</div>
+                    </div>
+                    <div class="proof-item">
+                        <a href="assets/lacuna/afriex-admin-lacuna-feedback.png" target="_blank" title="Team feedback on Slack">
+                            <img src="assets/lacuna/afriex-admin-lacuna-feedback.png" alt="Team feedback on Slack" style="object-position: top;">
+                        </a>
+                        <div class="proof-caption">Team lead feedback on Slack</div>
+                    </div>
+                </div>
+
                 <div class="exp-tech" style="margin-bottom:16px;">
                     <span class="tbadge">React</span>
                     <span class="tbadge">Tailwind CSS</span>
