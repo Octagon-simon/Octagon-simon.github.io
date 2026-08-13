@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Simon Ugorji — Software Engineer | Full-Stack, Backend & Mobile</title>
+    <title>Simon Ugorji: Software Engineer | Full-Stack, Backend & Mobile</title>
     <meta name="author" content="Simon Ugorji">
     <meta name="description"
-        content="Simon Ugorji is a Software Engineer from Nigeria specialising in full-stack web development, backend APIs, and cross-platform mobile apps with React Native & Expo. HNG11 Finalist — top 2.2% of 24,123 interns.">
+        content="Simon Ugorji is a Software Engineer from Nigeria specialising in full-stack web development, backend APIs, and cross-platform mobile apps with React Native & Expo. HNG11 Finalist, top 2.2% of 24,123 interns.">
     <meta name="keywords"
         content="Simon Ugorji, Software Engineer, Full Stack Developer, React Native, Expo, Node.js, PHP, TypeScript, Mobile Developer, Nigeria, HNG11">
-    <meta property="og:title" content="Simon Ugorji — Software Engineer">
+    <meta property="og:title" content="Simon Ugorji: Software Engineer">
     <meta property="og:description"
         content="Full-Stack Web, Backend & Mobile Engineer. HNG11 Finalist. React Native, Node.js, PHP, TypeScript.">
     <meta property="og:image" content="https://octagon-simon.github.io/assets/img/my-me.jpg">
@@ -18,9 +18,9 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ugorji_simon">
-    <meta name="twitter:title" content="Simon Ugorji — Software Engineer">
+    <meta name="twitter:title" content="Simon Ugorji: Software Engineer">
     <meta name="twitter:description"
-        content="Full-Stack Web, Backend & Mobile Engineer. HNG11 Finalist — top 2.2% of 24,123 interns.">
+        content="Full-Stack Web, Backend & Mobile Engineer. HNG11 Finalist, top 2.2% of 24,123 interns.">
     <meta name="twitter:image" content="https://octagon-simon.github.io/assets/img/my-me.jpg">
 
     <!-- Google Analytics -->
@@ -61,7 +61,7 @@
         "image": "https://octagon-simon.github.io/assets/img/my-me.jpg",
         "jobTitle": "Software Engineer",
         "description": "Software Engineer specialising in full-stack web, backend APIs, and mobile apps with React Native & Expo. HNG11 Finalist.",
-        "knowsAbout": ["React Native", "Node.js", "TypeScript", "PHP", "React.js", "Expo", "MongoDB", "MySQL"],
+        "knowsAbout": ["React Native", "Node.js", "TypeScript", "PHP", "React.js", "Expo", "MongoDB", "MySQL", "Electron"],
         "sameAs": [
             "https://github.com/octagon-simon",
             "https://www.linkedin.com/in/simon-ugorji-57a6a41a3/",
@@ -588,6 +588,7 @@
 
         .proj-links {
             display: flex;
+            flex-wrap: wrap;
             gap: 8px;
             margin-top: auto;
         }
@@ -1305,6 +1306,7 @@
                     <button class="rpill" data-role="frontend">Frontend</button>
                     <button class="rpill" data-role="backend">Backend</button>
                     <button class="rpill" data-role="mobile">Mobile</button>
+                    <button class="rpill" data-role="desktop">Desktop</button>
                 </div>
                 <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu">
                     <i class="mdi mdi-menu"></i>
@@ -1336,6 +1338,7 @@
             <button class="rpill" data-role="frontend" onclick="closeMobMenu()">Frontend</button>
             <button class="rpill" data-role="backend" onclick="closeMobMenu()">Backend</button>
             <button class="rpill" data-role="mobile" onclick="closeMobMenu()">Mobile</button>
+            <button class="rpill" data-role="desktop" onclick="closeMobMenu()">Desktop</button>
         </div>
     </div>
 
@@ -1482,6 +1485,16 @@
                 </div>
             </div>
 
+            <!-- Desktop skills -->
+            <div class="skill-group" data-skill-cat="desktop">
+                <div class="skill-group-title">Desktop</div>
+                <div class="skill-chips">
+                    <span class="chip">Electron</span>
+                    <span class="chip">React.js</span>
+                    <span class="chip">TypeScript</span>
+                </div>
+            </div>
+
             <!-- Tools (always visible) -->
             <div class="skill-group">
                 <div class="skill-group-title">Tools & Other</div>
@@ -1507,27 +1520,59 @@
                 <button class="fpill" data-role="frontend">Frontend</button>
                 <button class="fpill" data-role="backend">Backend</button>
                 <button class="fpill" data-role="mobile">Mobile</button>
+                <button class="fpill" data-role="desktop">Desktop</button>
             </div>
             <div class="row g-4" id="projects-grid">
 
-                <!-- Lacuna — agentic CLI -->
-                <div class="col-md-6 col-lg-4" data-proj-cat="backend">
+                <!-- Pulpit AI — voice-driven church presentation desktop app -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="desktop">
                     <div class="proj-card">
-                        <img src="assets/img/lacuna.webp" alt="Lacuna CLI running on Afriex admin" class="proj-img" style="object-position: top;">
+                        <img src="assets/img/pulpit-ai.webp" alt="Pulpit AI congregation screen, showing a clock and weather" class="proj-img">
                         <div class="proj-body">
-                            <h3 class="proj-title">Lacuna</h3>
-                            <p class="proj-desc">An agentic CLI that automatically writes tests for your codebase, runs
-                                them, then fixes the failing ones. Powered by AI.</p>
+                            <h3 class="proj-title">Pulpit AI</h3>
+                            <p class="proj-desc">A voice-driven, offline-first presentation app for churches. Speak a
+                                scripture reference and it appears on the projector instantly. Built with Electron and
+                                React, with on-device speech recognition and a plugin system for hymns, timers, and
+                                weather.</p>
                             <div class="proj-tech">
-                                <span class="tbadge">Node.js</span>
+                                <span class="tbadge">Electron</span>
+                                <span class="tbadge">React.js</span>
                                 <span class="tbadge">TypeScript</span>
-                                <span class="tbadge">CLI</span>
                             </div>
                             <div class="proj-links">
-                                <a href="https://www.npmjs.com/package/lacuna-cli" target="_blank" class="btn-visit"><i
-                                        class="mdi mdi-npm"></i> lacuna-cli</a>
-                                <a href="https://github.com/Octagon-simon/lacuna" class="btn-repo"><i
+                                <a href="https://octagon-simon.github.io/pulpit/" target="_blank" class="btn-visit">Visit</a>
+                                <a href="https://github.com/Octagon-simon/pulpit" target="_blank" class="btn-repo"><i
                                         class="mdi mdi-github"></i> Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lacuna — agentic test-coverage CLI + VS Code extension -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="backend">
+                    <div class="proj-card">
+                        <img src="assets/img/lacuna.webp" alt="Lacuna generating tests" class="proj-img" style="object-position: top;">
+                        <div class="proj-body">
+                            <h3 class="proj-title">Lacuna</h3>
+                            <p class="proj-desc">An AI agent that finds your uncovered code, writes real tests, runs
+                                them, and retries until they pass. Ships as a CLI <em>and</em> a VS Code extension
+                                (also on Cursor, Windsurf &amp; VSCodium via Open VSX).</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">TypeScript</span>
+                                <span class="tbadge">Node.js</span>
+                                <span class="tbadge">VS Code</span>
+                                <span class="tbadge">AI</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://marketplace.visualstudio.com/items?itemName=Octagon.lacuna-vscode"
+                                        target="_blank" rel="noopener noreferrer" class="btn-visit"><i
+                                        class="mdi mdi-microsoft-visual-studio-code"></i> VS Code</a>
+                                <a href="https://open-vsx.org/extension/octagon/lacuna-vscode" target="_blank"
+                                        rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-puzzle"></i> Open VSX</a>
+                                <a href="https://www.npmjs.com/package/lacuna-cli" target="_blank"
+                                        rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-npm"></i> npm</a>
+                                <a href="https://github.com/Octagon-simon/lacuna" target="_blank"
+                                        rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -1549,6 +1594,7 @@
                             <div class="proj-links">
                                 <a href="https://earnberries.com" target="_blank" class="btn-visit">Visit</a>
                                 <a href="https://apps.apple.com/ng/app/berry-by-rivabit/id6776190656" target="_blank" rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-apple"></i> App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.rivabit.berry" target="_blank" rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-google-play"></i> Play Store</a>
                             </div>
                         </div>
                     </div>
@@ -1866,8 +1912,10 @@
                     <span class="exp-period">2023 - Present</span>
                 </div>
                 <ul class="exp-bullets">
-                    <li>Built <strong>Lacuna</strong>, an agentic CLI that autonomously wrote, ran, and fixed tests for
-                        the admin dashboard, raising test coverage from near-zero to <strong>92%</strong></li>
+                    <li>Built <strong>Lacuna</strong>, an agentic AI tool that autonomously writes, runs, and fixes
+                        tests, raising the admin dashboard's coverage from near-zero to <strong>92%</strong>. Now
+                        shipped publicly as a CLI (npm) and a <strong>VS Code extension</strong> (VS Marketplace &amp;
+                        Open VSX)</li>
                     <li>Built and maintained the <strong>admin dashboard</strong> and <strong>business web
                             dashboard</strong> with React and Tailwind CSS, improving operational visibility and
                         usability for internal teams</li>
@@ -2048,6 +2096,10 @@
                     label: 'Mobile Portfolio',
                     typed: ['Mobile Engineer', 'React Native Developer', 'Expo Developer'],
                 },
+                desktop: {
+                    label: 'Desktop Portfolio',
+                    typed: ['Desktop Developer', 'Electron Engineer', 'Cross-Platform Developer'],
+                },
             };
 
             const DEFAULT_TYPED = ['Software Engineer', 'Full-Stack Developer', 'Backend Developer', 'Mobile Engineer'];
@@ -2090,6 +2142,8 @@
                     navbar.style.top = '0';
                     projCards.forEach(el => el.classList.remove('hidden-by-filter'));
                     skillGroups.forEach(el => el.classList.remove('hidden-by-filter'));
+                    document.querySelectorAll('#projects-grid .proj-section-label')
+                        .forEach(el => el.classList.remove('hidden-by-filter'));
                     startTyped(DEFAULT_TYPED);
                     return;
                 }
@@ -2104,6 +2158,20 @@
                 projCards.forEach(el => {
                     const cats = el.dataset.projCat.split(' ');
                     el.classList.toggle('hidden-by-filter', !cats.includes(role));
+                });
+
+                /* hide section dividers (e.g. "Earlier work") left with no visible cards */
+                document.querySelectorAll('#projects-grid .proj-section-label').forEach(label => {
+                    let sib = label.nextElementSibling;
+                    let hasVisible = false;
+                    while (sib && !sib.classList.contains('proj-section-label')) {
+                        if (sib.hasAttribute('data-proj-cat') && !sib.classList.contains('hidden-by-filter')) {
+                            hasVisible = true;
+                            break;
+                        }
+                        sib = sib.nextElementSibling;
+                    }
+                    label.classList.toggle('hidden-by-filter', !hasVisible);
                 });
 
                 /* filter skill groups */
