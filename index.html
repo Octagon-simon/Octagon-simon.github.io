@@ -27,7 +27,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8TW41FQR2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'G-G8TW41FQR2');
     </script>
@@ -52,24 +55,26 @@
 
     <!-- Schema.org Person — boosts Google name search results -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Simon Ugorji",
-        "alternateName": "The Octagon",
-        "url": "https://octagon-simon.github.io",
-        "image": "https://octagon-simon.github.io/assets/img/my-me.jpg",
-        "jobTitle": "Software Engineer",
-        "description": "Software Engineer specialising in full-stack web, backend APIs, and mobile apps with React Native & Expo. HNG11 Finalist.",
-        "knowsAbout": ["React Native", "Node.js", "TypeScript", "PHP", "React.js", "Expo", "MongoDB", "MySQL", "Electron"],
-        "sameAs": [
-            "https://github.com/octagon-simon",
-            "https://www.linkedin.com/in/simon-ugorji-57a6a41a3/",
-            "https://twitter.com/ugorji_simon",
-            "https://simon-ugorji.medium.com",
-            "https://dev.to/ugorji_simon"
-        ]
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Simon Ugorji",
+            "alternateName": "The Octagon",
+            "url": "https://octagon-simon.github.io",
+            "image": "https://octagon-simon.github.io/assets/img/my-me.jpg",
+            "jobTitle": "Software Engineer",
+            "description": "Software Engineer specialising in full-stack web, backend APIs, and mobile apps with React Native & Expo. HNG11 Finalist.",
+            "knowsAbout": ["React Native", "Node.js", "TypeScript", "PHP", "React.js", "Expo", "MongoDB", "MySQL",
+                "Electron"
+            ],
+            "sameAs": [
+                "https://github.com/octagon-simon",
+                "https://www.linkedin.com/in/simon-ugorji-57a6a41a3/",
+                "https://twitter.com/ugorji_simon",
+                "https://simon-ugorji.medium.com",
+                "https://dev.to/ugorji_simon"
+            ]
+        }
     </script>
 
     <style>
@@ -1433,7 +1438,8 @@
                 </div>
             </div>
             <div style="margin-top:28px;">
-                <a href="https://certgo.app/c-45408da3" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm">
+                <a href="https://certgo.app/c-45408da3" target="_blank" rel="noopener noreferrer"
+                    class="btn-ghost btn-sm">
                     <i class="mdi mdi-certificate-outline"></i> View Certificate
                 </a>
             </div>
@@ -1524,10 +1530,38 @@
             </div>
             <div class="row g-4" id="projects-grid">
 
+                <!-- beckoned — one notification when your AI coding agent needs you -->
+                <div class="col-md-6 col-lg-4" data-proj-cat="backend desktop">
+                    <div class="proj-card">
+                        <img src="assets/img/beckoned.webp" alt="beckoned notification banner" class="proj-img">
+                        <div class="proj-body">
+                            <h3 class="proj-title">beckoned</h3>
+                            <p class="proj-desc">Watches every Claude Code, Antigravity, Gemini CLI, and Eigent
+                                session running on your machine and sends one macOS notification the moment any of
+                                them needs you. Click it and you land back in the exact window, not just the app.</p>
+                            <div class="proj-tech">
+                                <span class="tbadge">TypeScript</span>
+                                <span class="tbadge">Swift</span>
+                                <span class="tbadge">Node.js</span>
+                                <span class="tbadge">macOS</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://octagon-simon.github.io/beckoned/" target="_blank"
+                                    rel="noopener noreferrer" class="btn-visit">Visit</a>
+                                <a href="https://www.npmjs.com/package/beckoned" target="_blank"
+                                    rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-npm"></i> npm</a>
+                                <a href="https://github.com/Octagon-simon/beckoned" target="_blank"
+                                    rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Pulpit AI — voice-driven church presentation desktop app -->
                 <div class="col-md-6 col-lg-4" data-proj-cat="desktop">
                     <div class="proj-card">
-                        <img src="assets/img/pulpit-ai.webp" alt="Pulpit AI congregation screen, showing a clock and weather" class="proj-img">
+                        <img src="assets/img/pulpit-ai.webp"
+                            alt="Pulpit AI congregation screen, showing a clock and weather" class="proj-img">
                         <div class="proj-body">
                             <h3 class="proj-title">Pulpit AI</h3>
                             <p class="proj-desc">A voice-driven, offline-first presentation app for churches. Speak a
@@ -1540,7 +1574,8 @@
                                 <span class="tbadge">TypeScript</span>
                             </div>
                             <div class="proj-links">
-                                <a href="https://octagon-simon.github.io/pulpit/" target="_blank" class="btn-visit">Visit</a>
+                                <a href="https://octagon-simon.github.io/pulpit/" target="_blank"
+                                    class="btn-visit">Visit</a>
                                 <a href="https://github.com/Octagon-simon/pulpit" target="_blank" class="btn-repo"><i
                                         class="mdi mdi-github"></i> Github</a>
                             </div>
@@ -1551,7 +1586,8 @@
                 <!-- Lacuna — agentic test-coverage CLI + VS Code extension -->
                 <div class="col-md-6 col-lg-4" data-proj-cat="backend">
                     <div class="proj-card">
-                        <img src="assets/img/lacuna.webp" alt="Lacuna generating tests" class="proj-img" style="object-position: top;">
+                        <img src="assets/img/lacuna.webp" alt="Lacuna generating tests" class="proj-img"
+                            style="object-position: top;">
                         <div class="proj-body">
                             <h3 class="proj-title">Lacuna</h3>
                             <p class="proj-desc">An AI agent that finds your uncovered code, writes real tests, runs
@@ -1565,14 +1601,15 @@
                             </div>
                             <div class="proj-links">
                                 <a href="https://marketplace.visualstudio.com/items?itemName=Octagon.lacuna-vscode"
-                                        target="_blank" rel="noopener noreferrer" class="btn-visit"><i
+                                    target="_blank" rel="noopener noreferrer" class="btn-visit"><i
                                         class="mdi mdi-microsoft-visual-studio-code"></i> VS Code</a>
                                 <a href="https://open-vsx.org/extension/octagon/lacuna-vscode" target="_blank"
-                                        rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-puzzle"></i> Open VSX</a>
+                                    rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-puzzle"></i> Open
+                                    VSX</a>
                                 <a href="https://www.npmjs.com/package/lacuna-cli" target="_blank"
-                                        rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-npm"></i> npm</a>
+                                    rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-npm"></i> npm</a>
                                 <a href="https://github.com/Octagon-simon/lacuna" target="_blank"
-                                        rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-github"></i> GitHub</a>
+                                    rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -1593,8 +1630,12 @@
                             </div>
                             <div class="proj-links">
                                 <a href="https://earnberries.com" target="_blank" class="btn-visit">Visit</a>
-                                <a href="https://apps.apple.com/ng/app/berry-by-rivabit/id6776190656" target="_blank" rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-apple"></i> App Store</a>
-                                <a href="https://play.google.com/store/apps/details?id=com.rivabit.berry" target="_blank" rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-google-play"></i> Play Store</a>
+                                <a href="https://apps.apple.com/ng/app/berry-by-rivabit/id6776190656" target="_blank"
+                                    rel="noopener noreferrer" class="btn-repo"><i class="mdi mdi-apple"></i> App
+                                    Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.rivabit.berry"
+                                    target="_blank" rel="noopener noreferrer" class="btn-repo"><i
+                                        class="mdi mdi-google-play"></i> Play Store</a>
                             </div>
                         </div>
                     </div>
@@ -1606,7 +1647,9 @@
                         <img src="assets/img/schoolmug.webp" alt="SchoolMug" class="proj-img">
                         <div class="proj-body">
                             <h3 class="proj-title">SchoolMug</h3>
-                            <p class="proj-desc">A cloud-based school management system built for Nigerian schools. Covers student enrollment, attendance, grading, fee collection, automated report cards, and
+                            <p class="proj-desc">A cloud-based school management system built for Nigerian schools.
+                                Covers student enrollment, attendance, grading, fee collection, automated report cards,
+                                and
                                 role-based portals for admins, teachers, and students.</p>
                             <div class="proj-tech">
                                 <span class="tbadge">React.js</span>
@@ -1627,7 +1670,8 @@
                         <div class="proj-body">
                             <h3 class="proj-title">CheflyMenu</h3>
                             <p class="proj-desc">A SaaS platform for restaurants to replace physical menus with
-                                interactive digital ones. QR codes, WhatsApp ordering, AI-powered branding, and time-based menu scheduling.</p>
+                                interactive digital ones. QR codes, WhatsApp ordering, AI-powered branding, and
+                                time-based menu scheduling.</p>
                             <div class="proj-tech">
                                 <span class="tbadge">React.js</span>
                                 <span class="tbadge">Node.js</span>
@@ -1646,14 +1690,18 @@
                         <img src="assets/img/polishy.webp" alt="Polishly" class="proj-img">
                         <div class="proj-body">
                             <h3 class="proj-title">Polishly</h3>
-                            <p class="proj-desc">A Chrome and Brave extension that uses AI to instantly rewrite selected text on freshdesk. Built out of a real need: I used it daily in my customer support role at Afriex to handle queries from customers across multiple languages and ensure every response was professional and error-free.</p>
+                            <p class="proj-desc">A Chrome and Brave extension that uses AI to instantly rewrite selected
+                                text on freshdesk. Built out of a real need: I used it daily in my customer support role
+                                at Afriex to handle queries from customers across multiple languages and ensure every
+                                response was professional and error-free.</p>
                             <div class="proj-tech">
                                 <span class="tbadge">JavaScript</span>
                                 <span class="tbadge">Chrome Extension</span>
                                 <span class="tbadge">AI</span>
                             </div>
                             <div class="proj-links">
-                                <a href="https://github.com/Octagon-simon/polishly" target="_blank" class="btn-repo"><i class="mdi mdi-github"></i> GitHub</a>
+                                <a href="https://github.com/Octagon-simon/polishly" target="_blank" class="btn-repo"><i
+                                        class="mdi mdi-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -1763,7 +1811,8 @@
                         <img src="assets/img/oshare-new.webp" alt="Oshare" class="proj-img">
                         <div class="proj-body">
                             <h3 class="proj-title">Oshare <span class="archived-tag">Unmaintained</span></h3>
-                            <p class="proj-desc">A web app for uploading and sharing links to files. Clean, fast, and easy to use.</p>
+                            <p class="proj-desc">A web app for uploading and sharing links to files. Clean, fast, and
+                                easy to use.</p>
                             <div class="proj-tech">
                                 <span class="tbadge">React.js</span>
                                 <span class="tbadge">PHP</span>
@@ -1921,7 +1970,8 @@
                         usability for internal teams</li>
                     <li>Implemented responsive, mobile-first layouts with Tailwind CSS utilities across all device sizes
                     </li>
-                    <li>Diagnosed and resolved critical UI/UX bugs including input formatting, search functionality, and state
+                    <li>Diagnosed and resolved critical UI/UX bugs including input formatting, search functionality, and
+                        state
                         synchronisation</li>
                     <li>Contributed to backend development with <strong>Node.js and MongoDB</strong>, delivering secure
                         APIs for transaction processing and automated payouts</li>
@@ -1936,20 +1986,26 @@
                 <div class="proof-label">Lacuna in action</div>
                 <div class="proof-strip">
                     <div class="proof-item">
-                        <a href="assets/lacuna/afriex-admin-lacuna.jpeg" target="_blank" title="Lacuna autonomously fixing failing tests">
-                            <img src="assets/lacuna/afriex-admin-lacuna.jpeg" alt="Lacuna fixing tests" style="object-position: top;">
+                        <a href="assets/lacuna/afriex-admin-lacuna.jpeg" target="_blank"
+                            title="Lacuna autonomously fixing failing tests">
+                            <img src="assets/lacuna/afriex-admin-lacuna.jpeg" alt="Lacuna fixing tests"
+                                style="object-position: top;">
                         </a>
                         <div class="proof-caption">Lacuna fixing 90 failing tests</div>
                     </div>
                     <div class="proof-item">
-                        <a href="assets/lacuna/afriex-admin-lacuna-success.png" target="_blank" title="92.96% statement coverage after Lacuna">
-                            <img src="assets/lacuna/afriex-admin-lacuna-success.png" alt="92.96% coverage" style="object-position: top;">
+                        <a href="assets/lacuna/afriex-admin-lacuna-success.png" target="_blank"
+                            title="92.96% statement coverage after Lacuna">
+                            <img src="assets/lacuna/afriex-admin-lacuna-success.png" alt="92.96% coverage"
+                                style="object-position: top;">
                         </a>
                         <div class="proof-caption">92.96% statement coverage</div>
                     </div>
                     <div class="proof-item">
-                        <a href="assets/lacuna/afriex-admin-lacuna-feedback.png" target="_blank" title="Team feedback on Slack">
-                            <img src="assets/lacuna/afriex-admin-lacuna-feedback.png" alt="Team feedback on Slack" style="object-position: top;">
+                        <a href="assets/lacuna/afriex-admin-lacuna-feedback.png" target="_blank"
+                            title="Team feedback on Slack">
+                            <img src="assets/lacuna/afriex-admin-lacuna-feedback.png" alt="Team feedback on Slack"
+                                style="object-position: top;">
                         </a>
                         <div class="proof-caption">Team lead feedback on Slack</div>
                     </div>
@@ -2059,7 +2115,8 @@
                     class="mdi mdi-twitter"></i></a>
             <a href="https://github.com/octagon-simon" target="_blank" title="Personal GitHub" class="soc-btn"><i
                     class="mdi mdi-github"></i></a>
-            <a href="https://github.com/simon-ugorji" target="_blank" title="Work GitHub" class="soc-btn" style="font-size:0.65rem; font-weight:700; letter-spacing:.04em; width:auto; padding:0 10px; color:var(--muted);">
+            <a href="https://github.com/simon-ugorji" target="_blank" title="Work GitHub" class="soc-btn"
+                style="font-size:0.65rem; font-weight:700; letter-spacing:.04em; width:auto; padding:0 10px; color:var(--muted);">
                 <i class="mdi mdi-github" style="font-size:1rem; margin-right:4px;"></i>work
             </a>
             <a href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3/" target="_blank" title="LinkedIn"
@@ -2076,8 +2133,8 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
 
     <script>
         (function () {
@@ -2102,13 +2159,17 @@
                 },
             };
 
-            const DEFAULT_TYPED = ['Software Engineer', 'Full-Stack Developer', 'Backend Developer', 'Mobile Engineer'];
+            const DEFAULT_TYPED = ['Software Engineer', 'Full-Stack Developer', 'Backend Developer',
+                'Mobile Engineer'
+            ];
 
             /* ── Typed.js instance ── */
             let typedInstance = null;
 
             function startTyped(strings) {
-                if (typedInstance) { typedInstance.destroy(); }
+                if (typedInstance) {
+                    typedInstance.destroy();
+                }
                 typedInstance = new Typed('#typed-role', {
                     strings,
                     typeSpeed: 60,
@@ -2149,8 +2210,8 @@
                 }
 
                 /* banner */
-                banner.innerHTML = 'Viewing: <strong>' + ROLES[role].label + '</strong>'
-                    + ' &nbsp;·&nbsp; <a href="' + window.location.pathname + '">View full portfolio →</a>';
+                banner.innerHTML = 'Viewing: <strong>' + ROLES[role].label + '</strong>' +
+                    ' &nbsp;·&nbsp; <a href="' + window.location.pathname + '">View full portfolio →</a>';
                 banner.style.display = 'block';
                 navbar.style.top = '40px';
 
@@ -2165,7 +2226,8 @@
                     let sib = label.nextElementSibling;
                     let hasVisible = false;
                     while (sib && !sib.classList.contains('proj-section-label')) {
-                        if (sib.hasAttribute('data-proj-cat') && !sib.classList.contains('hidden-by-filter')) {
+                        if (sib.hasAttribute('data-proj-cat') && !sib.classList.contains(
+                            'hidden-by-filter')) {
                             hasVisible = true;
                             break;
                         }
@@ -2224,7 +2286,9 @@
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
                 navbar.classList.toggle('scrolled', window.scrollY > 60);
-            }, { passive: true });
+            }, {
+                passive: true
+            });
 
             /* ── Scroll-reveal ── */
             const revealObserver = new IntersectionObserver(entries => {
@@ -2234,39 +2298,84 @@
                         revealObserver.unobserve(e.target);
                     }
                 });
-            }, { threshold: 0.07 });
+            }, {
+                threshold: 0.07
+            });
 
             document.querySelectorAll('.fade-up').forEach(el => revealObserver.observe(el));
 
             /* ── Nav link scroll-spy ── */
             const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-            const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+            const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(
+                Boolean);
 
             const spyObserver = new IntersectionObserver(entries => {
                 entries.forEach(e => {
                     if (e.isIntersecting) {
-                        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+                        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute(
+                            'href') === '#' + e.target.id));
                     }
                 });
-            }, { threshold: 0.35 });
+            }, {
+                threshold: 0.35
+            });
 
             sections.forEach(s => spyObserver.observe(s));
 
             /* ── Particles.js ── */
             particlesJS('particles-js', {
                 particles: {
-                    number: { value: 55, density: { enable: true, value_area: 900 } },
-                    color: { value: '#033af4' },
-                    shape: { type: 'circle' },
-                    opacity: { value: 0.38, random: true },
-                    size: { value: 2.4, random: true },
-                    line_linked: { enable: true, distance: 145, color: '#033af4', opacity: 0.18, width: 1 },
-                    move: { enable: true, speed: 1.4, random: true, out_mode: 'out' },
+                    number: {
+                        value: 55,
+                        density: {
+                            enable: true,
+                            value_area: 900
+                        }
+                    },
+                    color: {
+                        value: '#033af4'
+                    },
+                    shape: {
+                        type: 'circle'
+                    },
+                    opacity: {
+                        value: 0.38,
+                        random: true
+                    },
+                    size: {
+                        value: 2.4,
+                        random: true
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 145,
+                        color: '#033af4',
+                        opacity: 0.18,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 1.4,
+                        random: true,
+                        out_mode: 'out'
+                    },
                 },
                 interactivity: {
                     detect_on: 'canvas',
-                    events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: false } },
-                    modes: { repulse: { distance: 75 } },
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: 'repulse'
+                        },
+                        onclick: {
+                            enable: false
+                        }
+                    },
+                    modes: {
+                        repulse: {
+                            distance: 75
+                        }
+                    },
                 },
                 retina_detect: true,
             });
